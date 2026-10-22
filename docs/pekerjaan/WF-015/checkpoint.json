@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-015",
+  "status": "in_review",
+  "local_deliverables": "prepared_and_self_reviewed",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all 16 folder-02 items and one progress commit per item; stakeholder acceptance is separate.",
+  "artifacts": [
+    "matriks-hak-akses-aplikasi.md"
+  ],
+  "review": "Operasi read/write/command dipetakan guest/admin; role DB terpisah; actor CLI dan penolakan draft eksplisit.",
+  "open_items": [
+    "Penerimaan reviewer eksternal belum tercatat; WF-G2 tidak diklaim accepted."
+  ],
+  "git_delivery": {
+    "kind": "progress_checkpoint",
+    "target": "origin/main",
+    "verification": "Exact commit and remote ancestry reported after push; final acceptance is separate."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-23",
+  "method": "read-only SHA256 and csv.DictReader; no location verification",
+  "files": 49,
+  "extensions": {
+    ".xlsx": 5,
+    ".ipynb": 1,
+    ".csv": 3,
+    ".pdf": 39,
+    ".docx": 1
+  },
+  "changed_since_prior_manifest": [],
+  "facilities": 973,
+  "unique_codes": 973,
+  "regencies": 38,
+  "raw_district_keys": 665,
+  "service_counts": {
+    "Rawat Inap": 616,
+    "Non Rawat Inap": 357
+  },
+  "area_counts": {
+    "Perdesaan": 658,
+    "Terpencil": 16,
+    "Perkotaan": 294,
+    "Sangat Terpencil": 5
+  },
+  "code_sets_equal": true,
+  "coordinate_pairs": 565,
+  "missing_pairs": 408,
+  "unique_pairs": 560,
+  "duplicate_groups": 5,
+  "recap_detail_rows": 665,
+  "recap_aggregate_rows": 39,
+  "sum_detail": 973,
+  "sum_all": 2919
+}

@@ -1,0 +1,249 @@
+{
+  "files": [
+    {
+      "path": "Archives/Data_Gabungan_Kecamatan_Jawa_Timur.xlsx",
+      "bytes": 41010,
+      "sha256": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09"
+    },
+    {
+      "path": "Archives/GIS.ipynb",
+      "bytes": 31392,
+      "sha256": "d17052b660e430c894811c3c754907fa0fb34d5e64f2958efa0407f7a84c4dc4"
+    },
+    {
+      "path": "Archives/jumlah_puskesmas_per_kecamatan.csv",
+      "bytes": 14620,
+      "sha256": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915"
+    },
+    {
+      "path": "Archives/langsung buka csv disini/Data_Luas_Wilayah_Per_Kecamatan_Jawa_Timur_2024.xlsx",
+      "bytes": 42854,
+      "sha256": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d"
+    },
+    {
+      "path": "Archives/langsung buka csv disini/Data_Penduduk_Per_Kecamatan_Jawa_Timur_2024 .xlsx",
+      "bytes": 46698,
+      "sha256": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169"
+    },
+    {
+      "path": "Archives/langsung buka csv disini/puskesmas_jatim_alamat.xlsx",
+      "bytes": 66013,
+      "sha256": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65"
+    },
+    {
+      "path": "Archives/langsung buka csv disini/puskesmas_jatim_koordinat.xlsx",
+      "bytes": 93297,
+      "sha256": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116"
+    },
+    {
+      "path": "Archives/per kecamatan/Bangkalan.pdf",
+      "bytes": 5734709,
+      "sha256": "cf15b2de7ff379ec81eb247bac3bb2d71f25f9d26842923d950a7587e25cbcad"
+    },
+    {
+      "path": "Archives/per kecamatan/Banyuwangi.pdf",
+      "bytes": 2806101,
+      "sha256": "4a4ceaa7fb1680123560894dfe9ba8cfc0f724cdccbd889eaa3ecf823f8dd160"
+    },
+    {
+      "path": "Archives/per kecamatan/Blitar.pdf",
+      "bytes": 4258754,
+      "sha256": "32403291240cf4859aef84ea1106cde70af51fb0d9ad25e4a6835f005f3e633b"
+    },
+    {
+      "path": "Archives/per kecamatan/Bojonegoro.pdf",
+      "bytes": 18861653,
+      "sha256": "3f2a37809c59def24393fdbfd73c4202f5f6e7e13f96b328c845a9510a681b54"
+    },
+    {
+      "path": "Archives/per kecamatan/Bondowoso.pdf",
+      "bytes": 8728379,
+      "sha256": "71ab5f41657196ad801f3955951c53e69d886bf8dc0de795a4dbe01280715cb7"
+    },
+    {
+      "path": "Archives/per kecamatan/Gresik.pdf",
+      "bytes": 20503652,
+      "sha256": "ff0d7aa726c8af31e9fa79bf1d779a27a39218765a3c478a04fd458b30f0b8bc"
+    },
+    {
+      "path": "Archives/per kecamatan/Jember.pdf",
+      "bytes": 32171878,
+      "sha256": "d4d6515825422307d0fbbf55469f19e13f14f7a8d08ef3ccb48587164e43314f"
+    },
+    {
+      "path": "Archives/per kecamatan/Jombang.pdf",
+      "bytes": 14414170,
+      "sha256": "c8ddbfc9e333cc3cbf1f5b6999de9883bffe0f53deb523e6f53ef3d207564601"
+    },
+    {
+      "path": "Archives/per kecamatan/Kediri.pdf",
+      "bytes": 7225499,
+      "sha256": "046be09322f4a1dda074d59cc58231a91bb939082d61c7a6fec69ccb5e903f7d"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Batu.pdf",
+      "bytes": 12831601,
+      "sha256": "5a2bd4e99922e8b94e11f416beaf2ef8c18b59a5c7d1c6254450e07b92174bdb"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Blitar.pdf",
+      "bytes": 3581491,
+      "sha256": "f35af77994eb315ea2b9643a696a8c87d7ba53607dc5aba1448ce9e269468a9a"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Kediri.pdf",
+      "bytes": 6460518,
+      "sha256": "e52d175cc4d6333d38df8bfaecff3f198773ed0cb2d228b040492eb72e3d69b7"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Madiun.pdf",
+      "bytes": 14449739,
+      "sha256": "6d5236fe02ee8ccebedcd2cb6a4f0a73ae68ff46e648090c5861cbaf0343dff7"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Malang.pdf",
+      "bytes": 8608296,
+      "sha256": "f1b66376e3ea2cabcf22d92fbd9713258b6c3e7d4025fe14ad9b7a07e71b1d1f"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Mojokerto.pdf",
+      "bytes": 12866583,
+      "sha256": "4d496279f44099bedc4206902dc195a96068ae97b0adc1cd6585fba6be8a155b"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Pasuruan.pdf",
+      "bytes": 14766495,
+      "sha256": "bfcd7881139a6ae2ba48d4ddba3f1839bc923fce2a28f424ae8cc5964a80ff85"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Probolinggo.pdf",
+      "bytes": 30023161,
+      "sha256": "af21e4cf8fc09050672ee59bc50b72321fa71d1d103d35f9a8fd3c93daf4a9f6"
+    },
+    {
+      "path": "Archives/per kecamatan/Kota Surabaya.pdf",
+      "bytes": 4236484,
+      "sha256": "0546597605878e4142ba6bcbf729888ab99e02af5313f1697316403e40ca32da"
+    },
+    {
+      "path": "Archives/per kecamatan/Lamongan.pdf",
+      "bytes": 25468478,
+      "sha256": "e615473ba9ab7461fe5b5e21dbdcf435ee23762c1fe68c4a85bb0fe1059b4df3"
+    },
+    {
+      "path": "Archives/per kecamatan/Lumajang.pdf",
+      "bytes": 21146484,
+      "sha256": "55af442ae808ecb96052591f48c034b9ca543c4c3e491c0ed1e9ec969069d08e"
+    },
+    {
+      "path": "Archives/per kecamatan/Madiun.pdf",
+      "bytes": 12134670,
+      "sha256": "bfdb2233cae980b7cbcbb0beee5dabaaca547b41e7115665d647a2a4a339def3"
+    },
+    {
+      "path": "Archives/per kecamatan/Magetan.pdf",
+      "bytes": 13108733,
+      "sha256": "48063eca4f8f0829dde4f072f0082530e0335914adb68f5f3530e272d404df9a"
+    },
+    {
+      "path": "Archives/per kecamatan/Malang.pdf",
+      "bytes": 21835494,
+      "sha256": "cafc6e0a2c7f4f48c0478973010c7f10c17693140a9ab5f4199ac9fbbb1bbfa3"
+    },
+    {
+      "path": "Archives/per kecamatan/Mojokerto.pdf",
+      "bytes": 14919486,
+      "sha256": "ee29819833acf02148969a280bd81b5724bc62a408f4a173dddc86a2195e78f9"
+    },
+    {
+      "path": "Archives/per kecamatan/Nganjuk.pdf",
+      "bytes": 6314587,
+      "sha256": "6c557b3e27568c7e249e7b455b6266f6baa23c623a8ac299d8cdb62d4d85a3c9"
+    },
+    {
+      "path": "Archives/per kecamatan/Ngawi.pdf",
+      "bytes": 10468707,
+      "sha256": "d9335acb0d7be482c6277b749bcf91a66a79ab55cd4303ea709bfacdf6cffe4b"
+    },
+    {
+      "path": "Archives/per kecamatan/pacitan.pdf",
+      "bytes": 5593405,
+      "sha256": "51a3a39a7f7d7d8c06c9a26ccc79f6a2e11aa45acbd00eff556574cf664e41b6"
+    },
+    {
+      "path": "Archives/per kecamatan/Pamekasan.pdf",
+      "bytes": 12305587,
+      "sha256": "d0db783af481b4b4fe13e614659a21fc18c3d0b72e5c28f2678921ae18014484"
+    },
+    {
+      "path": "Archives/per kecamatan/Pasuruan.pdf",
+      "bytes": 4115305,
+      "sha256": "171ab34b5a191de9a3877ed1f7fd3f6b222ca1c31d69f0c918e4eb7af165912e"
+    },
+    {
+      "path": "Archives/per kecamatan/ponorogo.pdf",
+      "bytes": 6561508,
+      "sha256": "3d3dae90bc0248b41499362b02ddc93b46c5ad149a38d38f066c276b072c2489"
+    },
+    {
+      "path": "Archives/per kecamatan/Probolinggo.pdf",
+      "bytes": 12166823,
+      "sha256": "1bb601822123bfee5e246e0985d1fd02b4d147c7cfb49dd3228e18fc0f6ab24b"
+    },
+    {
+      "path": "Archives/per kecamatan/Sampang.pdf",
+      "bytes": 6146612,
+      "sha256": "61e738d1bc37348fd634507dea56b46fee5b2fb378ff393952a3877943959dc0"
+    },
+    {
+      "path": "Archives/per kecamatan/Sidoarjo.pdf",
+      "bytes": 12341124,
+      "sha256": "3e6e7d73b62ca1f38192700191d46c00f290f129bbbc820192ed676e6e18ad2e"
+    },
+    {
+      "path": "Archives/per kecamatan/Situbondo.pdf",
+      "bytes": 11757644,
+      "sha256": "597825dbebbcf128c47d4a589a8bdf480d60aa9df57f7c5d5b482035b820ce57"
+    },
+    {
+      "path": "Archives/per kecamatan/Sumenep.pdf",
+      "bytes": 12874304,
+      "sha256": "d7b77802e2759edb693c6dbc84f92f9f6b812ca70445ae8a8bab353139156b09"
+    },
+    {
+      "path": "Archives/per kecamatan/Trenggalek.pdf",
+      "bytes": 3648468,
+      "sha256": "d3113b2125b5c65ba08a7dc84a5a6cea424ed37b7508b9f1daee3e8ffe6c00f4"
+    },
+    {
+      "path": "Archives/per kecamatan/Tuban.pdf",
+      "bytes": 11755690,
+      "sha256": "f78e7820f4ec13f6c0d84af3e699b7117be6f79df828c0278ed6143ba1342e31"
+    },
+    {
+      "path": "Archives/per kecamatan/Tulungagung.pdf",
+      "bytes": 14439876,
+      "sha256": "d74d5f8f1076e3f81c2701a8cbcbb8c93f5eaf5afd780c42674dd6795df2f087"
+    },
+    {
+      "path": "Archives/Proposal.docx",
+      "bytes": 601158,
+      "sha256": "c8c0ca806fcc15f5152c0c2789286eeac70b45eb1e2941af9bcfe812791614e1"
+    },
+    {
+      "path": "Archives/Puskesmas_2024.pdf",
+      "bytes": 2060882,
+      "sha256": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd"
+    },
+    {
+      "path": "Archives/puskesmas_jatim_alamat.csv",
+      "bytes": 121354,
+      "sha256": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a"
+    },
+    {
+      "path": "Archives/puskesmas_jatim_koordinat.csv",
+      "bytes": 198780,
+      "sha256": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0"
+    }
+  ]
+}

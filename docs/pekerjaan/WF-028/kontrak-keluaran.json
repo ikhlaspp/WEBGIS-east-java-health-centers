@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "source_catalog_sha256": "cc3e2e9e1f3f3b5e73e392aeea8d67b85560a8424c33a53fcd3bfa61f764c1d3",
+  "tickets": [
+    {
+      "id": "WF-013",
+      "title": "Menggali skenario penggunaan admin dan guest",
+      "artifacts": [
+        "skenario-penggunaan.md"
+      ],
+      "acceptance": "Skenario mencakup fasilitas tanpa koordinat dan data belum lengkap serta tidak mengharuskan akun guest."
+    },
+    {
+      "id": "WF-014",
+      "title": "Menetapkan kebutuhan fungsional dan prioritas rilis",
+      "artifacts": [
+        "matriks-FR-dan-scope-rilis.md"
+      ],
+      "acceptance": "Tujuh belas FR tercakup dan keputusan empat tiket P1 eksplisit sebelum WF-G2."
+    },
+    {
+      "id": "WF-015",
+      "title": "Menetapkan batas akses aplikasi",
+      "artifacts": [
+        "matriks-hak-akses-aplikasi.md"
+      ],
+      "acceptance": "Setiap operasi tulis hanya dapat dilakukan admin melalui jalur terotorisasi; tidak ada registrasi publik yang tidak diminta."
+    },
+    {
+      "id": "WF-016",
+      "title": "Menentukan isi setiap halaman dan alur navigasi",
+      "artifacts": [
+        "inventaris-halaman-dan-konten.md"
+      ],
+      "acceptance": "Seluruh skenario 2.1.1 memiliki jalur halaman yang jelas dan tidak bergantung pada marker untuk mengakses fasilitas tanpa titik."
+    },
+    {
+      "id": "WF-017",
+      "title": "Menginventarisasi arsip dan kesenjangan dataset",
+      "artifacts": [
+        "matriks-ketersediaan-dataset.md"
+      ],
+      "acceptance": "Matriks membedakan data mentah, staging, dan data tervalidasi; 565 kandidat tidak disebut lokasi terverifikasi."
+    },
+    {
+      "id": "WF-018",
+      "title": "Memeriksa kelayakan sumber untuk scraping/pengunduhan",
+      "artifacts": [
+        "katalog-sumber-scraping.md",
+        "catatan-kelayakan-sumber.md"
+      ],
+      "acceptance": "Setiap dataset wajib memiliki jalur akuisisi yang dapat dijelaskan; pemeriksaan sampel bukan klaim batch penuh sudah berhasil."
+    },
+    {
+      "id": "WF-019",
+      "title": "Menetapkan periode, satuan, dan identitas sumber",
+      "artifacts": [
+        "kebijakan-periode-unit-identitas.md"
+      ],
+      "acceptance": "Nama file tidak menjadi bukti tahun observasi dan edisi batas wilayah tidak dianggap otomatis sesuai snapshot fasilitas."
+    },
+    {
+      "id": "WF-020",
+      "title": "Menentukan aturan kelengkapan dan penanganan data bermasalah",
+      "artifacts": [
+        "aturan-kualitas-dataset.md"
+      ],
+      "acceptance": "Tidak ada aturan yang menyamakan data hilang dengan nol atau menganggap verifikasi parsial sebagai cakupan penuh."
+    },
+    {
+      "id": "WF-021",
+      "title": "Menentukan indikator tabular dan cara agregasinya",
+      "artifacts": [
+        "katalog-indikator.md"
+      ],
+      "acceptance": "F berasal dari master administratif, bukan banyaknya marker; rasio kabupaten bukan rata-rata sederhana rasio kecamatan."
+    },
+    {
+      "id": "WF-022",
+      "title": "Menentukan kebutuhan peta tematik dan legenda",
+      "artifacts": [
+        "kebutuhan-layer-dan-legenda.md"
+      ],
+      "acceptance": "Setiap warna memiliki arti tertulis; data hilang berbeda dengan nol dan perubahan skala tidak tersembunyi."
+    },
+    {
+      "id": "WF-023",
+      "title": "Menentukan kebutuhan analisis radius",
+      "artifacts": [
+        "kebutuhan-analisis-radius.md"
+      ],
+      "acceptance": "Radius tidak disebut waktu tempuh dan cakupan area tidak diubah menjadi persentase penduduk terlayani."
+    },
+    {
+      "id": "WF-024",
+      "title": "Menetapkan keluaran penelitian dan batas kesimpulan",
+      "artifacts": [
+        "spesifikasi-keluaran-penelitian.md"
+      ],
+      "acceptance": "Keluaran penelitian memiliki hubungan yang jelas ke data dan metode; laporan tidak memerlukan analisis P2."
+    },
+    {
+      "id": "WF-025",
+      "title": "Menetapkan target performa dan kegunaan",
+      "artifacts": [
+        "baseline-performa-dan-kegunaan.md"
+      ],
+      "acceptance": "Setiap target mempunyai profil uji; angka usulan tidak dinyatakan sebagai hasil pengukuran."
+    },
+    {
+      "id": "WF-026",
+      "title": "Menetapkan target keamanan, backup, dan reproduksibilitas",
+      "artifacts": [
+        "baseline-keamanan-pemulihan-reproduksi.md"
+      ],
+      "acceptance": "Backup DB dan artefak sama-sama tercakup; target pemulihan bisa diuji pada environment terpisah."
+    },
+    {
+      "id": "WF-027",
+      "title": "Menyusun strategi UAT serta matriks kebutuhan–uji",
+      "artifacts": [
+        "matriks-kebutuhan-pengujian.md",
+        "strategi-UAT.md"
+      ],
+      "acceptance": "Seluruh FR/NFR mempunyai test atau bukti penerimaan; jumlah peserta usulan tidak dianggap peserta sudah tersedia."
+    },
+    {
+      "id": "WF-028",
+      "title": "Menyelesaikan SRS dan menerima WF-G2",
+      "artifacts": [
+        "SRS-baseline.md",
+        "penerimaan-WF-G2.md",
+        "keputusan-scope-P1.md"
+      ],
+      "acceptance": "Tidak ada kebutuhan wajib dengan kriteria penerimaan ambigu; semua P1 berstatus dipilih atau ditunda dengan alasan."
+    }
+  ]
+}

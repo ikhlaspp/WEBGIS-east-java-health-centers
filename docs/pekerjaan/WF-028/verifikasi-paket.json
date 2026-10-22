@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-10-22T22:43:43.765534+00:00",
+  "status": "passed",
+  "tickets": 16,
+  "required_artifacts_and_handoffs": 52,
+  "local_links_checked": 59,
+  "FR_rows": 17,
+  "NFR_rows": 8,
+  "archive_hashes_checked": 49,
+  "package_files_checked": 56,
+  "arithmetic_examples": [
+    {
+      "population": 30000,
+      "facilities": 1,
+      "expected": [
+        1,
+        0
+      ],
+      "actual": [
+        1,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "population": 30001,
+      "facilities": 1,
+      "expected": [
+        2,
+        1
+      ],
+      "actual": [
+        2,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "population": 10000,
+      "facilities": 0,
+      "expected": [
+        1,
+        1
+      ],
+      "actual": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "population": 0,
+      "facilities": 0,
+      "expected": [
+        0,
+        0
+      ],
+      "actual": [
+        0,
+        0
+      ],
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Document presence, trace coverage, local links, archive integrity, and arithmetic examples. Not application tests, source licensing, or stakeholder acceptance."
+}

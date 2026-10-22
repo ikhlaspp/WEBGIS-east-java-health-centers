@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-10-23",
+  "method": "text extraction only; not visual validation",
+  "sources": [
+    {
+      "source": "Archives/Puskesmas_2024.pdf",
+      "sha256": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "Archives/Puskesmas_2024.pdf",
+        "-"
+      ],
+      "pages": 239,
+      "text_bytes": 2637077,
+      "samples": [
+        {
+          "page_1_based": 136,
+          "needle": "35010200001",
+          "excerpt": "4873  34710200017  JETIS                                                                                                        Gedongtengen          Kota Yogyakarta         DI Yogyakarta  Non Rawat Inap  Perkotaan\n4874  34710200018  TEGALREJO        Jl. Prof. Dr. Sardjito No. 22 Terban Gondokusuman                                           Jetis                 Kota Yogyakarta         DI Yogyakarta  Non Rawat Inap  Perkotaan\n4875  35010200001  DONOROJO                                                                                                     Tegalrejo             Kota Yogyakarta         DI Yogyakarta  Rawat Inap      Perdesaan\n4876  35010200002  KALAK            T Jl. Bausasran DN III/819 Bausasran Danurejan                                              Donorojo              Pacitan                 Jawa Timur     Non Rawat Inap  Terpencil\n4877  35010200003  PUNUNG                                                                                                       Donorojo              Pacitan                 Jawa Timur     Rawat Inap      Perdesaan\n4878  35010200004  GONDOSARI        Jl. Krasak Timur No. 34 Bausasran Danurejan                                                 Punung                Pacitan                 Jawa Timur     Rawat Inap      Terpencil\n      35010200005  PRINGKUKU        Jl. Jayeng Prawiran No. 13 Purwokinanti Pakualaman                                          Punung                Pacitan                 Jawa Timur     Non Rawat Inap  Perdesaan\n\n                                    N Jl. Ledok Gondomanan No. 9 Prawirodirjan Gondomanan                                                             Pacitan\n"
+        }
+      ]
+    },
+    {
+      "source": "Archives/per kecamatan/Bangkalan.pdf",
+      "sha256": "cf15b2de7ff379ec81eb247bac3bb2d71f25f9d26842923d950a7587e25cbcad",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "Archives/per kecamatan/Bangkalan.pdf",
+        "-"
+      ],
+      "pages": 334,
+      "text_bytes": 610279,
+      "samples": [
+        {
+          "page_1_based": 51,
+          "needle": "1.1.1",
+          "excerpt": "           GEOGRAPHY CONDITION\n\nTabel     1.1.1        Luas Daerah dan Jumlah Pulau Menurut Kecamatan di\nTable                  Kabupaten Bangkalan, 2023\n\n           Total Area and Number of Islands by District in Bangkalan\n\n                       Regency, 2023\n\n         Kecamatan                       Ibukota Kecamatan   Luas"
+        },
+        {
+          "page_1_based": 52,
+          "needle": "1.1.1",
+          "excerpt": "KABUPATEN BANGKALAN DALAM ANGKA 2024\n\nLanjutan Tabel/Continued Table 1.1.1\n\n            Kecamatan        Persentase terhadap Luas Kabupaten/     Jumlah Pulau\n                                              Kota                 Number of Islands\n       .id District\n        .go (1)              Percentage to Regency/Municipal Area            (5)\nps Kamal\n.b Labang                                            (4)                   �"
+        },
+        {
+          "page_1_based": 89,
+          "needle": "3.1.1",
+          "excerpt": "           POPULATION\n\nTabel     3.1.1  Penduduk, Laju Pertumbuhan Penduduk, Distribusi\nTable            Persentase Penduduk, Kepadatan Penduduk, Rasio Jenis\n\n                 Kelamin Penduduk Menurut Kecamatan di Kabupaten\n\n                 Bangkalan, 2023\n\n           Population, Population Growth Rate, Percentage"
+        },
+        {
+          "page_1_based": 90,
+          "needle": "3.1.1",
+          "excerpt": "KABUPATEN BANGKALAN DALAM ANGKA 2024\n\nLanjutan Tabel/Continued Table 3.1.1\n\n       .id Kecamatan           Persentase Penduduk  Kepadatan Penduduk per km2\n\n              Subdistrict      Percentage of Total Population Population Density per sq.km\n\n         s.go (1)                     (4)           (5)\n.bp Kamal"
+        }
+      ]
+    },
+    {
+      "source": "Archives/per kecamatan/Bojonegoro.pdf",
+      "sha256": "3f2a37809c59def24393fdbfd73c4202f5f6e7e13f96b328c845a9510a681b54",
+      "command": [
+        "pdftotext",
+        "-layout",
+        "Archives/per kecamatan/Bojonegoro.pdf",
+        "-"
+      ],
+      "pages": 244,
+      "text_bytes": 8296,
+      "samples": []
+    }
+  ]
+}

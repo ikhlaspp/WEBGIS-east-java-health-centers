@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-011",
+  "status": "blocked",
+  "preparation": "local_candidate_ready",
+  "executor": "Codex",
+  "accepted": false,
+  "reviewer": null,
+  "blockers": [
+    "Pendahulu WF-010 belum done; hanya persiapan paket, bukan kelanjutan antrean formal",
+    "Penerimaan reviewer belum tersedia",
+    "Commit/push per tiket menunggu penerimaan"
+  ],
+  "artifacts": [
+    "standar-definition-of-done.md",
+    "standar-bukti-dan-defect.md"
+  ],
+  "delivery": {
+    "remote": "origin",
+    "branch": "main",
+    "status": "pending",
+    "commit": null
+  },
+  "next_action": "Review paket dan konfirmasi keputusan terbuka; lalu penerimaan dan delivery sesuai urutan"
+}

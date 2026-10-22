@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-22T21:50:22.831226+00:00",
+  "status": "passed",
+  "phase_one_tickets": 12,
+  "artifact_and_handoff_files_checked": 48,
+  "source_hashes_checked": 11,
+  "estimate_rows": 160,
+  "assignment_rows": 160,
+  "errors": [],
+  "scope": "Presence, source hashes and arithmetic only; not stakeholder acceptance, application tests or Git delivery."
+}

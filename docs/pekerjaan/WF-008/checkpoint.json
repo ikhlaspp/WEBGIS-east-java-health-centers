@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-008",
+  "status": "blocked",
+  "preparation": "local_candidate_ready",
+  "executor": "Codex",
+  "accepted": false,
+  "reviewer": null,
+  "blockers": [
+    "Pendahulu WF-007 belum done; hanya persiapan paket, bukan kelanjutan antrean formal",
+    "Penerimaan reviewer belum tersedia",
+    "Commit/push per tiket menunggu penerimaan",
+    "Konfirmasi tim/kapasitas, budget/deadline atau penerima terkait masih pending; lihat register keputusan D07–D10"
+  ],
+  "artifacts": [
+    "estimasi-usaha-per-tiket.md",
+    "jadwal-baseline.md",
+    "catatan-jalur-kritis.md"
+  ],
+  "delivery": {
+    "remote": "origin",
+    "branch": "main",
+    "status": "pending",
+    "commit": null
+  },
+  "next_action": "Review paket dan konfirmasi keputusan terbuka; lalu penerimaan dan delivery sesuai urutan"
+}

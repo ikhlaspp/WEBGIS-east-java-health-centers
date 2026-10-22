@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-23T04:49:16.380008+07:00",
+  "checks": {
+    "php": {
+      "command": [
+        "php",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "PHP 8.4.22 (cli) (built: Jun  3 2026 01:22:20) (ZTS Visual C++ 2022 x64)\nCopyright (c) The PHP Group\nBuilt by The PHP Group\nZend Engine v4.4.22, Copyright (c) Zend Technologies",
+      "stderr": ""
+    },
+    "php_modules": {
+      "command": [
+        "php",
+        "-m"
+      ],
+      "exit_code": 0,
+      "stdout": "[PHP Modules]\nbcmath\ncalendar\nCore\nctype\ncurl\ndate\ndom\nexif\nfileinfo\nfilter\ngd\nhash\niconv\nintl\njson\nlibxml\nmbstring\nmysqli\nmysqlnd\nopenssl\npcre\nPDO\npdo_mysql\nPhar\nrandom\nreadline\nReflection\nsession\nSimpleXML\nSPL\nstandard\ntokenizer\nxml\nxmlreader\nxmlwriter\nxsl\nzlib\n\n[Zend Modules]",
+      "stderr": ""
+    },
+    "composer": {
+      "command": [
+        "composer",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Composer version 2.4.1 2022-08-20 11:44:50",
+      "stderr": "Deprecation Notice: Constant E_STRICT is deprecated in phar://D:/laragon/bin/composer/composer.phar/src/Composer/Util/Silencer.php:36"
+    },
+    "node": {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "v24.14.1",
+      "stderr": ""
+    },
+    "npm": {
+      "command": [
+        "npm",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "11.11.0",
+      "stderr": ""
+    },
+    "python": {
+      "command": [
+        "python",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Python 3.10.6",
+      "stderr": ""
+    },
+    "psql": {
+      "command": [
+        "where.exe",
+        "psql"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "INFO: Could not find files for the given pattern(s)."
+    }
+  }
+}

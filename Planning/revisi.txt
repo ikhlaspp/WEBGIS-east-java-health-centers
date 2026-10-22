@@ -1,3 +1,0 @@
-role akun hanya admin dan user(guest untuk melihat hasil analisis), untuk pemegang data tidak perlu karna data kita ambil secara langsung dengan scrapping...
-
-lalu untuk 

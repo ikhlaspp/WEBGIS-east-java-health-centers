@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-23",
+  "algorithm": "sha256",
+  "sources": [
+    {
+      "path": "Archives/Proposal.docx",
+      "bytes": 601158,
+      "sha256": "c8c0ca806fcc15f5152c0c2789286eeac70b45eb1e2941af9bcfe812791614e1"
+    },
+    {
+      "path": "Planning/revisi.txt",
+      "bytes": 172,
+      "sha256": "5eb06642e99f6a8ca379a55bf7e6fbc70b1bac662cf53f311b5caae486c30a8b"
+    },
+    {
+      "path": "Planning/Waterfall/01-WBS-waterfall.md",
+      "bytes": 45883,
+      "sha256": "7be908803e61998ac0bd419137fd9fae06cdec42e6e892069ed60a496a2d92c6"
+    },
+    {
+      "path": "Planning/Waterfall/Tiket/daftar-tiket.json",
+      "bytes": 511025,
+      "sha256": "cc3e2e9e1f3f3b5e73e392aeea8d67b85560a8424c33a53fcd3bfa61f764c1d3"
+    },
+    {
+      "path": "Planning/01-kebutuhan-dan-ruang-lingkup.md",
+      "bytes": 8652,
+      "sha256": "e230f98481668ab66c19bb863d3536c63371c44e6c35e7b278e1760ff424b703"
+    },
+    {
+      "path": "Planning/02-dataset-dan-audit.md",
+      "bytes": 11857,
+      "sha256": "52eb1590eccc4215db1cffe879d37a8431737dbf4f305b8d1b9a7371309f5316"
+    },
+    {
+      "path": "Planning/03-arsitektur-dan-analisis.md",
+      "bytes": 13359,
+      "sha256": "3989252c66f0c18b42bccdc9568ab01ac7b16ae7431e4edb68cdaaa16c744a48"
+    },
+    {
+      "path": "Planning/04-supabase-dan-kamus-data.md",
+      "bytes": 16654,
+      "sha256": "bb1cfe8402b7a5603a9c933aaf405ce10da2fc83f29521d6b73458fee01d2404"
+    },
+    {
+      "path": "Planning/05-rencana-pengujian.md",
+      "bytes": 17086,
+      "sha256": "2216f2751b366ba78c7930ee42a4497db34031fb5ecb4349aa2eadfae97473a3"
+    },
+    {
+      "path": "Planning/06-tahapan-dan-kebutuhan.md",
+      "bytes": 10835,
+      "sha256": "9087c4ff68d8294b200fb20030ceb13588801ee7b42f02c735c068b1a3225090"
+    },
+    {
+      "path": "Planning/07-sumber-dan-keputusan.md",
+      "bytes": 8516,
+      "sha256": "b18a3d2a3f67f455be66ef0941b633b342fabb13d0acfbd824167c080ca69b12"
+    }
+  ]
+}

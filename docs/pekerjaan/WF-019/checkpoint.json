@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-019",
+  "status": "in_review",
+  "local_deliverables": "prepared_and_self_reviewed",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all 16 folder-02 items and one progress commit per item; stakeholder acceptance is separate.",
+  "artifacts": [
+    "kebijakan-periode-unit-identitas.md"
+  ],
+  "review": "Snapshot 2024-S1, target penduduk/master 2023, unit/identity/provenance ditulis; polygon 2026 belum diterima.",
+  "open_items": [
+    "Penerimaan reviewer eksternal belum tercatat; WF-G2 tidak diklaim accepted.",
+    "Edisi/izin polygon historis dan provider batch masih terbuka."
+  ],
+  "git_delivery": {
+    "kind": "progress_checkpoint",
+    "target": "origin/main",
+    "verification": "Exact commit and remote ancestry reported after push; final acceptance is separate."
+  }
+}

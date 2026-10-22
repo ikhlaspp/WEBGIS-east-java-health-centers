@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-014",
+  "status": "in_review",
+  "local_deliverables": "prepared_and_self_reviewed",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all 16 folder-02 items and one progress commit per item; stakeholder acceptance is separate.",
+  "artifacts": [
+    "matriks-FR-dan-scope-rilis.md"
+  ],
+  "review": "FR-01–17 dipetakan ke skenario/build/test; backend FR-15 P0, empat fitur P1 dipisahkan.",
+  "open_items": [
+    "Penerimaan reviewer eksternal belum tercatat; WF-G2 tidak diklaim accepted.",
+    "Scope P1/full/partial memakai asumsi kerja, belum jawaban eksplisit pemilik."
+  ],
+  "git_delivery": {
+    "kind": "progress_checkpoint",
+    "target": "origin/main",
+    "verification": "Exact commit and remote ancestry reported after push; final acceptance is separate."
+  }
+}

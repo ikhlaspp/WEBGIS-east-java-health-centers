@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-023",
+  "status": "in_review",
+  "local_deliverables": "prepared_and_self_reviewed",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all 16 folder-02 items and one progress commit per item; stakeholder acceptance is separate.",
+  "artifacts": [
+    "kebutuhan-analisis-radius.md"
+  ],
+  "review": "Radius 1000/3000/5000 meter, union/clip/pulau/tetangga/zero eligible; bukan klaim buffer aktual.",
+  "open_items": [
+    "Penerimaan reviewer eksternal belum tercatat; WF-G2 tidak diklaim accepted.",
+    "Scope P1/full/partial memakai asumsi kerja, belum jawaban eksplisit pemilik."
+  ],
+  "git_delivery": {
+    "kind": "progress_checkpoint",
+    "target": "origin/main",
+    "verification": "Exact commit and remote ancestry reported after push; final acceptance is separate."
+  }
+}

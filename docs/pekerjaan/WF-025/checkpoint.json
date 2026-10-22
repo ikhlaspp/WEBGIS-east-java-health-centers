@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-025",
+  "status": "in_review",
+  "local_deliverables": "prepared_and_self_reviewed",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all 16 folder-02 items and one progress commit per item; stakeholder acceptance is separate.",
+  "artifacts": [
+    "baseline-performa-dan-kegunaan.md"
+  ],
+  "review": "Profil dataset/perangkat/network/cache/VU/sample ditetapkan bersama target; belum hasil benchmark.",
+  "open_items": [
+    "Penerimaan reviewer eksternal belum tercatat; WF-G2 tidak diklaim accepted.",
+    "Hosting/budget/owner aktual belum dikonfirmasi; target kandidat engineering."
+  ],
+  "git_delivery": {
+    "kind": "progress_checkpoint",
+    "target": "origin/main",
+    "verification": "Exact commit and remote ancestry reported after push; final acceptance is separate."
+  }
+}

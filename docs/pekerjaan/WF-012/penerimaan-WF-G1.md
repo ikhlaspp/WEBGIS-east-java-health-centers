@@ -36,3 +36,7 @@ Pelaksana persiapan: Codex atas instruksi pengguna. Penerima bernama dan tanggal
 - Isu yang diterima beserta owner/tenggat: belum diputuskan.
 
 Otorisasi mengerjakan folder 01 tidak ditafsirkan sebagai penerimaan hasil yang belum dilihat. Pemeriksaan otomatis hanya menguji struktur dan kelengkapan lokal, bukan menggantikan review gerbang.
+
+## Revised college-assignment package
+
+The owner clarified that this is a college assignment and delegated preparation of the decisions. Review [the concrete revised package](revisi-tugas-kuliah-untuk-persetujuan.md). It proposes simplified planning and explicit data completion responsibilities; it does not record acceptance on the owner's behalf. The historical issues above remain visible; proposed replacements take effect only when this revised package is accepted.

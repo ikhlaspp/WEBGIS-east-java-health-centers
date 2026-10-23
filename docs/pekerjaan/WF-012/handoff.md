@@ -23,3 +23,7 @@ Expected: semua artefak katalog tersedia, asal keputusan terlihat, asumsi dibeda
 - Konfirmasi tim/kapasitas, budget/deadline atau penerima terkait masih pending; lihat register keputusan D07–D10
 
 Setelah review, perbarui kandidat sesuai keputusan nyata, catat reviewer/tanggal, kemudian commit dan push per tiket dengan identitas Git pengguna. Remote terkonfigurasi origin/main; belum ada SHA pengiriman untuk paket ini. Jam aktual tidak diukur; estimasi bukan realisasi.
+
+## Revised review package
+
+The owner delegated preparation of the college-assignment decisions. [The revised package](revisi-tugas-kuliah-untuk-persetujuan.md) is ready for one owner acceptance decision. Existing statuses record historical blockers; they are not automatically changed to done. After acceptance, reconcile the earlier candidate outputs and downstream decisions without claiming missing data is complete.

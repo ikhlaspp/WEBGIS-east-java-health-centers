@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "cases": [
+    {"raw": "30.001", "indicator": "population", "unit": "jiwa", "locale": "id_ID", "expected": 30001},
+    {"raw": "30,001", "indicator": "population", "unit": "jiwa", "locale": "en_US", "expected": 30001},
+    {"raw": "46,79", "indicator": "population", "unit": "ribu jiwa", "locale": "id_ID", "expected": 46790},
+    {"raw": "1.234,50", "indicator": "area", "unit": "ha", "locale": "id_ID", "expected": "12.3450"},
+    {"raw": "0", "indicator": "population", "unit": "jiwa", "locale": "id_ID", "expected": 0},
+    {"raw": "...", "indicator": "area", "unit": "km2", "locale": "id_ID", "expected": null}
+  ]
+}

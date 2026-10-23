@@ -1,0 +1,13 @@
+# Indicator parsing evidence
+
+24 October 2026. Implemented shared XLSX, configured CSV and BPS PDF adapters with a CLI. Raw values, cells, source hash, URL, page/sheet/cell locator, observation year, publication year and unit evidence travel with each record. Explicit locale parsing handles Indonesian separators; hectares convert to km2 and thousand-person units to whole people. Missing is distinct from zero. Formula, malformed number, missing metadata and changed headers do not become valid data.
+
+Executed both archived workbooks: each yields 666 district records and 38 totals, no parser diagnostics. All remain staging_unverified. Population notes claim 2023; area notes identify 585 records from 2023, 33 from 2019, 24 from 2021 and 24 from 2025. Publication filenames are not observation-year evidence. Original Archives files were read only; raw snapshots and outputs remain private under ignored data directories.
+
+Visually inspected Bangkalan physical pages 51 and 89 (printed pages 11 and 49). Each configured adapter extracts 18 district records plus one total. The population table explicitly uses thousands of people: Kamal 49,96 becomes 49960. Its published total converts to 1047310; the workbook says 1047320. This discrepancy remains unresolved for later validation rather than silently corrected. Table specs beside this log preserve source selection and metadata.
+
+The Bojonegoro PDF has a scanned table with only a rotated BPS URL in its text layer. Physical page 62 (printed page 36), table 3.1.1, was visually inspected. After identifying the watermark, the real RapidOCR backend produced 142 tokens and saved the original page render, token boxes, confidences and image hash. The adapter returns ocr_review_required with no promoted numeric rows. The printed total 1363058 is recognized but full row-level review is still required. OCR files remain private in data/staging/ocr.
+
+Verification: python -m pytest tests/python -q -> 37 passed, exit 0. Synthetic tests include locale/unit conversions, fractional people, invalid/formula/nonfinite numbers, zero versus missing, totals, changed CSV headers, missing year, empty Excel cells/source footers and low-confidence OCR evidence retention. Counts and hashes are in checkpoint.json.
+
+Reproduction: scripts/etl/indicators.py --input <archive> --indicator population|area --output data/staging/<name>.json. For PDFs pass --spec docs/pekerjaan/WF-058/bangkalan-population-table.json (or area spec). --ocr stores scanned-page evidence for review and deliberately returns exit 2 until reviewed. PDFs require manually evidenced table/year/unit selection; this adapter does not guess across all pages.

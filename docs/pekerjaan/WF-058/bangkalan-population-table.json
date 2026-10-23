@@ -1,0 +1,20 @@
+{
+  "regency_raw": "Bangkalan",
+  "locale": "id_ID",
+  "observation_year": 2023,
+  "publication_year": 2024,
+  "year_evidence": "Bangkalan, 2023",
+  "table_index": 0,
+  "data_start_row": 3,
+  "district_column": 0,
+  "total_labels": [
+    "Kabupaten Bangkalan"
+  ],
+  "publication_url": "https://bangkalankab.bps.go.id/id/publication/2024/02/28/9f1668d51e3b8ba782eb84a6/kabupaten-bangkalan-dalam-angka-2024.html",
+  "indicator": "population",
+  "pdf_page": 89,
+  "table_id": "3.1.1",
+  "value_column": 1,
+  "unit": "ribu jiwa",
+  "unit_evidence": "Penduduk (ribu)"
+}

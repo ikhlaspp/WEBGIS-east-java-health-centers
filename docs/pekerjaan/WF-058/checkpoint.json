@@ -1,0 +1,85 @@
+{
+  "ticket_id": "WF-058",
+  "status": "done",
+  "date": "2026-10-24",
+  "predecessor_commit": "e2573b18531fc12bfbaa25a8e8b376e4538c95f8",
+  "checks": {
+    "population-workbook": {
+      "report": {
+        "rows": 666,
+        "aggregates": 38,
+        "diagnostics": 0,
+        "statuses": {
+          "staging_unverified": 666
+        },
+        "observation_years": {
+          "2023": 666
+        }
+      },
+      "source_sha256": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169"
+    },
+    "area-workbook": {
+      "report": {
+        "rows": 666,
+        "aggregates": 38,
+        "diagnostics": 0,
+        "statuses": {
+          "staging_unverified": 666
+        },
+        "observation_years": {
+          "2023": 585,
+          "2019": 33,
+          "2021": 24,
+          "2025": 24
+        }
+      },
+      "source_sha256": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d"
+    },
+    "bangkalan-population": {
+      "report": {
+        "rows": 18,
+        "aggregates": 1,
+        "diagnostics": 0,
+        "statuses": {
+          "staging_unverified": 18
+        },
+        "observation_years": {
+          "2023": 18
+        }
+      },
+      "source_sha256": "cf15b2de7ff379ec81eb247bac3bb2d71f25f9d26842923d950a7587e25cbcad"
+    },
+    "bangkalan-area": {
+      "report": {
+        "rows": 18,
+        "aggregates": 1,
+        "diagnostics": 0,
+        "statuses": {
+          "staging_unverified": 18
+        },
+        "observation_years": {
+          "2023": 18
+        }
+      },
+      "source_sha256": "cf15b2de7ff379ec81eb247bac3bb2d71f25f9d26842923d950a7587e25cbcad"
+    },
+    "scanned_pdf": {
+      "source_sha256": "3f2a37809c59def24393fdbfd73c4202f5f6e7e13f96b328c845a9510a681b54",
+      "page": 62,
+      "tokens": 142,
+      "status": "requires_visual_review"
+    }
+  },
+  "tests": {
+    "command": "python -m pytest tests/python -q",
+    "result": "37 passed",
+    "exit_code": 0
+  },
+  "limitations": [
+    "Workbook metadata remains a derivative source claim until reconciliation.",
+    "OCR is stored for visual review, never promoted automatically.",
+    "This task completes parser implementation, not dataset certification."
+  ],
+  "review": "Technical self-review; no independent reviewer claimed.",
+  "next_action": "WF-059 after verified Git delivery"
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-038",
+  "status": "in_review",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all folder03 tasks; existing preference one progress commit per item, plain messages, Planning ignored.",
+  "artifacts": [
+    "spesifikasi-normalisasi-crosswalk.md"
+  ],
+  "self_review": "Raw/typed split, locale/unit/null, code+parent+edition, approved aliases dan Sempol–Ijen tanpa double-count didesain.",
+  "open_items": [
+    "Review/penerimaan stakeholder belum tercatat; status in_review bukan done/accepted.",
+    "Edisi/izin polygon historis, provider lokasi dan keputusan full/partial belum final."
+  ],
+  "delivery": {
+    "kind": "progress_checkpoint",
+    "remote": "origin",
+    "branch": "main",
+    "verification": "Commit SHA and remote ancestry reported after push; acceptance separate."
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "hash_policy": "UTF-8 text universal newlines normalized to LF",
+  "files": [
+    {
+      "path": "WF-013/skenario-penggunaan.md",
+      "sha256_utf8_lf": "b1f8fb6d2db38b4ba61b25ccbeb159981cb3ca8373cf36864ade395b30448625"
+    },
+    {
+      "path": "WF-014/matriks-FR-dan-scope-rilis.md",
+      "sha256_utf8_lf": "160dccad0b0895a696942e63300541245727f9dd56192729086e8881959905fd"
+    },
+    {
+      "path": "WF-015/matriks-hak-akses-aplikasi.md",
+      "sha256_utf8_lf": "f221a58f5306486e6a6481a7b4e8c0702310cbf29ff1b006c5abc0ed063ec119"
+    },
+    {
+      "path": "WF-016/inventaris-halaman-dan-konten.md",
+      "sha256_utf8_lf": "01f2c378568ce4a5b3d44d9049750b9e2aad6536be71950b3ad69bb4027ab7f7"
+    },
+    {
+      "path": "WF-017/matriks-ketersediaan-dataset.md",
+      "sha256_utf8_lf": "640b6c87915735c67628f394af9b1b72730ebc516127f120807d7b0180cb00b4"
+    },
+    {
+      "path": "WF-018/katalog-sumber-scraping.md",
+      "sha256_utf8_lf": "654b2ec11cdd412db36a0085875f461e982466e000336026c9bdb2bca222abbf"
+    },
+    {
+      "path": "WF-018/catatan-kelayakan-sumber.md",
+      "sha256_utf8_lf": "eb1a4d3676e8031d2a583d409fe1b9c71a8bcc1144d86e21df8139e788894d3b"
+    },
+    {
+      "path": "WF-019/kebijakan-periode-unit-identitas.md",
+      "sha256_utf8_lf": "0998f4860d093bef036acd478e631577a8379b4d6c2d84132571d87534f8ed6f"
+    },
+    {
+      "path": "WF-020/aturan-kualitas-dataset.md",
+      "sha256_utf8_lf": "a49fe760ea86ed61449fb31e81ebe2b310e4eb0d12bf6c3c7a4279cc75cff3f9"
+    },
+    {
+      "path": "WF-021/katalog-indikator.md",
+      "sha256_utf8_lf": "047c27e83b4354aefed1b003d8f109a7e47e4330fee19454b97fa6c70c3f76c8"
+    },
+    {
+      "path": "WF-022/kebutuhan-layer-dan-legenda.md",
+      "sha256_utf8_lf": "d6aede841c29570808d94acd71ccb7a2731d976c966002081fab943b59ef0b34"
+    },
+    {
+      "path": "WF-023/kebutuhan-analisis-radius.md",
+      "sha256_utf8_lf": "9996ba3f7d042557d2c841b183cec3b5e0adbb50da976f9fc3058e16719a271b"
+    },
+    {
+      "path": "WF-024/spesifikasi-keluaran-penelitian.md",
+      "sha256_utf8_lf": "65859b3c3260e977607f2e7743537a4149c10015c5dbd65c58be4762ec7b22ac"
+    },
+    {
+      "path": "WF-025/baseline-performa-dan-kegunaan.md",
+      "sha256_utf8_lf": "79f252ff93b5aefa9ca642c52dbbb4ec00cccd4ee5e00fdebabcec1dc884356e"
+    },
+    {
+      "path": "WF-026/baseline-keamanan-pemulihan-reproduksi.md",
+      "sha256_utf8_lf": "2bb19fde53fa40099781eb912cf4b854709aad31014d9100b83285b72f006f87"
+    },
+    {
+      "path": "WF-027/matriks-kebutuhan-pengujian.md",
+      "sha256_utf8_lf": "ce97fcc65e545885043bf113eef359ee852d8128ce03f8117590b873696b216a"
+    },
+    {
+      "path": "WF-027/strategi-UAT.md",
+      "sha256_utf8_lf": "08ca0ea55fb26828f1a0f6a7fa9dfb280e181efb01dff1b0cd379a57347fb93d"
+    },
+    {
+      "path": "WF-028/SRS-baseline.md",
+      "sha256_utf8_lf": "999ccb3ae377ca78a18a145288fa6e1d72ec96bd3cfc83e7d45e0e69fe0b25b3"
+    },
+    {
+      "path": "WF-028/penerimaan-WF-G2.md",
+      "sha256_utf8_lf": "ce35a51817b9022658e1c9eabf82f079a71ec2c72a331b8e6b4089d750d96f84"
+    },
+    {
+      "path": "WF-028/keputusan-scope-P1.md",
+      "sha256_utf8_lf": "9f1a29f4e44c6b043fea3cc2efa1a7c0f64a0f42d98976a8b52ead2c9256f968"
+    }
+  ]
+}

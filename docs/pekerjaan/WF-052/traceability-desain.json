@@ -1,0 +1,289 @@
+{
+  "requirements": [
+    {
+      "requirement": "FR-01",
+      "design_items": [
+        "WF-033",
+        "WF-034",
+        "WF-037",
+        "WF-038",
+        "WF-040"
+      ],
+      "tests": "Data D01,D02,D03,D04,D10",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-02",
+      "design_items": [
+        "WF-033",
+        "WF-034",
+        "WF-039",
+        "WF-040"
+      ],
+      "tests": "Spatial G01–G04",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-03",
+      "design_items": [
+        "WF-043",
+        "WF-045",
+        "WF-046",
+        "WF-047"
+      ],
+      "tests": "UI W01–W04",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-04",
+      "design_items": [
+        "WF-042",
+        "WF-043",
+        "WF-045",
+        "WF-046"
+      ],
+      "tests": "Spatial/UI G05,W05",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-05",
+      "design_items": [
+        "WF-033",
+        "WF-041",
+        "WF-045"
+      ],
+      "tests": "Formula A01–A07,A08-PARAM",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-06",
+      "design_items": [
+        "WF-039",
+        "WF-042",
+        "WF-043",
+        "WF-045"
+      ],
+      "tests": "Spatial G06–G11",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-07",
+      "design_items": [
+        "WF-030",
+        "WF-031",
+        "WF-044",
+        "WF-049",
+        "WF-050"
+      ],
+      "tests": "Repro R01–R03",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-08",
+      "design_items": [
+        "WF-029",
+        "WF-030",
+        "WF-031"
+      ],
+      "tests": "Integrasi I01,W01",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-09",
+      "design_items": [
+        "WF-030",
+        "WF-033",
+        "WF-034",
+        "WF-035",
+        "WF-036"
+      ],
+      "tests": "DB I01–I06,S06,S07",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-10",
+      "design_items": [
+        "WF-045",
+        "WF-046",
+        "WF-047"
+      ],
+      "tests": "UI W02–W04,W10",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-11",
+      "design_items": [
+        "WF-041",
+        "WF-045",
+        "WF-046"
+      ],
+      "tests": "Formula/UI A05,A06,W06",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-12",
+      "design_items": [
+        "WF-033",
+        "WF-042",
+        "WF-043",
+        "WF-045",
+        "WF-046"
+      ],
+      "tests": "Spatial/UI G05,W05",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-13",
+      "design_items": [
+        "WF-037",
+        "WF-040",
+        "WF-044",
+        "WF-045",
+        "WF-046"
+      ],
+      "tests": "Data/UI D07,W07,R03",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-14",
+      "design_items": [
+        "WF-048",
+        "WF-049",
+        "WF-050"
+      ],
+      "tests": "UI/security W08,S05-EXPORT",
+      "scope": "conditional_P1"
+    },
+    {
+      "requirement": "FR-15",
+      "design_items": [
+        "WF-032",
+        "WF-035",
+        "WF-036",
+        "WF-048",
+        "WF-049",
+        "WF-050"
+      ],
+      "tests": "Security/integrasi S01–S04,S05-IMPORT,S07,I04–I06",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "FR-16",
+      "design_items": [
+        "WF-041",
+        "WF-048",
+        "WF-049",
+        "WF-050"
+      ],
+      "tests": "Formula A08-RANK",
+      "scope": "conditional_P1"
+    },
+    {
+      "requirement": "FR-17",
+      "design_items": [
+        "WF-049",
+        "WF-050",
+        "WF-051"
+      ],
+      "tests": "Semua suite dan UAT",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-01",
+      "design_items": [
+        "WF-033",
+        "WF-034",
+        "WF-037",
+        "WF-038",
+        "WF-039",
+        "WF-040"
+      ],
+      "tests": "Data D01–D11, I02/I03",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-02",
+      "design_items": [
+        "WF-046",
+        "WF-047",
+        "WF-050"
+      ],
+      "tests": "UI W09,P03",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-03",
+      "design_items": [
+        "WF-030",
+        "WF-032",
+        "WF-043",
+        "WF-045",
+        "WF-050"
+      ],
+      "tests": "Performa P01,P02,P02-COLD,P03",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-04",
+      "design_items": [
+        "WF-046",
+        "WF-047",
+        "WF-050",
+        "WF-051"
+      ],
+      "tests": "UI W09,U01–U03",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-05",
+      "design_items": [
+        "WF-030",
+        "WF-034",
+        "WF-035",
+        "WF-036",
+        "WF-045",
+        "WF-048",
+        "WF-050"
+      ],
+      "tests": "Security S01–S05-IMPORT,S07,I05–I08",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-06",
+      "design_items": [
+        "WF-030",
+        "WF-031",
+        "WF-036",
+        "WF-041",
+        "WF-042",
+        "WF-044",
+        "WF-050"
+      ],
+      "tests": "Repro D11,A08-PARAM,R01–R03",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-07",
+      "design_items": [
+        "WF-036",
+        "WF-050"
+      ],
+      "tests": "Recovery S06",
+      "scope": "core_or_split_FR15"
+    },
+    {
+      "requirement": "NFR-08",
+      "design_items": [
+        "WF-039",
+        "WF-041",
+        "WF-042",
+        "WF-043",
+        "WF-044",
+        "WF-046",
+        "WF-051"
+      ],
+      "tests": "UI/UAT W05–W07,G10,UAT-02–05",
+      "scope": "core_or_split_FR15"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "tickets": [
+    {
+      "id": "WF-029",
+      "title": "Merancang hubungan Laravel, Leaflet, Supabase, dan Colab",
+      "artifacts": [
+        "diagram-arsitektur.md",
+        "alur-data.md"
+      ],
+      "verification": "Setiap keluaran SRS memiliki jalur komponen; tidak ada query browser langsung ke schema privat."
+    },
+    {
+      "id": "WF-030",
+      "title": "Merancang lingkungan development, test/staging, dan produksi",
+      "artifacts": [
+        "matriks-environment.md",
+        "kebijakan-dependensi.md"
+      ],
+      "verification": "Uji spasial direncanakan di PostgreSQL/PostGIS, bukan hanya SQLite; data uji tidak memakai kredensial produksi."
+    },
+    {
+      "id": "WF-031",
+      "title": "Merancang struktur kode dan alur integrasi",
+      "artifacts": [
+        "desain-struktur-repositori.md",
+        "alur-review-CI.md"
+      ],
+      "verification": "Setiap modul mempunyai lokasi dan tanggung jawab; rahasia, cache, dan dump tidak masuk daftar berkas yang dikomit."
+    },
+    {
+      "id": "WF-032",
+      "title": "Merancang proses batch dan penanganan kegagalan",
+      "artifacts": [
+        "desain-job-batch.md",
+        "matriks-error-retry.md"
+      ],
+      "verification": "Batch gagal tidak boleh mempromosikan rilis; pengulangan tidak menambah fasilitas atau analisis duplikat secara tak terkendali."
+    },
+    {
+      "id": "WF-033",
+      "title": "Membuat ERD dan kamus data final",
+      "artifacts": [
+        "ERD-final.md",
+        "kamus-data-final.md"
+      ],
+      "verification": "Setiap fakta penelitian dapat ditelusuri ke sumber dan rilis; seluruh hubungan ERD mempunyai definisi kolom."
+    },
+    {
+      "id": "WF-034",
+      "title": "Merancang constraint, indeks, dan migrasi",
+      "artifacts": [
+        "spesifikasi-constraint-indeks.md",
+        "urutan-migration.md"
+      ],
+      "verification": "Desain mencegah distrik boundary set lain masuk rilis dan status verified tanpa bukti yang dimiliki fasilitas terkait."
+    },
+    {
+      "id": "WF-035",
+      "title": "Merancang otorisasi admin dan akun teknis database",
+      "artifacts": [
+        "desain-otorisasi-dan-grants.md"
+      ],
+      "verification": "Runtime harian tidak memakai owner/BYPASSRLS; policy tidak mengasumsikan auth.uid Supabase jika identitas memakai session Laravel."
+    },
+    {
+      "id": "WF-036",
+      "title": "Merancang versi rilis, publikasi, dan pemulihan",
+      "artifacts": [
+        "desain-lifecycle-rilis.md",
+        "desain-backup-rollback.md"
+      ],
+      "verification": "Rollback memilih versi valid sebelumnya tanpa menghapus sejarah; koreksi data membentuk rilis baru."
+    },
+    {
+      "id": "WF-037",
+      "title": "Merancang adapter pengambilan tiap sumber",
+      "artifacts": [
+        "spesifikasi-adapter-sumber.md"
+      ],
+      "verification": "Tidak ada adapter yang menganggap respons HTTP sukses selalu berarti dataset lengkap; sumber historis tetap terkunci periodenya."
+    },
+    {
+      "id": "WF-038",
+      "title": "Merancang normalisasi dan crosswalk wilayah",
+      "artifacts": [
+        "spesifikasi-normalisasi-crosswalk.md"
+      ],
+      "verification": "Aturan tidak menebak kode wilayah dari nama atau potongan kode fasilitas dan tidak menghapus baris hanya demi jumlah target."
+    },
+    {
+      "id": "WF-039",
+      "title": "Merancang pencarian dan review koordinat",
+      "artifacts": [
+        "prosedur-geocoding-review.md",
+        "skema-bukti-lokasi.md"
+      ],
+      "verification": "Hanya lokasi facility yang terbukti dan verified layak buffer; fallback wilayah tidak otomatis dipromosikan menjadi lokasi bangunan."
+    },
+    {
+      "id": "WF-040",
+      "title": "Merancang staging dan laporan kualitas",
+      "artifacts": [
+        "kontrak-staging.md",
+        "spesifikasi-laporan-kualitas.md"
+      ],
+      "verification": "Baris gagal tidak hilang diam-diam; kualitas dilaporkan per kategori dan kandidat gagal tidak mendapat status validated."
+    },
+    {
+      "id": "WF-041",
+      "title": "Menulis spesifikasi rumus dan contoh hasil acuan",
+      "artifacts": [
+        "spesifikasi-formula.md",
+        "contoh-acuan-formula.md"
+      ],
+      "verification": "Expected result diturunkan dari definisi metode, bukan disalin dari fungsi implementasi yang kelak diuji."
+    },
+    {
+      "id": "WF-042",
+      "title": "Merancang operasi spasial dan toleransi",
+      "artifacts": [
+        "spesifikasi-operasi-spasial.md"
+      ],
+      "verification": "Tidak ada buffer dalam derajat yang ditafsirkan meter; overlap dan denominator cakupan memiliki definisi yang dapat diperiksa."
+    },
+    {
+      "id": "WF-043",
+      "title": "Merancang GeoJSON dan kelas choropleth",
+      "artifacts": [
+        "kontrak-layer-GeoJSON.md",
+        "spesifikasi-kelas-warna.md"
+      ],
+      "verification": "Contoh JSON valid tanpa Infinity/NaN dan skema properti cukup untuk tooltip serta halaman detail."
+    },
+    {
+      "id": "WF-044",
+      "title": "Merancang notebook dan manifest hasil",
+      "artifacts": [
+        "desain-notebook-dan-manifest.md"
+      ],
+      "verification": "Notebook dapat direproduksi tanpa langkah tersembunyi atau rumus yang berbeda dari aplikasi."
+    },
+    {
+      "id": "WF-045",
+      "title": "Menentukan kontrak endpoint dan respons",
+      "artifacts": [
+        "kontrak-API.md",
+        "contoh-respons-API.json"
+      ],
+      "verification": "Kontrak menjaga satu rilis untuk satu sesi tampilan; fasilitas tanpa titik tetap masuk endpoint tabel."
+    },
+    {
+      "id": "WF-046",
+      "title": "Membuat wireframe halaman publik",
+      "artifacts": [
+        "wireframe-publik.md",
+        "catatan-review-wireframe.md"
+      ],
+      "verification": "Tidak ada skenario yang hanya dapat diselesaikan pada desktop atau membutuhkan marker untuk fasilitas missing."
+    },
+    {
+      "id": "WF-047",
+      "title": "Merancang interaksi dan keadaan antarmuka",
+      "artifacts": [
+        "spesifikasi-state-interaksi.md"
+      ],
+      "verification": "Setiap state memiliki pemicu dan tampilan; request lambat serta sesi rilis berubah mempunyai perilaku pasti."
+    },
+    {
+      "id": "WF-048",
+      "title": "Merancang login admin dan fitur P1 terpilih",
+      "artifacts": [
+        "wireframe-admin-dan-P1.md"
+      ],
+      "verification": "Login admin inti tidak ikut ditunda bersama UI P1 dan tidak ada role pengelola baru."
+    },
+    {
+      "id": "WF-049",
+      "title": "Menyiapkan spesifikasi fixture dan expected result",
+      "artifacts": [
+        "spesifikasi-fixture.md",
+        "expected-results.md"
+      ],
+      "verification": "Kasus negatif mempunyai hasil penolakan yang jelas; peran pengelola pada fixture planning lama diganti sesuai revisi."
+    },
+    {
+      "id": "WF-050",
+      "title": "Menyusun prosedur uji integrasi dan nonfungsional",
+      "artifacts": [
+        "prosedur-pengujian-sistem.md"
+      ],
+      "verification": "Prosedur dapat dijalankan tester selain penulis modul; load test tidak diarahkan ke tile/geocoder publik."
+    },
+    {
+      "id": "WF-051",
+      "title": "Menyusun prosedur UAT dan kriteria gerbang rilis",
+      "artifacts": [
+        "skrip-UAT.md",
+        "checklist-gerbang-rilis.md"
+      ],
+      "verification": "Definisi lulus tidak dapat diubah sesudah melihat hasil uji tanpa perubahan baseline tercatat."
+    },
+    {
+      "id": "WF-052",
+      "title": "Meninjau konsistensi desain dan menerima WF-G3",
+      "artifacts": [
+        "paket-desain-baseline.md",
+        "penerimaan-WF-G3.md"
+      ],
+      "verification": "Semua kebutuhan P0 dan P1 terpilih punya desain serta prosedur verifikasi; konflik yang memblokir implementasi sudah selesai."
+    }
+  ]
+}

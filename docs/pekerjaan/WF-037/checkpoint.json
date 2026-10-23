@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-037",
+  "status": "in_review",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all folder03 tasks; existing preference one progress commit per item, plain messages, Planning ignored.",
+  "artifacts": [
+    "spesifikasi-adapter-sumber.md"
+  ],
+  "self_review": "Enam adapter memiliki input/discovery/parser/completeness/failure contracts; source edition/license/provider masih prerequisite nyata.",
+  "open_items": [
+    "Review/penerimaan stakeholder belum tercatat; status in_review bukan done/accepted.",
+    "Edisi/izin polygon historis, provider lokasi dan keputusan full/partial belum final."
+  ],
+  "delivery": {
+    "kind": "progress_checkpoint",
+    "remote": "origin",
+    "branch": "main",
+    "verification": "Commit SHA and remote ancestry reported after push; acceptance separate."
+  }
+}

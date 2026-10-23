@@ -1,0 +1,49 @@
+{
+  "ticket_id": "WF-056",
+  "status": "in_review",
+  "predecessor": "WF-055 done",
+  "completed": [
+    "Added SHA-pinned GitHub Actions for Python, PHP, frontend build and Playwright.",
+    "Added isolated PostgreSQL 16/PostGIS 3.4 CI service and a real geometry assertion.",
+    "Added explicit opt-in assertion failure probe and report artifacts.",
+    "Local Python tests, PHP checks, JS syntax and frontend build passed."
+  ],
+  "checks": [
+    {
+      "command": "python -m pytest tests/python -q",
+      "actual": "2 passed",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest tests/ci/assertion_failure.py -q",
+      "actual": "1 intentional assertion failure",
+      "exit_code": 1,
+      "expected_exit_code": 1
+    },
+    {
+      "command": "php vendor/bin/pint --dirty --format agent",
+      "actual": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "php artisan test",
+      "actual": "4 passed, 1 PostGIS test skipped because local pdo_pgsql/test service unavailable",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run lint; npm run build",
+      "actual": "passed",
+      "exit_code": 0
+    }
+  ],
+  "pending": [
+    "Observe GitHub Actions application/PostGIS/browser success and intentional failed Python job after push."
+  ],
+  "review": "Technical self-review; no independent reviewer claimed.",
+  "next_action": "Verify normal and failure-probe CI runs, then continue to WF-057.",
+  "delivery": {
+    "remote": "origin",
+    "branch": "main",
+    "verification": "Commit SHA and remote verification reported after push."
+  }
+}

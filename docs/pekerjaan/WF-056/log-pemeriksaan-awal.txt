@@ -1,0 +1,9 @@
+Local checks, 23 October 2026:
+Python fixtures: 2 passed, exit 0.
+Intentional assertion probe: 1 failed, exit 1 as required.
+Pint: passed, exit 0 (generated tool/cache paths excluded).
+PHPUnit: 4 passed, 1 skipped, exit 0. The skipped test needs PostgreSQL/PostGIS and pdo_pgsql; not available locally.
+JavaScript syntax: passed, exit 0.
+Vite build: passed, exit 0. Optional fontaine fallback optimization notice is non-blocking.
+Workflow YAML: parsed and both jobs present.
+Hosted pipeline/PostGIS/Playwright: awaiting actual remote run after push.

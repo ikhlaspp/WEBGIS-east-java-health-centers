@@ -39,6 +39,9 @@ __pycache__/
 htmlcov/
 .venv/
 .tools/
+/reports/
+/playwright-report/
+/test-results/
 venv/
 env/
 *.ipynb_checkpoints/

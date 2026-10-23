@@ -1,0 +1,15 @@
+{
+    "preset": "laravel",
+    "exclude": [
+        ".tools",
+        ".venv",
+        ".pytest_cache",
+        ".phpunit.cache",
+        "Archives",
+        "Planning",
+        "node_modules",
+        "vendor",
+        "storage",
+        "bootstrap/cache"
+    ]
+}

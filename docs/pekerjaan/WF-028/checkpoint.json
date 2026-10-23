@@ -10,7 +10,8 @@
   "artifacts": [
     "SRS-baseline.md",
     "penerimaan-WF-G2.md",
-    "keputusan-scope-P1.md"
+    "keputusan-scope-P1.md",
+    "revisi-tugas-kuliah-untuk-persetujuan.md"
   ],
   "review": "SRS menggabungkan 16 item, traceability dan scope; gerbang pending_review dengan blocker sumber/keputusan nyata.",
   "open_items": [
@@ -23,5 +24,8 @@
     "kind": "progress_checkpoint",
     "target": "origin/main",
     "verification": "Exact commit and remote ancestry reported after push; final acceptance is separate."
-  }
+  },
+  "review_package": "revisi-tugas-kuliah-untuk-persetujuan.md",
+  "review_package_status": "ready_for_owner_decision",
+  "next_action": "Owner reviews the concrete college-assignment supplement and accepts or requests changes; then reconcile affected baseline/checkpoint records and verify Git delivery. Do not backdate gate acceptance."
 }

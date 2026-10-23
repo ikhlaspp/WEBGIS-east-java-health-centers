@@ -28,3 +28,7 @@ Pemeriksaan struktur/hash/coverage tersedia pada [verifikasi paket](../WF-028/ve
 - Hosting/budget/owner aktual belum dikonfirmasi; target kandidat engineering.
 
 Commit progres satu item dikirim sesuai arahan; SHA/hasil remote dilaporkan setelah push. Setelah keputusan pemilik tersedia, revisi artefak dan catat reviewer/tanggal sebelum baseline accepted.
+
+## Revised review package
+
+The owner delegated preparation of the college-assignment decisions. [The revised package](revisi-tugas-kuliah-untuk-persetujuan.md) is ready for one owner acceptance decision. Existing statuses record historical blockers; they are not automatically changed to done. After acceptance, reconcile the earlier candidate outputs and downstream decisions without claiming missing data is complete.

@@ -23,3 +23,7 @@ Versi 1 · 23 Oktober 2026 · Pelaksana pemeriksaan teknis: Codex. **Keputusan g
 - Penerima kebutuhan: review SRS versi/hash, catat accepted atau rework dengan nama, tanggal dan alasan. Tidak ada tanda tangan palsu atau penerimaan otomatis karena push.
 
 Pekerjaan lokal dan 16 commit progres dapat dikirim sesuai instruksi pengguna. Status tiket kebutuhan tetap in_review; gerbang belum accepted dan implementasi/desain berikutnya tidak diklaim selesai. Bukti Git dicatat pada laporan pengiriman terpisah; setiap commit memuat satu paket item.
+
+## Revised college-assignment package
+
+The owner clarified that this is a college assignment and delegated preparation of the decisions. Review [the concrete revised package](revisi-tugas-kuliah-untuk-persetujuan.md). It proposes simplified planning and explicit data completion responsibilities; it does not record acceptance on the owner's behalf. The historical issues above remain visible; proposed replacements take effect only when this revised package is accepted.

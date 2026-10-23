@@ -7,3 +7,5 @@ JavaScript syntax: passed, exit 0.
 Vite build: passed, exit 0. Optional fontaine fallback optimization notice is non-blocking.
 Workflow YAML: parsed and both jobs present.
 Hosted pipeline/PostGIS/Playwright: awaiting actual remote run after push.
+
+Hosted run 39966249771: Python passed; PostGIS geometry test passed. Application page tests failed because a clean Git checkout lacked storage/framework/views, causing InvalidArgumentException: Please provide a valid cache path. Root .gitignore excluded the directory placeholders. Fix: preserve .gitignore placeholders for views, sessions, testing and logs while keeping runtime files ignored. Remote retest required.

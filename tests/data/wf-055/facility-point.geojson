@@ -1,0 +1,12 @@
+{
+  "type": "Feature",
+  "id": "SYNTH-FAC-001",
+  "properties": {
+    "fixture_id": "SYNTH-FAC-001",
+    "synthetic": true
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [112.01, -7.01]
+  }
+}

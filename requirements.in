@@ -1,0 +1,5 @@
+folium
+geopandas
+ipykernel
+pytest
+shapely

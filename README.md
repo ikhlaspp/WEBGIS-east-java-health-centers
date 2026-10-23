@@ -17,6 +17,10 @@ Some source data is incomplete: the archived facility-coordinate file has 565 of
 
 The repository setup item introduces Laravel and frontend lockfiles. The local PHP currently lacks `pdo_pgsql`; routes that need the database cannot run until a suitable driver is enabled. No Supabase credential is stored in this repository.
 
+## Python/GIS environment
+
+Use Python 3.12. On Windows, create `.venv` with `python -m venv .venv`; on other systems use `python3.12 -m venv .venv`. Install the pinned, hash-checked packages with `.venv/Scripts/python -m pip install --require-hashes -r requirements.lock` on Windows or `.venv/bin/python -m pip install --require-hashes -r requirements.lock` on Linux/macOS. Run fixture tests with `.venv/Scripts/python -m pytest tests/python -q` (Windows) or `.venv/bin/python -m pytest tests/python -q` (Linux/macOS). The notebook's sample geometry is synthetic; it does not process `Archives/`.
+
 ## Data handling
 
 - Treat files in `Archives/` as read-only source originals.

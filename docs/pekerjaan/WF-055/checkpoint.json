@@ -1,0 +1,84 @@
+{
+  "ticket_id": "WF-055",
+  "status": "blocked",
+  "input_hashes": {
+    "accepted_WF-G3_and_WF-054": "1ee8e1c6d7afe9284902a6aa5c58fe137dfe5818",
+    "fixture_spec": "docs/pekerjaan/WF-049/spesifikasi-fixture.md",
+    "expected_results": "docs/pekerjaan/WF-049/expected-results.md"
+  },
+  "code_revision": "1ee8e1c6d7afe9284902a6aa5c58fe137dfe5818",
+  "working_tree_paths": [
+    ".gitignore",
+    "README.md",
+    "requirements.in",
+    "requirements.lock",
+    "notebooks/gis_puskesmas.ipynb",
+    "tests/python/test_environment.py",
+    "tests/data/wf-055/facility-point.geojson",
+    "tests/data/wf-055/district-multipolygon.geojson",
+    "docs/pekerjaan/WF-055/log-setup-Python-Colab.md",
+    "docs/pekerjaan/WF-055/hasil-fixture-awal.txt",
+    "docs/pekerjaan/WF-055/handoff.md",
+    "docs/pekerjaan/WF-055/checkpoint.json"
+  ],
+  "completed": [
+    "Provisioned local CPython 3.12.15 in ignored workspace tools and created isolated .venv.",
+    "Generated universal hash-checked GIS/test dependency lock for Python 3.12.",
+    "Created synthetic Point and MultiPolygon fixtures and a notebook preflight.",
+    "Ran local fixture tests and notebook code cells successfully."
+  ],
+  "pending": [
+    "Run the notebook with the lock in Google Colab and record actual runtime version/output."
+  ],
+  "blocked": [
+    {
+      "issue": "No browser provider/session is available for accessing Google Colab in this environment.",
+      "impact": "WF-055 explicitly requires execution in both local and Colab environments; the ticket cannot be marked done yet.",
+      "owner": "Project owner / implementation",
+      "next_action": "Provide an available Colab browser session or run the notebook in Colab and return the actual runtime/output evidence."
+    }
+  ],
+  "evidence_paths": [
+    "docs/pekerjaan/WF-055/log-setup-Python-Colab.md",
+    "docs/pekerjaan/WF-055/hasil-fixture-awal.txt",
+    "docs/pekerjaan/WF-055/handoff.md"
+  ],
+  "checks": [
+    {
+      "command": "uv pip compile --python-version 3.12 --universal --generate-hashes requirements.in -o requirements.lock",
+      "environment": "uv 0.13.5; local CPython 3.12.15",
+      "expected": "pinned universal lock with hashes",
+      "actual": "53 packages resolved",
+      "exit_code": 0
+    },
+    {
+      "command": "uv pip sync --python .venv/Scripts/python.exe requirements.lock",
+      "environment": "Windows; CPython 3.12.15 in ignored .venv",
+      "expected": "install resolved packages",
+      "actual": "48 applicable packages installed",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/python/test_environment.py -q",
+      "environment": "Windows; CPython 3.12.15; GeoPandas 1.2.0; Shapely 2.2.0",
+      "expected": "imports pass; inside/outside spatial expected results match",
+      "actual": "2 passed",
+      "exit_code": 0
+    },
+    {
+      "command": "Parse notebook JSON and execute all Python code cells except the %pip installer cell",
+      "environment": "Windows; CPython 3.12.15; locked local environment",
+      "expected": "imports, geometry preflight, predicate, and Folium map cell run",
+      "actual": "passed; synthetic preflight message printed",
+      "exit_code": 0
+    },
+    {
+      "command": "Open Google Colab and run notebook",
+      "environment": "No browser provider/session available",
+      "expected": "Colab runtime reports version and synthetic preflight passes",
+      "actual": "not run; browser unavailable",
+      "exit_code": null
+    }
+  ],
+  "next_action": "Commit and push this blocked progress item; stop the serial queue until Colab evidence is available."
+}

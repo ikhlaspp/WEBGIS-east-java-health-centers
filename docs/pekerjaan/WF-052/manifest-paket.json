@@ -369,11 +369,11 @@
     },
     {
       "path": "WF-052/checkpoint.json",
-      "sha256_utf8_lf": "2f2171dc92af9bf4954f12a94c9d6655be56c9fff909ba9b41545f495ba32c99"
+      "sha256_utf8_lf": "2c4f81fbbd16f710e20fe18bc5412ffb4f154f3abb290225becc73886f078a29"
     },
     {
       "path": "WF-052/handoff.md",
-      "sha256_utf8_lf": "e1e0a311a24951091f7a3b123007c4394a3712da49660923097c62dafb49fa19"
+      "sha256_utf8_lf": "5c6f59be23d587d528bfa3636e9083b0108a240f92a5137249d8abfd94a58d50"
     },
     {
       "path": "WF-052/kontrak-keluaran.json",
@@ -389,7 +389,7 @@
     },
     {
       "path": "WF-052/penerimaan-WF-G3.md",
-      "sha256_utf8_lf": "c04b9171872e1cb9564cab8107a58b3a7ff983d3ec2d5100372a8a49e62241c5"
+      "sha256_utf8_lf": "f42649815b395d5a098baf36639061ef597c2e099d8710f1c69aea69323355d2"
     },
     {
       "path": "WF-052/traceability-desain.json",
@@ -397,7 +397,7 @@
     },
     {
       "path": "WF-052/validasi-desain.py",
-      "sha256_utf8_lf": "1d37de2a312e49e4db2633fd34d90d3f696305a8426dc063d7b3991f1a91ad6d"
+      "sha256_utf8_lf": "81418154df9f8d1e418714b8db5d543168cbb5c09fe09c5e7e4e694986cb3502"
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-23T03:30:33.287121+00:00",
+  "checked_at": "2026-10-23T04:31:29.237191+00:00",
   "status": "passed",
   "checks": {
     "items": 24,
     "required_artifacts_and_handoffs": 88,
-    "local_links": 158,
+    "local_links": 159,
     "json_files": 34,
     "manifest-paket.json_files": 99,
     "manifest-input.json_files": 20,

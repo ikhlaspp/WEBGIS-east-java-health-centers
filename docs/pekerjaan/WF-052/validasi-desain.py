@@ -29,7 +29,12 @@ for t in contract['tickets']:
         check(path.exists() and path.stat().st_size>0,f'Missing/empty {t["id"]}/{name}')
         required+=1
     cp=load(folder/'checkpoint.json')
-    check(cp['status']=='in_review' and not cp['stakeholder_accepted'],f'Acceptance claim {t["id"]}')
+    if t['id']=='WF-052':
+        check(cp['status']=='done' and cp['stakeholder_accepted'], 'WF-G3 acceptance must be explicitly recorded')
+        gate=(folder/'penerimaan-WF-G3.md').read_text(encoding='utf-8')
+        check('Status gerbang: accepted' in gate, 'WF-G3 acceptance record missing')
+    else:
+        check(cp['status']=='in_review' and not cp['stakeholder_accepted'],f'Acceptance claim {t["id"]}')
     for p in folder.glob('*.json'):
         if p.name=='verifikasi-desain.json':continue
         try:load(p);json_count+=1

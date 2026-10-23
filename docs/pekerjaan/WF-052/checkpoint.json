@@ -2,25 +2,32 @@
   "version": 1,
   "date": "2026-10-23",
   "ticket": "WF-052",
-  "status": "in_review",
+  "status": "done",
   "executor": "Codex",
-  "stakeholder_accepted": false,
-  "authorization": "User requested all folder03 tasks; existing preference one progress commit per item, plain messages, Planning ignored.",
+  "stakeholder_accepted": true,
+  "acceptance_record": {
+    "recipient": "Project owner / conversation user; repository identity Ikhlas Putra Pambagyo (ikhlaspp)",
+    "date": "2026-10-23",
+    "decision": "accepted",
+    "source": "Explicit user instruction: ok then accept it",
+    "accepted_baseline_manifest_sha256": "b90c8fd92f71718441e38bfcd2980516cc31df9782b24e7b8c6865c5cdc5297a"
+  },
+  "authorization": "User accepted WF-G3 and selected Archives as source data, Supabase as online database, and Vercel Hobby as hosting target.",
   "artifacts": [
     "paket-desain-baseline.md",
     "penerimaan-WF-G3.md"
   ],
-  "self_review": "24paket desain, trace17FR/8NFR,52handoff dan pemeriksaanJSON/hash/arithmetic dikumpulkan; WF-G3 pending review.",
+  "self_review": "24 paket desain, trace 17 FR/8 NFR, 52 handoff dan pemeriksaan JSON/hash/arithmetic lulus; WF-G3 diterima pemilik pekerjaan dengan dependensi data/runtime terbuka.",
   "open_items": [
-    "Review/penerimaan stakeholder belum tercatat; status in_review bukan done/accepted.",
-    "Edisi/izin polygon historis, provider lokasi dan keputusan full/partial belum final.",
-    "Hosting/akun/budget/versiDB aktual dan operator bernama perlu dikonfirmasi sebelum provisioning/operasi.",
-    "Empat P1 masih kandidat ditunda; tidak dinyatakan deferred resmi atau selected tanpa keputusan pemilik."
+    "Berkas polygon district tidak ditemukan di Archives; jangan memakai sumber eksternal tanpa keputusan dan verifikasi lisensi.",
+    "408 dari 973 fasilitas tidak memiliki koordinat; provider geocoding belum dipilih.",
+    "Supabase dan Vercel Hobby dipilih; akun, versi database dan deployment Laravel melalui runtime PHP komunitas perlu dibuktikan saat setup.",
+    "Empat P1 belum dipilih; jangan menandai deferred atau membangun tanpa keputusan scope."
   ],
   "delivery": {
-    "kind": "progress_checkpoint",
+    "kind": "accepted_baseline",
     "remote": "origin",
     "branch": "main",
-    "verification": "Commit SHA and remote ancestry reported after push; acceptance separate."
+    "verification": "Accepted by project owner in conversation; acceptance is distinct from runtime tests and academic review."
   }
 }

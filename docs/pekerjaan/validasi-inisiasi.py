@@ -18,8 +18,17 @@ for t in tickets[:12]:
     p=base/t['id']/'checkpoint.json'
     if p.exists():
         c=json.loads(p.read_text(encoding='utf-8'))
-        if c['accepted'] or c['delivery']['status']!='pending':
-            errors.append(f"Unexpected acceptance/delivery claim: {t['id']}")
+        if c['accepted']:
+            record = c.get('acceptance_record', {})
+            if c['status'] != 'done' or c.get('acceptance_gate') != 'WF-G1' or any(
+                not record.get(key) for key in ('recipient', 'recorded_at', 'source', 'reviewed_commit')
+            ) or record.get('decision') != 'accepted':
+                errors.append(f"Missing acceptance provenance: {t['id']}")
+            gate = (base/'WF-012/penerimaan-WF-G1.md').read_text(encoding='utf-8')
+            if '**Status: accepted.**' not in gate or record.get('reviewed_commit', '') not in gate:
+                errors.append(f"Acceptance does not match gate record: {t['id']}")
+        elif c['status'] == 'done':
+            errors.append(f"Done without acceptance: {t['id']}")
 manifest=json.loads((base/'WF-001/manifest-input.json').read_text(encoding='utf-8'))
 for item in manifest['sources']:
     if hashlib.sha256((root/item['path']).read_bytes()).hexdigest()!=item['sha256']:

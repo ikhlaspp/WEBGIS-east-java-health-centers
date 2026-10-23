@@ -1,3 +1,5 @@
+> Current baseline: accepted under [WF-G1](../WF-012/penerimaan-WF-G1.md) and [the college-project supplement](../WF-012/revisi-tugas-kuliah-untuk-persetujuan.md). The user is owner/approver; use free services and milestone-only scheduling. Earlier pending capacity, budget, and calendar statements below are historical assumptions superseded by that decision. No lecturer approval or team-hours commitment is implied.
+
 # Register keputusan
 
 Versi 1 — 23 Oktober 2026. Sumber keputusan adalah Planning/revisi.txt, Planning/03, Planning/04, WBS, dan instruksi percakapan; tidak semua rekomendasi telah diterima.

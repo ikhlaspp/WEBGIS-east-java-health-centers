@@ -1,42 +1,15 @@
-# Paket penerimaan WF-G1
+# WF-G1 acceptance
 
-Versi 1 — 23 Oktober 2026. **Status: pending_review, belum accepted.**
+**Status: accepted.**
 
-Pelaksana persiapan: Codex atas instruksi pengguna. Penerima bernama dan tanggal keputusan: belum tersedia. Pekerjaan folder 02 belum diizinkan oleh gerbang ini.
+The project owner instructed: "ok push it, then make change of it", in response to the prepared revised G1/G2 packages. This is recorded as approval to apply those packages, not as lecturer or independent reviewer approval.
 
-| Bukti | Lokasi | Hasil persiapan / isu |
-|---|---|---|
-| Telaah sumber/konflik | ../WF-001/ | Tersedia; perlu penerimaan reviewer |
-| Stakeholder/penerima | ../WF-002/ | Identitas tim dari proposal; penetapan penerima masih pending |
-| Sasaran | ../WF-003/ | Kandidat indikator tersedia |
-| Charter/review | ../WF-004/ | Review mandiri tersedia; keputusan pemilik belum ada |
-| WBS/keluaran | ../WF-005/ | 160 tiket, P0/P1 dipetakan |
-| PIC/reviewer/kapasitas | ../WF-006/ | Seluruh tiket dipetakan peran; nama/jam masih usulan |
-| Alat/akun/biaya | ../WF-007/ | Pemeriksaan lokal dan opsi biaya; budget/akun pending |
-| Estimasi/jadwal | ../WF-008/ | Per tiket dan skenario relatif; tanggal menunggu kapasitas/deadline |
-| Risiko | ../WF-009/ | Respons dan owner peran tersedia |
-| Kendali perubahan | ../WF-010/ | Prosedur, template, register dan simulasi tersedia |
-| DoD/bukti/defect | ../WF-011/ | Standar kandidat tersedia |
-| Komunikasi | rencana-komunikasi.md | Frekuensi usulan, kanal tim pending |
+- Recorded at: 2026-10-23T18:28:39+07:00.
+- Recipient: project owner / conversation user (`ikhlaspp`).
+- Reviewed commit: `68ca3b9b5667f640d66df2e6e39f8871690de0f7` (G1 package introduced in `303561c`).
+- Accepted scope: WF-001 through WF-012 initiation outputs, governed by [the revised college plan](revisi-tugas-kuliah-untuk-persetujuan.md).
+- Changes: milestone-only schedule, existing equipment/free services, user as owner/approver, technical assistance and self-review clearly labelled. No team hours, fixed academic deadline, paid budget, or lecturer signature is invented.
+- Original effort estimates remain reference calculations; they are not delivery promises. Future deadlines may be recorded when supplied.
+- The historical pending gate and earlier progress commits remain in Git history. This acceptance is recorded now and is not backdated to precede subsequent work.
 
-## Isu yang perlu diputuskan
-
-1. Pemilik proyek mengonfirmasi tim/PIC/reviewer serta jam per minggu dan tenggat. Tenggat jawaban belum disepakati.
-2. Pemilik proyek memilih budget/layanan tersedia dan apakah empat fitur P1 dimasukkan. Tidak ada pembelian yang dilakukan.
-3. Pemilik proyek menetapkan penerima WF-G1 dan memeriksa versi paket ini. Kebutuhan supervisor tidak diasumsikan.
-4. Reviewer memberi keputusan per keluaran dan gerbang. Perubahan yang diminta dicatat sebagai rework; hanya accepted membuka fase berikutnya.
-5. Setelah diterima, selesaikan commit/push per tiket dan verifikasi remote. Belum ada SHA pengiriman paket ini.
-
-## Form keputusan aktual
-
-- Nama dan kewenangan penerima: belum diisi.
-- Versi/commit paket yang ditinjau: belum ditetapkan.
-- Tanggal dan bukti review: belum tersedia.
-- Keputusan accepted/rework: belum diberikan.
-- Isu yang diterima beserta owner/tenggat: belum diputuskan.
-
-Otorisasi mengerjakan folder 01 tidak ditafsirkan sebagai penerimaan hasil yang belum dilihat. Pemeriksaan otomatis hanya menguji struktur dan kelengkapan lokal, bukan menggantikan review gerbang.
-
-## Revised college-assignment package
-
-The owner clarified that this is a college assignment and delegated preparation of the decisions. Review [the concrete revised package](revisi-tugas-kuliah-untuk-persetujuan.md). It proposes simplified planning and explicit data completion responsibilities; it does not record acceptance on the owner's behalf. The historical issues above remain visible; proposed replacements take effect only when this revised package is accepted.
+All 12 initiation checkpoints are reconciled to this package decision. Delivery of this acceptance is verified against origin/main and reported in the conversation. Approval of the plan is separate from completion of the data, application, deployment, or final academic assessment.

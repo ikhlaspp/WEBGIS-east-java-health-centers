@@ -1,3 +1,9 @@
+# Current acceptance status
+
+WF-G1 accepted by the project owner on 2026-10-23T18:28:39+07:00. This item is done as part of the accepted initiation package. [The accepted college plan](../WF-012/revisi-tugas-kuliah-untuk-persetujuan.md) supersedes earlier capacity/budget/calendar blockers. Earlier handoff text below is retained as historical preparation evidence; it is not the current status. Git delivery is reported with the acceptance commit.
+
+---
+
 # Handoff WF-006
 
 Versi 1 — 23 Oktober 2026. Pelaksana: Codex. Status formal: `blocked`; kandidat lokal tersedia, belum diterima.

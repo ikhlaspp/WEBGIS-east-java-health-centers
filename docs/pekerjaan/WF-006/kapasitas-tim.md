@@ -1,3 +1,5 @@
+> Current baseline: accepted under [WF-G1](../WF-012/penerimaan-WF-G1.md) and [the college-project supplement](../WF-012/revisi-tugas-kuliah-untuk-persetujuan.md). The user is owner/approver; use free services and milestone-only scheduling. Earlier pending capacity, budget, and calendar statements below are historical assumptions superseded by that decision. No lecturer approval or team-hours commitment is implied.
+
 # Kapasitas tim
 
 Versi kandidat 1, 23 Oktober 2026. Proposal menyebut tiga penulis; planning awal mengusulkan 12–15 jam/orang/minggu. Belum ada komitmen aktual yang membuktikan angka itu.

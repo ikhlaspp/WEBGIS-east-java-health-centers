@@ -1,3 +1,5 @@
+> Current baseline: accepted under [WF-G1](../WF-012/penerimaan-WF-G1.md) and [the college-project supplement](../WF-012/revisi-tugas-kuliah-untuk-persetujuan.md). The user is owner/approver; use free services and milestone-only scheduling. Earlier pending capacity, budget, and calendar statements below are historical assumptions superseded by that decision. No lecturer approval or team-hours commitment is implied.
+
 # Matriks penerima gerbang
 
 Versi 1, 23 Oktober 2026. Seluruh penerima di bawah adalah peran yang perlu dipetakan ke orang berwenang. Belum ada gerbang accepted.

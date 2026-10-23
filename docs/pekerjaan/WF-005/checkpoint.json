@@ -1,17 +1,13 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-10-23",
   "ticket": "WF-005",
-  "status": "blocked",
+  "status": "done",
   "preparation": "local_candidate_ready",
   "executor": "Codex",
-  "accepted": false,
-  "reviewer": null,
-  "blockers": [
-    "Pendahulu WF-004 belum done; hanya persiapan paket, bukan kelanjutan antrean formal",
-    "Penerimaan reviewer belum tersedia",
-    "Commit/push per tiket menunggu penerimaan"
-  ],
+  "accepted": true,
+  "reviewer": "Project owner / conversation user",
+  "blockers": [],
   "artifacts": [
     "audit-cakupan-wbs.md",
     "matriks-keluaran-wbs.md"
@@ -20,7 +16,24 @@
     "remote": "origin",
     "branch": "main",
     "status": "pending",
-    "commit": null
+    "commit": null,
+    "kind": "accepted_package_reconciliation",
+    "verification": "The acceptance commit and verified remote SHA are reported in the conversation after push; earlier item commits are retained."
   },
-  "next_action": "Review paket dan konfirmasi keputusan terbuka; lalu penerimaan dan delivery sesuai urutan"
+  "next_action": "Apply the accepted milestone-only college plan; record any new deadline or paid-service request explicitly.",
+  "acceptance_record": {
+    "decision": "accepted",
+    "recipient": "Project owner / conversation user (ikhlaspp)",
+    "recorded_at": "2026-10-23T18:28:39+07:00",
+    "source": "User instruction: ok push it, then make change of it",
+    "context": "Approval to apply the two revised college-assignment packages presented immediately before this instruction.",
+    "reviewed_commit": "68ca3b9b5667f640d66df2e6e39f8871690de0f7",
+    "scope": "Project-owner acceptance; not lecturer approval or independent academic review."
+  },
+  "acceptance_gate": "WF-G1",
+  "historical_blockers": [
+    "Pendahulu WF-004 belum done; hanya persiapan paket, bukan kelanjutan antrean formal",
+    "Penerimaan reviewer belum tersedia",
+    "Commit/push per tiket menunggu penerimaan"
+  ]
 }

@@ -1,0 +1,93 @@
+{
+  "ticket_id": "WF-054",
+  "input_hashes": {
+    "accepted_WF-G3_and_WF-053": "0a2c3bab86e9d21e14ab2fa758d119bf8387106c"
+  },
+  "code_revision": "0a2c3bab86e9d21e14ab2fa758d119bf8387106c",
+  "working_tree_paths": [
+    ".editorconfig",
+    ".env.example",
+    ".gitattributes",
+    ".gitignore",
+    ".npmrc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "boost.json",
+    "artisan",
+    "README.md",
+    "composer.json",
+    "composer.lock",
+    "package.json",
+    "package-lock.json",
+    "routes/web.php",
+    ".env.example",
+    "tests/Feature/HealthTest.php",
+    "docs/pekerjaan/WF-054/log-setup-Laravel.md",
+    "docs/pekerjaan/WF-054/log-build-frontend.txt",
+    "docs/pekerjaan/WF-054/handoff.md",
+    "docs/pekerjaan/WF-054/checkpoint.json"
+  ],
+  "completed": [
+    "Installed Laravel 13.38.0 and committed PHP and frontend dependency lockfiles.",
+    "Configured a sanitized Supabase PostgreSQL sample environment and ignored local .env.",
+    "Built Vite production assets and verified home and framework health routes."
+  ],
+  "pending": [],
+  "blocked": [
+    {
+      "issue": "Local PHP has no pdo_pgsql extension and no live Supabase credentials were provided.",
+      "impact": "Database migrations, spatial tests, and Supabase connectivity are not verified by WF-054.",
+      "owner": "Project owner / operator",
+      "next_action": "Provide/configure a local PostgreSQL PHP driver and Supabase test credentials before database-dependent ticket work; never use production credentials in tests."
+    },
+    {
+      "issue": "Vercel PHP is a community runtime and Laravel deployment has not been tested.",
+      "impact": "The target hosting choice is recorded but not yet proven deployable.",
+      "owner": "Implementation / operations",
+      "next_action": "Build and verify the Vercel deployment adapter in the deployment design/implementation ticket before claiming hosting readiness."
+    }
+  ],
+  "evidence_paths": [
+    "docs/pekerjaan/WF-054/log-setup-Laravel.md",
+    "docs/pekerjaan/WF-054/log-build-frontend.txt",
+    "docs/pekerjaan/WF-054/handoff.md"
+  ],
+  "checks": [
+    {
+      "command": "php artisan test --compact tests/Feature/HealthTest.php",
+      "environment": "PHP 8.4.22, Laravel 13.38.0, Windows, repository root; no DB access",
+      "expected": "home and /up respond successfully",
+      "actual": "2 tests passed, 2 assertions",
+      "exit_code": 0
+    },
+    {
+      "command": "npm.cmd run build",
+      "environment": "Node 24.14.1, npm 11.11.0, Vite 8.3.5, Windows",
+      "expected": "production assets emitted to public/build",
+      "actual": "successful build; 3 modules transformed; optional fontaine optimization warning",
+      "exit_code": 0
+    },
+    {
+      "command": "composer.bat validate --no-check-publish",
+      "environment": "Composer 2.4.1, PHP 8.4.22",
+      "expected": "composer.json and lock file valid",
+      "actual": "valid",
+      "exit_code": 0
+    },
+    {
+      "command": "vendor/bin/pint --dirty --format agent",
+      "environment": "Laravel Pint installed from composer.lock",
+      "expected": "PHP formatting passes",
+      "actual": "passed",
+      "exit_code": 0
+    },
+    {
+      "command": "GET http://127.0.0.1:8877/up while php artisan serve is running",
+      "environment": "Local PHP built-in server",
+      "expected": "HTTP 200",
+      "actual": "HTTP 200",
+      "exit_code": 0
+    }
+  ],
+  "next_action": "Inspect staged paths, commit and push the WF-054 item; proceed to WF-055 Python environment setup."
+}

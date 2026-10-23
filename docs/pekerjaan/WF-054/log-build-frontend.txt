@@ -1,0 +1,18 @@
+Frontend build record — 23 October 2026
+
+Working directory: repository root
+Node.js: v24.14.1
+npm: 11.11.0
+Vite: 8.3.5
+
+Command: npm.cmd install
+Expected: install frontend dependencies from package.json
+Actual: 56 packages added; 0 vulnerabilities reported
+Exit code: 0
+
+Command: npm.cmd run build
+Expected: Vite production assets emitted to public/build
+Actual: build completed successfully; 3 modules transformed; manifest and CSS/font assets emitted. Vite noted that optional package "fontaine" is absent, so optimized font fallbacks were not produced.
+Exit code: 0
+
+Generated assets under public/build are ignored by Git. package-lock.json is committed for repeatable installation.

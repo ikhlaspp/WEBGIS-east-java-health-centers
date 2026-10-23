@@ -1,0 +1,954 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "items": [
+    {
+      "id": "WF-053",
+      "title": "Membuat repositori dan struktur proyek",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        ".gitignore",
+        "README.md"
+      ],
+      "test_target": "git diff --check",
+      "commands": [
+        "git diff --check"
+      ],
+      "runner": "repo",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-053/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-054",
+      "title": "Menyiapkan Laravel dan build frontend",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "composer.json",
+        "package.json",
+        "routes/web.php",
+        ".env.example"
+      ],
+      "test_target": "tests/Feature/HealthTest.php",
+      "commands": [
+        "php artisan test tests/Feature/HealthTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-054/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-055",
+      "title": "Menyiapkan Python, Colab, dan alat pengujian",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "requirements.lock",
+        "notebooks/gis_puskesmas.ipynb",
+        "pyproject.toml",
+        "python/gis_pipeline/__init__.py"
+      ],
+      "test_target": "tests/python/test_environment.py",
+      "commands": [
+        "python -m pytest tests/python/test_environment.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-055/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-056",
+      "title": "Menyiapkan pipeline pemeriksaan otomatis",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        ".github/workflows/checks.yml",
+        "phpunit.xml",
+        "pytest.ini",
+        "playwright.config.js"
+      ],
+      "test_target": "Pipeline lint, PHPUnit/Pest, pytest, build; satu kegagalan assertion terkontrol harus menggagalkan job",
+      "commands": [
+        "python -m pytest tests/python -q",
+        "php artisan test",
+        "npm run build"
+      ],
+      "runner": "ci",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-056/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-057",
+      "title": "Mengimplementasikan pengunduh dan parser data fasilitas",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/facilities.py",
+        "python/gis_pipeline/etl/facilities.py"
+      ],
+      "test_target": "tests/python/test_facilities_parser.py",
+      "commands": [
+        "python -m pytest tests/python/test_facilities_parser.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-057/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-058",
+      "title": "Mengimplementasikan pengambilan data penduduk dan luas",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/indicators.py",
+        "python/gis_pipeline/etl/indicators.py"
+      ],
+      "test_target": "tests/python/test_indicators_parser.py",
+      "commands": [
+        "python -m pytest tests/python/test_indicators_parser.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-058/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-059",
+      "title": "Mengimplementasikan pengambilan kode dan polygon wilayah",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/boundaries.py",
+        "python/gis_pipeline/etl/boundaries.py"
+      ],
+      "test_target": "tests/python/test_boundaries_source.py",
+      "commands": [
+        "python -m pytest tests/python/test_boundaries_source.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-059/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-060",
+      "title": "Menambahkan cache, retry, dan pemeriksaan kelengkapan scraping",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/http_client.py",
+        "scripts/etl/batch.py",
+        "python/gis_pipeline/etl/http_client.py",
+        "python/gis_pipeline/etl/batch.py"
+      ],
+      "test_target": "tests/python/test_scraping_resilience.py",
+      "commands": [
+        "python -m pytest tests/python/test_scraping_resilience.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-060/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-061",
+      "title": "Menjalankan pengambilan sumber dan membekukan input mentah",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/acquire.py",
+        "data/raw/manifest.json",
+        "python/gis_pipeline/etl/acquire.py"
+      ],
+      "test_target": "Manifest seluruh halaman/file, hash dan periode sesuai target sumber",
+      "commands": [],
+      "runner": "data",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-061/",
+      "manual_evidence": "Seluruh sumber wajib tersedia atau memiliki keputusan pengganti yang diterima; unduhan parsial tidak diteruskan sebagai input lengkap."
+    },
+    {
+      "id": "WF-062",
+      "title": "Mengekstrak dan menormalisasi tabel sumber",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/normalize.py",
+        "python/gis_pipeline/etl/normalize.py"
+      ],
+      "test_target": "tests/python/test_normalize.py",
+      "commands": [
+        "python -m pytest tests/python/test_normalize.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-062/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-063",
+      "title": "Menyelesaikan crosswalk kode serta alias wilayah",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/crosswalk.py",
+        "data/processed/crosswalk.json",
+        "python/gis_pipeline/etl/crosswalk.py"
+      ],
+      "test_target": "tests/python/test_crosswalk.py",
+      "commands": [
+        "python -m pytest tests/python/test_crosswalk.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-063/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-064",
+      "title": "Memisahkan subtotal dan merekonsiliasi master fasilitas",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/reconcile_facilities.py",
+        "python/gis_pipeline/etl/reconcile_facilities.py"
+      ],
+      "test_target": "tests/python/test_reconcile_facilities.py",
+      "commands": [
+        "python -m pytest tests/python/test_reconcile_facilities.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-064/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-065",
+      "title": "Memverifikasi angka penduduk, luas, tahun, dan unit",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/validate_indicators.py",
+        "python/gis_pipeline/etl/validate_indicators.py"
+      ],
+      "test_target": "tests/python/test_validate_indicators.py",
+      "commands": [
+        "python -m pytest tests/python/test_validate_indicators.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-065/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-066",
+      "title": "Memvalidasi polygon dan kelengkapan master wilayah",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/validate_boundaries.py",
+        "python/gis_pipeline/etl/validate_boundaries.py"
+      ],
+      "test_target": "tests/python/test_validate_boundaries.py",
+      "commands": [
+        "python -m pytest tests/python/test_validate_boundaries.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-066/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-067",
+      "title": "Menyiapkan antrean geocoding dan pencatatan bukti",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/geocode.py",
+        "data/staging/location_queue.json",
+        "python/gis_pipeline/etl/geocode.py"
+      ],
+      "test_target": "tests/python/test_geocode_queue.py",
+      "commands": [
+        "python -m pytest tests/python/test_geocode_queue.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-067/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-068",
+      "title": "Mereview 565 pasangan koordinat yang sudah tersedia",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "data/staging/location_reviews.json"
+      ],
+      "test_target": "565 kode awal direkonsiliasi dengan keputusan dan bukti per fasilitas",
+      "commands": [],
+      "runner": "data",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-068/",
+      "manual_evidence": "Seluruh 565 kandidat mempunyai hasil review atau penghalang eksplisit; jumlah verified hanya menghitung bukti facility yang diterima."
+    },
+    {
+      "id": "WF-069",
+      "title": "Menelusuri 408 fasilitas tanpa koordinat",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "data/staging/location_searches.json"
+      ],
+      "test_target": "408 kode awal direkonsiliasi dengan hasil pencarian termasuk missing",
+      "commands": [],
+      "runner": "data",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-069/",
+      "manual_evidence": "408 kode memiliki catatan penelusuran; pencarian selesai tidak disamakan dengan 408 lokasi berhasil diverifikasi."
+    },
+    {
+      "id": "WF-070",
+      "title": "Menyelesaikan anomali koordinat dan konflik wilayah",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "data/staging/location_anomalies.json"
+      ],
+      "test_target": "Seluruh anomali, lima kelompok identik, boundary dan pulau memiliki keputusan berbukti",
+      "commands": [],
+      "runner": "data",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-070/",
+      "manual_evidence": "Setiap anomali mempunyai keputusan berbukti; data tidak dideduplicate hanya berdasarkan koordinat."
+    },
+    {
+      "id": "WF-071",
+      "title": "Membekukan laporan kelayakan data spasial",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/etl/validate_eligibility.py",
+        "python/gis_pipeline/etl/validate_eligibility.py"
+      ],
+      "test_target": "tests/python/test_eligibility.py",
+      "commands": [
+        "python -m pytest tests/python/test_eligibility.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-071/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-072",
+      "title": "Menyiapkan database development dan test dengan PostGIS",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "config/database.php",
+        ".env.example"
+      ],
+      "test_target": "tests/Feature/DatabaseConnectionTest.php",
+      "commands": [
+        "php artisan test tests/Feature/DatabaseConnectionTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-072/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-073",
+      "title": "Membuat migration tabel, constraint, dan indeks",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "database/migrations/"
+      ],
+      "test_target": "tests/Feature/DatabaseConstraintsTest.php",
+      "commands": [
+        "php artisan test tests/Feature/DatabaseConstraintsTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-073/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-074",
+      "title": "Mengimplementasikan grants dan pembatasan akses data",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "database/migrations/",
+        "tests/sql/role_access.sql"
+      ],
+      "test_target": "tests/Feature/DatabaseAccessTest.php",
+      "commands": [
+        "php artisan test tests/Feature/DatabaseAccessTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-074/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-075",
+      "title": "Membuat impor staging dan promosi data tervalidasi",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "app/Console/Commands/ImportDataset.php",
+        "app/Services/DatasetImportService.php"
+      ],
+      "test_target": "tests/Feature/DatasetImportTest.php",
+      "commands": [
+        "php artisan test tests/Feature/DatasetImportTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-075/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-076",
+      "title": "Memuat kandidat dataset hasil kurasi",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "data/processed/",
+        "app/Console/Commands/ImportDataset.php"
+      ],
+      "test_target": "Rekonsiliasi file kurasi dan DB kandidat: kode, jumlah, FK, tahun, hash dan eligibility",
+      "commands": [],
+      "runner": "data",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-076/",
+      "manual_evidence": "Kandidat DB sesuai manifest kurasi dan semua referensi berada pada edisi wilayah/rilis yang tepat."
+    },
+    {
+      "id": "WF-077",
+      "title": "Membuat perhitungan indikator kecamatan",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/analysis/indicators.py",
+        "python/gis_pipeline/analysis/indicators.py"
+      ],
+      "test_target": "tests/python/test_indicators.py",
+      "commands": [
+        "python -m pytest tests/python/test_indicators.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-077/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-078",
+      "title": "Membuat agregasi kabupaten dan provinsi",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/analysis/aggregates.py",
+        "python/gis_pipeline/analysis/aggregates.py"
+      ],
+      "test_target": "tests/python/test_aggregates.py",
+      "commands": [
+        "python -m pytest tests/python/test_aggregates.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-078/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-079",
+      "title": "Membuat buffer radius titik yang terverifikasi",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/analysis/buffers.py",
+        "python/gis_pipeline/analysis/buffers.py"
+      ],
+      "test_target": "tests/python/test_buffers.py",
+      "commands": [
+        "python -m pytest tests/python/test_buffers.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-079/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-080",
+      "title": "Membuat union, clip, dan luas cakupan wilayah",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/analysis/coverage.py",
+        "python/gis_pipeline/analysis/coverage.py"
+      ],
+      "test_target": "tests/python/test_coverage.py",
+      "commands": [
+        "python -m pytest tests/python/test_coverage.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-080/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-081",
+      "title": "Menyimpan hasil run dan layer tematik",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/analysis/export_layers.py",
+        "python/gis_pipeline/analysis/export_layers.py"
+      ],
+      "test_target": "tests/python/test_analysis_manifest.py",
+      "commands": [
+        "python -m pytest tests/python/test_analysis_manifest.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-081/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-082",
+      "title": "Membuat API rilis, wilayah, dan katalog sumber",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "routes/api.php",
+        "app/Http/Controllers/Api/ReleaseController.php",
+        "app/Http/Controllers/Api/RegionController.php",
+        "app/Http/Controllers/Api/SourceController.php",
+        "app/Services/ReleaseContext.php"
+      ],
+      "test_target": "tests/Feature/ReferenceApiTest.php",
+      "commands": [
+        "php artisan test tests/Feature/ReferenceApiTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-082/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-083",
+      "title": "Membuat API fasilitas, pencarian, filter, dan detail",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "app/Http/Controllers/Api/FacilityController.php",
+        "app/Http/Requests/FacilityFilterRequest.php"
+      ],
+      "test_target": "tests/Feature/FacilityApiTest.php",
+      "commands": [
+        "php artisan test tests/Feature/FacilityApiTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-083/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-084",
+      "title": "Membuat API statistik, GeoJSON, dan buffer",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "app/Http/Controllers/Api/StatisticsController.php",
+        "app/Http/Controllers/Api/MapController.php",
+        "app/Services/ReleaseCache.php",
+        "app/Services/StatisticsService.php"
+      ],
+      "test_target": "tests/Feature/MapStatisticsApiTest.php",
+      "commands": [
+        "php artisan test tests/Feature/MapStatisticsApiTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-084/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-085",
+      "title": "Membuat login/logout admin dan otorisasi operasi internal",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "routes/web.php",
+        "app/Http/Controllers/Auth/",
+        "app/Policies/",
+        "config/session.php"
+      ],
+      "test_target": "tests/Feature/AdminAuthenticationTest.php",
+      "commands": [
+        "php artisan test tests/Feature/AdminAuthenticationTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-085/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-086",
+      "title": "Membuat command review, analisis, publish, rollback, dan audit",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "app/Console/Commands/",
+        "app/Services/ReleaseLifecycleService.php",
+        "app/Services/ReleaseAuditService.php"
+      ],
+      "test_target": "tests/Feature/ReleaseLifecycleTest.php",
+      "commands": [
+        "php artisan test tests/Feature/ReleaseLifecycleTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-086/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-087",
+      "title": "Membuat layout, navigasi, dan dashboard",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "resources/views/layouts/app.blade.php",
+        "resources/views/home.blade.php",
+        "resources/css/app.css"
+      ],
+      "test_target": "tests/Browser/dashboard.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/dashboard.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-087/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-088",
+      "title": "Membuat peta dasar, marker, cluster, dan popup",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "resources/js/map/markers.js",
+        "resources/views/map.blade.php"
+      ],
+      "test_target": "tests/Browser/markers.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/markers.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-088/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-089",
+      "title": "Membuat pencarian dan filter bertingkat",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "resources/js/map/filters.js"
+      ],
+      "test_target": "tests/Browser/filters.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/filters.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-089/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-090",
+      "title": "Membuat layer choropleth, buffer, dan legenda",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "resources/js/map/layers.js",
+        "resources/js/map/legend.js"
+      ],
+      "test_target": "tests/Browser/layers.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/layers.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-090/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-091",
+      "title": "Membuat tabel dan halaman detail fasilitas/kecamatan",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "resources/views/facilities/",
+        "resources/views/districts/"
+      ],
+      "test_target": "tests/Browser/details.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/details.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-091/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-092",
+      "title": "Membuat halaman metodologi dan penanganan state UI",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "resources/views/methodology.blade.php",
+        "resources/js/map/state.js"
+      ],
+      "test_target": "tests/Browser/ui_states.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/ui_states.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-092/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-093",
+      "title": "Menghubungkan notebook ke snapshot rilis yang aman",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "notebooks/gis_puskesmas.ipynb",
+        "scripts/analysis/snapshot.py",
+        "python/gis_pipeline/analysis/snapshot.py"
+      ],
+      "test_target": "tests/python/test_snapshot.py",
+      "commands": [
+        "python -m pytest tests/python/test_snapshot.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-093/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-094",
+      "title": "Mengintegrasikan modul analisis ke notebook",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "notebooks/gis_puskesmas.ipynb",
+        "scripts/analysis/"
+      ],
+      "test_target": "tests/python/test_notebook_parity.py",
+      "commands": [
+        "python -m pytest tests/python/test_notebook_parity.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-094/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-095",
+      "title": "Membuat visualisasi Folium dan ekspor HTML/tabel",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "scripts/analysis/folium_export.py",
+        "python/gis_pipeline/analysis/folium_export.py"
+      ],
+      "test_target": "tests/python/test_folium_export.py",
+      "commands": [
+        "python -m pytest tests/python/test_folium_export.py -q"
+      ],
+      "runner": "python",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-095/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-096",
+      "title": "Menambahkan manifest dan panduan Run all",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "notebooks/gis_puskesmas.ipynb",
+        "docs/panduan-Run-all.md"
+      ],
+      "test_target": "Run all pada Colab bersih; log versi, input/output hash dan pemeriksaan manifest",
+      "commands": [],
+      "runner": "notebook",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-096/",
+      "manual_evidence": "Tidak ada langkah tersembunyi atau rahasia dalam notebook/HTML; konten deterministik dapat dibandingkan tanpa terpengaruh timestamp."
+    },
+    {
+      "id": "WF-097",
+      "title": "Membuat dashboard admin untuk menjalankan dan memantau batch",
+      "priority": "P1",
+      "scope": "conditional_pending_owner_selection",
+      "targets": [
+        "resources/views/admin/batches/",
+        "app/Http/Controllers/Admin/BatchController.php"
+      ],
+      "test_target": "tests/Browser/admin_batches.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/admin_batches.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-097/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-098",
+      "title": "Membuat layar review data dan publikasi rilis",
+      "priority": "P1",
+      "scope": "conditional_pending_owner_selection",
+      "targets": [
+        "resources/views/admin/reviews/",
+        "app/Http/Controllers/Admin/ReviewController.php"
+      ],
+      "test_target": "tests/Browser/admin_reviews.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/admin_reviews.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-098/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-099",
+      "title": "Membuat ekspor CSV hasil filter",
+      "priority": "P1",
+      "scope": "conditional_pending_owner_selection",
+      "targets": [
+        "app/Http/Controllers/Api/FacilityExportController.php",
+        "app/Services/FacilityCsvExport.php"
+      ],
+      "test_target": "tests/Feature/FacilityExportTest.php",
+      "commands": [
+        "php artisan test tests/Feature/FacilityExportTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-099/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-100",
+      "title": "Membuat daftar prioritas kecamatan",
+      "priority": "P1",
+      "scope": "conditional_pending_owner_selection",
+      "targets": [
+        "app/Services/DistrictRankingService.php",
+        "resources/views/districts/ranking.blade.php"
+      ],
+      "test_target": "tests/Feature/DistrictRankingTest.php",
+      "commands": [
+        "php artisan test tests/Feature/DistrictRankingTest.php"
+      ],
+      "runner": "php",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-100/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-101",
+      "title": "Menghubungkan pipeline, database, API, UI, dan artefak",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "tests/Browser/release_flow.spec.js"
+      ],
+      "test_target": "tests/Browser/release_flow.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/release_flow.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-101/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-102",
+      "title": "Melengkapi unit/component test modul yang berubah",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "tests/Feature/",
+        "tests/python/"
+      ],
+      "test_target": "Suite modul berubah dan expected result independen sesuai matriks kebutuhan-uji",
+      "commands": [
+        "python -m pytest tests/python -q",
+        "php artisan test"
+      ],
+      "runner": "suite",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-102/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-103",
+      "title": "Menjalankan smoke test dan memperbaiki kegagalan integrasi",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "tests/Browser/smoke.spec.js"
+      ],
+      "test_target": "tests/Browser/smoke.spec.js",
+      "commands": [
+        "npx --no-install playwright test tests/Browser/smoke.spec.js",
+        "npm run build"
+      ],
+      "runner": "browser",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-103/",
+      "manual_evidence": null
+    },
+    {
+      "id": "WF-104",
+      "title": "Membekukan kandidat uji dan menerima WF-G4",
+      "priority": "P0",
+      "scope": "core",
+      "targets": [
+        "docs/pekerjaan/WF-104/manifest-kandidat-uji.json"
+      ],
+      "test_target": "Cocokkan revision, lockfile, hash data/artefak, rilis/run dan bukti uji dengan keputusan WF-G4",
+      "commands": [],
+      "runner": "gate",
+      "working_directory": "repository root",
+      "fixture_directory": "tests/data/wf-104/",
+      "manual_evidence": "Kandidat dapat direproduksi dan semua prasyarat uji sistem tersedia sebelum fase 5 dibuka."
+    }
+  ]
+}

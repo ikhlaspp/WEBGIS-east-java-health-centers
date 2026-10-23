@@ -1,15 +1,6 @@
-WF-055 synthetic fixture check — 23 October 2026
-
-Environment: CPython 3.12.15; GeoPandas 1.2.0; Shapely 2.2.0; Folium 0.20.0; pytest 9.1.1
-Fixtures: tests/data/wf-055/facility-point.geojson and district-multipolygon.geojson
-Data type: synthetic only; no Archives/ rows or real boundaries used
-
-Command: .venv/Scripts/python.exe -m pytest tests/python/test_environment.py -q
-Actual: 2 passed in 4.13s
-Exit code: 0
-
-Notebook local preflight: 3 Python code cells executed (excluding the Colab/IPython %pip installation cell); GeoPandas/Folium imports succeeded, MultiPolygon was valid, the synthetic Point was within its polygon, the Folium marker cell ran.
-Actual output: GeoPandas 1.2.0; Folium 0.20.0; Synthetic spatial preflight passed.
-Exit code: 0
-
-Colab: NOT RUN. No browser session or browser provider was available in this execution environment. This remains a blocking acceptance item.
+Actual local Jupyter kernel execution; all code cells including the hash-locked installer executed.
+Working directory: notebooks/; repository root discovered by the notebook.
+{'python': '3.12.15', 'geopandas': '1.2.0', 'folium': '0.20.0'}
+Synthetic spatial preflight passed.
+2 passed, 1 warning in 1.14s
+Colab frontend execution: not run; no browser surface available.

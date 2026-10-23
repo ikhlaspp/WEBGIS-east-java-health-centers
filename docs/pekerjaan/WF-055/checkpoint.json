@@ -6,26 +6,30 @@
     "fixture_spec": "docs/pekerjaan/WF-049/spesifikasi-fixture.md",
     "expected_results": "docs/pekerjaan/WF-049/expected-results.md"
   },
-  "code_revision": "1ee8e1c6d7afe9284902a6aa5c58fe137dfe5818",
+  "code_revision": "cd9e30f3036e20cf5a14ff94c67a187aab02f031",
   "working_tree_paths": [
     ".gitignore",
     "README.md",
     "requirements.in",
     "requirements.lock",
+    "scripts/analysis/start-colab-local-runtime.ps1",
+    "docs/pekerjaan/WF-055/handoff.md",
     "notebooks/gis_puskesmas.ipynb",
     "tests/python/test_environment.py",
     "tests/data/wf-055/facility-point.geojson",
     "tests/data/wf-055/district-multipolygon.geojson",
     "docs/pekerjaan/WF-055/log-setup-Python-Colab.md",
     "docs/pekerjaan/WF-055/hasil-fixture-awal.txt",
-    "docs/pekerjaan/WF-055/handoff.md",
     "docs/pekerjaan/WF-055/checkpoint.json"
   ],
   "completed": [
     "Provisioned local CPython 3.12.15 in ignored workspace tools and created isolated .venv.",
-    "Generated universal hash-checked GIS/test dependency lock for Python 3.12.",
+    "Generated universal hash-checked GIS/test/Jupyter dependency lock for Python 3.12.",
+    "Installed Jupyter Notebook locally and prepared a token-authenticated localhost runtime launcher for the Colab origin.",
     "Created synthetic Point and MultiPolygon fixtures and a notebook preflight.",
-    "Ran local fixture tests and notebook code cells successfully."
+    "Ran local fixture tests and notebook code cells successfully.",
+    "Executed all notebook code cells in a real local Jupyter kernel, including the hash-locked installer and pytest; 2 tests passed.",
+    "Started the local runtime with user authorization; authenticated status HTTP 200, kernel start HTTP 201 and stop HTTP 204."
   ],
   "pending": [
     "Run the notebook with the lock in Google Colab and record actual runtime version/output."
@@ -48,14 +52,14 @@
       "command": "uv pip compile --python-version 3.12 --universal --generate-hashes requirements.in -o requirements.lock",
       "environment": "uv 0.13.5; local CPython 3.12.15",
       "expected": "pinned universal lock with hashes",
-      "actual": "53 packages resolved",
+      "actual": "106 packages resolved",
       "exit_code": 0
     },
     {
       "command": "uv pip sync --python .venv/Scripts/python.exe requirements.lock",
       "environment": "Windows; CPython 3.12.15 in ignored .venv",
       "expected": "install resolved packages",
-      "actual": "48 applicable packages installed",
+      "actual": "103 applicable packages installed",
       "exit_code": 0
     },
     {
@@ -66,19 +70,26 @@
       "exit_code": 0
     },
     {
-      "command": "Parse notebook JSON and execute all Python code cells except the %pip installer cell",
-      "environment": "Windows; CPython 3.12.15; locked local environment",
-      "expected": "imports, geometry preflight, predicate, and Folium map cell run",
-      "actual": "passed; synthetic preflight message printed",
-      "exit_code": 0
-    },
-    {
       "command": "Open Google Colab and run notebook",
       "environment": "No browser provider/session available",
       "expected": "Colab runtime reports version and synthetic preflight passes",
       "actual": "not run; browser unavailable",
       "exit_code": null
+    },
+    {
+      "command": "nbclient.NotebookClient.execute with working directory notebooks/ and PIP_NO_INDEX=1",
+      "environment": "Windows; CPython 3.12.15; all locked dependencies installed",
+      "expected": "All notebook cells execute, including installation and fixture tests",
+      "actual": "Synthetic spatial preflight passed; 2 tests passed, 1 warning",
+      "exit_code": 0
+    },
+    {
+      "command": "Authenticated Jupyter API status and create/delete temporary python3 kernel",
+      "environment": "Local runtime on 127.0.0.1:8888 under the project owner Windows account",
+      "expected": "Token authentication and Colab origin enabled; kernel starts and stops",
+      "actual": "HTTP 200/201/204; token enabled; allowed origin https://colab.research.google.com",
+      "exit_code": 0
     }
   ],
-  "next_action": "Commit and push this blocked progress item; stop the serial queue until Colab evidence is available."
+  "next_action": "Run all notebook cells from the Colab frontend using the authorized running local runtime and record actual output. Keep WF-055 blocked and do not start WF-056 until this evidence is available."
 }

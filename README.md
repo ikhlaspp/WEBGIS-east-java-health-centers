@@ -21,6 +21,8 @@ The repository setup item introduces Laravel and frontend lockfiles. The local P
 
 Use Python 3.12. On Windows, create `.venv` with `python -m venv .venv`; on other systems use `python3.12 -m venv .venv`. Install the pinned, hash-checked packages with `.venv/Scripts/python -m pip install --require-hashes -r requirements.lock` on Windows or `.venv/bin/python -m pip install --require-hashes -r requirements.lock` on Linux/macOS. Run fixture tests with `.venv/Scripts/python -m pytest tests/python -q` (Windows) or `.venv/bin/python -m pytest tests/python -q` (Linux/macOS). The notebook's sample geometry is synthetic; it does not process `Archives/`.
 
+To use Google's Colab website with this computer's local Python runtime, run `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\analysis\start-colab-local-runtime.ps1` from the repository root, then in Colab choose **Connect → Connect to local runtime** and enter the authenticated URL printed in the terminal. The server binds to `127.0.0.1:8888`, restricts browser origin to `https://colab.research.google.com`, and keeps Jupyter token authentication enabled. Stop it with Ctrl+C when finished. A Colab notebook connected this way executes code on this computer and can access files available to the Jupyter process.
+
 ## Data handling
 
 - Treat files in `Archives/` as read-only source originals.

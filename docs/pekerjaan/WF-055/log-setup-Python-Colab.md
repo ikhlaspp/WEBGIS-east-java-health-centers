@@ -23,8 +23,8 @@ Result: local Python/GIS environment and synthetic notebook preflight pass. Cola
 |---|---|---|
 | `uv python install 3.12` | Provision local CPython 3.12 | CPython 3.12.15 installed under ignored `.tools/python/`; global PATH/registry shim unavailable but not needed |
 | `uv venv --python <workspace Python 3.12> --seed .venv` | Isolated 3.12 environment | Created; seed pip 26.2.2 |
-| `uv pip compile --python-version 3.12 --universal --generate-hashes requirements.in -o requirements.lock` | Cross-platform, pinned, hash-checked lock | Resolved 53 packages |
-| `uv pip sync --python .venv/Scripts/python.exe requirements.lock` | Install locked environment | 48 packages installed for Windows/Python 3.12 |
+| `uv pip compile --python-version 3.12 --universal --generate-hashes requirements.in -o requirements.lock` | Cross-platform, pinned, hash-checked lock | Resolved 106 packages after adding Jupyter Notebook |
+| `uv pip sync --python .venv/Scripts/python.exe requirements.lock` | Install locked environment | 103 applicable packages installed for Windows/Python 3.12 |
 | `.venv/Scripts/python.exe -m pytest tests/python/test_environment.py -q` | Validate imports and synthetic point/polygon behavior | 2 passed |
 | Execute notebook code cells locally after skipping its `%pip` install cell | Notebook imports, checks geometry, and renders Folium map | Passed; printed GeoPandas 1.2.0 and Folium 0.20.0 and `Synthetic spatial preflight passed.` |
 | Inspect available Colab browser session | Run notebook in user Colab environment | Not run: no browser surfaces were available; `iab` browser could not be created |
@@ -32,3 +32,21 @@ Result: local Python/GIS environment and synthetic notebook preflight pass. Cola
 ## Remaining work
 
 The local environment and fixture checks pass, but the ticket requires a real Colab run. Do not mark WF-055 done until the notebook is run in Colab and the output is recorded. This local preflight does not validate Colab's current interpreter, Google account state, or runtime package installation.
+
+## Local runtime follow-up ? 23 October 2026
+
+The user authorized the local runtime startup. Jupyter Notebook 7.6.3 is installed in `.venv`; `scripts/analysis/start-colab-local-runtime.ps1` starts it on `127.0.0.1:8888`, enables only the Colab origin, retains token authentication, and avoids automatically opening a browser. Runtime/config/profile files stay in ignored `.tools/`; the runtime directory is separated by Windows username to avoid cookie-file ownership conflicts between the sandbox and owner account.
+
+Run from the repository root in PowerShell:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\analysis\start-colab-local-runtime.ps1
+```
+
+The execution-policy override applies only to that child process. Copy the authenticated URL shown by Jupyter into Colab's **Connect to local runtime** dialog. The current background server's URL is in the local ignored `.tools/colab/stderr.log`; do not commit that log or paste its token into evidence. Follow Google's setup guide: https://research.google.com/colaboratory/local-runtimes.html .
+
+Actual verification: all notebook cells executed through `nbclient` in a real local Jupyter kernel, from the `notebooks/` directory. The hashed installer ran against the already installed environment with `PIP_NO_INDEX=1`; GeoPandas/Folium imports and the synthetic spatial check passed; pytest reported 2 passed and 1 warning. The notebook includes the test runner cell so the same checks can run from Colab. The complete locally executed notebook is ignored at `.tools/colab/executed-preflight.ipynb`; concise results are in `hasil-fixture-awal.txt`.
+
+Startup troubleshooting: the initial PowerShell policy blocked the script; the child-process bypass resolved it. Windows profile permissions required keeping Jupyter/IPython directories in the workspace and separating runtime directories by account. An attempted duplicate startup correctly failed because port 8888 was already in use; the existing runtime was retained. Final authenticated API verification on the running server returned HTTP 200 for status, 201 for creating a temporary python3 kernel, and 204 for deleting that kernel. Token authentication was enabled and the allowed origin was `https://colab.research.google.com`.
+
+The available browser inventory was empty. This verifies the local Jupyter runtime, not an actual Colab frontend connection or a hosted Google runtime. WF-055 stays blocked pending the required Colab run; no external review or Colab result is claimed.

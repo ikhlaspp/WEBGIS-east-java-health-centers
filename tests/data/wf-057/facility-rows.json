@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "header": ["no", "kode_puskesmas", "nama_puskesmas", "alamat", "kecamatan", "kabupaten", "provinsi", "kemampuan_pelayanan", "karakteristik_wilayah"],
+  "rows": [
+    ["1", "00000000001", "SYNTHETIC CLINIC", "Synthetic street\nBlock A", "Synthetic District", "Synthetic Regency", "Jawa Timur", "Rawat Inap", "Perdesaan"],
+    ["2", "", "SYNTHETIC MISSING CODE", "Synthetic street", "Synthetic District", "Synthetic Regency", "Jawa Timur", "Non Rawat Inap", "Perdesaan"],
+    ["TOTAL", "", "", "", "", "", "", "", ""]
+  ]
+}

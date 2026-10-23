@@ -9,3 +9,6 @@ Workflow YAML: parsed and both jobs present.
 Hosted pipeline/PostGIS/Playwright: awaiting actual remote run after push.
 
 Hosted run 39966249771: Python passed; PostGIS geometry test passed. Application page tests failed because a clean Git checkout lacked storage/framework/views, causing InvalidArgumentException: Please provide a valid cache path. Root .gitignore excluded the directory placeholders. Fix: preserve .gitignore placeholders for views, sessions, testing and logs while keeping runtime files ignored. Remote retest required.
+
+Final hosted retest: https://github.com/ikhlaspp/WEBGIS-east-java-health-centers/actions/runs/39968079070 -> success, Python and application jobs. Includes PHP/PostGIS, frontend build and Playwright Chromium.
+Failure proof: https://github.com/ikhlaspp/WEBGIS-east-java-health-centers/actions/runs/39967313521 -> failure specifically at Controlled assertion failure; all preceding Python steps passed.

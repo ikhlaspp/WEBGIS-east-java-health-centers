@@ -4,3 +4,4 @@ ipykernel
 notebook
 pytest
 shapely
+pdfplumber

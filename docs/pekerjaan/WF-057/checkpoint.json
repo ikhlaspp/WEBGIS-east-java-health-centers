@@ -1,0 +1,116 @@
+{
+  "ticket_id": "WF-057",
+  "status": "done",
+  "predecessor": "WF-056 done; remote passing run 39968079070 and expected failure 39967313521 verified",
+  "completed": [
+    "Implemented bounded allowlisted HTTPS acquisition with source receipts and immutable raw snapshots.",
+    "Implemented PDF table and CSV adapters in the shared Python package; CLI writes private staging only.",
+    "Preserved raw cells, source hash, edition, URL, acquisition timestamp and table/page/row locators.",
+    "Executed both the archived PDF and downloaded official PDF; counts and all normalized fields reconcile."
+  ],
+  "checks": [
+    {
+      "command": "python -m pytest tests/python/test_facilities_parser.py -q",
+      "actual": "16 passed",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/etl/facilities.py --input Archives/Puskesmas_2024.pdf",
+      "actual": {
+        "complete": true,
+        "rows": 973,
+        "regencies": 38,
+        "expected_rows": 973,
+        "expected_regencies": 38,
+        "duplicates": [],
+        "quarantined": 0,
+        "diagnostics": 0,
+        "service_types": {
+          "Rawat Inap": 616,
+          "Non Rawat Inap": 357
+        },
+        "area_types": {
+          "Perdesaan": 658,
+          "Terpencil": 16,
+          "Perkotaan": 294,
+          "Sangat Terpencil": 5
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "command": "fetch_pdf approved official URL then parse_pdf and completeness",
+      "actual": {
+        "complete": true,
+        "rows": 973,
+        "regencies": 38,
+        "expected_rows": 973,
+        "expected_regencies": 38,
+        "duplicates": [],
+        "quarantined": 0,
+        "diagnostics": 0,
+        "service_types": {
+          "Rawat Inap": 616,
+          "Non Rawat Inap": 357
+        },
+        "area_types": {
+          "Perdesaan": 658,
+          "Terpencil": 16,
+          "Perkotaan": 294,
+          "Sangat Terpencil": 5
+        }
+      },
+      "exit_code": 0
+    }
+  ],
+  "reconciliation": {
+    "archive": {
+      "complete": true,
+      "rows": 973,
+      "regencies": 38,
+      "expected_rows": 973,
+      "expected_regencies": 38,
+      "duplicates": [],
+      "quarantined": 0,
+      "diagnostics": 0,
+      "service_types": {
+        "Rawat Inap": 616,
+        "Non Rawat Inap": 357
+      },
+      "area_types": {
+        "Perdesaan": 658,
+        "Terpencil": 16,
+        "Perkotaan": 294,
+        "Sangat Terpencil": 5
+      }
+    },
+    "official": {
+      "complete": true,
+      "rows": 973,
+      "regencies": 38,
+      "expected_rows": 973,
+      "expected_regencies": 38,
+      "duplicates": [],
+      "quarantined": 0,
+      "diagnostics": 0,
+      "service_types": {
+        "Rawat Inap": 616,
+        "Non Rawat Inap": 357
+      },
+      "area_types": {
+        "Perdesaan": 658,
+        "Terpencil": 16,
+        "Perkotaan": 294,
+        "Sangat Terpencil": 5
+      }
+    },
+    "pdf_field_differences": 0,
+    "csv_codes_match": true
+  },
+  "limitations": [
+    "Output is staging_unverified; coordinates, geographic joins and release validation are later tasks.",
+    "Raw downloaded PDF and staging records remain ignored/private; only metadata and synthetic samples are committed."
+  ],
+  "next_action": "Continue to WF-058 after this commit is pushed and verified.",
+  "review": "Technical self-review; no independent reviewer claimed."
+}

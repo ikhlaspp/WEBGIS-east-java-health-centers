@@ -30,7 +30,7 @@ jobs:
           cache-dependency-path: requirements.lock
       - run: python -m pip install --require-hashes -r requirements.lock
       - name: Python syntax checks
-        run: python -m compileall -q scripts tests/python
+        run: python -m compileall -q python scripts tests/python
       - name: Python fixture tests
         run: python -m pytest tests/python -q --junitxml=reports/python.xml
       - name: Controlled assertion failure

@@ -1,0 +1,140 @@
+{
+  "synthetic": true,
+  "rows": [
+    {
+      "source_id": "synthetic-facility",
+      "source_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_url": "https://example.test/synthetic",
+      "edition": "2024-S1",
+      "acquired_at": "2024-01-01T00:00:00Z",
+      "parser_version": "facilities-1.0",
+      "locator": "fixture/row/2",
+      "raw_fields": {
+        "no": "1",
+        "kode_puskesmas": "00000000001",
+        "nama_puskesmas": "SYNTHETIC CLINIC",
+        "alamat": "Synthetic street\nBlock A",
+        "kecamatan": "Synthetic District",
+        "kabupaten": "Synthetic Regency",
+        "provinsi": "Jawa Timur",
+        "kemampuan_pelayanan": "Rawat Inap",
+        "karakteristik_wilayah": "Perdesaan"
+      },
+      "raw_cells": [
+        "1",
+        "00000000001",
+        "SYNTHETIC CLINIC",
+        "Synthetic street\nBlock A",
+        "Synthetic District",
+        "Synthetic Regency",
+        "Jawa Timur",
+        "Rawat Inap",
+        "Perdesaan"
+      ],
+      "fields": {
+        "no": "1",
+        "kode_puskesmas": "00000000001",
+        "nama_puskesmas": "SYNTHETIC CLINIC",
+        "alamat": "Synthetic street Block A",
+        "kecamatan": "Synthetic District",
+        "kabupaten": "Synthetic Regency",
+        "provinsi": "Jawa Timur",
+        "kemampuan_pelayanan": "Rawat Inap",
+        "karakteristik_wilayah": "Perdesaan"
+      },
+      "status": "staging_unverified"
+    }
+  ],
+  "quarantined": [
+    {
+      "source_id": "synthetic-facility",
+      "source_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_url": "https://example.test/synthetic",
+      "edition": "2024-S1",
+      "acquired_at": "2024-01-01T00:00:00Z",
+      "parser_version": "facilities-1.0",
+      "locator": "fixture/row/3",
+      "raw_fields": {
+        "no": "2",
+        "kode_puskesmas": "",
+        "nama_puskesmas": "SYNTHETIC MISSING CODE",
+        "alamat": "Synthetic street",
+        "kecamatan": "Synthetic District",
+        "kabupaten": "Synthetic Regency",
+        "provinsi": "Jawa Timur",
+        "kemampuan_pelayanan": "Non Rawat Inap",
+        "karakteristik_wilayah": "Perdesaan"
+      },
+      "raw_cells": [
+        "2",
+        "",
+        "SYNTHETIC MISSING CODE",
+        "Synthetic street",
+        "Synthetic District",
+        "Synthetic Regency",
+        "Jawa Timur",
+        "Non Rawat Inap",
+        "Perdesaan"
+      ],
+      "fields": {
+        "no": "2",
+        "kode_puskesmas": "",
+        "nama_puskesmas": "SYNTHETIC MISSING CODE",
+        "alamat": "Synthetic street",
+        "kecamatan": "Synthetic District",
+        "kabupaten": "Synthetic Regency",
+        "provinsi": "Jawa Timur",
+        "kemampuan_pelayanan": "Non Rawat Inap",
+        "karakteristik_wilayah": "Perdesaan"
+      },
+      "reasons": [
+        "invalid_facility_code"
+      ]
+    }
+  ],
+  "aggregates": [
+    {
+      "source_id": "synthetic-facility",
+      "source_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "source_url": "https://example.test/synthetic",
+      "edition": "2024-S1",
+      "acquired_at": "2024-01-01T00:00:00Z",
+      "parser_version": "facilities-1.0",
+      "locator": "fixture/row/4",
+      "raw_fields": {
+        "no": "TOTAL",
+        "kode_puskesmas": "",
+        "nama_puskesmas": "",
+        "alamat": "",
+        "kecamatan": "",
+        "kabupaten": "",
+        "provinsi": "",
+        "kemampuan_pelayanan": "",
+        "karakteristik_wilayah": ""
+      },
+      "raw_cells": [
+        "TOTAL",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fields": {
+        "no": "TOTAL",
+        "kode_puskesmas": "",
+        "nama_puskesmas": "",
+        "alamat": "",
+        "kecamatan": "",
+        "kabupaten": "",
+        "provinsi": "",
+        "kemampuan_pelayanan": "",
+        "karakteristik_wilayah": ""
+      }
+    }
+  ],
+  "diagnostics": []
+}

@@ -1,3 +1,5 @@
+Status update: done. Hosted normal run 39968079070 passed; diagnostic run 39967313521 failed at the intentional assertion. The clean-checkout storage defect is fixed. Earlier preparation notes below are historical.
+
 # WF-056 handoff
 
 Status: in_review until the hosted normal and intentional failure runs are observed. The implementation and local checks are ready. Scope: workflow, runner configurations, PostGIS service smoke test, browser smoke test, opt-in failure probe and evidence.

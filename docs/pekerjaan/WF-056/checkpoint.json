@@ -1,12 +1,13 @@
 {
   "ticket_id": "WF-056",
-  "status": "in_review",
+  "status": "done",
   "predecessor": "WF-055 done",
   "completed": [
     "Added SHA-pinned GitHub Actions for Python, PHP, frontend build and Playwright.",
     "Added isolated PostgreSQL 16/PostGIS 3.4 CI service and a real geometry assertion.",
     "Added explicit opt-in assertion failure probe and report artifacts.",
-    "Local Python tests, PHP checks, JS syntax and frontend build passed."
+    "Local Python tests, PHP checks, JS syntax and frontend build passed.",
+    "Hosted run 39968079070 passed both jobs, including actual PostGIS and Chromium; diagnostic run 39967313521 failed at Controlled assertion failure as expected."
   ],
   "checks": [
     {
@@ -36,14 +37,17 @@
       "exit_code": 0
     }
   ],
-  "pending": [
-    "Observe GitHub Actions application/PostGIS/browser success and intentional failed Python job after push."
-  ],
+  "pending": [],
   "review": "Technical self-review; no independent reviewer claimed.",
-  "next_action": "Verify normal and failure-probe CI runs, then continue to WF-057.",
+  "next_action": "Continue to WF-057; retain the CI failure probe as opt-in only.",
   "delivery": {
     "remote": "origin",
     "branch": "main",
     "verification": "Commit SHA and remote verification reported after push."
+  },
+  "remote_runs": {
+    "success": 39968079070,
+    "intentional_failure": 39967313521,
+    "initial_defect": 39966249771
   }
 }

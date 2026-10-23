@@ -1,0 +1,200 @@
+{
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "ceil-boundary",
+      "input": {
+        "P": 30000,
+        "F": 1,
+        "A": "2",
+        "T": 30000
+      },
+      "expected": {
+        "density": "15000",
+        "ratio": "30000",
+        "need": 1,
+        "deficit": 0,
+        "without_facility": false
+      }
+    },
+    {
+      "id": "ceil-next",
+      "input": {
+        "P": 30001,
+        "F": 1,
+        "A": "2",
+        "T": 30000
+      },
+      "expected": {
+        "density": "15000.5",
+        "ratio": "30001",
+        "need": 2,
+        "deficit": 1,
+        "without_facility": false
+      }
+    },
+    {
+      "id": "two-facilities",
+      "input": {
+        "P": 60000,
+        "F": 2,
+        "A": "10",
+        "T": 30000
+      },
+      "expected": {
+        "density": "6000",
+        "ratio": "30000",
+        "need": 2,
+        "deficit": 0,
+        "without_facility": false
+      }
+    },
+    {
+      "id": "no-facility",
+      "input": {
+        "P": 10000,
+        "F": 0,
+        "A": "2",
+        "T": 30000
+      },
+      "expected": {
+        "density": "5000",
+        "ratio": null,
+        "need": 1,
+        "deficit": 1,
+        "without_facility": true
+      }
+    },
+    {
+      "id": "zero-population",
+      "input": {
+        "P": 0,
+        "F": 0,
+        "A": "2",
+        "T": 30000
+      },
+      "expected": {
+        "density": "0",
+        "ratio": null,
+        "need": 0,
+        "deficit": 0,
+        "without_facility": true
+      }
+    },
+    {
+      "id": "unknown-population",
+      "input": {
+        "P": null,
+        "F": 1,
+        "A": "2",
+        "T": 30000
+      },
+      "expected": {
+        "density": null,
+        "ratio": null,
+        "need": null,
+        "deficit": null,
+        "without_facility": false
+      }
+    },
+    {
+      "id": "unknown-area",
+      "input": {
+        "P": 60000,
+        "F": 3,
+        "A": null,
+        "T": 30000
+      },
+      "expected": {
+        "density": null,
+        "ratio": "20000",
+        "need": 2,
+        "deficit": 0,
+        "without_facility": false
+      }
+    },
+    {
+      "id": "larger-deficit",
+      "input": {
+        "P": 90001,
+        "F": 1,
+        "A": "2",
+        "T": 30000
+      },
+      "expected": {
+        "density": "45000.5",
+        "ratio": "90001",
+        "need": 4,
+        "deficit": 3,
+        "without_facility": false
+      }
+    },
+    {
+      "id": "changed-parameter",
+      "input": {
+        "P": 60000,
+        "F": 2,
+        "A": "10",
+        "T": 20000
+      },
+      "expected": {
+        "density": "6000",
+        "ratio": "30000",
+        "need": 3,
+        "deficit": 1,
+        "without_facility": false
+      }
+    }
+  ],
+  "invalid_inputs": [
+    {
+      "P": -1,
+      "F": 1,
+      "A": "1",
+      "T": 30000
+    },
+    {
+      "P": 1,
+      "F": -1,
+      "A": "1",
+      "T": 30000
+    },
+    {
+      "P": 1,
+      "F": 1,
+      "A": "0",
+      "T": 30000
+    },
+    {
+      "P": 1,
+      "F": 1,
+      "A": "1",
+      "T": 0
+    }
+  ],
+  "aggregates": [
+    {
+      "populations": [
+        30000,
+        90000
+      ],
+      "facilities": [
+        1,
+        2
+      ],
+      "expected_ratio": "40000"
+    },
+    {
+      "populations": [
+        30001,
+        29999
+      ],
+      "facilities": [
+        1,
+        1
+      ],
+      "expected_sum_deficit": 1,
+      "T": 30000
+    }
+  ]
+}

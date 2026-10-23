@@ -1,0 +1,132 @@
+{
+  "synthetic": true,
+  "crs": "EPSG:4326",
+  "radii_m": [
+    1000,
+    3000,
+    5000
+  ],
+  "points": [
+    {
+      "id": "overlap-a",
+      "coordinates": [
+        112,
+        -7
+      ],
+      "eligible": true
+    },
+    {
+      "id": "overlap-b",
+      "coordinates": [
+        112.005,
+        -7
+      ],
+      "eligible": true
+    },
+    {
+      "id": "centroid",
+      "coordinates": [
+        112.01,
+        -7.01
+      ],
+      "eligible": false,
+      "precision": "village"
+    },
+    {
+      "id": "boundary",
+      "coordinates": [
+        112,
+        -7.02
+      ],
+      "eligible": true
+    }
+  ],
+  "region": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            112,
+            -7.02
+          ],
+          [
+            112.04,
+            -7.02
+          ],
+          [
+            112.04,
+            -6.9799999999999995
+          ],
+          [
+            112,
+            -6.9799999999999995
+          ],
+          [
+            112,
+            -7.02
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            112.1,
+            -7.1
+          ],
+          [
+            112.11,
+            -7.1
+          ],
+          [
+            112.11,
+            -7.09
+          ],
+          [
+            112.1,
+            -7.09
+          ],
+          [
+            112.1,
+            -7.1
+          ]
+        ]
+      ]
+    ]
+  },
+  "invalid_polygon": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          112,
+          -7
+        ],
+        [
+          112.02,
+          -6.98
+        ],
+        [
+          112,
+          -6.98
+        ],
+        [
+          112.02,
+          -7
+        ],
+        [
+          112,
+          -7
+        ]
+      ]
+    ]
+  },
+  "expected": [
+    "centroid excluded",
+    "overlap union below sum",
+    "clip bounded by region",
+    "two islands preserved",
+    "invalid polygon rejected",
+    "r1 area <= r3 area <= r5 area"
+  ]
+}

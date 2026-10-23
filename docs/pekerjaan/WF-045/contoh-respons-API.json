@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "success": [
+    {
+      "path": "/api/v1/releases",
+      "status": 200,
+      "response": {
+        "data": [
+          {
+            "release_id": "11111111-1111-4111-8111-111111111111",
+            "label": "SYNTHETIC-TEST",
+            "default_analysis_run_id": "22222222-2222-4222-8222-222222222222",
+            "status": "published"
+          }
+        ],
+        "meta": {
+          "active_release_id": "11111111-1111-4111-8111-111111111111",
+          "page": 1,
+          "per_page": 50,
+          "total": 1
+        }
+      }
+    },
+    {
+      "path": "/api/v1/regions",
+      "query": {
+        "level": "district",
+        "parent_code": "0001",
+        "release_id": "11111111-1111-4111-8111-111111111111"
+      },
+      "status": 200,
+      "response": {
+        "data": [
+          {
+            "code": "0001001",
+            "name": "Synthetic district",
+            "parent_code": "0001",
+            "boundary_set_id": "33333333-3333-4333-8333-333333333333"
+          }
+        ],
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "path": "/api/v1/facilities",
+      "status": 200,
+      "response": {
+        "data": [
+          {
+            "code": "00000000001",
+            "name": "Synthetic clinic missing",
+            "address": "Synthetic address",
+            "regency_code": "0001",
+            "district_code": "0001001",
+            "service_type": "Rawat Inap",
+            "area_type": "Perdesaan",
+            "source_id": "44444444-4444-4444-8444-444444444444",
+            "source_locator": "fixture row1",
+            "location": null,
+            "coordinate_status": "missing",
+            "precision_level": "unknown",
+            "synthetic": true
+          }
+        ],
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z",
+          "page": 1,
+          "per_page": 50,
+          "total": 1
+        }
+      }
+    },
+    {
+      "path": "/api/v1/facilities/{code}",
+      "status": 200,
+      "response": {
+        "data": {
+          "code": "00000000001",
+          "name": "Synthetic clinic missing",
+          "address": "Synthetic address",
+          "regency_code": "0001",
+          "district_code": "0001001",
+          "service_type": "Rawat Inap",
+          "area_type": "Perdesaan",
+          "source_id": "44444444-4444-4444-8444-444444444444",
+          "source_locator": "fixture row1",
+          "location": null,
+          "coordinate_status": "missing",
+          "precision_level": "unknown",
+          "synthetic": true
+        },
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "path": "/api/v1/map/points",
+      "status": 200,
+      "response": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "00000000002",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                112,
+                -7
+              ]
+            },
+            "properties": {
+              "code": "00000000002",
+              "coordinate_status": "verified",
+              "precision_level": "facility",
+              "synthetic": true
+            }
+          }
+        ],
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z",
+          "filtered_registered": 3,
+          "filtered_mapped": 2,
+          "view_count": 1,
+          "bbox_applied": true
+        }
+      }
+    },
+    {
+      "path": "/api/v1/map/regions",
+      "status": 200,
+      "response": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "0001001",
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      112,
+                      -7
+                    ],
+                    [
+                      112.01,
+                      -7
+                    ],
+                    [
+                      112.01,
+                      -6.99
+                    ],
+                    [
+                      112,
+                      -6.99
+                    ],
+                    [
+                      112,
+                      -7
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "properties": {
+              "code": "0001001",
+              "parent_code": "0001",
+              "name": "Synthetic valid",
+              "value": 2000,
+              "unit": "people_per_km2",
+              "metric": "density",
+              "completeness": "complete",
+              "reason": null,
+              "without_facility": false,
+              "source_ids": [
+                "44444444-4444-4444-8444-444444444444"
+              ],
+              "source_periods": {
+                "facilities": "2024-S1",
+                "population": "2023",
+                "area": "2023"
+              },
+              "release_id": "11111111-1111-4111-8111-111111111111",
+              "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+              "synthetic": true
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "0001002",
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      112.02,
+                      -7
+                    ],
+                    [
+                      112.03,
+                      -7
+                    ],
+                    [
+                      112.03,
+                      -6.99
+                    ],
+                    [
+                      112.02,
+                      -6.99
+                    ],
+                    [
+                      112.02,
+                      -7
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "properties": {
+              "code": "0001002",
+              "parent_code": "0001",
+              "name": "Synthetic zero",
+              "value": 0,
+              "unit": "people_per_km2",
+              "metric": "density",
+              "completeness": "complete",
+              "reason": null,
+              "without_facility": false,
+              "source_ids": [
+                "44444444-4444-4444-8444-444444444444"
+              ],
+              "source_periods": {
+                "facilities": "2024-S1",
+                "population": "2023",
+                "area": "2023"
+              },
+              "release_id": "11111111-1111-4111-8111-111111111111",
+              "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+              "synthetic": true
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "0001003",
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      112.04,
+                      -7
+                    ],
+                    [
+                      112.05000000000001,
+                      -7
+                    ],
+                    [
+                      112.05000000000001,
+                      -6.99
+                    ],
+                    [
+                      112.04,
+                      -6.99
+                    ],
+                    [
+                      112.04,
+                      -7
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "properties": {
+              "code": "0001003",
+              "parent_code": "0001",
+              "name": "Synthetic unknown",
+              "value": null,
+              "unit": "people_per_km2",
+              "metric": "density",
+              "completeness": "incomplete",
+              "reason": "POPULATION_MISSING",
+              "without_facility": false,
+              "source_ids": [
+                "44444444-4444-4444-8444-444444444444"
+              ],
+              "source_periods": {
+                "facilities": "2024-S1",
+                "population": "2023",
+                "area": "2023"
+              },
+              "release_id": "11111111-1111-4111-8111-111111111111",
+              "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+              "synthetic": true
+            }
+          },
+          {
+            "type": "Feature",
+            "id": "0001004",
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      113,
+                      -7
+                    ],
+                    [
+                      113.01,
+                      -7
+                    ],
+                    [
+                      113.01,
+                      -6.99
+                    ],
+                    [
+                      113,
+                      -6.99
+                    ],
+                    [
+                      113,
+                      -7
+                    ]
+                  ]
+                ],
+                [
+                  [
+                    [
+                      113.02,
+                      -7.02
+                    ],
+                    [
+                      113.03,
+                      -7.02
+                    ],
+                    [
+                      113.03,
+                      -7.01
+                    ],
+                    [
+                      113.02,
+                      -7.01
+                    ],
+                    [
+                      113.02,
+                      -7.02
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "properties": {
+              "code": "0001004",
+              "parent_code": "0001",
+              "name": "Synthetic islands",
+              "value": 100,
+              "unit": "people_per_km2",
+              "metric": "density",
+              "completeness": "complete",
+              "reason": null,
+              "without_facility": false,
+              "source_ids": [
+                "44444444-4444-4444-8444-444444444444"
+              ],
+              "source_periods": {
+                "facilities": "2024-S1",
+                "population": "2023",
+                "area": "2023"
+              },
+              "release_id": "11111111-1111-4111-8111-111111111111",
+              "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+              "synthetic": true
+            }
+          }
+        ],
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z",
+          "metric": "density",
+          "unit": "people_per_km2",
+          "geometry_detail": "display",
+          "legend": {
+            "version": "fixed-v1",
+            "classes": [
+              "0",
+              ">0-1000",
+              ">1000-5000",
+              ">5000"
+            ],
+            "no_data": "Belum tersedia"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/v1/statistics",
+      "status": 200,
+      "response": {
+        "data": {
+          "region_code": "0001",
+          "population": 60000,
+          "facility_count": 3,
+          "population_per_facility": 20000,
+          "T": 30000,
+          "completeness": "complete",
+          "reason": null
+        },
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "path": "/api/v1/analysis/buffers",
+      "query": {
+        "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+        "radius_m": 3000,
+        "release_id": "11111111-1111-4111-8111-111111111111"
+      },
+      "status": 200,
+      "response": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "id": "0001003",
+            "geometry": null,
+            "properties": {
+              "code": "0001003",
+              "radius_m": 3000,
+              "covered_area_m2": null,
+              "geometry_area_m2": 1000000,
+              "coverage_pct": null,
+              "registered_count": 1,
+              "eligible_count": 0,
+              "excluded_count": 1,
+              "contributing_count": 0,
+              "completeness": "unavailable",
+              "reason": "NO_ELIGIBLE_INPUT",
+              "synthetic": true
+            }
+          }
+        ],
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z"
+        }
+      }
+    },
+    {
+      "path": "/api/v1/sources",
+      "status": 200,
+      "response": {
+        "data": [
+          {
+            "source_id": "44444444-4444-4444-8444-444444444444",
+            "publisher": "Fixture",
+            "title": "Synthetic input",
+            "observation_period": "2023",
+            "locator": "fixture row1",
+            "license_note": "Synthetic test data",
+            "limitations": "Not research observations"
+          }
+        ],
+        "meta": {
+          "release_id": "11111111-1111-4111-8111-111111111111",
+          "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+          "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+          "source_periods": {
+            "facilities": "2024-S1",
+            "population": "2023",
+            "area": "2023"
+          },
+          "coordinate_coverage": {
+            "registered": 3,
+            "coordinate_present": 2,
+            "eligible": 1,
+            "excluded": 2
+          },
+          "warnings": [
+            "SYNTHETIC_FIXTURE",
+            "PARTIAL_LOCATIONS"
+          ],
+          "generated_at": "2026-10-23T00:00:00Z"
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "status": 400,
+      "response": {
+        "error": {
+          "code": "UNKNOWN_PARAMETER",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 401,
+      "response": {
+        "error": {
+          "code": "UNAUTHENTICATED",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 403,
+      "response": {
+        "error": {
+          "code": "FORBIDDEN",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 404,
+      "response": {
+        "error": {
+          "code": "RELEASE_NOT_FOUND",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 409,
+      "response": {
+        "error": {
+          "code": "STALE_ACTIVE_VERSION",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 419,
+      "response": {
+        "error": {
+          "code": "CSRF_TOKEN_MISMATCH",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 422,
+      "response": {
+        "error": {
+          "code": "INVALID_RADIUS",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 429,
+      "response": {
+        "error": {
+          "code": "RATE_LIMITED",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 503,
+      "response": {
+        "error": {
+          "code": "NO_PUBLISHED_RELEASE",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    },
+    {
+      "status": 503,
+      "response": {
+        "error": {
+          "code": "DEPENDENCY_UNAVAILABLE",
+          "message": "Synthetic error example",
+          "request_id": "synthetic-request"
+        }
+      }
+    }
+  ]
+}

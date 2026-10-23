@@ -1,0 +1,283 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "0001001",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                112,
+                -7
+              ],
+              [
+                112.01,
+                -7
+              ],
+              [
+                112.01,
+                -6.99
+              ],
+              [
+                112,
+                -6.99
+              ],
+              [
+                112,
+                -7
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "code": "0001001",
+        "parent_code": "0001",
+        "name": "Synthetic valid",
+        "value": 2000,
+        "unit": "people_per_km2",
+        "metric": "density",
+        "completeness": "complete",
+        "reason": null,
+        "without_facility": false,
+        "source_ids": [
+          "44444444-4444-4444-8444-444444444444"
+        ],
+        "source_periods": {
+          "facilities": "2024-S1",
+          "population": "2023",
+          "area": "2023"
+        },
+        "release_id": "11111111-1111-4111-8111-111111111111",
+        "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+        "synthetic": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0001002",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                112.02,
+                -7
+              ],
+              [
+                112.03,
+                -7
+              ],
+              [
+                112.03,
+                -6.99
+              ],
+              [
+                112.02,
+                -6.99
+              ],
+              [
+                112.02,
+                -7
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "code": "0001002",
+        "parent_code": "0001",
+        "name": "Synthetic zero",
+        "value": 0,
+        "unit": "people_per_km2",
+        "metric": "density",
+        "completeness": "complete",
+        "reason": null,
+        "without_facility": false,
+        "source_ids": [
+          "44444444-4444-4444-8444-444444444444"
+        ],
+        "source_periods": {
+          "facilities": "2024-S1",
+          "population": "2023",
+          "area": "2023"
+        },
+        "release_id": "11111111-1111-4111-8111-111111111111",
+        "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+        "synthetic": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0001003",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                112.04,
+                -7
+              ],
+              [
+                112.05000000000001,
+                -7
+              ],
+              [
+                112.05000000000001,
+                -6.99
+              ],
+              [
+                112.04,
+                -6.99
+              ],
+              [
+                112.04,
+                -7
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "code": "0001003",
+        "parent_code": "0001",
+        "name": "Synthetic unknown",
+        "value": null,
+        "unit": "people_per_km2",
+        "metric": "density",
+        "completeness": "incomplete",
+        "reason": "POPULATION_MISSING",
+        "without_facility": false,
+        "source_ids": [
+          "44444444-4444-4444-8444-444444444444"
+        ],
+        "source_periods": {
+          "facilities": "2024-S1",
+          "population": "2023",
+          "area": "2023"
+        },
+        "release_id": "11111111-1111-4111-8111-111111111111",
+        "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+        "synthetic": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0001004",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                113,
+                -7
+              ],
+              [
+                113.01,
+                -7
+              ],
+              [
+                113.01,
+                -6.99
+              ],
+              [
+                113,
+                -6.99
+              ],
+              [
+                113,
+                -7
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                113.02,
+                -7.02
+              ],
+              [
+                113.03,
+                -7.02
+              ],
+              [
+                113.03,
+                -7.01
+              ],
+              [
+                113.02,
+                -7.01
+              ],
+              [
+                113.02,
+                -7.02
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "code": "0001004",
+        "parent_code": "0001",
+        "name": "Synthetic islands",
+        "value": 100,
+        "unit": "people_per_km2",
+        "metric": "density",
+        "completeness": "complete",
+        "reason": null,
+        "without_facility": false,
+        "source_ids": [
+          "44444444-4444-4444-8444-444444444444"
+        ],
+        "source_periods": {
+          "facilities": "2024-S1",
+          "population": "2023",
+          "area": "2023"
+        },
+        "release_id": "11111111-1111-4111-8111-111111111111",
+        "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+        "synthetic": true
+      }
+    }
+  ],
+  "meta": {
+    "release_id": "11111111-1111-4111-8111-111111111111",
+    "analysis_run_id": "22222222-2222-4222-8222-222222222222",
+    "boundary_set_id": "33333333-3333-4333-8333-333333333333",
+    "source_periods": {
+      "facilities": "2024-S1",
+      "population": "2023",
+      "area": "2023"
+    },
+    "coordinate_coverage": {
+      "registered": 3,
+      "coordinate_present": 2,
+      "eligible": 1,
+      "excluded": 2
+    },
+    "warnings": [
+      "SYNTHETIC_FIXTURE",
+      "PARTIAL_LOCATIONS"
+    ],
+    "generated_at": "2026-10-23T00:00:00Z",
+    "metric": "density",
+    "unit": "people_per_km2",
+    "geometry_detail": "display",
+    "legend": {
+      "version": "fixed-v1",
+      "classes": [
+        "0",
+        ">0-1000",
+        ">1000-5000",
+        ">5000"
+      ],
+      "no_data": "Belum tersedia"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-036",
+  "status": "in_review",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all folder03 tasks; existing preference one progress commit per item, plain messages, Planning ignored.",
+  "artifacts": [
+    "desain-lifecycle-rilis.md",
+    "desain-backup-rollback.md"
+  ],
+  "self_review": "Lifecycle/version CAS/audit/outbox/visibility-before-cache dan backupDB+file/restore/rollback dijelaskan dengan race failure cases.",
+  "open_items": [
+    "Review/penerimaan stakeholder belum tercatat; status in_review bukan done/accepted.",
+    "Hosting/akun/budget/versiDB aktual dan operator bernama perlu dikonfirmasi sebelum provisioning/operasi."
+  ],
+  "delivery": {
+    "kind": "progress_checkpoint",
+    "remote": "origin",
+    "branch": "main",
+    "verification": "Commit SHA and remote ancestry reported after push; acceptance separate."
+  }
+}

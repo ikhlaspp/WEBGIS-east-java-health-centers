@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-034",
+  "status": "in_review",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all folder03 tasks; existing preference one progress commit per item, plain messages, Planning ignored.",
+  "artifacts": [
+    "spesifikasi-constraint-indeks.md",
+    "urutan-migration.md"
+  ],
+  "self_review": "Composite FK lintas boundary/release/review, checks, immutability locks, indeks dan migration order didesain; SQL belum dieksekusi.",
+  "open_items": [
+    "Review/penerimaan stakeholder belum tercatat; status in_review bukan done/accepted."
+  ],
+  "delivery": {
+    "kind": "progress_checkpoint",
+    "remote": "origin",
+    "branch": "main",
+    "verification": "Commit SHA and remote ancestry reported after push; acceptance separate."
+  }
+}

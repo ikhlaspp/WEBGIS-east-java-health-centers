@@ -1,0 +1,59 @@
+{
+  "ticket_id": "WF-053",
+  "input_hashes": {
+    "WF-G3-accepted-baseline": "55ba57b0b9bf8377c3642fd65beb00dda3c19160",
+    "WF-031-layout": "docs/pekerjaan/WF-031/desain-struktur-repositori.md"
+  },
+  "code_revision": "55ba57b0b9bf8377c3642fd65beb00dda3c19160",
+  "working_tree_paths": [
+    ".gitignore",
+    "README.md",
+    "docs/pekerjaan/WF-053/catatan-inisialisasi-repo.md",
+    "docs/pekerjaan/WF-053/struktur-proyek.txt",
+    "docs/pekerjaan/WF-053/handoff.md",
+    "docs/pekerjaan/WF-053/checkpoint.json"
+  ],
+  "completed": [
+    "Inspected existing repository, remote, archive files, and project layout.",
+    "Prepared ignore rules, development README, structure map, and execution handoff.",
+    "Verified ignore rules, archive preservation, staged-path isolation, and git diff --check."
+  ],
+  "pending": [],
+  "blocked": [
+    {
+      "issue": "District boundary GIS source is absent from Archives; 408 of 973 facility rows have no coordinates.",
+      "impact": "Polygon layers and complete location-based analysis cannot be produced from current archived inputs alone.",
+      "owner": "Project owner / data reviewer",
+      "next_action": "Obtain an authorized source decision or revise the dependent requirement before polygon-dependent ticket work."
+    }
+  ],
+  "evidence_paths": [
+    "docs/pekerjaan/WF-053/catatan-inisialisasi-repo.md",
+    "docs/pekerjaan/WF-053/struktur-proyek.txt",
+    "docs/pekerjaan/WF-053/handoff.md"
+  ],
+  "checks": [
+    {
+      "command": "git diff --check",
+      "environment": "Windows PowerShell, repository root",
+      "expected": "exit code 0 with no whitespace errors",
+      "actual": "passed with exit code 0",
+      "exit_code": 0
+    },
+    {
+      "command": "git check-ignore -v .env .env.local vendor node_modules data/raw/example.csv Planning/example.md; verify .env.example is not ignored",
+      "environment": "Windows PowerShell, repository root",
+      "expected": "local secrets, dependencies, generated data and Planning are ignored; example env stays trackable",
+      "actual": "all listed paths matched intended rules; .env.example was not ignored",
+      "exit_code": 0
+    },
+    {
+      "command": "git ls-files Archives; git ls-files Planning",
+      "environment": "Windows PowerShell, repository root",
+      "expected": "archive originals remain tracked and Planning remains untracked",
+      "actual": "archive files remain tracked; no Planning files are tracked",
+      "exit_code": 0
+    }
+  ],
+  "next_action": "Push the WF-053 item commit, verify it on origin/main, then start WF-054."
+}

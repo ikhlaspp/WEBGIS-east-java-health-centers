@@ -1,1 +1,62 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# PHP / Laravel
+/vendor/
+/.phpunit.cache/
+/storage/*.key
+/storage/framework/cache/data/
+/storage/framework/sessions/
+/storage/framework/testing/
+/storage/framework/views/
+/storage/logs/
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+
+# Node / Vite
+/node_modules/
+/public/build/
+/public/hot
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Python / notebooks
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+*.ipynb_checkpoints/
+
+# Local datasets, generated outputs, and database dumps
+/data/raw/
+/data/staging/
+/data/processed/
+/data/exports/
+*.dump
+*.sql.gz
+*.sqlite
+*.sqlite3
+
+# Deployment, editor, and operating-system files
+/.vercel/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local planning and generated runtime output
 /Planning/

@@ -1,0 +1,38 @@
+Repository layout after the WF-053 scaffold
+Baseline revision: 55ba57b0b9bf8377c3642fd65beb00dda3c19160 (WF-G3 acceptance record)
+
+Existing source and evidence (preserved):
+  Archives/                 Original spreadsheets, CSV, PDFs, and notebook; read-only
+  docs/pekerjaan/           Ticket evidence and accepted design artifacts
+
+Current root files:
+  .gitignore                Local secrets, dependencies, caches, generated data, Planning
+  README.md                 Project status, setup policy, and data handling
+
+Approved application layout (created by the corresponding implementation items):
+  app/Http/Controllers/Api/ Laravel HTTP/API boundary
+  app/Http/Requests/        Request validation and allowlists
+  app/Http/Resources/       Stable response serialization
+  app/Services/             Release context, lifecycle, statistics, audit
+  app/Policies/             Authorization policy
+  app/Console/Commands/     Controlled CLI entry points
+  database/migrations/      PostgreSQL/PostGIS schema and grants
+  resources/views/          Blade templates
+  resources/js/map/         Leaflet state, requests, layers, and legends
+  python/gis_pipeline/      Shared Python acquisition, validation, and analysis package
+  scripts/etl/              Thin ETL entry points
+  scripts/analysis/         Thin analysis/export entry points
+  notebooks/                Notebook orchestration over the shared package
+  tests/Feature/            Laravel feature tests
+  tests/Unit/               PHP unit tests
+  tests/Browser/            Browser tests
+  tests/python/              Python package tests
+  tests/sql/                 PostgreSQL/PostGIS and role tests
+  tests/data/wf-NNN/        Small synthetic, item-scoped fixtures only
+  data/raw/                 Local source copies; ignored by Git
+  data/staging/              Generated staging data; ignored by Git
+  data/processed/            Generated outputs; ignored by Git
+  data/exports/               Generated exports; ignored by Git
+  docs/runbooks/              Operational procedures
+
+At this checkpoint the application directories and dependency manifests are not yet present. WF-054 will install the Laravel and frontend skeleton without replacing Archives or docs. WF-055/056 add the Python environment and CI. Paths are mapped from WF-031 and are not claims that code already exists.

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "ticket": "WF-032",
+  "status": "in_review",
+  "executor": "Codex",
+  "stakeholder_accepted": false,
+  "authorization": "User requested all folder03 tasks; existing preference one progress commit per item, plain messages, Planning ignored.",
+  "artifacts": [
+    "desain-job-batch.md",
+    "matriks-error-retry.md"
+  ],
+  "self_review": "State job/lease/idempotency/chunk25/retry/partial-count tersedia; sukses parser berbeda dari validasi rilis.",
+  "open_items": [
+    "Review/penerimaan stakeholder belum tercatat; status in_review bukan done/accepted."
+  ],
+  "delivery": {
+    "kind": "progress_checkpoint",
+    "remote": "origin",
+    "branch": "main",
+    "verification": "Commit SHA and remote ancestry reported after push; acceptance separate."
+  }
+}

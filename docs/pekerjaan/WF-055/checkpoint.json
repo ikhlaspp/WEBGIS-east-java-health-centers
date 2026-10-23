@@ -1,12 +1,12 @@
 {
   "ticket_id": "WF-055",
-  "status": "blocked",
+  "status": "done",
   "input_hashes": {
     "accepted_WF-G3_and_WF-054": "1ee8e1c6d7afe9284902a6aa5c58fe137dfe5818",
     "fixture_spec": "docs/pekerjaan/WF-049/spesifikasi-fixture.md",
     "expected_results": "docs/pekerjaan/WF-049/expected-results.md"
   },
-  "code_revision": "cd9e30f3036e20cf5a14ff94c67a187aab02f031",
+  "code_revision": "8acf4af4bf76df80e0c9bbec0c30a103996cdf16",
   "working_tree_paths": [
     ".gitignore",
     "README.md",
@@ -29,19 +29,11 @@
     "Created synthetic Point and MultiPolygon fixtures and a notebook preflight.",
     "Ran local fixture tests and notebook code cells successfully.",
     "Executed all notebook code cells in a real local Jupyter kernel, including the hash-locked installer and pytest; 2 tests passed.",
-    "Started the local runtime with user authorization; authenticated status HTTP 200, kernel start HTTP 201 and stop HTTP 204."
+    "Started the local runtime with user authorization; authenticated status HTTP 200, kernel start HTTP 201 and stop HTTP 204.",
+    "Project owner supplied the final pytest output after the Colab local-runtime Run all instructions: 2 passed, 1 optional cache warning in 1.23s."
   ],
-  "pending": [
-    "Run the notebook with the lock in Google Colab and record actual runtime version/output."
-  ],
-  "blocked": [
-    {
-      "issue": "No browser provider/session is available for accessing Google Colab in this environment.",
-      "impact": "WF-055 explicitly requires execution in both local and Colab environments; the ticket cannot be marked done yet.",
-      "owner": "Project owner / implementation",
-      "next_action": "Provide an available Colab browser session or run the notebook in Colab and return the actual runtime/output evidence."
-    }
-  ],
+  "pending": [],
+  "blocked": [],
   "evidence_paths": [
     "docs/pekerjaan/WF-055/log-setup-Python-Colab.md",
     "docs/pekerjaan/WF-055/hasil-fixture-awal.txt",
@@ -71,10 +63,11 @@
     },
     {
       "command": "Open Google Colab and run notebook",
-      "environment": "No browser provider/session available",
-      "expected": "Colab runtime reports version and synthetic preflight passes",
-      "actual": "not run; browser unavailable",
-      "exit_code": null
+      "environment": "Colab frontend connected to the project local Windows Jupyter runtime; output supplied by the project owner",
+      "expected": "Notebook fixture tests pass from Colab using the local runtime",
+      "actual": "2 passed, 1 warning in 1.23s; PytestCacheWarning: Windows denied optional cache creation",
+      "exit_code": null,
+      "evidence_source": "User-pasted final cell output in conversation after Run all instructions; process exit code was not separately supplied"
     },
     {
       "command": "nbclient.NotebookClient.execute with working directory notebooks/ and PIP_NO_INDEX=1",
@@ -91,5 +84,5 @@
       "exit_code": 0
     }
   ],
-  "next_action": "Run all notebook cells from the Colab frontend using the authorized running local runtime and record actual output. Keep WF-055 blocked and do not start WF-056 until this evidence is available."
+  "next_action": "Commit and push the completion evidence; verify the remote SHA. WF-056 may then begin. Hosted Google compute was not tested; Colab used the approved local runtime."
 }

@@ -3,7 +3,7 @@
 Date: 23 October 2026
 Executor: Codex on the project owner's instruction
 Baseline revision: `1ee8e1c6d7afe9284902a6aa5c58fe137dfe5818`
-Result: local Python/GIS environment and synthetic notebook preflight pass. Colab execution remains blocked because no browser is available in this session.
+Result: done. Local Python/GIS notebook execution passed, and the project owner supplied passing Colab local-runtime fixture output. Earlier blockers and their resolution are documented below.
 
 ## Environment installed
 
@@ -29,7 +29,7 @@ Result: local Python/GIS environment and synthetic notebook preflight pass. Cola
 | Execute notebook code cells locally after skipping its `%pip` install cell | Notebook imports, checks geometry, and renders Folium map | Passed; printed GeoPandas 1.2.0 and Folium 0.20.0 and `Synthetic spatial preflight passed.` |
 | Inspect available Colab browser session | Run notebook in user Colab environment | Not run: no browser surfaces were available; `iab` browser could not be created |
 
-## Remaining work
+## Initial remaining work (resolved by owner-supplied evidence below)
 
 The local environment and fixture checks pass, but the ticket requires a real Colab run. Do not mark WF-055 done until the notebook is run in Colab and the output is recorded. This local preflight does not validate Colab's current interpreter, Google account state, or runtime package installation.
 
@@ -50,3 +50,9 @@ Actual verification: all notebook cells executed through `nbclient` in a real lo
 Startup troubleshooting: the initial PowerShell policy blocked the script; the child-process bypass resolved it. Windows profile permissions required keeping Jupyter/IPython directories in the workspace and separating runtime directories by account. An attempted duplicate startup correctly failed because port 8888 was already in use; the existing runtime was retained. Final authenticated API verification on the running server returned HTTP 200 for status, 201 for creating a temporary python3 kernel, and 204 for deleting that kernel. Token authentication was enabled and the allowed origin was `https://colab.research.google.com`.
 
 The available browser inventory was empty. This verifies the local Jupyter runtime, not an actual Colab frontend connection or a hosted Google runtime. WF-055 stays blocked pending the required Colab run; no external review or Colab result is claimed.
+
+## Completion from owner-supplied Colab evidence
+
+After receiving the Colab upload, local-runtime connection, and Run all instructions, the project owner supplied the final cell output: **2 passed, 1 warning in 1.23s**. The complete supplied output is recorded in `hasil-fixture-awal.txt`. The warning is `PytestCacheWarning` caused by Windows denying creation of `.pytest_cache/v/cache`; it affects optional cache persistence and does not represent a failed test.
+
+This is user-supplied Colab frontend evidence using the approved local Windows runtime. The agent did not observe the browser, and no hosted Google compute run or independent external review is claimed. Earlier complete local notebook execution and the server's kernel lifecycle checks remain the supporting evidence. The missing Colab execution evidence is now supplied; WF-055 is marked done. Commit and verify delivery before moving to WF-056.

@@ -3,4 +3,17 @@ Working directory: notebooks/; repository root discovered by the notebook.
 {'python': '3.12.15', 'geopandas': '1.2.0', 'folium': '0.20.0'}
 Synthetic spatial preflight passed.
 2 passed, 1 warning in 1.14s
-Colab frontend execution: not run; no browser surface available.
+Colab frontend execution: initially unavailable to the agent; later supplied by the project owner below.
+
+Colab local-runtime evidence supplied by the project owner after Run all instructions:
+..                                                                       [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\_pytest\cacheprovider.py:469
+  D:\laragon\www\GIS-puskesmas\.venv\Lib\site-packages\_pytest\cacheprovider.py:469: PytestCacheWarning: could not create cache path D:\laragon\www\GIS-puskesmas\.pytest_cache\v\cache\nodeids: [WinError 5] Access is denied: 'D:\\laragon\\www\\GIS-puskesmas\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2 passed, 1 warning in 1.23s
+
+Source: user-provided conversation output, not an agent-observed Colab browser session.
+Interpretation: both fixture tests passed; optional pytest cache creation failed due to Windows permissions. No assertion failed. This is Colab with the local runtime, not hosted Google compute.

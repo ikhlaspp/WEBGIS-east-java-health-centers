@@ -24,13 +24,13 @@ Versi 1 · 23 Oktober 2026 · Penyusun: Codex. P=proposal, U=arahan pengguna, R=
 
 ## Empat opsi P1
 
-| Item | Asumsi kerja | Alasan dan konsekuensi |
+| Item | Accepted scope | Alasan dan konsekuensi |
 |---|---|---|
-| WF-097 dashboard batch admin | Ditunda dari kandidat rilis inti | Command tetap memberi status/job/log; UI bukan prasyarat kontrol operasional |
-| WF-098 layar review/publish | Ditunda dari kandidat rilis inti | Review tercatat dan publish/rollback tetap P0 lewat command terotorisasi |
-| WF-099 ekspor CSV publik | Ditunda dari kandidat rilis inti | Tabel paginasi tetap P0; ekspor artefak penelitian FR-07/024 tetap wajib |
-| WF-100 ranking kecamatan | Ditunda dari kandidat rilis inti | Angka defisit/detail tetap tersedia; A08-PARAM tetap wajib |
+| WF-097 dashboard batch admin | deferred from the accepted core release | Command tetap memberi status/job/log; UI bukan prasyarat kontrol operasional |
+| WF-098 layar review/publish | deferred from the accepted core release | Review tercatat dan publish/rollback tetap P0 lewat command terotorisasi |
+| WF-099 ekspor CSV publik | deferred from the accepted core release | Tabel paginasi tetap P0; ekspor artefak penelitian FR-07/024 tetap wajib |
+| WF-100 ranking kecamatan | deferred from the accepted core release | Angka defisit/detail tetap tersedia; A08-PARAM tetap wajib |
 
-Ini default P0-first yang diajukan untuk review, bukan klaim pengguna telah menyetujui deferred. Keputusan akhir dan sumber jawaban dirangkum dalam [register scope](../WF-028/keputusan-scope-P1.md). Ketika scope dipilih, perubahan berlaku pada desain, pembangunan dan suite terkait bersama-sama.
+The owner accepted P0-first and the four individual deferrals under WF-G2; they are no longer tentative. Keputusan akhir dan sumber jawaban dirangkum dalam [register scope](../WF-028/keputusan-scope-P1.md). Ketika scope dipilih, perubahan berlaku pada desain, pembangunan dan suite terkait bersama-sama.
 
 P2 di luar rilis: routing/waktu tempuh, isochrone, rekam medis, akun publik, optimasi lokasi, prediksi, penilaian mutu, statistik klaster lanjutan. Tidak ada skor prioritas berbobot baru tanpa tujuan dan CR. Penerimaan: semua 17 FR terlacak; FR-15 dipecah sehingga P1 tidak dapat menunda pengamanan backend.

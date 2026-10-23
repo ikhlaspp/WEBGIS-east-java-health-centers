@@ -19,15 +19,24 @@
   ],
   "self_review": "24 paket desain, trace 17 FR/8 NFR, 52 handoff dan pemeriksaan JSON/hash/arithmetic lulus; WF-G3 diterima pemilik pekerjaan dengan dependensi data/runtime terbuka.",
   "open_items": [
-    "Berkas polygon district tidak ditemukan di Archives; jangan memakai sumber eksternal tanpa keputusan dan verifikasi lisensi.",
+    "Official free boundary/code research and acquisition authorized by accepted G2 revision; verify actual edition, terms and historical mapping before use.",
     "408 dari 973 fasilitas tidak memiliki koordinat; provider geocoding belum dipilih.",
-    "Supabase dan Vercel Hobby dipilih; akun, versi database dan deployment Laravel melalui runtime PHP komunitas perlu dibuktikan saat setup.",
-    "Empat P1 belum dipilih; jangan menandai deferred atau membangun tanpa keputusan scope."
+    "Supabase dan Vercel Hobby dipilih; akun, versi database dan deployment Laravel melalui runtime PHP komunitas perlu dibuktikan saat setup."
   ],
   "delivery": {
     "kind": "accepted_baseline",
     "remote": "origin",
     "branch": "main",
     "verification": "Accepted by project owner in conversation; acceptance is distinct from runtime tests and academic review."
+  },
+  "scope_update": {
+    "decision_path": "docs/pekerjaan/WF-028/keputusan-scope-P1.md",
+    "deferred": [
+      "WF-097",
+      "WF-098",
+      "WF-099",
+      "WF-100"
+    ],
+    "effect": "Core G3 geometry/security contracts preserved; earlier unspecified P1 and source-research authorization statements superseded."
   }
 }

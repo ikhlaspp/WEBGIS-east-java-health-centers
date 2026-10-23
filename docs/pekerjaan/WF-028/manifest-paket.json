@@ -1,15 +1,15 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-10-23",
   "hash_policy": "UTF-8 text with universal newlines normalized to LF, allowing Windows Git checkout CRLF. Excludes this manifest and generated validation report.",
   "files": [
     {
       "path": "WF-013/checkpoint.json",
-      "sha256_utf8_lf": "0d93351b19bfd8ab641a343bfe063f43e74faa67d264787bee467021bdd908ed"
+      "sha256_utf8_lf": "98fbd780a184dc2301fa87243fef62f561657e5e64d7ea3e0491d091641f0ebf"
     },
     {
       "path": "WF-013/handoff.md",
-      "sha256_utf8_lf": "d31ae4d63b20c694e9d4717d941a6df600eaeb4336cd99ceb4485768bccde463"
+      "sha256_utf8_lf": "cd250928440c17e31375ae479957974e160b9f603fcd63b7ffa66baf2ddf4ab7"
     },
     {
       "path": "WF-013/skenario-penggunaan.md",
@@ -17,23 +17,23 @@
     },
     {
       "path": "WF-014/checkpoint.json",
-      "sha256_utf8_lf": "24c93826fa6dd4370e4a9ed815325728ce913c8e53811ec051a81a11f6b80a46"
+      "sha256_utf8_lf": "156c4286e5cb27cf37c28b19b3feb0f816d8e14d088e827ad5167ca539ff568e"
     },
     {
       "path": "WF-014/handoff.md",
-      "sha256_utf8_lf": "0944a57848d892f4142fbb38cbe170ef258b3a310f65c2918e51f19e8fa15bd4"
+      "sha256_utf8_lf": "3cfad2be83d987e8a18cb2d8d8ff22eca3ae4ce78fbbefc640bcbf2a59e7c1e1"
     },
     {
       "path": "WF-014/matriks-FR-dan-scope-rilis.md",
-      "sha256_utf8_lf": "160dccad0b0895a696942e63300541245727f9dd56192729086e8881959905fd"
+      "sha256_utf8_lf": "4d77c84162477b17d5e69431204fb83cb6daea95c437cfdaaf0ba22b545913d2"
     },
     {
       "path": "WF-015/checkpoint.json",
-      "sha256_utf8_lf": "cade9ebad01874ac375e29c766ac49161db035468df81f7c5ed377a2fef5a7c3"
+      "sha256_utf8_lf": "7659beb397bf303c57b5a42222375883028dd593f52462b9e8f098d61dcafddb"
     },
     {
       "path": "WF-015/handoff.md",
-      "sha256_utf8_lf": "1ed5ecfbaf36ce25026bdad7564e784efb2b67593e980f01c2bd687c94b3a86b"
+      "sha256_utf8_lf": "db5f32aaf66bde52a6d7d5455e1b7239cc48da99affac3d02eec891ba014743e"
     },
     {
       "path": "WF-015/matriks-hak-akses-aplikasi.md",
@@ -41,11 +41,11 @@
     },
     {
       "path": "WF-016/checkpoint.json",
-      "sha256_utf8_lf": "60aa42fd071c498d1771afa87f74e35dc85924ebdbd736e6200586f93cd35eaf"
+      "sha256_utf8_lf": "f334f23d1ac8fcf603638d584f6397a85ca49f9ab5433403991da0a072430681"
     },
     {
       "path": "WF-016/handoff.md",
-      "sha256_utf8_lf": "4267ecd8f6585b8478c4473445504d23539b03c5a97380a97af7bad160aafd45"
+      "sha256_utf8_lf": "df1417973a06f83c039618f60fe8c437d29ba38a8cec3c6fb1a47ca714583492"
     },
     {
       "path": "WF-016/inventaris-halaman-dan-konten.md",
@@ -57,11 +57,11 @@
     },
     {
       "path": "WF-017/checkpoint.json",
-      "sha256_utf8_lf": "72e6362b4a40f5a68614b76178471690fb43a773b8825383c0d05e35d9908ce0"
+      "sha256_utf8_lf": "d425900478f6531588cfc1f51acd1fcfa108b87df7d55ef3ca906d4f3405941f"
     },
     {
       "path": "WF-017/handoff.md",
-      "sha256_utf8_lf": "b7a5698d6e9a253ee18d67cb5d4b3269ef38adb29ffab27576ecc47033ecc123"
+      "sha256_utf8_lf": "e486c2f04cb1a204ef7d748ac1ec6a64b0512c7af066b0ab6490ef4f11b4d9c7"
     },
     {
       "path": "WF-017/manifest-arsip.json",
@@ -73,15 +73,15 @@
     },
     {
       "path": "WF-018/catatan-kelayakan-sumber.md",
-      "sha256_utf8_lf": "eb1a4d3676e8031d2a583d409fe1b9c71a8bcc1144d86e21df8139e788894d3b"
+      "sha256_utf8_lf": "b63596fc0534d8cc1d88109bb33b9be3413e87f082e1a2bcc54dceff0dcab96c"
     },
     {
       "path": "WF-018/checkpoint.json",
-      "sha256_utf8_lf": "47179f5a31f0472c668c242fda6f1d132ef856bc663eb96770067a4915071a44"
+      "sha256_utf8_lf": "4ce57de0e095cf348c78487b66af0eb87c5192d651a1602bff5afc9f57e7f710"
     },
     {
       "path": "WF-018/handoff.md",
-      "sha256_utf8_lf": "2b1bc8b80a256a907a5bb9023539725de7c5484661d144c3b4bd76e7a00940ed"
+      "sha256_utf8_lf": "6a7fb33ac2d6027c90aaab9543111a02ff70255ed4ad24b0adf4dd6a42dc4715"
     },
     {
       "path": "WF-018/katalog-sumber-scraping.md",
@@ -93,35 +93,35 @@
     },
     {
       "path": "WF-019/checkpoint.json",
-      "sha256_utf8_lf": "f726203009230a8223e7a70eb001e1dbb2d086b85b396076a7dc9b631428e058"
+      "sha256_utf8_lf": "4c41346528860a769f40bcb2cdab5dae87fce02bb72407f8095faf9d4c15640b"
     },
     {
       "path": "WF-019/handoff.md",
-      "sha256_utf8_lf": "d2577deb6f2d35a6c50d725c5973a79f998051aa55db76c9f66f51e5693037d7"
+      "sha256_utf8_lf": "de071edeabc48d5d1e1b0790cc20b1933426a0d388dd0a5d9314d86084834608"
     },
     {
       "path": "WF-019/kebijakan-periode-unit-identitas.md",
-      "sha256_utf8_lf": "0998f4860d093bef036acd478e631577a8379b4d6c2d84132571d87534f8ed6f"
+      "sha256_utf8_lf": "683769238856d30206d6f54c1a531336e3357a24f87bfce51d98c38a0e145cd1"
     },
     {
       "path": "WF-020/aturan-kualitas-dataset.md",
-      "sha256_utf8_lf": "a49fe760ea86ed61449fb31e81ebe2b310e4eb0d12bf6c3c7a4279cc75cff3f9"
+      "sha256_utf8_lf": "f38fec2b269ae3dd602875290d79f6a7bca80b8d5e34dcfb10a5216dc2d0abf6"
     },
     {
       "path": "WF-020/checkpoint.json",
-      "sha256_utf8_lf": "f45c8336438768b21029566b337692246029ce23374e10a8afac0fe23f457f5e"
+      "sha256_utf8_lf": "86f0493c7655ff728501277aa13fcc240464647c2ebd1e69650986714376f2c1"
     },
     {
       "path": "WF-020/handoff.md",
-      "sha256_utf8_lf": "4facd5702c6b993a3441a8657b466bf9ce77900ebb0dd572c9b77af88c774b04"
+      "sha256_utf8_lf": "290db9e4c1ca6e97cafe3bf1d3703f4caa076d6510513e66e2fe0613594c1f16"
     },
     {
       "path": "WF-021/checkpoint.json",
-      "sha256_utf8_lf": "ef1782441b91646aa0c049daea2e30a1c27992aeb8df643543138fcc07597cd2"
+      "sha256_utf8_lf": "f247613c631bd8bf18935ca9802305a2a3121859142be9d4f1e914bee1b4528a"
     },
     {
       "path": "WF-021/handoff.md",
-      "sha256_utf8_lf": "fce8218e0e987783f4143a71c8af19ef92f57adf4d09ad86cf344fc6b7617ba2"
+      "sha256_utf8_lf": "108496d3df10ca7e5b24745281c1b9ed18d1a6a87cac0e7564133e438bb16e1b"
     },
     {
       "path": "WF-021/katalog-indikator.md",
@@ -129,11 +129,11 @@
     },
     {
       "path": "WF-022/checkpoint.json",
-      "sha256_utf8_lf": "932a07e05fcdef964ceb8eb33c40a2984d958a27d717ffb47db3c85246585905"
+      "sha256_utf8_lf": "a77a26992a34817aa79459fb40c5f347eb428c7b7b3703d6f4b0a28c91e0f5ae"
     },
     {
       "path": "WF-022/handoff.md",
-      "sha256_utf8_lf": "a18fc0041a96147359fa8877dcf40c33d614f7c5199c72f3842830016430bc9e"
+      "sha256_utf8_lf": "2f9e266bd12fe26543567a5a522848e86f2306101f4b5099dbe696f9fcba09fc"
     },
     {
       "path": "WF-022/kebutuhan-layer-dan-legenda.md",
@@ -141,23 +141,23 @@
     },
     {
       "path": "WF-023/checkpoint.json",
-      "sha256_utf8_lf": "a36a5fd9b4c6fbc24ddf2226987eb70e36e358d048ecfffea050e74124dabfcc"
+      "sha256_utf8_lf": "29f57ec1d5135626c2e5c0b557f2e0e4aaee152783f854beea6203ca94f0543a"
     },
     {
       "path": "WF-023/handoff.md",
-      "sha256_utf8_lf": "b968b995b2d4696c3e708066e475ffef9eba711ea84fdaba398bd38bc46e9e6c"
+      "sha256_utf8_lf": "db8703f08a5f4f5cbe1bd9f9b4ee5f26983a50401506e0b98f04e584e8352e8b"
     },
     {
       "path": "WF-023/kebutuhan-analisis-radius.md",
-      "sha256_utf8_lf": "9996ba3f7d042557d2c841b183cec3b5e0adbb50da976f9fc3058e16719a271b"
+      "sha256_utf8_lf": "e1f2695dbe6db7bfc48bf72209d0b0c81898ada81bdc6673eb991743c7333ba5"
     },
     {
       "path": "WF-024/checkpoint.json",
-      "sha256_utf8_lf": "9b604448ff41efe9a79b18e85ad9cd45518bec9c767eb4f439178240215ff5fc"
+      "sha256_utf8_lf": "273fadd955927b42ed9ec35e5026005551b2ba143ceada7d3d05bcf4c4e2cd53"
     },
     {
       "path": "WF-024/handoff.md",
-      "sha256_utf8_lf": "c812325aef9bed048b15e7c146bc7f853fd725d029995c3528213eaec603630b"
+      "sha256_utf8_lf": "b14506f48c2cf4bf0d1c123c7a2d5a9cf2ca045ca224665646c61f702683bd7d"
     },
     {
       "path": "WF-024/spesifikasi-keluaran-penelitian.md",
@@ -169,11 +169,11 @@
     },
     {
       "path": "WF-025/checkpoint.json",
-      "sha256_utf8_lf": "23567fa2025325761d93f571a3cc4a83523937d1fefbf7c5f28f83b13344cb0c"
+      "sha256_utf8_lf": "620b468821638465a0795166b905f0757f7f5f094650d4c0c16e76b965470016"
     },
     {
       "path": "WF-025/handoff.md",
-      "sha256_utf8_lf": "c134fbf495617cd95ef0671087b934c5235fc1b50229550fd760e0d649849ec0"
+      "sha256_utf8_lf": "d3ed94765ee620f027cab48d0cf61f23e8a5c5c98d9301873e16712c8a7ff69b"
     },
     {
       "path": "WF-026/baseline-keamanan-pemulihan-reproduksi.md",
@@ -181,23 +181,23 @@
     },
     {
       "path": "WF-026/checkpoint.json",
-      "sha256_utf8_lf": "351e574bada36f1373141a3d69c2df9c3e13e284efdc7194245f7eba4c70ec9e"
+      "sha256_utf8_lf": "cafe7bc8f3dfd6ed3725d0d7797cd30350cacc5a1d709b0a62b170cea32cc6d7"
     },
     {
       "path": "WF-026/handoff.md",
-      "sha256_utf8_lf": "333553a98686f256efc11523968219d72bb82dd935babc84db6aa50981914dfc"
+      "sha256_utf8_lf": "38091ef42b29c2b74de5f57b4521ddfec9e8973175be68490bbbc837c5b305b4"
     },
     {
       "path": "WF-027/checkpoint.json",
-      "sha256_utf8_lf": "6a2a9aefed47c2624664efee9af35b8202e42e4d2071eeb6ba1a6ee5540b1b3b"
+      "sha256_utf8_lf": "0096661036d48c6f086768f0c910a7ee036e226801366038c64b3bc09f8f27b4"
     },
     {
       "path": "WF-027/handoff.md",
-      "sha256_utf8_lf": "2f6879e364c4ec497e764c72de04fad55bd8d07b62d30a3f7cce8ef9cc6556ed"
+      "sha256_utf8_lf": "c1f5f7f1c5b50273618fe1345c22c836edaf59f72b21ddf986b21c930a957275"
     },
     {
       "path": "WF-027/matriks-kebutuhan-pengujian.md",
-      "sha256_utf8_lf": "ce97fcc65e545885043bf113eef359ee852d8128ce03f8117590b873696b216a"
+      "sha256_utf8_lf": "e64f5307189b8f26ca4dc96e5d13f3051200e449e38d5bae708e3b24cad1be4a"
     },
     {
       "path": "WF-027/strategi-UAT.md",
@@ -205,15 +205,15 @@
     },
     {
       "path": "WF-028/checkpoint.json",
-      "sha256_utf8_lf": "7d962ca47c3198566512cb059dcfb8be3c511f0da6fa0ea7ce5d12bba91b89ed"
+      "sha256_utf8_lf": "4192d44c9a2b0dc19218ae7bcfc3ef758d267952d9e7fb9a06188dd40d4bf14f"
     },
     {
       "path": "WF-028/handoff.md",
-      "sha256_utf8_lf": "8c138f71079dffb9614e20a357a54551b311bfe16c3a12eb81c6273eee08f33e"
+      "sha256_utf8_lf": "48e9036a8bae31c54f505fda171d0f4760e5140af20fd67958e89ac0707d72ba"
     },
     {
       "path": "WF-028/keputusan-scope-P1.md",
-      "sha256_utf8_lf": "9f1a29f4e44c6b043fea3cc2efa1a7c0f64a0f42d98976a8b52ead2c9256f968"
+      "sha256_utf8_lf": "39e8dc254b9add2e8186542cebc0f5e7a62614ade94dc64108f2441a4c5ba6c0"
     },
     {
       "path": "WF-028/kontrak-keluaran.json",
@@ -221,11 +221,16 @@
     },
     {
       "path": "WF-028/penerimaan-WF-G2.md",
-      "sha256_utf8_lf": "ce35a51817b9022658e1c9eabf82f079a71ec2c72a331b8e6b4089d750d96f84"
+      "sha256_utf8_lf": "d12f6df4c9101a2070fdd960fa6f9689a20ad9e6cadc23ed9e605ed081241825"
     },
     {
       "path": "WF-028/SRS-baseline.md",
-      "sha256_utf8_lf": "999ccb3ae377ca78a18a145288fa6e1d72ec96bd3cfc83e7d45e0e69fe0b25b3"
+      "sha256_utf8_lf": "21b4761e351b0e1994578d41849c3259dc7a5faaa681cdc9f94c932d6d95456d"
+    },
+    {
+      "path": "WF-028/revisi-tugas-kuliah-untuk-persetujuan.md",
+      "sha256_utf8_lf": "aead20b32e93661350c6c9f9c4c052724a48de33929ee81b2dc13612163d9fe6"
     }
-  ]
+  ],
+  "revision_note": "Reconciled current records after owner approval of G1/G2 college supplements at reviewed commit 68ca3b9b5667f640d66df2e6e39f8871690de0f7. Original input/acceptance snapshots remain in Git history; this manifest checks the current revision."
 }

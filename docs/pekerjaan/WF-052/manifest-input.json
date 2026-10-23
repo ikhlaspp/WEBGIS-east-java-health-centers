@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-10-23",
   "hash_policy": "UTF-8 text universal newlines normalized to LF",
   "files": [
@@ -9,7 +9,7 @@
     },
     {
       "path": "WF-014/matriks-FR-dan-scope-rilis.md",
-      "sha256_utf8_lf": "160dccad0b0895a696942e63300541245727f9dd56192729086e8881959905fd"
+      "sha256_utf8_lf": "4d77c84162477b17d5e69431204fb83cb6daea95c437cfdaaf0ba22b545913d2"
     },
     {
       "path": "WF-015/matriks-hak-akses-aplikasi.md",
@@ -29,15 +29,15 @@
     },
     {
       "path": "WF-018/catatan-kelayakan-sumber.md",
-      "sha256_utf8_lf": "eb1a4d3676e8031d2a583d409fe1b9c71a8bcc1144d86e21df8139e788894d3b"
+      "sha256_utf8_lf": "b63596fc0534d8cc1d88109bb33b9be3413e87f082e1a2bcc54dceff0dcab96c"
     },
     {
       "path": "WF-019/kebijakan-periode-unit-identitas.md",
-      "sha256_utf8_lf": "0998f4860d093bef036acd478e631577a8379b4d6c2d84132571d87534f8ed6f"
+      "sha256_utf8_lf": "683769238856d30206d6f54c1a531336e3357a24f87bfce51d98c38a0e145cd1"
     },
     {
       "path": "WF-020/aturan-kualitas-dataset.md",
-      "sha256_utf8_lf": "a49fe760ea86ed61449fb31e81ebe2b310e4eb0d12bf6c3c7a4279cc75cff3f9"
+      "sha256_utf8_lf": "f38fec2b269ae3dd602875290d79f6a7bca80b8d5e34dcfb10a5216dc2d0abf6"
     },
     {
       "path": "WF-021/katalog-indikator.md",
@@ -49,7 +49,7 @@
     },
     {
       "path": "WF-023/kebutuhan-analisis-radius.md",
-      "sha256_utf8_lf": "9996ba3f7d042557d2c841b183cec3b5e0adbb50da976f9fc3058e16719a271b"
+      "sha256_utf8_lf": "e1f2695dbe6db7bfc48bf72209d0b0c81898ada81bdc6673eb991743c7333ba5"
     },
     {
       "path": "WF-024/spesifikasi-keluaran-penelitian.md",
@@ -65,7 +65,7 @@
     },
     {
       "path": "WF-027/matriks-kebutuhan-pengujian.md",
-      "sha256_utf8_lf": "ce97fcc65e545885043bf113eef359ee852d8128ce03f8117590b873696b216a"
+      "sha256_utf8_lf": "e64f5307189b8f26ca4dc96e5d13f3051200e449e38d5bae708e3b24cad1be4a"
     },
     {
       "path": "WF-027/strategi-UAT.md",
@@ -73,15 +73,16 @@
     },
     {
       "path": "WF-028/SRS-baseline.md",
-      "sha256_utf8_lf": "999ccb3ae377ca78a18a145288fa6e1d72ec96bd3cfc83e7d45e0e69fe0b25b3"
+      "sha256_utf8_lf": "21b4761e351b0e1994578d41849c3259dc7a5faaa681cdc9f94c932d6d95456d"
     },
     {
       "path": "WF-028/penerimaan-WF-G2.md",
-      "sha256_utf8_lf": "ce35a51817b9022658e1c9eabf82f079a71ec2c72a331b8e6b4089d750d96f84"
+      "sha256_utf8_lf": "d12f6df4c9101a2070fdd960fa6f9689a20ad9e6cadc23ed9e605ed081241825"
     },
     {
       "path": "WF-028/keputusan-scope-P1.md",
-      "sha256_utf8_lf": "9f1a29f4e44c6b043fea3cc2efa1a7c0f64a0f42d98976a8b52ead2c9256f968"
+      "sha256_utf8_lf": "39e8dc254b9add2e8186542cebc0f5e7a62614ade94dc64108f2441a4c5ba6c0"
     }
-  ]
+  ],
+  "revision_note": "Reconciled current records after owner approval of G1/G2 college supplements at reviewed commit 68ca3b9b5667f640d66df2e6e39f8871690de0f7. Original input/acceptance snapshots remain in Git history; this manifest checks the current revision."
 }

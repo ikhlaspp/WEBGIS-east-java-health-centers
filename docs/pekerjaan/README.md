@@ -24,3 +24,7 @@ Mulai review dari [charter](WF-004/project-charter.md), [estimasi](WF-008/estima
 | WF-012 | done | [rencana-komunikasi.md](WF-012/rencana-komunikasi.md), [penerimaan-WF-G1.md](WF-012/penerimaan-WF-G1.md) |
 
 Current decisions: owner-directed college assignment, free services, milestone-only plan; no invented hours/deadline. See [accepted G1 revision](WF-012/revisi-tugas-kuliah-untuk-persetujuan.md). Release scope is governed by WF-G2. Hasil validasi lokal: [JSON](verifikasi-inisiasi.json). Reproduksi: `python -B docs/pekerjaan/validasi-inisiasi.py`. Estimasi dapat dibentuk ulang dengan `susun-bukti-inisiasi.py`; jangan menjalankan ulang untuk menimpa baseline yang sudah direview tanpa meninjau diff.
+
+## Requirements acceptance
+
+[WF-G2](WF-028/penerimaan-WF-G2.md) is accepted; WF-013 through WF-028 are done as requirements documents. WF-097 through WF-100 are deferred optional features. Data acquisition and verification remain implementation work. These decisions do not mark later P0 tickets done.

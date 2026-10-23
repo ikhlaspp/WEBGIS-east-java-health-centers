@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-10-22T22:43:43.765534+00:00",
+  "checked_at": "2026-10-23T11:32:51.157162+00:00",
   "status": "passed",
   "tickets": 16,
   "required_artifacts_and_handoffs": 52,
-  "local_links_checked": 59,
+  "local_links_checked": 88,
   "FR_rows": 17,
   "NFR_rows": 8,
   "archive_hashes_checked": 49,
-  "package_files_checked": 56,
+  "package_files_checked": 57,
   "arithmetic_examples": [
     {
       "population": 30000,

@@ -1,3 +1,5 @@
+> Current decision: [WF-G2 accepted](../WF-028/penerimaan-WF-G2.md). The accepted supplement supersedes earlier pending gate/scope statements. Data completeness and source checks remain mandatory before dependent implementation; partial demos are labelled; optional UI/public CSV/ranking tests are out of scope, not passed. Existing P0 checks remain required.
+
 # Aturan kualitas dataset
 
 Versi 1 · 23 Oktober 2026 · Penyusun: Codex. Kebutuhan publikasi dan eligibility, bukan laporan dataset telah lulus.

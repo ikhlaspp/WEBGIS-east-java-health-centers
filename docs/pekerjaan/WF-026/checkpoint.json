@@ -1,23 +1,40 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-10-23",
   "ticket": "WF-026",
-  "status": "in_review",
+  "status": "done",
   "local_deliverables": "prepared_and_self_reviewed",
   "executor": "Codex",
-  "stakeholder_accepted": false,
-  "authorization": "User requested all 16 folder-02 items and one progress commit per item; stakeholder acceptance is separate.",
+  "stakeholder_accepted": true,
+  "authorization": "Owner approved applying the revised college-assignment packages: ok push it, then make change of it",
   "artifacts": [
     "baseline-keamanan-pemulihan-reproduksi.md"
   ],
   "review": "Role/audit/session, backup DB+file, retensi, RPO/RTO dan restore/repro tertulis; layanan/owner belum dikonfirmasi.",
-  "open_items": [
+  "open_items": [],
+  "git_delivery": {
+    "kind": "accepted_package_reconciliation",
+    "target": "origin/main",
+    "verification": "Acceptance commit and verified origin/main SHA reported after push; earlier individual progress commits retained."
+  },
+  "historical_open_items": [
     "Penerimaan reviewer eksternal belum tercatat; WF-G2 tidak diklaim accepted.",
     "Hosting/budget/owner aktual belum dikonfirmasi; target kandidat engineering."
   ],
-  "git_delivery": {
-    "kind": "progress_checkpoint",
-    "target": "origin/main",
-    "verification": "Exact commit and remote ancestry reported after push; final acceptance is separate."
-  }
+  "acceptance_record": {
+    "decision": "accepted",
+    "recipient": "Project owner / conversation user (ikhlaspp)",
+    "recorded_at": "2026-10-23T18:28:39+07:00",
+    "source": "User instruction: ok push it, then make change of it",
+    "context": "Approval to apply the two revised college-assignment packages presented immediately before this instruction.",
+    "reviewed_commit": "68ca3b9b5667f640d66df2e6e39f8871690de0f7",
+    "scope": "Project-owner acceptance; not lecturer approval or independent academic review."
+  },
+  "acceptance_gate": "WF-G2",
+  "next_action": "Follow the accepted G2 scope. Complete data acquisition and curation before dependent mandatory implementation tasks; do not claim data or deployment readiness from requirements acceptance.",
+  "implementation_dependencies": [
+    "Verify official boundary edition, usage terms, region codes and historical mapping before spatial implementation.",
+    "Verify coordinate evidence and population/area years; partial demonstrations cannot establish complete coverage.",
+    "Prove Supabase/Vercel deployment feasibility before release."
+  ]
 }

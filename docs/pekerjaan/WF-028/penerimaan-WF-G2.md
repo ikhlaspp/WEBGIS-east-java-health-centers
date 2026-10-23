@@ -1,29 +1,20 @@
-# Review dan penerimaan WF-G2
+# WF-G2 acceptance
 
-Versi 1 · 23 Oktober 2026 · Pelaksana pemeriksaan teknis: Codex. **Keputusan gerbang: pending_review; bukan accepted.** Instruksi melanjutkan folder 02 mengotorisasi penyusunan dan pengiriman progres, tanpa mengarang keputusan reviewer manusia.
+**Status: accepted.**
 
-| Pemeriksaan | Hasil aktual |
-|---|---|
-| 16 paket dan seluruh keluaran katalog tersedia | Lihat verifikasi-paket.json dan manifest-paket.json |
-| 17 FR dan 8 NFR mempunyai acceptance/test | Matriks WF-014/WF-027 dan pemeriksaan coverage |
-| Dua role aplikasi, backend admin P0 | Konsisten pada WF-013–016/026/027 |
-| Raw/staging/verified, F/marker, null/zero dibedakan | Konsisten pada WF-017–023 |
-| Eksplorasi sumber dan sampel parser | Metadata resmi dan ekstraksi sampel tersedia; tidak ada klaim scraping seluruh dataset |
-| Scope empat P1 | Default P0-first diuraikan per item; keputusan pemilik masih pending |
-| Full/partial | Aturan konkret tersedia; pilihan pemilik masih pending |
-| Edisi/izin polygon dan provider batch | Belum resolved; sumber BIG 2026 tidak cocok otomatis dengan target historis |
-| Performa, backup, reproduksi/UAT | Target dan profil tersedia; hosting/owner/nama peserta belum tersedia, hasil belum diuji |
-| Review oleh penerima | Belum tercatat; pemeriksaan mandiri bukan pengganti |
+- Recipient: project owner / conversation user (`ikhlaspp`).
+- Recorded at: 2026-10-23T18:28:39+07:00.
+- Source: "ok push it, then make change of it", following the revised gate packages and request for approval to apply them.
+- Reviewed commit: `68ca3b9b5667f640d66df2e6e39f8871690de0f7`.
+- Scope: WF-013 through WF-028 requirements package, governed by [the accepted college requirements](revisi-tugas-kuliah-untuk-persetujuan.md).
+- Preceding gate: [WF-G1](../WF-012/penerimaan-WF-G1.md) accepted in the same owner decision; records reconciled in gate order now, without backdating earlier work.
 
-## Daftar tindakan sebelum accepted
+## Accepted decisions
 
-- Pemilik kebutuhan: pilih/terima empat P1 dan full/partial dari register scope. Tenggat jawaban belum ditetapkan.
-- DG dan pemilik kebutuhan: putuskan edisi polygon/izin dan metode crosswalk, lengkapkan jalur lokasi resmi/provider batch bila diperlukan. Tenggat: sebelum desain adapter/spasial dibekukan; blocker WF-G2 tetap terbuka.
-- Pemilik proyek/OP: konfirmasi kapasitas/budget/hosting/owner dan penerima yang masih terbuka dari fase 1; sesuaikan target jika diperlukan sebelum penerimaan.
-- Penerima kebutuhan: review SRS versi/hash, catat accepted atau rework dengan nama, tanggal dan alasan. Tidak ada tanda tangan palsu atau penerimaan otomatis karena push.
+Core proposal outputs and existing geometry/data-quality contracts remain. Optional batch dashboard, review/publish UI, public CSV download and ranking are deferred individually. Free services, Supabase and the Vercel Hobby target remain the resource policy. Paid services require a separate request.
 
-Pekerjaan lokal dan 16 commit progres dapat dikirim sesuai instruksi pengguna. Status tiket kebutuhan tetap in_review; gerbang belum accepted dan implementasi/desain berikutnya tidak diklaim selesai. Bukti Git dicatat pada laporan pengiriman terpisah; setiap commit memuat satu paket item.
+Archives is the initial input collection. Research and acquisition of suitable free official boundary/code data are allowed; actual edition, provenance, usage terms and historical mapping must be verified before use. Coordinates and observation years require evidence. Partial demonstrations must disclose eligible/total counts and cannot imply complete 973-facility coverage.
 
-## Revised college-assignment package
+This acceptance explicitly moves exact source-edition selection and data verification from a gate prerequisite to the existing acquisition/curation tasks. Missing mandatory data still blocks the first task that needs it; no mandatory implementation task may be skipped. Review the concrete acceptance rules in the supplement and [scope register](keputusan-scope-P1.md).
 
-The owner clarified that this is a college assignment and delegated preparation of the decisions. Review [the concrete revised package](revisi-tugas-kuliah-untuk-persetujuan.md). It proposes simplified planning and explicit data completion responsibilities; it does not record acceptance on the owner's behalf. The historical issues above remain visible; proposed replacements take effect only when this revised package is accepted.
+The owner accepts the requirements, not completion of the dataset, implementation, deployment, or academic assessment. No lecturer approval or independent reviewer signature is claimed. Historical pending records remain in Git history. Acceptance delivery is verified against origin/main and reported in the conversation.

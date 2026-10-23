@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-10-23",
   "hash_policy": "UTF-8 text universal newlines normalized to LF; excludes self and generated report",
   "files": [
@@ -369,7 +369,7 @@
     },
     {
       "path": "WF-052/checkpoint.json",
-      "sha256_utf8_lf": "2c4f81fbbd16f710e20fe18bc5412ffb4f154f3abb290225becc73886f078a29"
+      "sha256_utf8_lf": "3431da0280e5cb78dd543ea64a5f51e0d06f7a47b963ac02add566c07e45412f"
     },
     {
       "path": "WF-052/handoff.md",
@@ -381,7 +381,7 @@
     },
     {
       "path": "WF-052/manifest-input.json",
-      "sha256_utf8_lf": "fc31f74cfd5242a3694d50bb19a115561254d178601a7d920246167b7328f30e"
+      "sha256_utf8_lf": "d34a0bcebc78b3d8ce0883e5e671c23312b020f17fceba4a4328612ddc71232f"
     },
     {
       "path": "WF-052/paket-desain-baseline.md",
@@ -389,7 +389,7 @@
     },
     {
       "path": "WF-052/penerimaan-WF-G3.md",
-      "sha256_utf8_lf": "f42649815b395d5a098baf36639061ef597c2e099d8710f1c69aea69323355d2"
+      "sha256_utf8_lf": "f5697a9287dd27981cedd6a47ff82f3cc76def911d099b45d9a268184eca6fd2"
     },
     {
       "path": "WF-052/traceability-desain.json",
@@ -399,5 +399,6 @@
       "path": "WF-052/validasi-desain.py",
       "sha256_utf8_lf": "81418154df9f8d1e418714b8db5d543168cbb5c09fe09c5e7e4e694986cb3502"
     }
-  ]
+  ],
+  "revision_note": "Reconciled current records after owner approval of G1/G2 college supplements at reviewed commit 68ca3b9b5667f640d66df2e6e39f8871690de0f7. Original input/acceptance snapshots remain in Git history; this manifest checks the current revision."
 }

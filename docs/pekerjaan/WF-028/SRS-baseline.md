@@ -1,12 +1,14 @@
+> Current baseline: accepted under [WF-G2](penerimaan-WF-G2.md). [The accepted college supplement](revisi-tugas-kuliah-untuk-persetujuan.md) supersedes candidate-status and source-selection timing statements below. Core requirements remain; four optional features are deferred.
+
 # Spesifikasi kebutuhan perangkat lunak
 
-Versi kandidat 1.0 · 23 Oktober 2026 · Penyusun: Codex. Status: siap review teknis, belum baseline WF-G2 accepted.
+Versi kandidat 1.0 · 23 Oktober 2026 · Penyusun: Codex. Status: accepted with the linked college-project supplement.
 
 ## Tujuan dan konteks
 
 WebGIS menyajikan persebaran puskesmas Jawa Timur historis 2024-S1, indikator penduduk/luas dan radius geometris. Dataset awal 973 fasilitas pada 38 kabupaten/kota; kandidat lokasi 565 terisi dan 408 kosong. Angka ini merupakan hasil audit raw, bukan lokasi tervalidasi. Keluaran adalah aplikasi Laravel/Leaflet, PostgreSQL/PostGIS melalui Supabase, pipeline Python, notebook Colab/Folium dan laporan yang bisa direproduksi. Tidak ada data pasien, akun masyarakat atau rekomendasi pembangunan otomatis.
 
-Role aplikasi hanya admin dan guest. Guest tanpa akun membaca rilis terbit. Admin login dan command lifecycle P0; dashboard/review UI/CSV publik/ranking merupakan empat opsi P1. Kandidat scope P0-first mengikuti register keputusan di bawah, belum keputusan pemilik.
+Role aplikasi hanya admin dan guest. Guest tanpa akun membaca rilis terbit. Admin login dan command lifecycle P0; dashboard/review UI/CSV publik/ranking merupakan empat opsi P1. Scope P0-first is accepted; individual P1 deferrals are recorded in the scope register.
 
 ## Dokumen normatif kandidat
 
@@ -29,7 +31,7 @@ Dokumen tertaut adalah bagian SRS versi ini; manifest paket memuat SHA256 agar p
 | Performa/usability | [Target terukur](../WF-025/baseline-performa-dan-kegunaan.md) | Profil API/map/mobile/keyboard |
 | Security/recovery/repro | [Baseline](../WF-026/baseline-keamanan-pemulihan-reproduksi.md) | Role/secret/audit; backup DB+file; lock/hash |
 | Verifikasi | [Matriks FR/NFR-uji](../WF-027/matriks-kebutuhan-pengujian.md), [UAT](../WF-027/strategi-UAT.md) | Semua 17 FR dan 8 NFR terlacak; actual belum ada |
-| Scope final | [Register keputusan](keputusan-scope-P1.md) | Empat P1 dan full/partial perlu keputusan aktual |
+| Scope final | [Register keputusan](keputusan-scope-P1.md) | Accepted P1 deferrals and partial-demonstration conditions |
 
 ## Kontrak lintas bagian
 
@@ -43,4 +45,4 @@ Dokumen tertaut adalah bagian SRS versi ini; manifest paket memuat SHA256 agar p
 
 Penerimaan kebutuhan memerlukan keputusan scope dan sumber/periode/cakupan, review konsistensi, penerima nyata, tanggal dan versi paket. Penerimaan rilis nanti memerlukan uji P0 (serta P1 terpilih) aktual, nol critical/high, restore, reproduksi dan UAT. Angka performa/RPO/RTO adalah target, bukan hasil. Pemeriksaan paket dokumen tidak menggantikan pengujian aplikasi atau reviewer eksternal.
 
-Perubahan setelah accepted menggunakan CR, mencatat kebutuhan dan tiket/test terdampak, versi/hash lama/baru, usaha/risiko dan keputusan pemilik. Kebutuhan yang berubah membuka kembali bukti lama bila tidak lagi berlaku. Fase desain belum dinyatakan dibuka oleh dokumen ini; [checklist gerbang](penerimaan-WF-G2.md) mencatat status aktual.
+Perubahan setelah accepted menggunakan CR, mencatat kebutuhan dan tiket/test terdampak, versi/hash lama/baru, usaha/risiko dan keputusan pemilik. Kebutuhan yang berubah membuka kembali bukti lama bila tidak lagi berlaku. WF-G2 acceptance is now recorded; [checklist gerbang](penerimaan-WF-G2.md) mencatat status aktual.

@@ -1,16 +1,16 @@
-# Register scope rilis
+# Accepted release scope
 
-Versi 1 · 23 Oktober 2026 · Penyusun: Codex. Instruksi pengguna: kerjakan semua 16 item folder 02, satu commit per item. Pesan commit memakai deskripsi hasil tanpa ID tiket sesuai preferensi pengguna. Planning tetap lokal/ignored; hasil kebutuhan disimpan di docs.
+Status: accepted under [WF-G2](penerimaan-WF-G2.md). Owner instruction: "ok push it, then make change of it", approving the revised package at commit `68ca3b9b5667f640d66df2e6e39f8871690de0f7`.
 
-| Keputusan | Nilai kandidat | Dasar dan status |
+| Item | Decision | Required behavior retained |
 |---|---|---|
-| Dashboard batch (WF-097) | Ditunda dari rilis inti | Default P0-first; command/status tetap wajib. Belum konfirmasi eksplisit scope oleh pemilik |
-| Review/publish UI (WF-098) | Ditunda dari rilis inti | Command terotorisasi dan review berbukti tetap P0; belum konfirmasi eksplisit |
-| CSV publik (WF-099) | Ditunda dari rilis inti | Tabel tetap P0 dan export penelitian tetap wajib; belum konfirmasi eksplisit |
-| Ranking (WF-100) | Ditunda dari rilis inti | Defisit/detail dan A08-PARAM tetap P0; belum konfirmasi eksplisit |
-| Cakupan spasial | Partial diperbolehkan sebagai kandidat dengan label x/y; full hanya jika 973 eligible | Pertanyaan telah diajukan; belum ada penerimaan eksternal tercatat |
-| Penduduk/master kode | Target observasi 2023 dan MFD 2023 | Asumsi teknis mengikuti sumber tersedia; tidak mengklaim data sudah dikurasi |
-| Polygon | Edisi historis yang cocok atau harmonisasi eksplisit | Belum diputus; BIG 2026 tidak otomatis diterima |
-| Geocoding | Review kandidat dan koordinat resmi; tanpa batch provider publik default | Provider batch dan izin/anggaran belum dipilih |
+| WF-097 batch dashboard | deferred | Administrative command/status/job logs |
+| WF-098 review/publish UI | deferred | Evidence-based review and authorized publish/rollback commands |
+| WF-099 public CSV download | deferred | Public tables, research exports, and backend import validation |
+| WF-100 ranking | deferred | Deficit/detail indicators and A08-PARAM validation |
+| Coverage | Labelled partial demonstrations allowed | Complete final coverage objective retained; missing facilities remain in the master; verified points only in buffers |
+| Population and region codes | Reconcile Archives against official sources | Preserve actual years/units and document region-code mapping; 2023 reference where supported |
+| Boundaries | Acquire compatible free official geometry and codes during implementation | Verify edition, usage terms, island coverage and historical mapping before spatial use |
+| Geocoding | Official location evidence and manual review first | No paid/default unrestricted batch service; candidate coordinates are not automatically verified |
 
-Keputusan kandidat digunakan untuk membuat SRS yang konkret dan reviewable. Tidak mengubah empat tiket P1 menjadi deferred resmi sebelum keputusan pemilik tercatat. Perubahan pilihan memperbarui FR, UI, implementasi, estimasi dan pengujian bersama-sama melalui prosedur WF-010. Tabel ini tidak mengarang nama/tanggal penerimaan.
+The scope-specific tests for deferred UI/export/ranking features are not_in_scope_for_release, not passed. P0 backend controls, research exports, A08-PARAM and S05-IMPORT remain required. Use [the accepted supplement](revisi-tugas-kuliah-untuk-persetujuan.md) for the full conditions; final academic coverage reduction requires a separate recorded decision.

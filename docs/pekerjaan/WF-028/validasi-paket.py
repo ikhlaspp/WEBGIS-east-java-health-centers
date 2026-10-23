@@ -30,8 +30,17 @@ for ticket in contract['tickets']:
             errors.append(f'Missing or empty: {ticket["id"]}/{name}')
         artifacts += 1
     checkpoint = json.loads((folder/'checkpoint.json').read_text(encoding='utf-8'))
-    if checkpoint['status'] != 'in_review' or checkpoint['stakeholder_accepted']:
-        errors.append(f'Unsupported acceptance claim: {ticket["id"]}')
+    if checkpoint['stakeholder_accepted']:
+        record = checkpoint.get('acceptance_record', {})
+        gate = (HERE/'penerimaan-WF-G2.md').read_text(encoding='utf-8')
+        if checkpoint['status'] != 'done' or checkpoint.get('acceptance_gate') != 'WF-G2' or any(
+            not record.get(key) for key in ('recipient', 'recorded_at', 'source', 'reviewed_commit')
+        ) or record.get('decision') != 'accepted':
+            errors.append(f'Missing acceptance provenance: {ticket["id"]}')
+        if '**Status: accepted.**' not in gate or record.get('reviewed_commit', '') not in gate:
+            errors.append(f'Acceptance does not match gate record: {ticket["id"]}')
+    elif checkpoint['status'] != 'in_review':
+        errors.append(f'Unsupported unaccepted status: {ticket["id"]}')
     for path in folder.glob('*.md'):
         content = path.read_text(encoding='utf-8')
         if '\ufffd' in content:

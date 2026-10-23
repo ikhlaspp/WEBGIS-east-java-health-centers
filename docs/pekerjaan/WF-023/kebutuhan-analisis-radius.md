@@ -1,3 +1,5 @@
+> Current decision: [WF-G2 accepted](../WF-028/penerimaan-WF-G2.md). The accepted supplement supersedes earlier pending gate/scope statements. Data completeness and source checks remain mandatory before dependent implementation; partial demos are labelled; optional UI/public CSV/ranking tests are out of scope, not passed. Existing P0 checks remain required.
+
 # Analisis radius geometris
 
 Versi 1 · 23 Oktober 2026 · Penyusun: Codex. Radius kandidat tetap 1000, 3000, 5000 meter. Tidak ada hasil buffer produksi dihitung dalam pekerjaan kebutuhan.

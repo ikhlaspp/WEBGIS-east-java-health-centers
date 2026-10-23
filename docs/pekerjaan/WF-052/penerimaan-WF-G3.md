@@ -1,3 +1,5 @@
+> Subsequent scope reconciliation: [WF-G2 is now accepted](../WF-028/penerimaan-WF-G2.md). Four optional features are explicitly deferred; free official boundary/code research is authorized subject to source checks. The original G3 acceptance below is historical and remains valid for unchanged core contracts. Missing data still blocks dependent implementation.
+
 # Pemeriksaan WF-G3
 
 Versi 2 · 23 Oktober 2026 · Pemeriksa teknis: Codex. **Status gerbang: accepted.** Penerimaan diberikan oleh pemilik pekerjaan melalui percakapan pada 23 Oktober 2026: “ok then accept it.” Penerima: pengguna pemilik pekerjaan; identitas repo yang cocok adalah Ikhlas Putra Pambagyo (`ikhlaspp`).

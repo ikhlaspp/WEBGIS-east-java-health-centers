@@ -1,3 +1,9 @@
+# Current acceptance status
+
+WF-G2 accepted by the project owner on 2026-10-23T18:28:39+07:00. This requirements item is done under [the accepted college requirements](../WF-028/revisi-tugas-kuliah-untuk-persetujuan.md). Earlier handoff text below is historical preparation evidence. Source acquisition, location verification and deployment checks remain implementation dependencies; approval does not claim those tasks have passed. Git acceptance delivery is reported in the conversation.
+
+---
+
 # Handoff WF-015
 
 Versi 1 · 23 Oktober 2026 · Pelaksana: Codex · Status: in_review.

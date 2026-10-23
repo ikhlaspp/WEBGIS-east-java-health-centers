@@ -1,0 +1,11 @@
+# Notebook dan manifest reproduksi
+
+Versi 1 · 23 Oktober 2026 · Penyusun: Codex.
+
+Cell groups ordered: (1) konfigurasi release/run+snapshot URL allowlist dan output root; (2) install locked wheel/code revision dan pemeriksaan native versions; (3) download manifest, verify hash/license and sanitized snapshot; (4) schema/period/identity validation; (5) load approved mapping/eligibility, tidak menjalankan live geocoding; (6) call shared indicators module; (7) spatial reference pipeline; (8) legend/Folium; (9) CSV/GeoJSON/HTML exports; (10) compare expected/reference dan output manifest.
+
+Notebook tidak memuat DB credential produksi, Supabase service key atau arbitrary pip latest. Colab bootstrap memeriksa interpreter against lock; bila tidak kompatibel berhenti dengan instruksi environment, tidak silently mengubah metode. Source data didapat gateway publik published atau file sanitized yang dibagikan secara authorized. Draft raw responses tidak disalin ke notebook.
+
+Input manifest required: schema_version,release_id,analysis_run_id,boundary_set_id,code_revision,method_version,source_periods,input_files[{path,bytes,sha256}],eligibility_counts,parameters{T,radii_m,buffer_method,quad_segs,area_method,legend_version},dependency_locks. Output: artifacts[{kind,path,bytes,sha256}],content_hash,generated_at,environment,validation_status,warnings. Relative paths di-resolve di output root dan reject traversal/absolute/untrusted redirects. JSON canonical UTF-8 sorted keys; tabular rows sort code, decimals canonical, no NaN. Content hash excludes generated_at/duration/temp paths, includes scientific values and parameters. Geometry equivalence dibanding toleransi karena binary order/WKB bisa berbeda; simpan file hashes aktual tanpa mengklaim byte-identical lintas platform.
+
+`Run all` dari runtime kosong menghasilkan fixture dahulu, lalu snapshot specified; cell error menghentikan downstream. Source unavailable/hash mismatch/unknown edition/no eligible → actionable error atau unavailable result sesuai contract, bukan download latest fallback. Restart menggunakan checkpoint terverifikasi input/code/hash, tidak notebook hidden state. HTML memerlukan tile/CDN internet kecuali resources lokal berizin telah dikemas; manifest menyebut external dependencies. Dua browser harus menampilkan data/legend/version yang sama dengan API rilis/run.

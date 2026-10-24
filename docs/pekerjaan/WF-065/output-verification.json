@@ -1,0 +1,38 @@
+{
+  "output_path": "data/processed/indicator-decisions.json",
+  "output_sha256": "debaf267d8f5584ee2a3171348ead6598618be66cd09a732c4395fbc73898cb3",
+  "content_sha256": "3ff9f559e4cf05c6242dbac314ab8ab8b4024cddad8ff42b7b4fb8d75b00ddd8",
+  "source_review_document": "docs/pekerjaan/WF-065/reviewed-source-tables.json",
+  "reviewed_tables": 76,
+  "original_archive_files_unchanged": 49,
+  "summary": {
+    "observations": 1332,
+    "reviewed_rows": 1332,
+    "source_checked": 1332,
+    "unreviewed": 0,
+    "value_changes": 47,
+    "year_changes": 110,
+    "total_statuses": {
+      "exact": 55,
+      "within_rounding_envelope": 19,
+      "unresolved_difference": 2
+    }
+  },
+  "all_sources_reviewed": true,
+  "risk_review_complete": true,
+  "source_periods": {
+    "population": {
+      "2023": 666
+    },
+    "area": {
+      "2023": 507,
+      "2024": 71,
+      "2022": 31,
+      "2020": 5,
+      "2019": 33,
+      "2021": 19
+    }
+  },
+  "data_quality_accepted": false,
+  "publication_allowed": false
+}

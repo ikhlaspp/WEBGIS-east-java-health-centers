@@ -1,0 +1,18 @@
+{
+  "ticket_id": "WF-065",
+  "status": "done",
+  "predecessor_commit": "5391c08af0b20a0f77ff614399fbbd85083faed3",
+  "reviewed_observations": 1332,
+  "reviewed_tables": 76,
+  "value_corrections": 47,
+  "year_corrections": 110,
+  "tests_passed": 164,
+  "unresolved_source_totals": [
+    "Lamongan area 2022: -0.60 km2",
+    "Kota Surabaya area 2023: -0.39 km2"
+  ],
+  "data_quality_accepted": false,
+  "publication_allowed": false,
+  "delivery": "pending_commit_and_verified_push",
+  "next_action": "Verify Git delivery, then WF-066 polygon validation; retain source-total findings for the quality gate."
+}

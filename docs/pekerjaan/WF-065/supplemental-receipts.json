@@ -1,0 +1,52 @@
+[
+  {
+    "source_id": "malang-area-2019",
+    "edition": "historical-area-verification",
+    "source_url": "https://portal.malangkab.go.id/uploads/dokumen/malangkab-pusat-opd-PROFIL%20KABUPATEN%20MALANG%20lengkap%20revisi3%28juni%29_FIX.pdf",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-10-24T20:04:39.244217+00:00",
+    "sha256": "fe3fe8780ad0cf59ce21df084bf8fb8af222fbeffe949ec712b34094bd3bf361",
+    "bytes": 10561688,
+    "raw_path": "data\\raw\\malang-area-2019\\fe3fe8780ad0cf59ce21df084bf8fb8af222fbeffe949ec712b34094bd3bf361.bin"
+  },
+  {
+    "source_id": "probolinggo-2021-publication",
+    "edition": "historical-area-verification",
+    "source_url": "https://ppid.probolinggokota.go.id/wp-content/uploads/2021/09/Kota-Probolinggo-Dalam-Angka-2021.pdf",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-10-24T20:04:57.346220+00:00",
+    "sha256": "464ae5410d643c1c9372693bf58fa986487305c765f499dfa0361085469b8d12",
+    "bytes": 4724575,
+    "raw_path": "data\\raw\\probolinggo-2021-publication\\464ae5410d643c1c9372693bf58fa986487305c765f499dfa0361085469b8d12.bin"
+  },
+  {
+    "source_id": "tulungagung-statistics-2022",
+    "edition": "historical-area-verification",
+    "source_url": "https://potensi.tulungagung.go.id/sites/default/files/2024-06/Statistik%20Daerah%20Kabupaten%20Tulungagung%202022.pdf",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-10-24T20:05:00.063725+00:00",
+    "sha256": "bd222f20722a7ac00b73343ad081c81a33b63b25e7b853de069f7cf3f051b8d3",
+    "bytes": 4214900,
+    "raw_path": "data\\raw\\tulungagung-statistics-2022\\bd222f20722a7ac00b73343ad081c81a33b63b25e7b853de069f7cf3f051b8d3.bin"
+  },
+  {
+    "source_id": "lamongan-pph-2023",
+    "edition": "2023",
+    "source_url": "https://lamongankab.go.id/beranda/documents/dinkpp/02.%20Lapkir%20PPH%20Kab.%20Lamongan%202023_compressed.pdf",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-10-24T20:06:46.543546+00:00",
+    "sha256": "b94bb8bb1e9e0095aa31dfddd8e23972ab8f650daeeaba8f0873d72d6d0322bf",
+    "bytes": 1609212,
+    "raw_path": "data\\raw\\lamongan-pph-2023\\b94bb8bb1e9e0095aa31dfddd8e23972ab8f650daeeaba8f0873d72d6d0322bf.bin"
+  },
+  {
+    "source_id": "tulungagung-statistics-2024",
+    "edition": "2024",
+    "source_url": "https://web-api.bps.go.id/download.php?f=IcKXpKQg0C2guoSv+tw121kzTzRjSy9aSEdjMnZsNVFMdkJvRmVvazFJVGdVMEYxL1cyR3cxV3pmTktsQlArNWR3YTlObHZ4RlRMcEI3V3BDbkR4VU1PTEJXdm40ejQ5WTkyK0tKRGIrTXprWHVSU0VWczlWUjRXUkZOYW4zNzM3UEcxejhUalM2TlZub0hvSjRuanVya29QcjRiYnpuZ0xDbUFaQXdlbnYrVzJkakdUMlRYRVZ4NzBmM0d0MmpqUWtzZG5meXdJd3lRTzdIMllOMUh3bG1rdmFWa3hYZ3VreGhia1NmTndiTFZ2ZmhRaytqT1VTYWJsOFp3MzhwR28zTlNvaGFmRWs4S2pYaS9JNGQ1S0ZQdTV0T2VoTEpDMzArWUxnPT0%3D",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-10-24T22:20:43.956640+00:00",
+    "sha256": "65b61c92d3ff6a8df5e8cec4755accd5ff3a21bb4514fd97c80e413d3ff87a17",
+    "bytes": 2447406,
+    "raw_path": "data\\raw\\tulungagung-statistics-2024\\65b61c92d3ff6a8df5e8cec4755accd5ff3a21bb4514fd97c80e413d3ff87a17.bin"
+  }
+]

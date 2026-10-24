@@ -1,0 +1,11 @@
+{
+  "output_path": "data/processed/facility-master.json",
+  "output_sha256": "6cf8ece0fc223f17e80b3cd57d490791521b6c20e1a9a799fc2a54a2927108b0",
+  "content_sha256": "8c5431fb83ae01795c3f7caf74fee055560a0eb35878d2840c39be86a2b48297",
+  "repeat_byte_identical": true,
+  "unique_facilities": 973,
+  "all_region_assignment_counts_sum": 973,
+  "retained_districts": 666,
+  "public_eligible": 0,
+  "verified_locations": 0
+}

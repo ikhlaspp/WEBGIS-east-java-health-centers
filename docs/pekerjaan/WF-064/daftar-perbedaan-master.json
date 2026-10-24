@@ -1,0 +1,146 @@
+{
+  "pipeline_version": "reconcile-facilities-1.0",
+  "summary": {
+    "facilities": 973,
+    "regencies": 38,
+    "districts": 666,
+    "districts_with_assignments": 665,
+    "service_counts": {
+      "Rawat Inap": 616,
+      "Non Rawat Inap": 357
+    },
+    "area_counts": {
+      "Perdesaan": 658,
+      "Terpencil": 16,
+      "Perkotaan": 294,
+      "Sangat Terpencil": 5
+    },
+    "coordinate_counts": {
+      "baseline_pairs": 565,
+      "baseline_missing": 408,
+      "baseline_unique_pairs": 560,
+      "baseline_duplicate_groups": 5,
+      "xlsx_pairs": 568,
+      "without_any_candidate": 405,
+      "verified": 0
+    },
+    "substantive_attribute_differences": 0,
+    "formatting_differences": 0,
+    "coordinate_differences": 3
+  },
+  "attribute_differences": [],
+  "formatting_differences": [],
+  "coordinate_differences": [
+    {
+      "facility_code": "35770200004",
+      "csv": {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_locator": "csv/row/904"
+      },
+      "xlsx": {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_locator": "xlsx/puskesmas_jatim_koordinat/row/904"
+      },
+      "csv_present": false,
+      "xlsx_present": true,
+      "decision": "retain_both_candidates_no_automatic_replacement_or_verification"
+    },
+    {
+      "facility_code": "35770200005",
+      "csv": {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_locator": "csv/row/905"
+      },
+      "xlsx": {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_locator": "xlsx/puskesmas_jatim_koordinat/row/905"
+      },
+      "csv_present": false,
+      "xlsx_present": true,
+      "decision": "retain_both_candidates_no_automatic_replacement_or_verification"
+    },
+    {
+      "facility_code": "35770200006",
+      "csv": {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_locator": "csv/row/906"
+      },
+      "xlsx": {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_locator": "xlsx/puskesmas_jatim_koordinat/row/906"
+      },
+      "csv_present": false,
+      "xlsx_present": true,
+      "decision": "retain_both_candidates_no_automatic_replacement_or_verification"
+    }
+  ],
+  "count_differences": [
+    {
+      "dataset": "combined_historical",
+      "source": {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_locator": "xlsx/Gabungan/row/106"
+      },
+      "region_code": "3511151",
+      "source_count": 0,
+      "derived_official_count": 1,
+      "decision": "duplicate_alias_observation_held_no_merge"
+    },
+    {
+      "dataset": "combined_historical",
+      "source": {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_locator": "xlsx/Gabungan/row/113"
+      },
+      "region_code": "3511151",
+      "source_count": 1,
+      "derived_official_count": 1,
+      "decision": "duplicate_alias_observation_held_no_merge"
+    }
+  ],
+  "historical_totals": {
+    "counts_historical": {
+      "detail_rows": 665,
+      "aggregate_rows": 39,
+      "detail_sum": 973,
+      "parent_subtotal_sum": 973,
+      "province_total": 973,
+      "naive_all_rows_sum": 2919,
+      "aggregates_in_master_count": 0
+    },
+    "combined_historical": {
+      "detail_rows": 667,
+      "aggregate_rows": 39,
+      "detail_sum": 973,
+      "parent_subtotal_sum": 973,
+      "province_total": 973,
+      "naive_all_rows_sum": 2919,
+      "aggregates_in_master_count": 0
+    }
+  },
+  "reconciliation_complete": true,
+  "data_quality_accepted": false,
+  "publication_allowed": false,
+  "input_identity": {
+    "normalization_batch": "aa13005be54777d3e00d1610444fa4d52bdac3bdd4d7b8d6f4f1d70fe741b47c",
+    "crosswalk_sha256": "3714685d57d7128c8403f8b8e559e2cb5fca9f8617b6c3a1493ba9d55f9985b8",
+    "baseline_content_sha256": "bdbc831920a4d61cff4d148aa520f430b50457bfe4080b8c9cb4e31c1ba8f2dd"
+  },
+  "content_sha256": "8c5431fb83ae01795c3f7caf74fee055560a0eb35878d2840c39be86a2b48297"
+}

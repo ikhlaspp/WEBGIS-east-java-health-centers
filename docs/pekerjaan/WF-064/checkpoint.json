@@ -1,0 +1,62 @@
+{
+  "ticket_id": "WF-064",
+  "status": "done",
+  "predecessor_commit": "5d71479d9a10872e64578554629ca802737b55b8",
+  "next_action": "WF-065 indicator curation after verified Git delivery.",
+  "completed": [
+    "Reconciled six facility source copies against official identities and independent audit categories.",
+    "Excluded 39 aggregates per historical count source, checking every parent and provincial subtotal.",
+    "Retained all 973 facilities, all 666 districts and both sources of unverified coordinate candidates.",
+    "Recorded three XLSX-only coordinates and held both combined Ijen/Sempol observations without automatic merging."
+  ],
+  "checks": [
+    {
+      "command": "reconcile_facilities.py with committed input paths in handoff.md",
+      "exit_code": 0,
+      "actual": {
+        "facilities": 973,
+        "regencies": 38,
+        "districts": 666,
+        "districts_with_assignments": 665,
+        "service_counts": {
+          "Rawat Inap": 616,
+          "Non Rawat Inap": 357
+        },
+        "area_counts": {
+          "Perdesaan": 658,
+          "Terpencil": 16,
+          "Perkotaan": 294,
+          "Sangat Terpencil": 5
+        },
+        "coordinate_counts": {
+          "baseline_pairs": 565,
+          "baseline_missing": 408,
+          "baseline_unique_pairs": 560,
+          "baseline_duplicate_groups": 5,
+          "xlsx_pairs": 568,
+          "without_any_candidate": 405,
+          "verified": 0
+        },
+        "substantive_attribute_differences": 0,
+        "formatting_differences": 0,
+        "coordinate_differences": 3
+      }
+    },
+    {
+      "command": "Repeat run and verify saved master SHA/counts/flags",
+      "exit_code": 0,
+      "actual": "Byte-identical, 973 unique codes, 666 retained districts, 0 verified/public eligible"
+    },
+    {
+      "command": "python -m pytest tests/python -q",
+      "exit_code": 0,
+      "actual": "142 passed"
+    },
+    {
+      "command": "python -m compileall -q python scripts/etl tests/python",
+      "exit_code": 0
+    }
+  ],
+  "review": "Technical self-review only; no independent reviewer, lecturer or UAT acceptance claimed.",
+  "data_quality_accepted": false
+}

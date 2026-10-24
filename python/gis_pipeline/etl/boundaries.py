@@ -1,8 +1,10 @@
 """Acquire region reference evidence without repairing or promoting source geometry."""
 
 import hashlib
+import copy
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
 from collections import Counter
@@ -14,6 +16,45 @@ from .indicators import angled_glyph
 from .sources import CheckedRedirect, snapshot, validate_url
 
 BIG_SERVICE = 'https://geoservices.big.go.id/rbi/rest/services/BATASWILAYAH/BATAS_KECAMATAN_AR/MapServer'
+
+
+def reconcile_master(master, decisions):
+    """Apply explicit decisions only when the archived official bridge corroborates them."""
+    result = copy.deepcopy(master)
+    discrepancies = {(row['code'], row['name'], row['locator']) for row in master['summary_discrepancies']}
+    seen = set()
+    rows = {row['code']: row for row in result['rows']}
+    for decision in decisions:
+        key = tuple(decision['summary'][field] for field in ('code', 'name', 'locator'))
+        if key not in discrepancies or key in seen:
+            raise ValueError('Unexpected or duplicate reconciliation decision')
+        receipt = decision['evidence_receipt']
+        url = urllib.parse.urlsplit(receipt['source_url'])
+        query = urllib.parse.parse_qs(url.query)
+        if (url.scheme != 'https' or url.hostname != 'sig.bps.go.id'
+                or url.path != '/rest-bridging/getwilayah'
+                or receipt['edition'] != '2023_1.2022'
+                or query.get('periode_merge') != ['2023_1.2022']):
+            raise ValueError('Expected explicit official 2023 bridge evidence')
+        raw = Path(receipt['raw_path']).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != receipt['sha256']:
+            raise ValueError('Reconciliation evidence hash mismatch')
+        code, name = decision['canonical_code'], decision['canonical_name']
+        if name != decision['summary']['name']:
+            raise ValueError('Reconciliation must corroborate the disputed identity, not substitute another name')
+        matches = [row for row in json.loads(raw) if row.get('kode_bps') == code and row.get('nama_bps') == name]
+        if len(matches) != 1 or code not in rows or query.get('parent') != [code[:4]]:
+            raise ValueError('Canonical identity is not uniquely supported by evidence')
+        rows[code]['name'] = name
+        rows[code]['identity_evidence'] = {'source_hash': receipt['sha256'], 'source_url': receipt['source_url'],
+                                         'period': receipt['edition'], 'raw_record': matches[0]}
+        seen.add(key)
+    result['identity_resolutions'] = copy.deepcopy(decisions)
+    result['report']['unresolved_source_conflicts'] = len(discrepancies - seen)
+    result['report']['complete'] = (result['report']['coverage_complete']
+                                     and result['report'].get('summary_rows') == 666
+                                     and not (discrepancies - seen))
+    return result
 
 
 def detail_line(lines, index):
@@ -36,10 +77,72 @@ def fetch_json(url, raw_root, source_id, edition, allowed_hosts):
     if len(data) > 64 * 1024 * 1024:
         raise ValueError('Oversized JSON response')
     parsed = json.loads(data)
-    if not isinstance(parsed, dict) or 'error' in parsed:
+    if not isinstance(parsed, (dict, list)) or 'error' in parsed:
         raise ValueError('Source API error or unexpected JSON schema')
     receipt = snapshot(data, raw_root, source_id, edition, url, 'https_download')
     return parsed, receipt
+
+
+def acquire_bridge(master, raw_root, resume_receipts=()):
+    records, receipts = [], []
+    cached = {}
+    for receipt in resume_receipts:
+        parsed = urllib.parse.urlsplit(receipt['source_url'])
+        if parsed.scheme != 'https' or parsed.hostname != 'sig.bps.go.id' or parsed.path != '/rest-bridging/getwilayah':
+            raise ValueError('Invalid resumed bridge source')
+        if receipt['edition'] != '2023_1.2022':
+            raise ValueError('Invalid resumed bridge period')
+        key = tuple(sorted(urllib.parse.parse_qsl(parsed.query)))
+        cached[key] = receipt
+    for regency in master['regencies']:
+        url = ('https://sig.bps.go.id/rest-bridging/getwilayah?' + urllib.parse.urlencode({
+            'level': 'kecamatan', 'parent': regency['code'], 'periode_merge': '2023_1.2022'}))
+        key = tuple(sorted(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)))
+        if key in cached:
+            receipt = cached[key]
+            raw = Path(receipt['raw_path']).read_bytes()
+            if hashlib.sha256(raw).hexdigest() != receipt['sha256']:
+                raise ValueError('Resumed bridge hash mismatch')
+            rows = json.loads(raw)
+        else:
+            time.sleep(1)
+            rows, receipt = fetch_json(url, raw_root, 'bps-bridge', '2023_1.2022', {'sig.bps.go.id'})
+        if not isinstance(rows, list) or len(rows) != regency['expected_districts']:
+            raise ValueError('Bridge parent coverage mismatch')
+        for row in rows:
+            if (not isinstance(row.get('kode_bps'), str) or not re.fullmatch(regency['code'] + r'\d{3}', row['kode_bps'])
+                    or not isinstance(row.get('kode_dagri'), str) or not re.fullmatch(r'35\d{4}', row['kode_dagri'])):
+                raise ValueError('Invalid bridge code or parent')
+            records.append({**row, 'source_hash': receipt['sha256'], 'period': receipt['edition']})
+        receipts.append(receipt)
+    if (len({r['kode_bps'] for r in records}) != len(records)
+            or len({r['kode_dagri'] for r in records}) != len(records)
+            or {r['kode_bps'] for r in records} != {r['code'] for r in master['rows']}):
+        raise ValueError('Bridge duplicates or master code-set mismatch')
+    return {'records': records, 'receipts': receipts, 'period': '2023_1.2022'}
+
+
+def candidate_links(collection, bridge):
+    lookup = {r['kode_dagri']: r for r in bridge['records']}
+    if len(lookup) != len(bridge['records']):
+        raise ValueError('Ambiguous bridge')
+    links, excluded = [], []
+    used = set()
+    for feature in collection['features']:
+        properties = feature['properties']
+        raw = properties.get('KDCPUM')
+        code = raw.replace('.', '') if isinstance(raw, str) and re.fullmatch(r'35\.\d{2}\.\d{2}', raw) else None
+        if code not in lookup:
+            excluded.append({'object_id': properties['OBJECTID'], 'raw_code': raw, 'reason': 'No exact official code link'})
+            continue
+        if code in used:
+            raise ValueError('Multiple boundary objects for one bridge identity require explicit review')
+        used.add(code)
+        links.append({'object_id': properties['OBJECTID'], 'pum_raw': raw, 'bps_code': lookup[code]['kode_bps'],
+                      'bridge_hash': lookup[code]['source_hash'], 'bridge_period': bridge['period'],
+                      'boundary_edition': '2026-06', 'status': 'candidate_not_historically_validated'})
+    return {'links': links, 'excluded': excluded, 'unmatched_bridge_codes': sorted(set(lookup) - used),
+            'publication_allowed': False, 'historical_geometry_validated': False}
 
 
 def parse_master(path, manifest):

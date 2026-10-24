@@ -110,7 +110,7 @@
           "raw_line": "7 3504 061 PUCANG LABAN 2 7 9"
         },
         "detail_same_code": null,
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -125,7 +125,7 @@
           "locator": "pdf/page/62/line/10",
           "raw_line": "35 04 070 PUCANG LABAN 35 04 070 001 PANGGUNGKALAK"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -140,7 +140,7 @@
           "locator": "pdf/page/62/line/19",
           "raw_line": "35 04 080 REJOTANGAN 35 04 080 001 TENGGONG"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -155,7 +155,7 @@
           "locator": "pdf/page/63/line/6",
           "raw_line": "35 04 090 NGUNUT 35 04 090 010 GILANG"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -170,7 +170,7 @@
           "locator": "pdf/page/63/line/15",
           "raw_line": "35 04 100 SUMBERGEMPOL 35 04 100 001 JUNJUNG"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -185,7 +185,7 @@
           "locator": "pdf/page/64/line/6",
           "raw_line": "35 04 110 BOYOLANGU 35 04 110 013 SOBONTORO"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -200,7 +200,7 @@
           "locator": "pdf/page/64/line/11",
           "raw_line": "35 04 120 TULUNGAGUNG 35 04 120 001 KEDUNGSOKO"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -215,7 +215,7 @@
           "locator": "pdf/page/64/line/25",
           "raw_line": "35 04 130 KEDUNGWARU 35 04 130 001 PLOSOKANDANG"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -230,7 +230,7 @@
           "locator": "pdf/page/65/line/6",
           "raw_line": "35 04 140 NGANTRU 35 04 140 001 PAKEL"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -245,7 +245,7 @@
           "locator": "pdf/page/65/line/19",
           "raw_line": "35 04 150 KARANGREJO 35 04 150 001 BUNGUR"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -260,7 +260,7 @@
           "locator": "pdf/page/65/line/32",
           "raw_line": "35 04 160 KAUMAN 35 04 160 001 PUCANGAN"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -275,7 +275,7 @@
           "locator": "pdf/page/66/line/6",
           "raw_line": "35 04 170 GONDANG 35 04 170 001 KENDAL"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -290,7 +290,7 @@
           "locator": "pdf/page/66/line/26",
           "raw_line": "35 04 180 PAGER WOJO 35 04 180 001 WONOREJO"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -300,7 +300,7 @@
           "raw_line": "7 6 11 060 SUKOSARI 1 3 4"
         },
         "detail_same_code": null,
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -315,7 +315,7 @@
           "locator": "pdf/page/149/line/6",
           "raw_line": "35 11 151 SEMPOL 35 11 151 004 JAMPIT"
         },
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       },
       {
         "summary": {
@@ -325,11 +325,105 @@
           "raw_line": "3 36 76 021 KRANGGAN 6 \u2013 6"
         },
         "detail_same_code": null,
-        "status": "unresolved"
+        "status": "corroborated_in_identity-resolutions.json; original disagreement retained"
       }
     ],
     "candidate_path": "data/staging/master-2023.json",
-    "publication_url": "https://jatim.bps.go.id/id/publication/2024/07/26/d64a7ab574bdbb877d3f5665/village-master-file-of-jawa-timur-province-2023.html"
+    "publication_url": "https://jatim.bps.go.id/id/publication/2024/07/26/d64a7ab574bdbb877d3f5665/village-master-file-of-jawa-timur-province-2023.html",
+    "reconciliation": {
+      "report": {
+        "complete": true,
+        "coverage_complete": true,
+        "source_conflicts": 16,
+        "summary_rows": 666,
+        "districts": 666,
+        "regencies": 38,
+        "expected_by_parent": {
+          "3501": 12,
+          "3502": 21,
+          "3503": 14,
+          "3504": 19,
+          "3505": 22,
+          "3506": 26,
+          "3507": 33,
+          "3508": 21,
+          "3509": 31,
+          "3510": 25,
+          "3511": 23,
+          "3512": 17,
+          "3513": 24,
+          "3514": 24,
+          "3515": 18,
+          "3516": 18,
+          "3517": 21,
+          "3518": 20,
+          "3519": 15,
+          "3520": 18,
+          "3521": 19,
+          "3522": 28,
+          "3523": 20,
+          "3524": 27,
+          "3525": 18,
+          "3526": 18,
+          "3527": 14,
+          "3528": 13,
+          "3529": 27,
+          "3571": 3,
+          "3572": 3,
+          "3573": 5,
+          "3574": 5,
+          "3575": 4,
+          "3576": 3,
+          "3577": 3,
+          "3578": 31,
+          "3579": 3
+        },
+        "actual_by_parent": {
+          "3501": 12,
+          "3502": 21,
+          "3503": 14,
+          "3504": 19,
+          "3505": 22,
+          "3506": 26,
+          "3507": 33,
+          "3508": 21,
+          "3509": 31,
+          "3510": 25,
+          "3511": 23,
+          "3512": 17,
+          "3513": 24,
+          "3514": 24,
+          "3515": 18,
+          "3516": 18,
+          "3517": 21,
+          "3518": 20,
+          "3519": 15,
+          "3520": 18,
+          "3521": 19,
+          "3522": 28,
+          "3523": 20,
+          "3524": 27,
+          "3525": 18,
+          "3526": 18,
+          "3527": 14,
+          "3528": 13,
+          "3529": 27,
+          "3571": 3,
+          "3572": 3,
+          "3573": 5,
+          "3574": 5,
+          "3575": 4,
+          "3576": 3,
+          "3577": 3,
+          "3578": 31,
+          "3579": 3
+        },
+        "unresolved_source_conflicts": 0
+      },
+      "decisions": "identity-resolutions.json",
+      "private_output": "data/staging/master-reconciled.json",
+      "evidence_period": "2023 Semester 1 BPS / 2022 Kemendagri; not a claim of continuous validity at every later date"
+    }
   },
   "boundaries": {
     "edition": "2026-06",
@@ -1403,5 +1497,18 @@
     ],
     "candidate_path": "data/staging/big-boundaries-candidate.json",
     "candidate_sha256": "275033415a7b16722c622bfd343f2810db99eaf72a7e89e6594be37c705d9a11"
-  }
+  },
+  "bridge_progress": {
+    "expected_parents": 38,
+    "acquired_parents": 38,
+    "records": 666,
+    "candidate_links": 666,
+    "excluded_objects": 10,
+    "unmatched_acquired_codes": 0,
+    "complete": true,
+    "historical_geometry_validated": false,
+    "publication_allowed": false,
+    "recovery": "Completed using hashed snapshots after intermittent remote TLS resets; no previously verified source needed redownloading."
+  },
+  "bridge_receipts": "bridge-resume-receipts.json"
 }

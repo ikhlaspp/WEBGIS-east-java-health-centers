@@ -1,0 +1,338 @@
+[
+  {
+    "summary": {
+      "code": "3504061",
+      "name": "PUCANG LABAN",
+      "locator": "pdf/page/59/line/15"
+    },
+    "canonical_code": "3504070",
+    "canonical_name": "PUCANG LABAN",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504070",
+      "name": "REJOTANGAN",
+      "locator": "pdf/page/59/line/16"
+    },
+    "canonical_code": "3504080",
+    "canonical_name": "REJOTANGAN",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504080",
+      "name": "NGUNUT",
+      "locator": "pdf/page/59/line/17"
+    },
+    "canonical_code": "3504090",
+    "canonical_name": "NGUNUT",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504090",
+      "name": "SUMBERGEMPOL",
+      "locator": "pdf/page/59/line/18"
+    },
+    "canonical_code": "3504100",
+    "canonical_name": "SUMBERGEMPOL",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504100",
+      "name": "BOYOLANGU",
+      "locator": "pdf/page/59/line/19"
+    },
+    "canonical_code": "3504110",
+    "canonical_name": "BOYOLANGU",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504110",
+      "name": "TULUNGAGUNG",
+      "locator": "pdf/page/59/line/20"
+    },
+    "canonical_code": "3504120",
+    "canonical_name": "TULUNGAGUNG",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504120",
+      "name": "KEDUNGWARU",
+      "locator": "pdf/page/59/line/21"
+    },
+    "canonical_code": "3504130",
+    "canonical_name": "KEDUNGWARU",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504130",
+      "name": "NGANTRU",
+      "locator": "pdf/page/59/line/22"
+    },
+    "canonical_code": "3504140",
+    "canonical_name": "NGANTRU",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504140",
+      "name": "KARANGREJO",
+      "locator": "pdf/page/59/line/23"
+    },
+    "canonical_code": "3504150",
+    "canonical_name": "KARANGREJO",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504150",
+      "name": "KAUMAN",
+      "locator": "pdf/page/59/line/24"
+    },
+    "canonical_code": "3504160",
+    "canonical_name": "KAUMAN",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504160",
+      "name": "GONDANG",
+      "locator": "pdf/page/59/line/25"
+    },
+    "canonical_code": "3504170",
+    "canonical_name": "GONDANG",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504170",
+      "name": "PAGER WOJO",
+      "locator": "pdf/page/59/line/26"
+    },
+    "canonical_code": "3504180",
+    "canonical_name": "PAGER WOJO",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3504180",
+      "name": "SENDANG",
+      "locator": "pdf/page/59/line/27"
+    },
+    "canonical_code": "3504190",
+    "canonical_name": "SENDANG",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:00.667877+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data\\raw\\bps-bridge\\26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "611060",
+      "name": "SUKOSARI",
+      "locator": "pdf/page/143/line/15"
+    },
+    "canonical_code": "3511060",
+    "canonical_name": "SUKOSARI",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3511&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:01.351501+00:00",
+      "sha256": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+      "bytes": 2120,
+      "raw_path": "data\\raw\\bps-bridge\\c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3511151",
+      "name": "IJEN",
+      "locator": "pdf/page/143/line/28"
+    },
+    "canonical_code": "3511151",
+    "canonical_name": "IJEN",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3511&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:01.351501+00:00",
+      "sha256": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+      "bytes": 2120,
+      "raw_path": "data\\raw\\bps-bridge\\c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  },
+  {
+    "summary": {
+      "code": "3676021",
+      "name": "KRANGGAN",
+      "locator": "pdf/page/393/line/9"
+    },
+    "canonical_code": "3576021",
+    "canonical_name": "KRANGGAN",
+    "evidence_receipt": {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3576&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:01.966585+00:00",
+      "sha256": "b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a",
+      "bytes": 287,
+      "raw_path": "data\\raw\\bps-bridge\\b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a.bin"
+    },
+    "basis": "Exact official 2023 Semester 1 BPS bridge identity; retained PDF disagreement",
+    "review": "Technical source corroboration; no external reviewer claimed"
+  }
+]

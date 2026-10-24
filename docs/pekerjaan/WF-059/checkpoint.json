@@ -7,7 +7,9 @@
     "Implemented shared master-code and full-ID boundary acquisition adapters and CLI.",
     "Downloaded official MFD 2023 and all 676 objects selected by province code 35 in the current BIG layer.",
     "Preserved raw files, string identifiers, MultiPolygon islands and source receipts.",
-    "Reconciled 666 detailed master rows and 38 parent counts; retained 16 summary/detail conflicts."
+    "Reconciled 666 detailed master rows and 38 parent counts; retained 16 summary/detail conflicts.",
+    "Corroborated all 16 disputed identities against the official BPS 2023 Semester 1 / Kemendagri 2022 bridge; retained original disagreements and immutable evidence.",
+    "Completed all 38 official bridge tables: 666 BPS/PUM pairs and 666 exact candidate geometry links; 10 uncoded objects retained separately, zero unmatched bridge codes."
   ],
   "checks": [
     {
@@ -120,15 +122,53 @@
         }
       },
       "tool_shell_exit_code": 1
+    },
+    {
+      "command": "reconcile_master(master, identity-resolutions.json)",
+      "actual": {
+        "decisions": 16,
+        "unresolved_source_conflicts": 0,
+        "districts": 666,
+        "regencies": 38
+      },
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest tests/python -q",
+      "actual": "51 passed",
+      "exit_code": 0
+    },
+    {
+      "command": "GitHub Actions run 40026052844 (previous commit)",
+      "actual": "completed success"
+    },
+    {
+      "command": "acquire_bridge with resumable hashed receipts then candidate_links",
+      "actual": {
+        "expected_parents": 38,
+        "acquired_parents": 38,
+        "records": 666,
+        "candidate_links": 666,
+        "excluded_objects": 10,
+        "unmatched_acquired_codes": 0,
+        "complete": true,
+        "historical_geometry_validated": false,
+        "publication_allowed": false,
+        "recovery": "Completed using hashed snapshots after intermittent remote TLS resets; no previously verified source needed redownloading."
+      },
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/etl/boundaries.py --master-receipt .tools/mfd-receipt.json --resolutions docs/pekerjaan/WF-059/identity-resolutions.json --download-bridge --bridge-receipts docs/pekerjaan/WF-059/bridge-resume-receipts.json --output data/staging/boundary-review.json",
+      "actual": "master=true; 38 cached parent receipts verified; CLI_EXIT=0",
+      "exit_code": 0
     }
   ],
   "blocked": [
-    "MFD source contains 16 contradictory summary/detail identities; canonical mapping not established.",
     "BIG source is June 2026, not an accepted historical boundary edition; explicit harmonization remains unresolved.",
-    "All 676 BIG BPS-code fields are null and 10 PUM identifiers are empty; no guessed joins allowed.",
     "BIG item metadata licenseInfo and XML useLimit are empty; redistribution terms are not established."
   ],
   "downstream": "WF-060 through mandatory folder 4 tasks remain pending under the accepted serial dependency rule.",
   "review": "Technical self-review only; no owner acceptance or external reviewer fabricated.",
-  "next_action": "Reconcile the 16 identities with an independent official edition, obtain compatible official boundaries and traceable use terms, or record an explicit approved harmonization change; rerun source checks."
+  "next_action": "Resolve the June 2026 boundary edition versus historical baseline and traceable boundary reuse terms. Code conflicts and complete BPS/PUM bridging are resolved; no later mandatory ticket is claimed complete."
 }

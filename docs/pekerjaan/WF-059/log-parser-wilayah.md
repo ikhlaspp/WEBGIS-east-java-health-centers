@@ -1,6 +1,6 @@
 # Region source acquisition and parser evidence
 
-24 October 2026. Status: blocked on source suitability; implementation and private acquisition are saved.
+24 October 2026. Status: blocked on boundary edition and reuse terms. The follow-up below supersedes the initial unresolved-master status; implementation and private acquisition are saved.
 
 Implemented python/gis_pipeline/etl/boundaries.py and scripts/etl/boundaries.py. Downloading uses the shared HTTPS allowlist/redirect checks and immutable snapshots. Every geometry page is selected by object IDs; counts, duplicates, missing IDs, transfer-limit flags and the final source ID set are checked. Geometry is not simplified, repaired or flattened. Codes remain strings or their original null values. The CLI preserves failed master diagnostics and exits 2 rather than approving an unresolved source.
 
@@ -23,3 +23,16 @@ Source references: [BPS MFD publication](https://jatim.bps.go.id/id/publication/
 47 Python tests passed; compileall passed. Boundary tests cover pagination, independent expected object sets, zero-prefixed strings, MultiPolygon islands, truncated/missing/duplicate geometry, source drift, missing code joins, split names and contradictory master records. Raw datasets are ignored/private; the committed manifest contains hashes, locators, counts and source metadata only. Archives was not modified.
 
 WF-059 is not complete. WF-060 and later mandatory tickets cannot advance under the accepted finish-to-start rule while this mandatory predecessor is blocked. The next work is an evidence-backed identity reconciliation and historical boundary/terms resolution, or an explicitly accepted change allowing a specific newer boundary edition with a reviewed crosswalk. No false gate acceptance, made-up coordinates or fabricated completion is recorded.
+
+
+## Follow-up: official identity corroboration
+
+The official SIG BPS page exposes a period selector and public REST endpoint. Its period catalogue includes 2023_1.2022, explicitly 2023 Semester 1 BPS and 2022 Kemendagri. Downloaded the Tulungagung, Bondowoso and Mojokerto city tables and preserved source hashes. All 16 disputed PDF identities have exact corroborating BPS code/name records: the Tulungagung detail sequence, Sukosari 3511060, Kranggan 3576021 and Ijen 3511151. Ijen is retained as the corroborated name while the original Sempol detail text is preserved. These are explicit source-backed decisions in identity-resolutions.json, not fuzzy matches or invented reviewer acceptance.
+
+The reconciliation function verifies the evidence host, path, selected period, parent, SHA-256 and unique exact code/name record before applying a decision. Duplicate/unsupported decisions fail. The master retains all 666 codes and 38 parents; unresolved identity conflicts are now zero. This evidence has the stated semester, not an invented effective date range.
+
+A full bridge acquisition was then attempted to resolve the null BPS fields in the boundary candidate via its PUM codes. The initial download saved 20 parent tables before TLS resets. Retrying outside the sandbox reproduced the same remote failure. Resuming recovered six more tables, and a later resumed attempt completed the remaining twelve. All 38 tables now reconcile to 666 unique BPS/PUM pairs, linking exactly 666 candidate geometry objects. Ten objects without a usable PUM code remain explicitly excluded from joins; all original geometries are preserved. bridge-progress.json records complete counts; bridge-resume-receipts.json allows recovery without redownloading verified snapshots. Candidate links use exact dotted PUM-code normalization only; absent codes remain excluded, with no name guessing. Successful code linkage does not validate June 2026 geometry for 2023.
+
+Added CLI options --resolutions, --download-bridge and --bridge-receipts. Resume using the existing master receipt and the two JSON files beside this log. No source archive or source geometry was modified. Verification: 51 Python tests passed and compileall passed. The preceding hosted run 40026052844 also completed successfully. The remaining blockers are boundary edition and reuse terms. Master identities and full code bridging are now corroborated; historical geometry validity remains unestablished.
+
+Official reference: https://sig.bps.go.id/bridging-kode/index. The exact query URLs, periods and hashed downloads are recorded in the evidence receipts.

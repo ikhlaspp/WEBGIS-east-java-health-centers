@@ -1,0 +1,12 @@
+{
+  "expected_parents": 38,
+  "acquired_parents": 38,
+  "records": 666,
+  "candidate_links": 666,
+  "excluded_objects": 10,
+  "unmatched_acquired_codes": 0,
+  "complete": true,
+  "historical_geometry_validated": false,
+  "publication_allowed": false,
+  "recovery": "Completed using hashed snapshots after intermittent remote TLS resets; no previously verified source needed redownloading."
+}

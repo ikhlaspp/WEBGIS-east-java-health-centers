@@ -1,0 +1,14 @@
+{
+  "source_id": "hdx-boundary-admin3",
+  "edition": "2020-04",
+  "source_url": "https://data.humdata.org/dataset/84a1d98a-790b-4d66-9d14-bbfa48500802/resource/e1421da4-8f48-47d2-ac49-79ff5bfa4d24/download/idn_admin_boundaries.geojson.zip#idn_admin3.geojson",
+  "acquired_from": "https_zip_member",
+  "acquired_at": "2026-10-24T02:15:22.164566+00:00",
+  "sha256": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+  "bytes": 286457798,
+  "raw_path": "data\\raw\\hdx-boundary-admin3\\803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75.bin",
+  "archive_etag": "\"045ca81f33d8798cf8ff2a5726275bb0\"",
+  "archive_member": "idn_admin3.geojson",
+  "archive_member_crc": 589943116,
+  "archive_total_bytes": 456203094
+}

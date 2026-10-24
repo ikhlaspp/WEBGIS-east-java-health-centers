@@ -13,9 +13,87 @@ from pathlib import Path
 import pdfplumber
 
 from .indicators import angled_glyph
-from .sources import CheckedRedirect, snapshot, validate_url
+from .sources import CheckedRedirect, snapshot, validate_url, fetch_zip_member
 
 BIG_SERVICE = 'https://geoservices.big.go.id/rbi/rest/services/BATASWILAYAH/BATAS_KECAMATAN_AR/MapServer'
+HDX_CATALOG = 'https://data.humdata.org/api/3/action/package_show?id=cod-ab-idn'
+
+
+def select_hdx_features(collection, master):
+    if not master['report']['complete']:
+        raise ValueError('Resolve the master identities before selecting boundaries')
+    if collection.get('type') != 'FeatureCollection' or collection.get('crs', {}).get('properties', {}).get('name') != 'urn:ogc:def:crs:OGC:1.3:CRS84':
+        raise ValueError('Unexpected historical boundary schema or CRS')
+    expected = {row['code'] for row in master['rows']}
+    features, excluded, links, seen = [], [], [], set()
+    for feature in collection['features']:
+        props = feature['properties']
+        if props['adm1_pcode'] != 'ID35':
+            continue
+        pcode = props.get('adm3_pcode')
+        if not isinstance(pcode, str) or not re.fullmatch(r'ID35\d{5}', pcode):
+            raise ValueError('Malformed historical source code')
+        code = pcode[2:]
+        if code in seen:
+            raise ValueError('Duplicate historical boundary code')
+        seen.add(code)
+        geometry = feature.get('geometry')
+        if not geometry or geometry.get('type') not in ('Polygon', 'MultiPolygon') or not geometry.get('coordinates'):
+            raise ValueError('Missing historical polygon geometry')
+        if props.get('valid_on') != '2020-04-01' or props.get('version') != 'v01':
+            raise ValueError('Historical edition changed')
+        if props.get('adm2_pcode') != 'ID' + code[:4]:
+            raise ValueError('Historical boundary parent mismatch')
+        if code not in expected:
+            if (pcode, props.get('adm3_name')) != ('ID3522888', 'Perairan'):
+                raise ValueError('Unexpected extra historical region requires review')
+            excluded.append({'feature': feature, 'reason': 'Source water area, not a district in the 2023 master'})
+            continue
+        features.append(feature)
+        links.append({'source_pcode': pcode, 'region_code': code, 'mapping': 'exact ID prefix and BPS text code'})
+    if {link['region_code'] for link in links} != expected:
+        raise ValueError('Historical boundaries do not cover every master district')
+    return {'collection': {**collection, 'features': features}, 'excluded': excluded, 'links': links,
+            'report': {'complete': True, 'districts': len(features), 'excluded_water_objects': len(excluded),
+                       'parents': len({f['properties']['adm2_pcode'] for f in features}),
+                       'geometry_types': dict(Counter(f['geometry']['type'] for f in features))},
+            'boundary_edition': '2020-04-01', 'crs': 'OGC:CRS84',
+            'analysis_mode': 'mixed_period_exploration', 'strict_2023_geometry_verified': False,
+            'ready_for_public_release': False}
+
+
+def parse_hdx(member_receipt, catalog_receipt, master):
+    for receipt in (member_receipt, catalog_receipt):
+        if hashlib.sha256(Path(receipt['raw_path']).read_bytes()).hexdigest() != receipt['sha256']:
+            raise ValueError('Historical source evidence hash mismatch')
+    if catalog_receipt['source_url'] != HDX_CATALOG:
+        raise ValueError('Expected the official HDX catalogue receipt')
+    catalog = json.loads(Path(catalog_receipt['raw_path']).read_text(encoding='utf-8'))['result']
+    if catalog['license_id'] != 'cc-by-igo' or catalog['dataset_source'] != 'Badan Pusat Statistik (BPS - Statistics Indonesia)':
+        raise ValueError('Historical licence or attribution changed')
+    resource = next(item for item in catalog['resources'] if item['format'] == 'GeoJSON')
+    if member_receipt['source_url'] != resource['url'] + '#idn_admin3.geojson':
+        raise ValueError('Member receipt does not match the catalogued resource')
+    collection = json.loads(Path(member_receipt['raw_path']).read_text(encoding='utf-8'))
+    if len(collection['features']) != 7069:
+        raise ValueError('National historical district count changed; inspect edition')
+    result = select_hdx_features(collection, master)
+    result['receipts'] = {'member': member_receipt, 'catalog': catalog_receipt}
+    result['license'] = {'id': 'CC-BY-3.0-IGO', 'url': 'https://creativecommons.org/licenses/by/3.0/igo/',
+                         'catalogue_url': 'https://data.humdata.org/dataset/cod-ab-idn',
+                         'attribution': 'Indonesia - Subnational Administrative Boundaries (COD-AB v01), BPS; distributed by OCHA ROAP, OCHA FIS and HDX.',
+                         'changes': 'Selected East Java districts, linked exact BPS codes, retained water object separately; source geometry unchanged.',
+                         'notice': 'No endorsement by BPS, OCHA or HDX is implied.',
+                         'reuse_permitted_subject_to_terms': True}
+    return result
+
+
+def acquire_hdx(raw_root, master):
+    catalog, receipt = fetch_json(HDX_CATALOG, raw_root, 'hdx-catalog', 'cod-ab-idn-v01', {'data.humdata.org'})
+    resource = next(item for item in catalog['result']['resources'] if item['format'] == 'GeoJSON')
+    member = fetch_zip_member(resource['url'], resource['size'], 'idn_admin3.geojson', raw_root,
+                              'hdx-boundary-admin3', '2020-04', {'data.humdata.org', 's3.us-east-1.amazonaws.com'})
+    return parse_hdx(member, receipt, master)
 
 
 def reconcile_master(master, decisions):

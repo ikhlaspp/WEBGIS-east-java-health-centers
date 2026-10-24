@@ -1,6 +1,7 @@
 """Bounded HTTPS acquisition and immutable local source snapshots."""
 
 import hashlib
+import io
 import ipaddress
 import json
 import re
@@ -9,8 +10,70 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
+
+
+class RemoteZipReader(io.RawIOBase):
+    """Read bounded public ZIP ranges, verifying object identity on every request."""
+
+    def __init__(self, url, size, allowed_hosts, opener=None):
+        validate_url(url, allowed_hosts)
+        if not isinstance(size, int) or not 0 < size <= 512 * 1024 * 1024:
+            raise ValueError('Archive size outside supported bounds')
+        self.url, self.size, self.position, self.etag = url, size, 0, None
+        self.opener = opener or urllib.request.build_opener(CheckedRedirect(allowed_hosts))
+
+    def seekable(self):
+        return True
+
+    def tell(self):
+        return self.position
+
+    def seek(self, offset, whence=0):
+        if whence not in (0, 1, 2):
+            raise ValueError('Invalid seek mode')
+        position = offset + (0 if whence == 0 else self.position if whence == 1 else self.size)
+        if not 0 <= position <= self.size:
+            raise ValueError('Seek outside archive')
+        self.position = position
+        return position
+
+    def read(self, size=-1):
+        size = self.size - self.position if size < 0 else min(size, self.size - self.position)
+        if size == 0:
+            return b''
+        if size > 96 * 1024 * 1024:
+            raise ValueError('ZIP range exceeds read bound')
+        start, end = self.position, self.position + size - 1
+        request = urllib.request.Request(self.url, headers={
+            'User-Agent': 'GIS-puskesmas-academic/1.0', 'Range': f'bytes={start}-{end}'})
+        with self.opener.open(request, timeout=60) as response:
+            if response.status != 206 or response.headers.get('Content-Range') != f'bytes {start}-{end}/{self.size}':
+                raise ValueError('Source did not honor the exact archive range')
+            etag = response.headers.get('ETag')
+            if not etag or (self.etag is not None and etag != self.etag):
+                raise ValueError('Archive identity missing or changed during download')
+            self.etag = etag
+            data = response.read(size + 1)
+            if len(data) != size:
+                raise ValueError('Incomplete archive range')
+        self.position += size
+        return data
+
+
+def fetch_zip_member(url, archive_size, member, raw_root, source_id, edition, allowed_hosts):
+    reader = RemoteZipReader(url, archive_size, allowed_hosts)
+    with zipfile.ZipFile(reader) as archive:
+        info = archive.getinfo(member)
+        if info.file_size > 320 * 1024 * 1024 or info.compress_size > 96 * 1024 * 1024:
+            raise ValueError('Archive member exceeds acquisition bounds')
+        data = archive.read(info)  # ZIP CRC is verified; no archive paths are extracted.
+    receipt = snapshot(data, raw_root, source_id, edition, url + '#' + member, 'https_zip_member')
+    receipt.update(archive_etag=reader.etag, archive_total_bytes=archive_size,
+                   archive_member=member, archive_member_crc=info.CRC)
+    return receipt
 
 
 def validate_url(url, allowed_hosts):

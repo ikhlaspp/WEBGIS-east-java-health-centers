@@ -1,7 +1,7 @@
 {
   "ticket_id": "WF-059",
   "date": "2026-10-24",
-  "status": "blocked",
+  "status": "done",
   "master": {
     "receipt": {
       "source_id": "bps-mfd",
@@ -1496,7 +1496,9 @@
       }
     ],
     "candidate_path": "data/staging/big-boundaries-candidate.json",
-    "candidate_sha256": "275033415a7b16722c622bfd343f2810db99eaf72a7e89e6594be37c705d9a11"
+    "candidate_sha256": "275033415a7b16722c622bfd343f2810db99eaf72a7e89e6594be37c705d9a11",
+    "selected": false,
+    "disposition": "Superseded by licensed historical HDX/BPS reference; kept for comparison only."
   },
   "bridge_progress": {
     "expected_parents": 38,
@@ -1510,5 +1512,62 @@
     "publication_allowed": false,
     "recovery": "Completed using hashed snapshots after intermittent remote TLS resets; no previously verified source needed redownloading."
   },
-  "bridge_receipts": "bridge-resume-receipts.json"
+  "bridge_receipts": "bridge-resume-receipts.json",
+  "selected_boundary_source": {
+    "selected_source": "HDX COD-AB Indonesia v01, BPS source, OCHA publication",
+    "edition": "2020-04-01",
+    "mode": "mixed_period_exploration",
+    "report": {
+      "complete": true,
+      "districts": 666,
+      "excluded_water_objects": 1,
+      "parents": 38,
+      "geometry_types": {
+        "Polygon": 603,
+        "MultiPolygon": 63
+      }
+    },
+    "crs": "OGC:CRS84",
+    "license": {
+      "id": "CC-BY-3.0-IGO",
+      "url": "https://creativecommons.org/licenses/by/3.0/igo/",
+      "catalogue_url": "https://data.humdata.org/dataset/cod-ab-idn",
+      "attribution": "Indonesia - Subnational Administrative Boundaries (COD-AB v01), BPS; distributed by OCHA ROAP, OCHA FIS and HDX.",
+      "changes": "Selected East Java districts, linked exact BPS codes, retained water object separately; source geometry unchanged.",
+      "notice": "No endorsement by BPS, OCHA or HDX is implied.",
+      "reuse_permitted_subject_to_terms": true
+    },
+    "receipts": {
+      "member": {
+        "source_id": "hdx-boundary-admin3",
+        "edition": "2020-04",
+        "source_url": "https://data.humdata.org/dataset/84a1d98a-790b-4d66-9d14-bbfa48500802/resource/e1421da4-8f48-47d2-ac49-79ff5bfa4d24/download/idn_admin_boundaries.geojson.zip#idn_admin3.geojson",
+        "acquired_from": "https_zip_member",
+        "acquired_at": "2026-10-24T02:15:22.164566+00:00",
+        "sha256": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+        "bytes": 286457798,
+        "raw_path": "data\\raw\\hdx-boundary-admin3\\803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75.bin",
+        "archive_etag": "\"045ca81f33d8798cf8ff2a5726275bb0\"",
+        "archive_member": "idn_admin3.geojson",
+        "archive_member_crc": 589943116,
+        "archive_total_bytes": 456203094
+      },
+      "catalog": {
+        "source_id": "hdx-catalog",
+        "edition": "cod-ab-idn-v01",
+        "source_url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-idn",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-10-24T02:22:57.172117+00:00",
+        "sha256": "43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b",
+        "bytes": 15413,
+        "raw_path": "data\\raw\\hdx-catalog\\43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b.bin"
+      }
+    },
+    "private_output": "data/staging/historical-boundaries.json",
+    "strict_2023_geometry_verified": false,
+    "ready_for_public_release": false,
+    "required_display_label": "Batas referensi BPS/OCHA: 2020; master wilayah BPS: 2023; fasilitas: 2024-S1. Periode sumber berbeda.",
+    "excluded_water_pcode": "ID3522888",
+    "source_selection_authority": "Accepted WF-G2 permits free official historical-source selection in acquisition tasks; WF-019 permits explicitly labelled mixed-period exploration."
+  }
 }

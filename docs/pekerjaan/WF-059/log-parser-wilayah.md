@@ -1,6 +1,6 @@
 # Region source acquisition and parser evidence
 
-24 October 2026. Status: blocked on boundary edition and reuse terms. The follow-up below supersedes the initial unresolved-master status; implementation and private acquisition are saved.
+24 October 2026. Current status: done for acquisition; see the final historical-source selection below. Earlier blockers are retained as audit history. The follow-up below supersedes the initial unresolved-master status; implementation and private acquisition are saved.
 
 Implemented python/gis_pipeline/etl/boundaries.py and scripts/etl/boundaries.py. Downloading uses the shared HTTPS allowlist/redirect checks and immutable snapshots. Every geometry page is selected by object IDs; counts, duplicates, missing IDs, transfer-limit flags and the final source ID set are checked. Geometry is not simplified, repaired or flattened. Codes remain strings or their original null values. The CLI preserves failed master diagnostics and exits 2 rather than approving an unresolved source.
 
@@ -36,3 +36,12 @@ A full bridge acquisition was then attempted to resolve the null BPS fields in t
 Added CLI options --resolutions, --download-bridge and --bridge-receipts. Resume using the existing master receipt and the two JSON files beside this log. No source archive or source geometry was modified. Verification: 51 Python tests passed and compileall passed. The preceding hosted run 40026052844 also completed successfully. The remaining blockers are boundary edition and reuse terms. Master identities and full code bridging are now corroborated; historical geometry validity remains unestablished.
 
 Official reference: https://sig.bps.go.id/bridging-kode/index. The exact query URLs, periods and hashed downloads are recorded in the evidence receipts.
+
+
+## Final source selection: licensed historical BPS/OCHA reference
+
+The official HDX metadata API returned an explicit CC BY-IGO licence and BPS source attribution for COD-AB Indonesia v01. The 2020-04-01 district member was acquired from the catalogue's GeoJSON ZIP using bounded HTTP ranges and stable ETag checks; ZIP CRC and a complete member SHA-256 were verified. The parser checks the catalogue receipt, licence/source identity, national count 7069, exact CRS, feature dates, parent identities, complete district-code coverage and unexpected duplicates/extras. Actual selection: 666 districts, 38 parents, 603 Polygon and 63 MultiPolygon; one water object is preserved outside district joins.
+
+The historical reference is selected for explicitly labelled mixed-period exploration under the existing accepted scope. It is not relabelled 2023 or certified ready for publication. source-selection.md and selected-boundary-source.json preserve the rationale, attribution, licence and required date labels. The unapproved BIG 2026 candidate is superseded, not silently accepted. This resolves the acquisition blocker without changing the proposed feature scope or inventing permission from BIG.
+
+63 Python tests pass, including ZIP range/identity failure cases and historical code/parent/date/geometry/coverage checks. Real source hashes and reports are in the manifest. WF-060 may proceed after verified Git delivery; downstream data-quality and release checks remain mandatory.

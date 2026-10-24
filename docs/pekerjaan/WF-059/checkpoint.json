@@ -1,6 +1,6 @@
 {
   "ticket_id": "WF-059",
-  "status": "blocked",
+  "status": "done",
   "date": "2026-10-24",
   "predecessor_commit": "89454df8e6045b1233ed85c4ff27adb82a58b30a",
   "completed": [
@@ -9,7 +9,8 @@
     "Preserved raw files, string identifiers, MultiPolygon islands and source receipts.",
     "Reconciled 666 detailed master rows and 38 parent counts; retained 16 summary/detail conflicts.",
     "Corroborated all 16 disputed identities against the official BPS 2023 Semester 1 / Kemendagri 2022 bridge; retained original disagreements and immutable evidence.",
-    "Completed all 38 official bridge tables: 666 BPS/PUM pairs and 666 exact candidate geometry links; 10 uncoded objects retained separately, zero unmatched bridge codes."
+    "Completed all 38 official bridge tables: 666 BPS/PUM pairs and 666 exact candidate geometry links; 10 uncoded objects retained separately, zero unmatched bridge codes.",
+    "Selected licensed BPS/OCHA historical reference dated 2020-04-01 for the accepted explicitly labelled mixed-period mode; verified all 666 district codes and 38 parents, preserving geometry and a separate water object."
   ],
   "checks": [
     {
@@ -162,13 +163,39 @@
       "command": "python scripts/etl/boundaries.py --master-receipt .tools/mfd-receipt.json --resolutions docs/pekerjaan/WF-059/identity-resolutions.json --download-bridge --bridge-receipts docs/pekerjaan/WF-059/bridge-resume-receipts.json --output data/staging/boundary-review.json",
       "actual": "master=true; 38 cached parent receipts verified; CLI_EXIT=0",
       "exit_code": 0
+    },
+    {
+      "command": "parse_hdx(member_receipt, catalog_receipt, reconciled_master)",
+      "actual": {
+        "complete": true,
+        "districts": 666,
+        "excluded_water_objects": 1,
+        "parents": 38,
+        "geometry_types": {
+          "Polygon": 603,
+          "MultiPolygon": 63
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest tests/python -q",
+      "actual": "63 passed",
+      "exit_code": 0
+    },
+    {
+      "command": "boundaries.py with master, resolution and HDX source receipts",
+      "actual": "master=true; historical_boundaries.complete=true; districts=666; parents=38; CLI_EXIT=0",
+      "exit_code": 0
     }
   ],
-  "blocked": [
-    "BIG source is June 2026, not an accepted historical boundary edition; explicit harmonization remains unresolved.",
-    "BIG item metadata licenseInfo and XML useLimit are empty; redistribution terms are not established."
-  ],
+  "blocked": [],
   "downstream": "WF-060 through mandatory folder 4 tasks remain pending under the accepted serial dependency rule.",
   "review": "Technical self-review only; no owner acceptance or external reviewer fabricated.",
-  "next_action": "Resolve the June 2026 boundary edition versus historical baseline and traceable boundary reuse terms. Code conflicts and complete BPS/PUM bridging are resolved; no later mandatory ticket is claimed complete."
+  "next_action": "Proceed to WF-060 after this source-selection implementation is verified and pushed.",
+  "limitations": [
+    "Boundary reference is 2020, not certified 2023 geometry; mixed-period labels are mandatory.",
+    "Topology, coordinates, analytic joins and public-release validation remain later tasks.",
+    "The BIG 2026 candidate remains unselected; its missing terms have not been invented or waived."
+  ]
 }

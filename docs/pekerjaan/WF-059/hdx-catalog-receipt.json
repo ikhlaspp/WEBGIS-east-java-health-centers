@@ -1,0 +1,10 @@
+{
+  "source_id": "hdx-catalog",
+  "edition": "cod-ab-idn-v01",
+  "source_url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-idn",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-24T02:22:57.172117+00:00",
+  "sha256": "43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b",
+  "bytes": 15413,
+  "raw_path": "data\\raw\\hdx-catalog\\43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b.bin"
+}

@@ -1,0 +1,329 @@
+{
+  "batch_id": "aa13005be54777d3e00d1610444fa4d52bdac3bdd4d7b8d6f4f1d70fe741b47c",
+  "pipeline_version": "normalize-1.0",
+  "content_sha256": "1f31d4456ac0e1d98a9880b0331e530696d5437c4897bc3aba999ee24b42a056",
+  "datasets": [
+    {
+      "dataset": "facilities_official",
+      "source_id": "kemkes-facilities",
+      "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+      "raw": 973,
+      "accepted": 973,
+      "quarantined": 0,
+      "aggregate": 0,
+      "metadata": {
+        "pages_scanned": 239,
+        "detail_pages": [
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155
+        ],
+        "selection": "Jawa Timur facility table rows"
+      },
+      "content_sha256": "d4cb44d5655d59d4d65a37f8f2e281b781e415f808984479d5adaa292e2de8d8"
+    },
+    {
+      "dataset": "combined_historical",
+      "source_id": "archive-42e2f19ed6a77a43",
+      "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+      "raw": 706,
+      "accepted": 667,
+      "quarantined": 0,
+      "aggregate": 39,
+      "metadata": {
+        "header_rows": 2,
+        "encoding": "xlsx_xml",
+        "blank_rows": 292,
+        "parsed_data_rows": 706
+      },
+      "content_sha256": "4a1f86d3bb8b501b7bd875fd96dc61244dd78cbdda9a4b85d2b63d752e216d39"
+    },
+    {
+      "dataset": "counts_historical",
+      "source_id": "archive-0d53d53c9d3bca6e",
+      "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+      "raw": 704,
+      "accepted": 665,
+      "quarantined": 0,
+      "aggregate": 39,
+      "metadata": {
+        "encoding": "utf-8",
+        "bom": true,
+        "header_rows": 1,
+        "blank_rows": 0,
+        "parsed_data_rows": 704
+      },
+      "content_sha256": "ee948feba0741bbc889aa3d04fda88f05225e96ff82b4babc799bf96bab23181"
+    },
+    {
+      "dataset": "area",
+      "source_id": "archive-153ba08285163260",
+      "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+      "raw": 704,
+      "accepted": 666,
+      "quarantined": 0,
+      "aggregate": 38,
+      "metadata": {
+        "notes": [
+          {
+            "locator": "xlsx/Catatan/A1",
+            "text": "Catatan / Notes"
+          },
+          {
+            "locator": "xlsx/Catatan/A3",
+            "text": "Sumber utama: BPS, publikasi \"<Region> Dalam Angka 2024\", Tabel 1.1.1 \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan, 2023\" (data tahun 2023)."
+          },
+          {
+            "locator": "xlsx/Catatan/A4",
+            "text": "Luas dalam satuan km2 (kilometer persegi), sesuai angka yang dicetak di buku."
+          },
+          {
+            "locator": "xlsx/Catatan/A5",
+            "text": "Total per kabupaten/kota = angka yang dicetak di baris \"Kabupaten/Kota ...\" pada tabel sumber."
+          },
+          {
+            "locator": "xlsx/Catatan/A6",
+            "text": "Selisih kecil antara jumlah kecamatan dan angka total (mis. Kota Surabaya 335,54 vs 335,93; Kota Kediri 67,24 vs 67,23; Kota Mojokerto 20,20 vs 20,21) disebabkan pembulatan 2 angka desimal pada nilai per kecamatan oleh BPS."
+          },
+          {
+            "locator": "xlsx/Catatan/A7",
+            "text": "Kabupaten Malang, Kabupaten Tulungagung, dan Kota Probolinggo: buku Dalam Angka 2024 tidak mencetak luas per kecamatan (nilai \"...\" / keterangan \"data belum tersedia\"), hanya total (Malang 3.473,439 km2; Tulungagung 1.144,53 km2; Kota Probolinggo 54,676 km2). Oleh karena itu ketiga sheet diisi dari data CSV BPS edisi lama: Malang 2019 (total 2.977,05 km2), Tulungagung 2021 (total 1.055,65 km2), Kota Probolinggo 2021 (total 56,67 km2). Angka dari CSV hanya berlaku untuk tahun tersebut, TIDAK sama dengan total 2023 di buku."
+          },
+          {
+            "locator": "xlsx/Catatan/A8",
+            "text": "5 wilayah lain (Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) tidak tersedia dari PDF (dokumen scan tanpa teks), diisi dari CSV BPS: Bojonegoro 2023 (total 2.307,06 km2), Jember 2023 (total 3.314,13 km2), Lamongan 2023 (total 1.812,80 km2), Lumajang 2025 (total 1.790,90 km2), Kota Madiun 2025 (total 33,23 km2). Nilai Lamongan di CSV dalam hektar (x100 km2), sudah dikonversi ke km2."
+          },
+          {
+            "locator": "xlsx/Catatan/A9",
+            "text": "Total 38 kabupaten/kota di Jawa Timur: 29 kabupaten + 9 kota, 666 kecamatan. Untuk 8 wilayah (Malang, Tulungagung, Kota Probolinggo, Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) luas per kecamatan tidak terbit di buku 2023, diambil dari CSV BPS dengan tahun sumber bervariasi."
+          },
+          {
+            "locator": "xlsx/Catatan/A10",
+            "text": "Sumber data wilayah per kabupaten/kota pada buku berasal dari Kepmendagri / Permendagri terkait (mis. Kepmendagri 100.1.1-6117 Tahun 2022)."
+          },
+          {
+            "locator": "xlsx/Malang/A37",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kabupaten Malang, 2019\". Total CSV 2.977,05 km2 (edisi 2019); total edisi 2023 di buku 3.473,439 km2."
+          },
+          {
+            "locator": "xlsx/Tulungagung/A23",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kabupaten Tulungagung, 2021\". Total CSV 1.055,65 km2 (edisi 2021); total edisi 2023 di buku 1.144,53 km2."
+          },
+          {
+            "locator": "xlsx/Kota Probolinggo/A9",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kota Probolinggo, 2021\". Total CSV 56,67 km2 (edisi 2021); total edisi 2023 di buku 54,676 km2."
+          },
+          {
+            "locator": "xlsx/Bojonegoro/A32",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kabupaten Bojonegoro, 2023\". Total 2.307,06 km2."
+          },
+          {
+            "locator": "xlsx/Jember/A35",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kabupaten Jember, 2023\". Total 3.314,13 km2."
+          },
+          {
+            "locator": "xlsx/Lamongan/A31",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kabupaten Lamongan, 2023\". Nilai di CSV dalam hektar (x100 km2), sudah dibagi 100 menjadi km2. Jumlah kecamatan 1.813,40 km2 vs total 1.812,80 km2 (selisih 0,60 km2 karena angka per kecamatan di CSV tidak dijumlahkan persis ke total). Keterangan sumber: data luas area hanya tersedia level kabupaten."
+          },
+          {
+            "locator": "xlsx/Lumajang/A25",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kabupaten Lumajang, 2025\". Total 1.790,90 km2."
+          },
+          {
+            "locator": "xlsx/Kota Madiun/A7",
+            "text": "Sumber CSV BPS \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan di Kota Madiun, 2025\". Total 33,23 km2."
+          }
+        ],
+        "source_kind": "archived_derivative_workbook"
+      },
+      "content_sha256": "0444f5ec2302c8b2fd169ccc2d3bdff9abb6e78e4db6c288d87dcc8431b717e4"
+    },
+    {
+      "dataset": "population",
+      "source_id": "archive-debc88ea7c1b1db2",
+      "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+      "raw": 704,
+      "accepted": 666,
+      "quarantined": 0,
+      "aggregate": 38,
+      "metadata": {
+        "notes": [
+          {
+            "locator": "xlsx/Catatan/A1",
+            "text": "Catatan / Notes"
+          },
+          {
+            "locator": "xlsx/Catatan/A3",
+            "text": "Sumber utama: BPS, publikasi \"<Region> Dalam Angka 2024\", Tabel 3.1.1 / 3.1.3 \"Jumlah Penduduk Menurut Kecamatan, 2023\" (data tahun 2023)."
+          },
+          {
+            "locator": "xlsx/Catatan/A4",
+            "text": "33 kabupaten/kota pertama diisi dari data CSV BPS (Sensus Penduduk per kecamatan, jenis kelamin lengkap)."
+          },
+          {
+            "locator": "xlsx/Catatan/A5",
+            "text": "5 kabupaten/kota berikut (Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) TIDAK tersedia sebagai teks di PDF (dokumen scan tanpa lapisan teks), sehingga diisi dari hasil OCR (pembacaan otomatis gambar) pada dokumen scan, lalu diverifikasi bahwa jumlah per kecamatan = angka total yang dicetak di buku."
+          },
+          {
+            "locator": "xlsx/Catatan/A6",
+            "text": "Verifikasi OCR Bojonegoro: total 1.363.058 (28 kecamatan); Jember: laki-laki 1.298.852, perempuan 1.301.811, jumlah 2.600.663 (31 kecamatan); Lamongan: total 1.385.835 (27 kecamatan); Lumajang: total 1.108.487 (21 kecamatan); Kota Madiun: total 202.544 (3 kecamatan). Jumlah per kecamatan yang tertera di sheet dihitung ulang = total tersebut, sehingga konsisten."
+          },
+          {
+            "locator": "xlsx/Catatan/A7",
+            "text": "Kolom yang TIDAK diisi pada sheet Bojonegoro, Lamongan, Lumajang, dan Kota Madiun (Laki-laki / Perempuan) tidak dicetak terpisah di tabel sumber (hanya kolom \"Jumlah Penduduk\"), sehingga data Sensus per jenis kelamin dari CSV tidak digabung agar tidak terjadi campuran sumber data."
+          },
+          {
+            "locator": "xlsx/Catatan/A8",
+            "text": "Angka kemungkinan memiliki selisih sangat kecil (ratusan orang atau kurang) terhadap angka resmi per kecamatan karena keterbatasan hasil OCR pada dokumen scan. Untuk data resmi silakan gunakan CSV BPS atau buku cetak resmi."
+          }
+        ],
+        "source_kind": "archived_derivative_workbook"
+      },
+      "content_sha256": "72974ad1d83895f43a89ccfbabd9d4814f963c4cfdf04eb9a353304271a22479"
+    },
+    {
+      "dataset": "facilities_xlsx",
+      "source_id": "archive-b52dc1bad4468b67",
+      "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+      "raw": 973,
+      "accepted": 973,
+      "quarantined": 0,
+      "aggregate": 0,
+      "metadata": {
+        "header_rows": 1,
+        "encoding": "xlsx_xml",
+        "blank_rows": 26,
+        "parsed_data_rows": 973
+      },
+      "content_sha256": "e16ac3388dcc7dc5851ae8190140ca564058e5c5e594ffd41b96a5b77be07b3a"
+    },
+    {
+      "dataset": "coordinates_xlsx",
+      "source_id": "archive-6b4cdc167411ed72",
+      "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+      "raw": 973,
+      "accepted": 973,
+      "quarantined": 0,
+      "aggregate": 0,
+      "metadata": {
+        "header_rows": 1,
+        "encoding": "xlsx_xml",
+        "blank_rows": 0,
+        "parsed_data_rows": 973
+      },
+      "content_sha256": "d51009c86584cdbe5ebeef472a07288ab499e4efbcf192b5aef6d7aec91c10e3"
+    },
+    {
+      "dataset": "facilities_archive",
+      "source_id": "archive-e9997b3d0351eac6",
+      "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+      "raw": 973,
+      "accepted": 973,
+      "quarantined": 0,
+      "aggregate": 0,
+      "metadata": {
+        "pages_scanned": 239,
+        "detail_pages": [
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155
+        ],
+        "selection": "Jawa Timur facility table rows"
+      },
+      "content_sha256": "0c9c0dcc4a768e79914ab0ba966121d872f58a1c0881acae3cb5e79899a6d2f1"
+    },
+    {
+      "dataset": "facilities_csv",
+      "source_id": "archive-cf9cbf4c45fd8d51",
+      "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+      "raw": 973,
+      "accepted": 973,
+      "quarantined": 0,
+      "aggregate": 0,
+      "metadata": {
+        "encoding": "utf-8",
+        "bom": false,
+        "header_rows": 1,
+        "blank_rows": 0,
+        "parsed_data_rows": 973
+      },
+      "content_sha256": "27edb3f534f24dff9fd49919dd89b3946a006d8724997e0fcf99b37d5f2b190c"
+    },
+    {
+      "dataset": "coordinates_csv",
+      "source_id": "archive-d0e057ab2864a5bc",
+      "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+      "raw": 973,
+      "accepted": 973,
+      "quarantined": 0,
+      "aggregate": 0,
+      "metadata": {
+        "encoding": "utf-8",
+        "bom": false,
+        "header_rows": 1,
+        "blank_rows": 0,
+        "parsed_data_rows": 973
+      },
+      "content_sha256": "a8e85b83542c5c4b2ebc5fddc11c2369c5383fec5045725fe3567327c98d35a4"
+    }
+  ],
+  "outputs": {
+    "accepted": {
+      "path": "data/staging/normalized/aa13005be54777d3e00d1610444fa4d52bdac3bdd4d7b8d6f4f1d70fe741b47c/1f31d4456ac0e1d98a9880b0331e530696d5437c4897bc3aba999ee24b42a056/staging.json",
+      "sha256": "7fcc156d89893c75cd9a5cfa34d9898149b676ecb671afa68e4159d44f0ed70b",
+      "rows": 8502
+    },
+    "quarantined": {
+      "path": "data/staging/normalized/aa13005be54777d3e00d1610444fa4d52bdac3bdd4d7b8d6f4f1d70fe741b47c/1f31d4456ac0e1d98a9880b0331e530696d5437c4897bc3aba999ee24b42a056/quarantine.json",
+      "sha256": "bda1a2fb438da4ee85314898c42bb72eb14e6a1bce159a07dd11ec3b16188542",
+      "rows": 0
+    },
+    "aggregate": {
+      "path": "data/staging/normalized/aa13005be54777d3e00d1610444fa4d52bdac3bdd4d7b8d6f4f1d70fe741b47c/1f31d4456ac0e1d98a9880b0331e530696d5437c4897bc3aba999ee24b42a056/aggregates.json",
+      "sha256": "54bdcc09f2eeb611d4b40f3aa4ea390e47c4612c1a93cbb6bb13e3bc07d3504b",
+      "rows": 154
+    }
+  },
+  "data_quality_accepted": false,
+  "source_plan_sha256": "3b889e89bcda571d8e0c0e3b087597a5550a9f3a7e932a3d8473955f7ad04882",
+  "raw": 8656,
+  "counts": {
+    "accepted": 8502,
+    "quarantined": 0,
+    "aggregate": 154
+  }
+}

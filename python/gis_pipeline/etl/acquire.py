@@ -30,6 +30,21 @@ def checked_bytes(path, expected):
     return data
 
 
+def checked_document_bytes(path, expected):
+    """Verify repository JSON evidence across Git's LF/CRLF checkout conversion.
+
+    Only newline representations may differ; raw dataset bytes never use this path.
+    Return the exact representation whose original hash and size were recorded.
+    """
+    data = path.read_bytes()
+    data.decode('utf-8')
+    lf = data.replace(b'\r\n', b'\n')
+    for candidate in (data, lf, lf.replace(b'\n', b'\r\n')):
+        if len(candidate) == expected['bytes'] and hashlib.sha256(candidate).hexdigest() == expected['sha256']:
+            return candidate
+    raise ValueError('Repository source evidence differs beyond line endings')
+
+
 def freeze(root, plan, output):
     """Fail closed on inventory drift. Only publish a manifest after all checks pass."""
     root = Path(root).resolve()
@@ -37,7 +52,7 @@ def freeze(root, plan, output):
     if output.suffix != '.json':
         raise ValueError('Acquisition manifest must be a JSON file, not a raw snapshot')
     baseline_path = local_path(root, plan['archive_inventory'])
-    baseline = json.loads(checked_bytes(baseline_path, plan['archive_inventory_identity']))['files']
+    baseline = json.loads(checked_document_bytes(baseline_path, plan['archive_inventory_identity']))['files']
     expected_paths = [item['path'] for item in baseline]
     actual_paths = {p.relative_to(root).as_posix() for p in (root / 'Archives').rglob('*') if p.is_file()}
     if len(set(expected_paths)) != len(expected_paths) or set(expected_paths) != actual_paths:
@@ -48,7 +63,7 @@ def freeze(root, plan, output):
         raise ValueError('External count differs from source plan')
     config_evidence = []
     for item in plan.get('configuration', []):
-        checked_bytes(local_path(root, item['path']), item)
+        checked_document_bytes(local_path(root, item['path']), item)
         config_evidence.append(item)
     entries = []
     # Verify every input before writing snapshots; a partial run never publishes a manifest.

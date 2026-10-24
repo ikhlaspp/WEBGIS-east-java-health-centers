@@ -1,0 +1,40 @@
+{
+  "content_sha256": "1f31d4456ac0e1d98a9880b0331e530696d5437c4897bc3aba999ee24b42a056",
+  "all_output_hashes_match": true,
+  "all_dataset_content_hashes_match": true,
+  "counts_reconcile": true,
+  "data_quality_accepted": false,
+  "coordinate_datasets": {
+    "coordinates_csv": {
+      "missing": 408,
+      "candidate_unverified": 565
+    },
+    "coordinates_xlsx": {
+      "missing": 405,
+      "candidate_unverified": 568
+    }
+  },
+  "coordinate_pair_discrepancies": [
+    {
+      "facility_code": "35770200004",
+      "csv_locator": "csv/row/904",
+      "xlsx_locator": "xlsx/puskesmas_jatim_koordinat/row/904",
+      "csv_status": "missing",
+      "xlsx_status": "candidate_unverified"
+    },
+    {
+      "facility_code": "35770200005",
+      "csv_locator": "csv/row/905",
+      "xlsx_locator": "xlsx/puskesmas_jatim_koordinat/row/905",
+      "csv_status": "missing",
+      "xlsx_status": "candidate_unverified"
+    },
+    {
+      "facility_code": "35770200006",
+      "csv_locator": "csv/row/906",
+      "xlsx_locator": "xlsx/puskesmas_jatim_koordinat/row/906",
+      "csv_status": "missing",
+      "xlsx_status": "candidate_unverified"
+    }
+  ]
+}

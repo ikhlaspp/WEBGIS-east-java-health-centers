@@ -1,0 +1,548 @@
+[
+  {
+    "source_id": "kemkes-facilities",
+    "sha256": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+    "path": "data/raw/kemkes-facilities/6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556.bin",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "bps-mfd",
+    "sha256": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+    "path": "data/raw/bps-mfd/64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "hdx-boundary-admin3",
+    "sha256": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "path": "data/raw/hdx-boundary-admin3/803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "hdx-catalog",
+    "sha256": "43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b",
+    "path": "data/raw/hdx-catalog/43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "e8e0e7d67862d91625246438c1d68183e998af4f10f48439ec464e090d747f8d",
+    "path": "data/raw/bps-bridge/e8e0e7d67862d91625246438c1d68183e998af4f10f48439ec464e090d747f8d.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "5db614134d1d5a32f941197798558e7710294e88516d9d0a013ea1c7c02d4315",
+    "path": "data/raw/bps-bridge/5db614134d1d5a32f941197798558e7710294e88516d9d0a013ea1c7c02d4315.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "f603ae175815a0b248957b483a98bd0e414b29cfacf05b2ab98ac28d5c9542bf",
+    "path": "data/raw/bps-bridge/f603ae175815a0b248957b483a98bd0e414b29cfacf05b2ab98ac28d5c9542bf.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+    "path": "data/raw/bps-bridge/26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "c60e39f7db4f0f3ff1c687a188ef2c6410c8118cb448bda0a2c3bbdc6e334bea",
+    "path": "data/raw/bps-bridge/c60e39f7db4f0f3ff1c687a188ef2c6410c8118cb448bda0a2c3bbdc6e334bea.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "5584337413504e41ffb02c337b986d858bdef53e4d53f4cef125c5b12e0390b4",
+    "path": "data/raw/bps-bridge/5584337413504e41ffb02c337b986d858bdef53e4d53f4cef125c5b12e0390b4.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+    "path": "data/raw/bps-bridge/3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "761995c3e4b6bc18829d4b486e66679df6bc5c644b0c64baa19a055785ab08c3",
+    "path": "data/raw/bps-bridge/761995c3e4b6bc18829d4b486e66679df6bc5c644b0c64baa19a055785ab08c3.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56",
+    "path": "data/raw/bps-bridge/76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "ec6ad4d91286f125da4aba43c2ff6ba4f1c8aadac1e256d6c0eff56f3427853e",
+    "path": "data/raw/bps-bridge/ec6ad4d91286f125da4aba43c2ff6ba4f1c8aadac1e256d6c0eff56f3427853e.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+    "path": "data/raw/bps-bridge/c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "0aef5d2119e7609479903b2357b5ce38eb08567a3f14b6ee48548c94e302ad6d",
+    "path": "data/raw/bps-bridge/0aef5d2119e7609479903b2357b5ce38eb08567a3f14b6ee48548c94e302ad6d.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "2255b56e943f3651bb1fc9ec2d24b86d107555ce520f88a06aa39ebea572c30c",
+    "path": "data/raw/bps-bridge/2255b56e943f3651bb1fc9ec2d24b86d107555ce520f88a06aa39ebea572c30c.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+    "path": "data/raw/bps-bridge/6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "fea69178c6af7ff90552e8b871528bfb8bc1b9510cc27d315539e0bce1587ce5",
+    "path": "data/raw/bps-bridge/fea69178c6af7ff90552e8b871528bfb8bc1b9510cc27d315539e0bce1587ce5.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52",
+    "path": "data/raw/bps-bridge/0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb",
+    "path": "data/raw/bps-bridge/e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "26d913c139579933bedf57a6b3494f16808fea180905f0ee42b59bf4547cfdb5",
+    "path": "data/raw/bps-bridge/26d913c139579933bedf57a6b3494f16808fea180905f0ee42b59bf4547cfdb5.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "9255f3f639d36507f0e12d69f91660cb45abc7bfa9ca3fd4d18beb52b8eac61f",
+    "path": "data/raw/bps-bridge/9255f3f639d36507f0e12d69f91660cb45abc7bfa9ca3fd4d18beb52b8eac61f.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "9d9a92aab47420eb2ad81d8ba6fd44c5fc8947cb576a71b2f547e97dbcc5cfd6",
+    "path": "data/raw/bps-bridge/9d9a92aab47420eb2ad81d8ba6fd44c5fc8947cb576a71b2f547e97dbcc5cfd6.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "0a330da288fdcdeefb35cbbd3cc1e031624405209ce5c6c1ccb2c14ef04b1fa6",
+    "path": "data/raw/bps-bridge/0a330da288fdcdeefb35cbbd3cc1e031624405209ce5c6c1ccb2c14ef04b1fa6.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34",
+    "path": "data/raw/bps-bridge/7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "27d6938939e2d2ef7bbb1eb83164297c2ee4b5d3fd0f3edf40cfabc06419f515",
+    "path": "data/raw/bps-bridge/27d6938939e2d2ef7bbb1eb83164297c2ee4b5d3fd0f3edf40cfabc06419f515.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "16fbb3d5346ebdad00934bc2d6813b33f372323e8be94eacb0f8093dda92feb8",
+    "path": "data/raw/bps-bridge/16fbb3d5346ebdad00934bc2d6813b33f372323e8be94eacb0f8093dda92feb8.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "a8250b6c28fa829336e309bb97bc963b540d1d6f38812c43b416e048f629ce96",
+    "path": "data/raw/bps-bridge/a8250b6c28fa829336e309bb97bc963b540d1d6f38812c43b416e048f629ce96.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "a48fd3ac4abb20782402a6491a732e07ccfe852af0c4b9dec9ebd06f5f67779e",
+    "path": "data/raw/bps-bridge/a48fd3ac4abb20782402a6491a732e07ccfe852af0c4b9dec9ebd06f5f67779e.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "01cd1043db15c8bbd6e1ad7820dbdda937954dd8324d348263b9fbde366692e8",
+    "path": "data/raw/bps-bridge/01cd1043db15c8bbd6e1ad7820dbdda937954dd8324d348263b9fbde366692e8.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "ae9d4d661bc0efa631abe1737340676cb42d2ffdae6b863382eea509e112287f",
+    "path": "data/raw/bps-bridge/ae9d4d661bc0efa631abe1737340676cb42d2ffdae6b863382eea509e112287f.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+    "path": "data/raw/bps-bridge/f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "77be783777aadcd9d11864110b1d678d4f0e86b3dc68b10fff35625a6c7f86a6",
+    "path": "data/raw/bps-bridge/77be783777aadcd9d11864110b1d678d4f0e86b3dc68b10fff35625a6c7f86a6.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "8ad378a87094bb81766a2988982dce17c2471c7f27a3211e40c1473760a1c6ab",
+    "path": "data/raw/bps-bridge/8ad378a87094bb81766a2988982dce17c2471c7f27a3211e40c1473760a1c6ab.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "35d2c71ee125464a39543ee0962c25a227efc903f0c64f6b0bf449ddad262cc9",
+    "path": "data/raw/bps-bridge/35d2c71ee125464a39543ee0962c25a227efc903f0c64f6b0bf449ddad262cc9.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "19ec78c10e5c3ca48adc3c09c4793905d0cac8cec2992792c8db89edd8888006",
+    "path": "data/raw/bps-bridge/19ec78c10e5c3ca48adc3c09c4793905d0cac8cec2992792c8db89edd8888006.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "70c2dab8540d0dbfd8756535404f626f43cfe08c8cdb049a03049901db3a76a0",
+    "path": "data/raw/bps-bridge/70c2dab8540d0dbfd8756535404f626f43cfe08c8cdb049a03049901db3a76a0.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a",
+    "path": "data/raw/bps-bridge/b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "aba29f86698d140dc78b79ca18490bc9396b80ad675f11747bc032108dd29ec8",
+    "path": "data/raw/bps-bridge/aba29f86698d140dc78b79ca18490bc9396b80ad675f11747bc032108dd29ec8.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+    "path": "data/raw/bps-bridge/1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "bps-bridge",
+    "sha256": "f9dc766578f91ae07abb5bb896c640ae4429aa891d7de6baa555076c88d65dc4",
+    "path": "data/raw/bps-bridge/f9dc766578f91ae07abb5bb896c640ae4429aa891d7de6baa555076c88d65dc4.bin",
+    "role": "region_reference_for_crosswalk_and_geometry"
+  },
+  {
+    "source_id": "archive-42e2f19ed6a77a43",
+    "sha256": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+    "path": "Archives/Data_Gabungan_Kecamatan_Jawa_Timur.xlsx",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-1f05c012b498596a",
+    "sha256": "d17052b660e430c894811c3c754907fa0fb34d5e64f2958efa0407f7a84c4dc4",
+    "path": "Archives/GIS.ipynb",
+    "role": "supporting_context"
+  },
+  {
+    "source_id": "archive-0d53d53c9d3bca6e",
+    "sha256": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+    "path": "Archives/jumlah_puskesmas_per_kecamatan.csv",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-153ba08285163260",
+    "sha256": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+    "path": "Archives/langsung buka csv disini/Data_Luas_Wilayah_Per_Kecamatan_Jawa_Timur_2024.xlsx",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-debc88ea7c1b1db2",
+    "sha256": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+    "path": "Archives/langsung buka csv disini/Data_Penduduk_Per_Kecamatan_Jawa_Timur_2024 .xlsx",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-b52dc1bad4468b67",
+    "sha256": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+    "path": "Archives/langsung buka csv disini/puskesmas_jatim_alamat.xlsx",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-6b4cdc167411ed72",
+    "sha256": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+    "path": "Archives/langsung buka csv disini/puskesmas_jatim_koordinat.xlsx",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-2fb92472318adce2",
+    "sha256": "cf15b2de7ff379ec81eb247bac3bb2d71f25f9d26842923d950a7587e25cbcad",
+    "path": "Archives/per kecamatan/Bangkalan.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-71f45c7176656ed0",
+    "sha256": "4a4ceaa7fb1680123560894dfe9ba8cfc0f724cdccbd889eaa3ecf823f8dd160",
+    "path": "Archives/per kecamatan/Banyuwangi.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-08d1e09f177f7c40",
+    "sha256": "32403291240cf4859aef84ea1106cde70af51fb0d9ad25e4a6835f005f3e633b",
+    "path": "Archives/per kecamatan/Blitar.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-d082467a035e1b0a",
+    "sha256": "3f2a37809c59def24393fdbfd73c4202f5f6e7e13f96b328c845a9510a681b54",
+    "path": "Archives/per kecamatan/Bojonegoro.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-312db0681978b550",
+    "sha256": "71ab5f41657196ad801f3955951c53e69d886bf8dc0de795a4dbe01280715cb7",
+    "path": "Archives/per kecamatan/Bondowoso.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-d8795532e17b362b",
+    "sha256": "ff0d7aa726c8af31e9fa79bf1d779a27a39218765a3c478a04fd458b30f0b8bc",
+    "path": "Archives/per kecamatan/Gresik.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-edc5277f224e8864",
+    "sha256": "d4d6515825422307d0fbbf55469f19e13f14f7a8d08ef3ccb48587164e43314f",
+    "path": "Archives/per kecamatan/Jember.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-821ededfb4188cd6",
+    "sha256": "c8ddbfc9e333cc3cbf1f5b6999de9883bffe0f53deb523e6f53ef3d207564601",
+    "path": "Archives/per kecamatan/Jombang.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-ac19e6f2c5f3f870",
+    "sha256": "046be09322f4a1dda074d59cc58231a91bb939082d61c7a6fec69ccb5e903f7d",
+    "path": "Archives/per kecamatan/Kediri.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-10cd7ae2c86022f2",
+    "sha256": "5a2bd4e99922e8b94e11f416beaf2ef8c18b59a5c7d1c6254450e07b92174bdb",
+    "path": "Archives/per kecamatan/Kota Batu.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-9053fd1d80822265",
+    "sha256": "f35af77994eb315ea2b9643a696a8c87d7ba53607dc5aba1448ce9e269468a9a",
+    "path": "Archives/per kecamatan/Kota Blitar.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-54669821ec35b00a",
+    "sha256": "e52d175cc4d6333d38df8bfaecff3f198773ed0cb2d228b040492eb72e3d69b7",
+    "path": "Archives/per kecamatan/Kota Kediri.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-f153cddb75652194",
+    "sha256": "6d5236fe02ee8ccebedcd2cb6a4f0a73ae68ff46e648090c5861cbaf0343dff7",
+    "path": "Archives/per kecamatan/Kota Madiun.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-6933dd6baa440065",
+    "sha256": "f1b66376e3ea2cabcf22d92fbd9713258b6c3e7d4025fe14ad9b7a07e71b1d1f",
+    "path": "Archives/per kecamatan/Kota Malang.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-3cdfa7f272856993",
+    "sha256": "4d496279f44099bedc4206902dc195a96068ae97b0adc1cd6585fba6be8a155b",
+    "path": "Archives/per kecamatan/Kota Mojokerto.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-95472be82b3f6fcb",
+    "sha256": "bfcd7881139a6ae2ba48d4ddba3f1839bc923fce2a28f424ae8cc5964a80ff85",
+    "path": "Archives/per kecamatan/Kota Pasuruan.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-23ea5cc02917944b",
+    "sha256": "af21e4cf8fc09050672ee59bc50b72321fa71d1d103d35f9a8fd3c93daf4a9f6",
+    "path": "Archives/per kecamatan/Kota Probolinggo.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-7e0188759a9d81f2",
+    "sha256": "0546597605878e4142ba6bcbf729888ab99e02af5313f1697316403e40ca32da",
+    "path": "Archives/per kecamatan/Kota Surabaya.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-36640b41915a8fec",
+    "sha256": "e615473ba9ab7461fe5b5e21dbdcf435ee23762c1fe68c4a85bb0fe1059b4df3",
+    "path": "Archives/per kecamatan/Lamongan.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-5a89b1184b7eb6ba",
+    "sha256": "55af442ae808ecb96052591f48c034b9ca543c4c3e491c0ed1e9ec969069d08e",
+    "path": "Archives/per kecamatan/Lumajang.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-94e038054e5862c8",
+    "sha256": "bfdb2233cae980b7cbcbb0beee5dabaaca547b41e7115665d647a2a4a339def3",
+    "path": "Archives/per kecamatan/Madiun.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-5cb92db1eaff9360",
+    "sha256": "48063eca4f8f0829dde4f072f0082530e0335914adb68f5f3530e272d404df9a",
+    "path": "Archives/per kecamatan/Magetan.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-ef3708f9fa2e8d0d",
+    "sha256": "cafc6e0a2c7f4f48c0478973010c7f10c17693140a9ab5f4199ac9fbbb1bbfa3",
+    "path": "Archives/per kecamatan/Malang.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-5a0ca857a5d4381a",
+    "sha256": "ee29819833acf02148969a280bd81b5724bc62a408f4a173dddc86a2195e78f9",
+    "path": "Archives/per kecamatan/Mojokerto.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-9691c0e7d8dd0431",
+    "sha256": "6c557b3e27568c7e249e7b455b6266f6baa23c623a8ac299d8cdb62d4d85a3c9",
+    "path": "Archives/per kecamatan/Nganjuk.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-6e667f195f5f1e18",
+    "sha256": "d9335acb0d7be482c6277b749bcf91a66a79ab55cd4303ea709bfacdf6cffe4b",
+    "path": "Archives/per kecamatan/Ngawi.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-73cf7bcabe88f724",
+    "sha256": "51a3a39a7f7d7d8c06c9a26ccc79f6a2e11aa45acbd00eff556574cf664e41b6",
+    "path": "Archives/per kecamatan/pacitan.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-0d2d4d0a4e67a662",
+    "sha256": "d0db783af481b4b4fe13e614659a21fc18c3d0b72e5c28f2678921ae18014484",
+    "path": "Archives/per kecamatan/Pamekasan.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-3f2df0db6e041531",
+    "sha256": "171ab34b5a191de9a3877ed1f7fd3f6b222ca1c31d69f0c918e4eb7af165912e",
+    "path": "Archives/per kecamatan/Pasuruan.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-b03136c920855b93",
+    "sha256": "3d3dae90bc0248b41499362b02ddc93b46c5ad149a38d38f066c276b072c2489",
+    "path": "Archives/per kecamatan/ponorogo.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-daf370354f014661",
+    "sha256": "1bb601822123bfee5e246e0985d1fd02b4d147c7cfb49dd3228e18fc0f6ab24b",
+    "path": "Archives/per kecamatan/Probolinggo.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-e0231a86b889cde1",
+    "sha256": "61e738d1bc37348fd634507dea56b46fee5b2fb378ff393952a3877943959dc0",
+    "path": "Archives/per kecamatan/Sampang.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-06fc08bdd3758693",
+    "sha256": "3e6e7d73b62ca1f38192700191d46c00f290f129bbbc820192ed676e6e18ad2e",
+    "path": "Archives/per kecamatan/Sidoarjo.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-d4f5ee15b5bcdee0",
+    "sha256": "597825dbebbcf128c47d4a589a8bdf480d60aa9df57f7c5d5b482035b820ce57",
+    "path": "Archives/per kecamatan/Situbondo.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-f8daa30338c4382f",
+    "sha256": "d7b77802e2759edb693c6dbc84f92f9f6b812ca70445ae8a8bab353139156b09",
+    "path": "Archives/per kecamatan/Sumenep.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-ab150cd2c765d08a",
+    "sha256": "d3113b2125b5c65ba08a7dc84a5a6cea424ed37b7508b9f1daee3e8ffe6c00f4",
+    "path": "Archives/per kecamatan/Trenggalek.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-4618808ef702ab3a",
+    "sha256": "f78e7820f4ec13f6c0d84af3e699b7117be6f79df828c0278ed6143ba1342e31",
+    "path": "Archives/per kecamatan/Tuban.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-31ce2d3980f7d760",
+    "sha256": "d74d5f8f1076e3f81c2701a8cbcbb8c93f5eaf5afd780c42674dd6795df2f087",
+    "path": "Archives/per kecamatan/Tulungagung.pdf",
+    "role": "original_indicator_evidence_for_curation"
+  },
+  {
+    "source_id": "archive-6fc00d54c7be8226",
+    "sha256": "c8c0ca806fcc15f5152c0c2789286eeac70b45eb1e2941af9bcfe812791614e1",
+    "path": "Archives/Proposal.docx",
+    "role": "supporting_context"
+  },
+  {
+    "source_id": "archive-e9997b3d0351eac6",
+    "sha256": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+    "path": "Archives/Puskesmas_2024.pdf",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-cf9cbf4c45fd8d51",
+    "sha256": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+    "path": "Archives/puskesmas_jatim_alamat.csv",
+    "role": "normalized_table"
+  },
+  {
+    "source_id": "archive-d0e057ab2864a5bc",
+    "sha256": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+    "path": "Archives/puskesmas_jatim_koordinat.csv",
+    "role": "normalized_table"
+  }
+]

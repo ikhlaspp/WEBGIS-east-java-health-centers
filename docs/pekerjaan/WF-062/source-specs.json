@@ -1,0 +1,157 @@
+[
+  {
+    "dataset": "facilities_official",
+    "format": "facility_pdf",
+    "edition": "2024-S1",
+    "source_id": "kemkes-facilities",
+    "sha256": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+    "expected_rows": 973
+  },
+  {
+    "dataset": "combined_historical",
+    "format": "xlsx",
+    "sheet": "Gabungan",
+    "header_row": 2,
+    "headers": [
+      "No",
+      "Kabupaten",
+      "Kecamatan",
+      "Jumlah Penduduk",
+      "Luas (km2)",
+      "Jumlah Puskesmas"
+    ],
+    "kind": "combined",
+    "source_id": "archive-42e2f19ed6a77a43",
+    "sha256": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+    "expected_rows": 706,
+    "total_labels": [
+      "TOTAL"
+    ]
+  },
+  {
+    "dataset": "counts_historical",
+    "format": "csv",
+    "headers": [
+      "kabupaten",
+      "kecamatan",
+      "jumlah_puskesmas"
+    ],
+    "kind": "count",
+    "source_id": "archive-0d53d53c9d3bca6e",
+    "sha256": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+    "expected_rows": 704,
+    "total_labels": [
+      "TOTAL"
+    ]
+  },
+  {
+    "dataset": "area",
+    "format": "indicator_workbook",
+    "indicator": "area",
+    "source_id": "archive-153ba08285163260",
+    "sha256": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+    "expected_rows": 704
+  },
+  {
+    "dataset": "population",
+    "format": "indicator_workbook",
+    "indicator": "population",
+    "source_id": "archive-debc88ea7c1b1db2",
+    "sha256": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+    "expected_rows": 704
+  },
+  {
+    "dataset": "facilities_xlsx",
+    "format": "xlsx",
+    "kind": "facility",
+    "headers": [
+      "no",
+      "kode_puskesmas",
+      "nama_puskesmas",
+      "alamat",
+      "kecamatan",
+      "kabupaten",
+      "provinsi",
+      "kemampuan_pelayanan",
+      "karakteristik_wilayah"
+    ],
+    "sheet": "puskesmas_jatim_alamat",
+    "source_id": "archive-b52dc1bad4468b67",
+    "sha256": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+    "expected_rows": 973
+  },
+  {
+    "dataset": "coordinates_xlsx",
+    "format": "xlsx",
+    "kind": "coordinates",
+    "headers": [
+      "no",
+      "kode_puskesmas",
+      "nama_puskesmas",
+      "alamat",
+      "kecamatan",
+      "kabupaten",
+      "provinsi",
+      "kemampuan_pelayanan",
+      "karakteristik_wilayah",
+      "query_alamat",
+      "latitude",
+      "longitude",
+      "status_geocoding"
+    ],
+    "sheet": "puskesmas_jatim_koordinat",
+    "source_id": "archive-6b4cdc167411ed72",
+    "sha256": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+    "expected_rows": 973
+  },
+  {
+    "dataset": "facilities_archive",
+    "format": "facility_pdf",
+    "edition": "2024-S1",
+    "source_id": "archive-e9997b3d0351eac6",
+    "sha256": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+    "expected_rows": 973
+  },
+  {
+    "dataset": "facilities_csv",
+    "format": "csv",
+    "kind": "facility",
+    "headers": [
+      "no",
+      "kode_puskesmas",
+      "nama_puskesmas",
+      "alamat",
+      "kecamatan",
+      "kabupaten",
+      "provinsi",
+      "kemampuan_pelayanan",
+      "karakteristik_wilayah"
+    ],
+    "source_id": "archive-cf9cbf4c45fd8d51",
+    "sha256": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+    "expected_rows": 973
+  },
+  {
+    "dataset": "coordinates_csv",
+    "format": "csv",
+    "kind": "coordinates",
+    "headers": [
+      "no",
+      "kode_puskesmas",
+      "nama_puskesmas",
+      "alamat",
+      "kecamatan",
+      "kabupaten",
+      "provinsi",
+      "kemampuan_pelayanan",
+      "karakteristik_wilayah",
+      "query_alamat",
+      "latitude",
+      "longitude",
+      "status_geocoding"
+    ],
+    "source_id": "archive-d0e057ab2864a5bc",
+    "sha256": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+    "expected_rows": 973
+  }
+]

@@ -3,7 +3,7 @@ import json
 
 import pytest
 
-from gis_pipeline.etl.acquire import freeze
+from gis_pipeline.etl.acquire import checked_bytes, checked_document_bytes, freeze
 
 
 def identity(data):
@@ -63,3 +63,15 @@ def test_manifest_cannot_overwrite_archive(inputs):
     root, plan = inputs
     with pytest.raises(ValueError):
         freeze(root, plan, 'Archives/table.csv')
+
+
+def test_git_newline_conversion_only_applies_to_repository_evidence(tmp_path):
+    original = b'{\r\n  "version": 1\r\n}\r\n'
+    path = tmp_path / 'evidence.json'
+    path.write_bytes(original.replace(b'\r\n', b'\n'))
+    assert checked_document_bytes(path, identity(original)) == original
+    with pytest.raises(ValueError):
+        checked_bytes(path, identity(original))
+    path.write_bytes(b'{\n  "version": 2\n}\n')
+    with pytest.raises(ValueError):
+        checked_document_bytes(path, identity(original))

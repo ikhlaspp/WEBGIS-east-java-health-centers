@@ -1,0 +1,47 @@
+{
+  "ticket_id": "WF-062",
+  "status": "done",
+  "predecessor_commit": "39b01a32bfc9cadd661b0838676e10464ea58faa",
+  "next_action": "WF-063 after verified Git delivery.",
+  "batch_id": "aa13005be54777d3e00d1610444fa4d52bdac3bdd4d7b8d6f4f1d70fe741b47c",
+  "content_sha256": "1f31d4456ac0e1d98a9880b0331e530696d5437c4897bc3aba999ee24b42a056",
+  "completed": [
+    "Implemented deterministic raw-preserving normalization and explicit source roles.",
+    "Normalized 10 frozen tables, keeping historical duplicate source records and separating all totals.",
+    "Verified saved artifact hashes/counts and recorded three additional unverified XLSX coordinate candidates.",
+    "Made repository JSON evidence verification portable across Git newline conversion without relaxing raw hashes."
+  ],
+  "checks": [
+    {
+      "command": "normalize.py with committed manifest/specs",
+      "exit_code": 0,
+      "actual": {
+        "raw": 8656,
+        "accepted": 8502,
+        "quarantined": 0,
+        "aggregate": 154
+      }
+    },
+    {
+      "command": "Saved output hash/content/count recomputation",
+      "exit_code": 0,
+      "actual": "All match; see output-verification.json"
+    },
+    {
+      "command": "python -m pytest tests/python -q",
+      "exit_code": 0,
+      "actual": "114 passed"
+    },
+    {
+      "command": "python -m compileall -q python scripts/etl tests/python",
+      "exit_code": 0
+    },
+    {
+      "command": "Initial expected 667 combined raw rows",
+      "exit_code": 1,
+      "actual": "Guard rejected; direct source inspection proved 667 details plus 39 aggregates; final spec 706 and separate aggregate classification passed."
+    }
+  ],
+  "data_quality_accepted": false,
+  "review": "Technical self-review only; no independent, lecturer or UAT acceptance claimed."
+}

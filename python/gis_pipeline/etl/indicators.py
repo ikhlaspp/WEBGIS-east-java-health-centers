@@ -2,6 +2,7 @@
 
 import csv
 import hashlib
+import io
 import json
 import re
 from collections import Counter
@@ -82,7 +83,7 @@ def parse_workbook(path, manifest, indicator):
     if hashlib.sha256(path.read_bytes()).hexdigest() != manifest['sha256']:
         raise ValueError('Source hash mismatch')
     result = {'rows': [], 'aggregates': [], 'diagnostics': [], 'notes': []}
-    workbook = load_workbook(path, read_only=True, data_only=False)
+    workbook = load_workbook(io.BytesIO(path.read_bytes()), read_only=True, data_only=False)
     try:
         if 'Catatan' not in workbook.sheetnames:
             raise ValueError('Workbook lacks its source metadata sheet')

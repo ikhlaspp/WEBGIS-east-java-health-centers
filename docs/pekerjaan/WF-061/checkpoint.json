@@ -1,0 +1,39 @@
+{
+  "ticket_id": "WF-061",
+  "status": "done",
+  "predecessor_commit": "ae0077083e2d905800f4fea4620135286f3a281a",
+  "next_action": "WF-062 extraction/normalization after verified Git delivery.",
+  "completed": [
+    "Frozen and hash-verified 49 unchanged archive files and 42 selected official receipts.",
+    "Re-ran facility, indicator, master, code-bridge and historical boundary adapters.",
+    "Recorded exact historical discrepancies without correcting or promoting data."
+  ],
+  "checks": [
+    {
+      "command": "acquire.py --plan docs/pekerjaan/WF-061/source-plan.json --reconcile-output docs/pekerjaan/WF-061/reconciliation.json",
+      "exit_code": 0,
+      "actual": "91 available entries; 973 facilities; 666 rows per indicator; 38 readable BPS PDFs"
+    },
+    {
+      "command": "boundaries.py with master, resolutions, HDX receipts and all 38 resumed bridge receipts",
+      "exit_code": 0,
+      "actual": "666 master districts, 666 selected boundaries, 666 bridge pairs; 38 parents; one water object excluded"
+    },
+    {
+      "command": "python -m pytest tests/python -q",
+      "exit_code": 0,
+      "actual": "94 passed"
+    },
+    {
+      "command": "python -m compileall -q python scripts/etl tests/python",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest tests/python/test_acquisition.py -q after final manifest target checks",
+      "exit_code": 0,
+      "actual": "8 passed"
+    }
+  ],
+  "review": "Technical self-review only; no independent or lecturer acceptance claimed.",
+  "data_quality_accepted": false
+}

@@ -68,8 +68,10 @@ def test_workbook_empty_cells_and_source_footer_keep_correct_locators(tmp_path):
     sheet.append(['Synthetic A', None])
     sheet.append(['TOTAL', 0])
     sheet.append(['Sumber CSV BPS synthetic'])
-    path = tmp_path / 'synthetic.xlsx'
-    workbook.save(path)
+    original = tmp_path / 'synthetic.xlsx'
+    workbook.save(original)
+    path = tmp_path / 'immutable-snapshot.bin'
+    path.write_bytes(original.read_bytes())
     manifest = {'source_id': 'synthetic', 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                 'source_url': 'https://example.test/synthetic.xlsx', 'acquired_at': '2024-01-01'}
     result = parse_workbook(path, manifest, 'area')

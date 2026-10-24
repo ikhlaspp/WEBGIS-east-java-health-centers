@@ -1,0 +1,447 @@
+{
+  "archive_inventory": "docs/pekerjaan/WF-017/manifest-arsip.json",
+  "archive_inventory_identity": {
+    "bytes": 8922,
+    "sha256": "f2f95f421b5d662d9a27c380687313a8c1d0e877bde602e392b48dea81648e76"
+  },
+  "expected_archive_files": 49,
+  "expected_external_files": 42,
+  "external_receipts": [
+    {
+      "source_id": "kemkes-facilities",
+      "edition": "2024-S1",
+      "source_url": "https://kemkes.go.id/app_asset/file_content_download/1732157570673ea0828311d8.00594061.pdf",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T14:22:39.487034+00:00",
+      "sha256": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+      "bytes": 3301458,
+      "raw_path": "data/raw/kemkes-facilities/6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556.bin"
+    },
+    {
+      "source_id": "bps-mfd",
+      "edition": "2023",
+      "source_url": "https://web-api.bps.go.id/download.php?f=d6Fc2BCRfrogAGHMz8urLElDV2xBNDJ3S3U3cE0wUXRteWRHQWdseUtKN2hCa2ZFSGhFTU5KS0g3bmhOeVVvdis1R3VjT0UzYmVGb3NBMDZPWWlZM0dtbzVBaXFFQXhHZmxEKzhNZnoyUnVzdExVNmJWMHRRdzBwYm9mT1Y3N1FxUkZhSkFBN1Zaa2FoS3gvdG9iNnMxYmRuZWVoOGo4K1AvSU9SaEcwQVU1elFDSEpEMEtyUE5lRy9OUW56WnVqc2MzY0sxYzdnTHFLdEhJTXBnMmErVFVWM2NPK2d3ZkpxTFhibm1MSkVsNGhSU1FOS2ZveElUZVZrNmRJYktvUE50SDIzMWZWSDdZRU9VYUJTQmNkRTJMMXRoWWNVTys0SUd4VHVBPT0%3D",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T20:35:44.890249+00:00",
+      "sha256": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "bytes": 3091751,
+      "raw_path": "data/raw/bps-mfd/64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f.bin"
+    },
+    {
+      "source_id": "hdx-boundary-admin3",
+      "edition": "2020-04",
+      "source_url": "https://data.humdata.org/dataset/84a1d98a-790b-4d66-9d14-bbfa48500802/resource/e1421da4-8f48-47d2-ac49-79ff5bfa4d24/download/idn_admin_boundaries.geojson.zip#idn_admin3.geojson",
+      "acquired_from": "https_zip_member",
+      "acquired_at": "2026-10-24T02:15:22.164566+00:00",
+      "sha256": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+      "bytes": 286457798,
+      "raw_path": "data/raw/hdx-boundary-admin3/803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75.bin",
+      "archive_etag": "\"045ca81f33d8798cf8ff2a5726275bb0\"",
+      "archive_member": "idn_admin3.geojson",
+      "archive_member_crc": 589943116,
+      "archive_total_bytes": 456203094
+    },
+    {
+      "source_id": "hdx-catalog",
+      "edition": "cod-ab-idn-v01",
+      "source_url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-idn",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-24T02:22:57.172117+00:00",
+      "sha256": "43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b",
+      "bytes": 15413,
+      "raw_path": "data/raw/hdx-catalog/43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3501&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:16.822026+00:00",
+      "sha256": "e8e0e7d67862d91625246438c1d68183e998af4f10f48439ec464e090d747f8d",
+      "bytes": 1091,
+      "raw_path": "data/raw/bps-bridge/e8e0e7d67862d91625246438c1d68183e998af4f10f48439ec464e090d747f8d.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3502&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:17.505737+00:00",
+      "sha256": "5db614134d1d5a32f941197798558e7710294e88516d9d0a013ea1c7c02d4315",
+      "bytes": 1842,
+      "raw_path": "data/raw/bps-bridge/5db614134d1d5a32f941197798558e7710294e88516d9d0a013ea1c7c02d4315.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3503&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:18.304622+00:00",
+      "sha256": "f603ae175815a0b248957b483a98bd0e414b29cfacf05b2ab98ac28d5c9542bf",
+      "bytes": 1249,
+      "raw_path": "data/raw/bps-bridge/f603ae175815a0b248957b483a98bd0e414b29cfacf05b2ab98ac28d5c9542bf.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3504&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:19.305966+00:00",
+      "sha256": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bytes": 1764,
+      "raw_path": "data/raw/bps-bridge/26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3505&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:19.930273+00:00",
+      "sha256": "c60e39f7db4f0f3ff1c687a188ef2c6410c8118cb448bda0a2c3bbdc6e334bea",
+      "bytes": 1983,
+      "raw_path": "data/raw/bps-bridge/c60e39f7db4f0f3ff1c687a188ef2c6410c8118cb448bda0a2c3bbdc6e334bea.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3506&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:20.613955+00:00",
+      "sha256": "5584337413504e41ffb02c337b986d858bdef53e4d53f4cef125c5b12e0390b4",
+      "bytes": 2307,
+      "raw_path": "data/raw/bps-bridge/5584337413504e41ffb02c337b986d858bdef53e4d53f4cef125c5b12e0390b4.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3507&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:21.221344+00:00",
+      "sha256": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+      "bytes": 2998,
+      "raw_path": "data/raw/bps-bridge/3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3508&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:23.091319+00:00",
+      "sha256": "761995c3e4b6bc18829d4b486e66679df6bc5c644b0c64baa19a055785ab08c3",
+      "bytes": 1932,
+      "raw_path": "data/raw/bps-bridge/761995c3e4b6bc18829d4b486e66679df6bc5c644b0c64baa19a055785ab08c3.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3509&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:23.730276+00:00",
+      "sha256": "76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56",
+      "bytes": 2802,
+      "raw_path": "data/raw/bps-bridge/76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3510&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:24.421412+00:00",
+      "sha256": "ec6ad4d91286f125da4aba43c2ff6ba4f1c8aadac1e256d6c0eff56f3427853e",
+      "bytes": 2274,
+      "raw_path": "data/raw/bps-bridge/ec6ad4d91286f125da4aba43c2ff6ba4f1c8aadac1e256d6c0eff56f3427853e.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3511&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:25.088425+00:00",
+      "sha256": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+      "bytes": 2120,
+      "raw_path": "data/raw/bps-bridge/c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3512&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:25.698930+00:00",
+      "sha256": "0aef5d2119e7609479903b2357b5ce38eb08567a3f14b6ee48548c94e302ad6d",
+      "bytes": 1556,
+      "raw_path": "data/raw/bps-bridge/0aef5d2119e7609479903b2357b5ce38eb08567a3f14b6ee48548c94e302ad6d.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3513&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:26.347463+00:00",
+      "sha256": "2255b56e943f3651bb1fc9ec2d24b86d107555ce520f88a06aa39ebea572c30c",
+      "bytes": 2157,
+      "raw_path": "data/raw/bps-bridge/2255b56e943f3651bb1fc9ec2d24b86d107555ce520f88a06aa39ebea572c30c.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3514&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:26.991725+00:00",
+      "sha256": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bytes": 2136,
+      "raw_path": "data/raw/bps-bridge/6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3515&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:27.902271+00:00",
+      "sha256": "fea69178c6af7ff90552e8b871528bfb8bc1b9510cc27d315539e0bce1587ce5",
+      "bytes": 1602,
+      "raw_path": "data/raw/bps-bridge/fea69178c6af7ff90552e8b871528bfb8bc1b9510cc27d315539e0bce1587ce5.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3516&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:28.628505+00:00",
+      "sha256": "0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52",
+      "bytes": 1602,
+      "raw_path": "data/raw/bps-bridge/0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3517&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:29.251792+00:00",
+      "sha256": "e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb",
+      "bytes": 1891,
+      "raw_path": "data/raw/bps-bridge/e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3518&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:29.937457+00:00",
+      "sha256": "26d913c139579933bedf57a6b3494f16808fea180905f0ee42b59bf4547cfdb5",
+      "bytes": 1791,
+      "raw_path": "data/raw/bps-bridge/26d913c139579933bedf57a6b3494f16808fea180905f0ee42b59bf4547cfdb5.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3519&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:39:30.676827+00:00",
+      "sha256": "9255f3f639d36507f0e12d69f91660cb45abc7bfa9ca3fd4d18beb52b8eac61f",
+      "bytes": 1338,
+      "raw_path": "data/raw/bps-bridge/9255f3f639d36507f0e12d69f91660cb45abc7bfa9ca3fd4d18beb52b8eac61f.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3520&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:40:26.886003+00:00",
+      "sha256": "9d9a92aab47420eb2ad81d8ba6fd44c5fc8947cb576a71b2f547e97dbcc5cfd6",
+      "bytes": 1625,
+      "raw_path": "data/raw/bps-bridge/9d9a92aab47420eb2ad81d8ba6fd44c5fc8947cb576a71b2f547e97dbcc5cfd6.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3521&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:40:28.503295+00:00",
+      "sha256": "0a330da288fdcdeefb35cbbd3cc1e031624405209ce5c6c1ccb2c14ef04b1fa6",
+      "bytes": 1698,
+      "raw_path": "data/raw/bps-bridge/0a330da288fdcdeefb35cbbd3cc1e031624405209ce5c6c1ccb2c14ef04b1fa6.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3522&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:40:30.121807+00:00",
+      "sha256": "7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34",
+      "bytes": 2511,
+      "raw_path": "data/raw/bps-bridge/7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3523&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:40:31.770225+00:00",
+      "sha256": "27d6938939e2d2ef7bbb1eb83164297c2ee4b5d3fd0f3edf40cfabc06419f515",
+      "bytes": 1783,
+      "raw_path": "data/raw/bps-bridge/27d6938939e2d2ef7bbb1eb83164297c2ee4b5d3fd0f3edf40cfabc06419f515.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3524&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:40:33.476361+00:00",
+      "sha256": "16fbb3d5346ebdad00934bc2d6813b33f372323e8be94eacb0f8093dda92feb8",
+      "bytes": 2425,
+      "raw_path": "data/raw/bps-bridge/16fbb3d5346ebdad00934bc2d6813b33f372323e8be94eacb0f8093dda92feb8.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3525&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:40:35.084760+00:00",
+      "sha256": "a8250b6c28fa829336e309bb97bc963b540d1d6f38812c43b416e048f629ce96",
+      "bytes": 1643,
+      "raw_path": "data/raw/bps-bridge/a8250b6c28fa829336e309bb97bc963b540d1d6f38812c43b416e048f629ce96.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3526&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:11.754625+00:00",
+      "sha256": "a48fd3ac4abb20782402a6491a732e07ccfe852af0c4b9dec9ebd06f5f67779e",
+      "bytes": 1590,
+      "raw_path": "data/raw/bps-bridge/a48fd3ac4abb20782402a6491a732e07ccfe852af0c4b9dec9ebd06f5f67779e.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3527&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:13.479715+00:00",
+      "sha256": "01cd1043db15c8bbd6e1ad7820dbdda937954dd8324d348263b9fbde366692e8",
+      "bytes": 1284,
+      "raw_path": "data/raw/bps-bridge/01cd1043db15c8bbd6e1ad7820dbdda937954dd8324d348263b9fbde366692e8.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3528&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:15.115954+00:00",
+      "sha256": "ae9d4d661bc0efa631abe1737340676cb42d2ffdae6b863382eea509e112287f",
+      "bytes": 1165,
+      "raw_path": "data/raw/bps-bridge/ae9d4d661bc0efa631abe1737340676cb42d2ffdae6b863382eea509e112287f.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3529&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:16.951715+00:00",
+      "sha256": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+      "bytes": 2452,
+      "raw_path": "data/raw/bps-bridge/f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3571&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:18.647472+00:00",
+      "sha256": "77be783777aadcd9d11864110b1d678d4f0e86b3dc68b10fff35625a6c7f86a6",
+      "bytes": 275,
+      "raw_path": "data/raw/bps-bridge/77be783777aadcd9d11864110b1d678d4f0e86b3dc68b10fff35625a6c7f86a6.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3572&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:20.250052+00:00",
+      "sha256": "8ad378a87094bb81766a2988982dce17c2471c7f27a3211e40c1473760a1c6ab",
+      "bytes": 288,
+      "raw_path": "data/raw/bps-bridge/8ad378a87094bb81766a2988982dce17c2471c7f27a3211e40c1473760a1c6ab.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3573&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:21.908681+00:00",
+      "sha256": "35d2c71ee125464a39543ee0962c25a227efc903f0c64f6b0bf449ddad262cc9",
+      "bytes": 458,
+      "raw_path": "data/raw/bps-bridge/35d2c71ee125464a39543ee0962c25a227efc903f0c64f6b0bf449ddad262cc9.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3574&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:23.695191+00:00",
+      "sha256": "19ec78c10e5c3ca48adc3c09c4793905d0cac8cec2992792c8db89edd8888006",
+      "bytes": 460,
+      "raw_path": "data/raw/bps-bridge/19ec78c10e5c3ca48adc3c09c4793905d0cac8cec2992792c8db89edd8888006.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3575&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:25.361701+00:00",
+      "sha256": "70c2dab8540d0dbfd8756535404f626f43cfe08c8cdb049a03049901db3a76a0",
+      "bytes": 384,
+      "raw_path": "data/raw/bps-bridge/70c2dab8540d0dbfd8756535404f626f43cfe08c8cdb049a03049901db3a76a0.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3576&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:30:01.966585+00:00",
+      "sha256": "b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a",
+      "bytes": 287,
+      "raw_path": "data/raw/bps-bridge/b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3577&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:28.336125+00:00",
+      "sha256": "aba29f86698d140dc78b79ca18490bc9396b80ad675f11747bc032108dd29ec8",
+      "bytes": 277,
+      "raw_path": "data/raw/bps-bridge/aba29f86698d140dc78b79ca18490bc9396b80ad675f11747bc032108dd29ec8.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3578&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:29.933918+00:00",
+      "sha256": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+      "bytes": 2878,
+      "raw_path": "data/raw/bps-bridge/1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa.bin"
+    },
+    {
+      "source_id": "bps-bridge",
+      "edition": "2023_1.2022",
+      "source_url": "https://sig.bps.go.id/rest-bridging/getwilayah?level=kecamatan&parent=3579&periode_merge=2023_1.2022",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-23T22:42:31.553399+00:00",
+      "sha256": "f9dc766578f91ae07abb5bb896c640ae4429aa891d7de6baa555076c88d65dc4",
+      "bytes": 262,
+      "raw_path": "data/raw/bps-bridge/f9dc766578f91ae07abb5bb896c640ae4429aa891d7de6baa555076c88d65dc4.bin"
+    }
+  ],
+  "configuration": [
+    {
+      "path": "docs/pekerjaan/WF-059/identity-resolutions.json",
+      "bytes": 14727,
+      "sha256": "4634b01451c112da2ab819ad25803cf043a8d130294fb60822c91bccf45e3106"
+    },
+    {
+      "path": "docs/pekerjaan/WF-059/selected-boundary-source.json",
+      "bytes": 2799,
+      "sha256": "6945ef11700fb3af1f03ae0c3d7533cb4b87aca55bfb304e1a9377427a3cd302"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "ticket_id": "WF-060",
+  "status": "done",
+  "predecessor_commit": "0263b8357f4eb72221b6a3508748f1b3fe67467f",
+  "completed": [
+    "Implemented one shared bounded HTTP transport and integrated PDF, JSON and ZIP range adapters.",
+    "Implemented verified source/edition/parameter caches, live-source cache bypass, Retry-After scheduling and finite retries.",
+    "Implemented local single-writer batch checkpoints, page/schema/ID/count validation and explicit resume."
+  ],
+  "checks": [
+    {
+      "command": "python -m pytest tests/python/test_scraping_resilience.py -q",
+      "actual": "23 passed",
+      "exit_code": 0
+    },
+    {
+      "command": "http_client.py twice against official HDX metadata API",
+      "actual": "first cache_hit=false attempts=1; second cache_hit=true attempts=0; identical SHA-256 43c6a2cc8dac094a6f122789690931845484e01c34a89b4b698c35c72609792b",
+      "exit_code": 0
+    },
+    {
+      "command": "batch.py with committed synthetic fixture",
+      "actual": "succeeded; two pages, raw=2, accepted=2; BATCH_EXIT=0",
+      "exit_code": 0
+    },
+    {
+      "command": "RemoteZipReader real first-header and end-directory byte ranges",
+      "actual": "valid ZIP signatures and stable ETag; no range fragments persisted",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest tests/python -q",
+      "actual": "86 passed",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m compileall -q python scripts/etl tests/python",
+      "exit_code": 0
+    }
+  ],
+  "next_action": "Proceed to WF-061 after verified Git delivery.",
+  "review": "Technical self-review; no independent reviewer claimed."
+}

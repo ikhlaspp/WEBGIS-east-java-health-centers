@@ -1,0 +1,26 @@
+{
+  "synthetic": true,
+  "identity": {
+    "source_hash": "2de5cf393dcaec703441431c07bff60305b17ee3e043bed25bcdbf694ce477c2",
+    "source_id": "synthetic",
+    "target_release_id": "synthetic-draft",
+    "pipeline_version": "1",
+    "operation": "acquire"
+  },
+  "expected_pages": [
+    "p1",
+    "p2"
+  ],
+  "expected_ids": [
+    "0001",
+    "0002"
+  ],
+  "required_fields": [
+    "id",
+    "value"
+  ],
+  "page_files": {
+    "p1": "tests/data/wf-060/p1.json",
+    "p2": "tests/data/wf-060/p2.json"
+  }
+}

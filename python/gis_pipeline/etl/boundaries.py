@@ -6,14 +6,13 @@ import json
 import re
 import time
 import urllib.parse
-import urllib.request
 from collections import Counter
 from pathlib import Path
 
 import pdfplumber
 
 from .indicators import angled_glyph
-from .sources import CheckedRedirect, snapshot, validate_url, fetch_zip_member
+from .sources import fetch_zip_member
 
 BIG_SERVICE = 'https://geoservices.big.go.id/rbi/rest/services/BATASWILAYAH/BATAS_KECAMATAN_AR/MapServer'
 HDX_CATALOG = 'https://data.humdata.org/api/3/action/package_show?id=cod-ab-idn'
@@ -89,7 +88,7 @@ def parse_hdx(member_receipt, catalog_receipt, master):
 
 
 def acquire_hdx(raw_root, master):
-    catalog, receipt = fetch_json(HDX_CATALOG, raw_root, 'hdx-catalog', 'cod-ab-idn-v01', {'data.humdata.org'})
+    catalog, receipt = fetch_json(HDX_CATALOG, raw_root, 'hdx-catalog', 'cod-ab-idn-v01', {'data.humdata.org'}, cache=False)
     resource = next(item for item in catalog['result']['resources'] if item['format'] == 'GeoJSON')
     member = fetch_zip_member(resource['url'], resource['size'], 'idn_admin3.geojson', raw_root,
                               'hdx-boundary-admin3', '2020-04', {'data.humdata.org', 's3.us-east-1.amazonaws.com'})
@@ -145,20 +144,16 @@ def detail_line(lines, index):
     return re.match(r'^(35)\s*(\d{2})\s*(\d{3})\s+([^\d]+?)\s+35\s*\d{2}\s*\d{3}\s*\d{3}\b', line)
 
 
-def fetch_json(url, raw_root, source_id, edition, allowed_hosts):
-    validate_url(url, allowed_hosts)
-    opener = urllib.request.build_opener(CheckedRedirect(allowed_hosts))
-    request = urllib.request.Request(url, headers={'User-Agent': 'GIS-puskesmas-academic/1.0',
-                                                  'Accept': 'application/json'})
-    with opener.open(request, timeout=60) as response:
-        data = response.read(64 * 1024 * 1024 + 1)
-    if len(data) > 64 * 1024 * 1024:
-        raise ValueError('Oversized JSON response')
-    parsed = json.loads(data)
-    if not isinstance(parsed, (dict, list)) or 'error' in parsed:
-        raise ValueError('Source API error or unexpected JSON schema')
-    receipt = snapshot(data, raw_root, source_id, edition, url, 'https_download')
-    return parsed, receipt
+def fetch_json(url, raw_root, source_id, edition, allowed_hosts, *, cache=True):
+    from .http_client import SourceClient
+
+    def validate(data, headers):
+        parsed = json.loads(data)
+        if not isinstance(parsed, (dict, list)) or 'error' in parsed:
+            raise ValueError('Source API error or unexpected JSON schema')
+    result = SourceClient(raw_root, allowed_hosts).fetch(
+        url, source_id, edition, headers={'Accept': 'application/json'}, validate=validate, cache=cache)
+    return json.loads(result['data']), result['receipt']
 
 
 def acquire_bridge(master, raw_root, resume_receipts=()):
@@ -344,7 +339,7 @@ def coverage(collection, master_codes):
 def acquire_big(raw_root):
     receipts = []
     def get(url):
-        parsed, receipt = fetch_json(url, raw_root, 'big-boundary', '2026-06', {'geoservices.big.go.id'})
+        parsed, receipt = fetch_json(url, raw_root, 'big-boundary', '2026-06', {'geoservices.big.go.id'}, cache=False)
         receipts.append(receipt)
         return parsed
     service = get(BIG_SERVICE + '?f=pjson')

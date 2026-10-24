@@ -1,0 +1,12 @@
+{
+  "rows": [
+    {
+      "id": "0001",
+      "value": 11
+    }
+  ],
+  "quarantined": [],
+  "aggregates": [],
+  "raw_count": 1,
+  "next_page": "p2"
+}

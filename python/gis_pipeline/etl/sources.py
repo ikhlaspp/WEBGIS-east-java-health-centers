@@ -19,11 +19,12 @@ class RemoteZipReader(io.RawIOBase):
     """Read bounded public ZIP ranges, verifying object identity on every request."""
 
     def __init__(self, url, size, allowed_hosts, opener=None):
+        from .http_client import SourceClient
         validate_url(url, allowed_hosts)
         if not isinstance(size, int) or not 0 < size <= 512 * 1024 * 1024:
             raise ValueError('Archive size outside supported bounds')
         self.url, self.size, self.position, self.etag = url, size, 0, None
-        self.opener = opener or urllib.request.build_opener(CheckedRedirect(allowed_hosts))
+        self.client = SourceClient('.', allowed_hosts, opener=opener)
 
     def seekable(self):
         return True
@@ -47,18 +48,17 @@ class RemoteZipReader(io.RawIOBase):
         if size > 96 * 1024 * 1024:
             raise ValueError('ZIP range exceeds read bound')
         start, end = self.position, self.position + size - 1
-        request = urllib.request.Request(self.url, headers={
-            'User-Agent': 'GIS-puskesmas-academic/1.0', 'Range': f'bytes={start}-{end}'})
-        with self.opener.open(request, timeout=60) as response:
-            if response.status != 206 or response.headers.get('Content-Range') != f'bytes {start}-{end}/{self.size}':
-                raise ValueError('Source did not honor the exact archive range')
-            etag = response.headers.get('ETag')
-            if not etag or (self.etag is not None and etag != self.etag):
-                raise ValueError('Archive identity missing or changed during download')
-            self.etag = etag
-            data = response.read(size + 1)
-            if len(data) != size:
-                raise ValueError('Incomplete archive range')
+        result = self.client.fetch(self.url, 'zip-range', 'range-read', headers={'Range': f'bytes={start}-{end}'},
+                                   max_bytes=size, cache=False, persist=False, expected_status=206)
+        if result['headers'].get('content-range') != f'bytes {start}-{end}/{self.size}':
+            raise ValueError('Source did not honor the exact archive range')
+        etag = result['headers'].get('etag')
+        if not etag or (self.etag is not None and etag != self.etag):
+            raise ValueError('Archive identity missing or changed during download')
+        self.etag = etag
+        data = result['data']
+        if len(data) != size:
+            raise ValueError('Incomplete archive range')
         self.position += size
         return data
 
@@ -119,30 +119,12 @@ def snapshot(data, raw_root, source_id, edition, source_url, acquired_from):
 
 
 def fetch_pdf(url, raw_root, source_id, edition, allowed_hosts, max_bytes=64 * 1024 * 1024):
-    validate_url(url, allowed_hosts)
-    opener = urllib.request.build_opener(CheckedRedirect(allowed_hosts))
-    request = urllib.request.Request(url, headers={
-        'User-Agent': 'GIS-puskesmas-academic/1.0 (+https://github.com/ikhlaspp/WEBGIS-east-java-health-centers)',
-        'Accept': 'application/pdf',
-    })
-    for attempt in range(3):
-        try:
-            with opener.open(request, timeout=60) as response:
-                content_type = response.headers.get_content_type()
-                if content_type not in ('application/pdf', 'application/octet-stream'):
-                    raise ValueError('Source response is not a PDF')
-                data = response.read(max_bytes + 1)
-                if len(data) > max_bytes or not data.startswith(b'%PDF-'):
-                    raise ValueError('Source is oversized or has invalid PDF magic')
-                return snapshot(data, raw_root, source_id, edition, url, 'https_download')
-        except urllib.error.HTTPError as exc:
-            if attempt == 2 or exc.code not in (429, 500, 502, 503, 504):
-                raise
-            delay = exc.headers.get('Retry-After', '')
-            if delay and (not delay.isdigit() or int(delay) > 60):
-                raise RuntimeError('Source retry requires a later scheduled attempt') from exc
-            time.sleep(max(1, int(delay) if delay else 2 ** attempt))
-        except (urllib.error.URLError, TimeoutError):
-            if attempt == 2:
-                raise
-            time.sleep(2 ** attempt)
+    from .http_client import SourceClient
+
+    def validate(data, headers):
+        if headers.get('content-type', '').split(';')[0].strip() not in ('application/pdf', 'application/octet-stream'):
+            raise ValueError('Source response is not a PDF')
+        if not data.startswith(b'%PDF-'):
+            raise ValueError('Source has invalid PDF magic')
+    return SourceClient(raw_root, allowed_hosts).fetch(
+        url, source_id, edition, headers={'Accept': 'application/pdf'}, max_bytes=max_bytes, validate=validate)['receipt']

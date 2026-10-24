@@ -64,6 +64,7 @@ def test_remote_zip_reads_only_selected_member_with_stable_ranges(monkeypatch):
         archive.writestr('unused.txt', 'unused')
     data = buffer.getvalue()
     monkeypatch.setattr('gis_pipeline.etl.sources.validate_url', lambda *args: None)
+    monkeypatch.setattr('gis_pipeline.etl.http_client.validate_url', lambda *args: None)
     class Opener:
         def open(self, request, timeout):
             start, end = map(int, re.fullmatch(r'bytes=(\d+)-(\d+)', request.get_header('Range')).groups())
@@ -77,6 +78,7 @@ def test_remote_zip_reads_only_selected_member_with_stable_ranges(monkeypatch):
 @pytest.mark.parametrize('fault', ['ignored_range', 'wrong_range', 'changed_etag', 'short_read'])
 def test_remote_archive_rejects_inconsistent_responses(monkeypatch, fault):
     monkeypatch.setattr('gis_pipeline.etl.sources.validate_url', lambda *args: None)
+    monkeypatch.setattr('gis_pipeline.etl.http_client.validate_url', lambda *args: None)
     class Opener:
         def open(self, request, timeout):
             return RangeResponse(b'ab' if fault != 'short_read' else b'a',

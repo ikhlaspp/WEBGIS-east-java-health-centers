@@ -1,0 +1,4254 @@
+[
+  {
+    "decision_id": "alias-001",
+    "source_key": [
+      "tulungagung",
+      "campurdarat"
+    ],
+    "parent_code": "3504",
+    "target_code": "3504040",
+    "target_name": "CAMPUR DARAT",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/61/line/15",
+      "bridge_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bridge_record": {
+        "kode_bps": "3504040",
+        "nama_bps": "CAMPUR DARAT",
+        "kode_dagri": "350416",
+        "nama_dagri": "Campurdarat",
+        "source_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-002",
+    "source_key": [
+      "tulungagung",
+      "tanggunggunung"
+    ],
+    "parent_code": "3504",
+    "target_code": "3504050",
+    "target_name": "TANGGUNG GUNUNG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/61/line/25",
+      "bridge_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bridge_record": {
+        "kode_bps": "3504050",
+        "nama_bps": "TANGGUNG GUNUNG",
+        "kode_dagri": "350419",
+        "nama_dagri": "Tanggunggunung",
+        "source_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-003",
+    "source_key": [
+      "tulungagung",
+      "pucanglaban"
+    ],
+    "parent_code": "3504",
+    "target_code": "3504070",
+    "target_name": "PUCANG LABAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/62/line/10",
+      "bridge_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bridge_record": {
+        "kode_bps": "3504070",
+        "nama_bps": "PUCANG LABAN",
+        "kode_dagri": "350412",
+        "nama_dagri": "Pucanglaban",
+        "source_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-004",
+    "source_key": [
+      "tulungagung",
+      "pagerwojo"
+    ],
+    "parent_code": "3504",
+    "target_code": "3504180",
+    "target_name": "PAGER WOJO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/66/line/26",
+      "bridge_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+      "bridge_record": {
+        "kode_bps": "3504180",
+        "nama_bps": "PAGER WOJO",
+        "kode_dagri": "350406",
+        "nama_dagri": "Pagerwojo",
+        "source_hash": "26bb10c64ad570fbdeab72f1dc49473b790ec8ddf153b46030026d0d377d88c2",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-005",
+    "source_key": [
+      "malang",
+      "sumbermanjing wetan"
+    ],
+    "parent_code": "3507",
+    "target_code": "3507060",
+    "target_name": "SUMBERMANJING",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2019
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/98/line/14",
+      "bridge_hash": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+      "bridge_record": {
+        "kode_bps": "3507060",
+        "nama_bps": "SUMBERMANJING",
+        "kode_dagri": "350704",
+        "nama_dagri": "Sumbermanjing Wetan",
+        "source_hash": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-006",
+    "source_key": [
+      "malang",
+      "tirtoyudo"
+    ],
+    "parent_code": "3507",
+    "target_code": "3507080",
+    "target_name": "TIRTO YUDO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2019
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/99/line/6",
+      "bridge_hash": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+      "bridge_record": {
+        "kode_bps": "3507080",
+        "nama_bps": "TIRTO YUDO",
+        "kode_dagri": "350730",
+        "nama_dagri": "Tirtoyudo",
+        "source_hash": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-007",
+    "source_key": [
+      "malang",
+      "sumberpucung"
+    ],
+    "parent_code": "3507",
+    "target_code": "3507170",
+    "target_name": "SUMBER PUCUNG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2019
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/102/line/24",
+      "bridge_hash": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+      "bridge_record": {
+        "kode_bps": "3507170",
+        "nama_bps": "SUMBER PUCUNG",
+        "kode_dagri": "350712",
+        "nama_dagri": "Sumberpucung",
+        "source_hash": "3d34a7862e61f0b6ac0cecf8c8efeab53ff1fda1acfa705595aad518cbe07939",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-008",
+    "source_key": [
+      "jember",
+      "gumukmas"
+    ],
+    "parent_code": "3509",
+    "target_code": "3509020",
+    "target_name": "GUMUK MAS",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/123/line/11",
+      "bridge_hash": "76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56",
+      "bridge_record": {
+        "kode_bps": "3509020",
+        "nama_bps": "GUMUK MAS",
+        "kode_dagri": "350904",
+        "nama_dagri": "Gumukmas",
+        "source_hash": "76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-009",
+    "source_key": [
+      "jember",
+      "sumberbaru"
+    ],
+    "parent_code": "3509",
+    "target_code": "3509170",
+    "target_name": "SUMBER BARU",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/126/line/12",
+      "bridge_hash": "76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56",
+      "bridge_record": {
+        "kode_bps": "3509170",
+        "nama_bps": "SUMBER BARU",
+        "kode_dagri": "350903",
+        "nama_dagri": "Sumberbaru",
+        "source_hash": "76019349063c8ecddb91ee131ae468576ffa1d71b9f91845ea26ba18c698fc56",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-010",
+    "source_key": [
+      "bondowoso",
+      "sumberwringin"
+    ],
+    "parent_code": "3511",
+    "target_code": "3511061",
+    "target_name": "SUMBER WRINGIN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/145/line/39",
+      "bridge_hash": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+      "bridge_record": {
+        "kode_bps": "3511061",
+        "nama_bps": "SUMBER WRINGIN",
+        "kode_dagri": "351118",
+        "nama_dagri": "Sumberwringin",
+        "source_hash": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-011",
+    "source_key": [
+      "bondowoso",
+      "curahdami"
+    ],
+    "parent_code": "3511",
+    "target_code": "3511110",
+    "target_name": "CURAH DAMI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/147/line/12",
+      "bridge_hash": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+      "bridge_record": {
+        "kode_bps": "3511110",
+        "nama_bps": "CURAH DAMI",
+        "kode_dagri": "351107",
+        "nama_dagri": "Curahdami",
+        "source_hash": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-012",
+    "source_key": [
+      "bondowoso",
+      "sempol"
+    ],
+    "parent_code": "3511",
+    "target_code": "3511151",
+    "target_name": "IJEN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/149/line/6",
+      "bridge_hash": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+      "bridge_record": {
+        "kode_bps": "3511151",
+        "nama_bps": "IJEN",
+        "kode_dagri": "351119",
+        "nama_dagri": "Sempol",
+        "source_hash": "c0418f3f6ccccef9707765a683218cfeca3140f51a8ff966f1baa5362456f428",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-013",
+    "source_key": [
+      "probolinggo",
+      "pejarakan"
+    ],
+    "parent_code": "3513",
+    "target_code": "3513170",
+    "target_name": "PAJARAKAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/168/line/6",
+      "bridge_hash": "2255b56e943f3651bb1fc9ec2d24b86d107555ce520f88a06aa39ebea572c30c",
+      "bridge_record": {
+        "kode_bps": "3513170",
+        "nama_bps": "PAJARAKAN",
+        "kode_dagri": "351316",
+        "nama_dagri": "Pejarakan",
+        "source_hash": "2255b56e943f3651bb1fc9ec2d24b86d107555ce520f88a06aa39ebea572c30c",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-014",
+    "source_key": [
+      "pasuruan",
+      "gondangwetan"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514190",
+    "target_name": "GONDANG WETAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/181/line/10",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514190",
+        "nama_bps": "GONDANG WETAN",
+        "kode_dagri": "351418",
+        "nama_dagri": "Gondangwetan",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-015",
+    "source_key": [
+      "sidoarjo",
+      "balongbendo"
+    ],
+    "parent_code": "3515",
+    "target_code": "3515180",
+    "target_name": "BALONG BENDO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/197/line/6",
+      "bridge_hash": "fea69178c6af7ff90552e8b871528bfb8bc1b9510cc27d315539e0bce1587ce5",
+      "bridge_record": {
+        "kode_bps": "3515180",
+        "nama_bps": "BALONG BENDO",
+        "kode_dagri": "351512",
+        "nama_dagri": "Balongbendo",
+        "source_hash": "fea69178c6af7ff90552e8b871528bfb8bc1b9510cc27d315539e0bce1587ce5",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-016",
+    "source_key": [
+      "mojokerto",
+      "gedeg"
+    ],
+    "parent_code": "3516",
+    "target_code": "3516140",
+    "target_name": "GEDEK",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/208/line/15",
+      "bridge_hash": "0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52",
+      "bridge_record": {
+        "kode_bps": "3516140",
+        "nama_bps": "GEDEK",
+        "kode_dagri": "351614",
+        "nama_dagri": "Gedeg",
+        "source_hash": "0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-017",
+    "source_key": [
+      "mojokerto",
+      "dawarblandong"
+    ],
+    "parent_code": "3516",
+    "target_code": "3516170",
+    "target_name": "DAWAR BLANDONG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/209/line/27",
+      "bridge_hash": "0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52",
+      "bridge_record": {
+        "kode_bps": "3516170",
+        "nama_bps": "DAWAR BLANDONG",
+        "kode_dagri": "351617",
+        "nama_dagri": "Dawarblandong",
+        "source_hash": "0d81d0654b81e96134f20f85d140c8eb9fb5320975df1ea0db8e49c1a5306c52",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-018",
+    "source_key": [
+      "jombang",
+      "bandarkedungmulyo"
+    ],
+    "parent_code": "3517",
+    "target_code": "3517010",
+    "target_name": "BANDAR KEDUNG MULYO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/214/line/7",
+      "bridge_hash": "e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb",
+      "bridge_record": {
+        "kode_bps": "3517010",
+        "nama_bps": "BANDAR KEDUNG MULYO",
+        "kode_dagri": "351718",
+        "nama_dagri": "Bandarkedungmulyo",
+        "source_hash": "e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-019",
+    "source_key": [
+      "jombang",
+      "jogoroto"
+    ],
+    "parent_code": "3517",
+    "target_code": "3517110",
+    "target_name": "JOGO ROTO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/218/line/10",
+      "bridge_hash": "e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb",
+      "bridge_record": {
+        "kode_bps": "3517110",
+        "nama_bps": "JOGO ROTO",
+        "kode_dagri": "351719",
+        "nama_dagri": "Jogoroto",
+        "source_hash": "e9dacb7514308af8766c9b395d713e3620366f78cf9bc27bcd77dd34870ce9fb",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-020",
+    "source_key": [
+      "bojonegoro",
+      "kepohbaru"
+    ],
+    "parent_code": "3522",
+    "target_code": "3522090",
+    "target_name": "KEPOH BARU",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/272/line/8",
+      "bridge_hash": "7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34",
+      "bridge_record": {
+        "kode_bps": "3522090",
+        "nama_bps": "KEPOH BARU",
+        "kode_dagri": "352209",
+        "nama_dagri": "Kepohbaru",
+        "source_hash": "7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-021",
+    "source_key": [
+      "lamongan",
+      "karanggeneng"
+    ],
+    "parent_code": "3524",
+    "target_code": "3524200",
+    "target_name": "KARANG GENENG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/307/line/6",
+      "bridge_hash": "16fbb3d5346ebdad00934bc2d6813b33f372323e8be94eacb0f8093dda92feb8",
+      "bridge_record": {
+        "kode_bps": "3524200",
+        "nama_bps": "KARANG GENENG",
+        "kode_dagri": "352418",
+        "nama_dagri": "Karanggeneng",
+        "source_hash": "16fbb3d5346ebdad00934bc2d6813b33f372323e8be94eacb0f8093dda92feb8",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-022",
+    "source_key": [
+      "bangkalan",
+      "tanjung bumi"
+    ],
+    "parent_code": "3526",
+    "target_code": "3526160",
+    "target_name": "TANJUNGBUMI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/334/line/6",
+      "bridge_hash": "a48fd3ac4abb20782402a6491a732e07ccfe852af0c4b9dec9ebd06f5f67779e",
+      "bridge_record": {
+        "kode_bps": "3526160",
+        "nama_bps": "TANJUNGBUMI",
+        "kode_dagri": "352609",
+        "nama_dagri": "Tanjung Bumi",
+        "source_hash": "a48fd3ac4abb20782402a6491a732e07ccfe852af0c4b9dec9ebd06f5f67779e",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-023",
+    "source_key": [
+      "sampang",
+      "karangpenang"
+    ],
+    "parent_code": "3527",
+    "target_code": "3527101",
+    "target_name": "KARANG PENANG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/344/line/6",
+      "bridge_hash": "01cd1043db15c8bbd6e1ad7820dbdda937954dd8324d348263b9fbde366692e8",
+      "bridge_record": {
+        "kode_bps": "3527101",
+        "nama_bps": "KARANG PENANG",
+        "kode_dagri": "352714",
+        "nama_dagri": "Karangpenang",
+        "source_hash": "01cd1043db15c8bbd6e1ad7820dbdda937954dd8324d348263b9fbde366692e8",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-024",
+    "source_key": [
+      "pamekasan",
+      "batumarmar"
+    ],
+    "parent_code": "3528",
+    "target_code": "3528120",
+    "target_name": "BATU MARMAR",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/352/line/18",
+      "bridge_hash": "ae9d4d661bc0efa631abe1737340676cb42d2ffdae6b863382eea509e112287f",
+      "bridge_record": {
+        "kode_bps": "3528120",
+        "nama_bps": "BATU MARMAR",
+        "kode_dagri": "352811",
+        "nama_dagri": "Batumarmar",
+        "source_hash": "ae9d4d661bc0efa631abe1737340676cb42d2ffdae6b863382eea509e112287f",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-025",
+    "source_key": [
+      "sumenep",
+      "giliginting"
+    ],
+    "parent_code": "3529",
+    "target_code": "3529040",
+    "target_name": "GILIGENTENG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/358/line/15",
+      "bridge_hash": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+      "bridge_record": {
+        "kode_bps": "3529040",
+        "nama_bps": "GILIGENTENG",
+        "kode_dagri": "352908",
+        "nama_dagri": "Giliginting",
+        "source_hash": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-026",
+    "source_key": [
+      "sumenep",
+      "guluk-guluk"
+    ],
+    "parent_code": "3529",
+    "target_code": "3529100",
+    "target_name": "GULUK GULUK",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/360/line/25",
+      "bridge_hash": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+      "bridge_record": {
+        "kode_bps": "3529100",
+        "nama_bps": "GULUK GULUK",
+        "kode_dagri": "352909",
+        "nama_dagri": "Guluk-Guluk",
+        "source_hash": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-027",
+    "source_key": [
+      "kota kediri",
+      "kota"
+    ],
+    "parent_code": "3571",
+    "target_code": "3571020",
+    "target_name": "KOTA KEDIRI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/370/line/20",
+      "bridge_hash": "77be783777aadcd9d11864110b1d678d4f0e86b3dc68b10fff35625a6c7f86a6",
+      "bridge_record": {
+        "kode_bps": "3571020",
+        "nama_bps": "KOTA KEDIRI",
+        "kode_dagri": "357102",
+        "nama_dagri": "Kota",
+        "source_hash": "77be783777aadcd9d11864110b1d678d4f0e86b3dc68b10fff35625a6c7f86a6",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-028",
+    "source_key": [
+      "kota pasuruan",
+      "bugul kidul"
+    ],
+    "parent_code": "3575",
+    "target_code": "3575030",
+    "target_name": "BUGULKIDUL",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/390/line/21",
+      "bridge_hash": "70c2dab8540d0dbfd8756535404f626f43cfe08c8cdb049a03049901db3a76a0",
+      "bridge_record": {
+        "kode_bps": "3575030",
+        "nama_bps": "BUGULKIDUL",
+        "kode_dagri": "357503",
+        "nama_dagri": "Bugul Kidul",
+        "source_hash": "70c2dab8540d0dbfd8756535404f626f43cfe08c8cdb049a03049901db3a76a0",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-029",
+    "source_key": [
+      "kota mojokerto",
+      "prajuritkulon"
+    ],
+    "parent_code": "3576",
+    "target_code": "3576010",
+    "target_name": "PRAJURIT KULON",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/394/line/6",
+      "bridge_hash": "b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a",
+      "bridge_record": {
+        "kode_bps": "3576010",
+        "nama_bps": "PRAJURIT KULON",
+        "kode_dagri": "357601",
+        "nama_dagri": "Prajuritkulon",
+        "source_hash": "b1fbde27181156a8bb6e029fed5376e247946dad4c7f17f4888989ab2da7a96a",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-030",
+    "source_key": [
+      "kota madiun",
+      "manguharjo"
+    ],
+    "parent_code": "3577",
+    "target_code": "3577010",
+    "target_name": "MANGU HARJO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/398/line/6",
+      "bridge_hash": "aba29f86698d140dc78b79ca18490bc9396b80ad675f11747bc032108dd29ec8",
+      "bridge_record": {
+        "kode_bps": "3577010",
+        "nama_bps": "MANGU HARJO",
+        "kode_dagri": "357702",
+        "nama_dagri": "Manguharjo",
+        "source_hash": "aba29f86698d140dc78b79ca18490bc9396b80ad675f11747bc032108dd29ec8",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-031",
+    "source_key": [
+      "kota surabaya",
+      "sukomanunggal"
+    ],
+    "parent_code": "3578",
+    "target_code": "3578160",
+    "target_name": "SUKO MANUNGGAL",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/405/line/12",
+      "bridge_hash": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+      "bridge_record": {
+        "kode_bps": "3578160",
+        "nama_bps": "SUKO MANUNGGAL",
+        "kode_dagri": "357827",
+        "nama_dagri": "Sukomanunggal",
+        "source_hash": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-032",
+    "source_key": [
+      "kota surabaya",
+      "asem rowo"
+    ],
+    "parent_code": "3578",
+    "target_code": "3578270",
+    "target_name": "ASEMROWO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "facilities_official",
+        "source_id": "kemkes-facilities",
+        "source_hash": "6acffbb1baa933b1e9f9155ec3e076ba0499670f66f3b43ebb3cdc586ed2b556",
+        "source_edition": "2024-S1",
+        "observation_period": null
+      },
+      {
+        "dataset": "counts_historical",
+        "source_id": "archive-0d53d53c9d3bca6e",
+        "source_hash": "58c0b5e4dfdb4e0b8fbd9ed0c5b9535bdb7ad02080b0738b9d2a2eeb1de4f915",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_xlsx",
+        "source_id": "archive-b52dc1bad4468b67",
+        "source_hash": "4f176eddfda4ae0bf78ec5991a3713cfb76f7cb530213abf10f67ba9778e1a65",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_xlsx",
+        "source_id": "archive-6b4cdc167411ed72",
+        "source_hash": "10e2f6f5a511bfdef496463701e38af4e8683a7593586418542ecaa1dfd3e116",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_archive",
+        "source_id": "archive-e9997b3d0351eac6",
+        "source_hash": "bd07d7e79e2ebc2623174237a8faf066b2286a44785cd0a58fa84a06e9a904cd",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "facilities_csv",
+        "source_id": "archive-cf9cbf4c45fd8d51",
+        "source_hash": "2e86a6dddb2e6b17b56420264911b0b1dacd45104b6565a9f498f1e23594f96a",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "coordinates_csv",
+        "source_id": "archive-d0e057ab2864a5bc",
+        "source_hash": "3bdbe75d0706eaa5495e47a36c0f70b7da66a31895410519b332252c175addd0",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/406/line/38",
+      "bridge_hash": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+      "bridge_record": {
+        "kode_bps": "3578270",
+        "nama_bps": "ASEMROWO",
+        "kode_dagri": "357828",
+        "nama_dagri": "Asem Rowo",
+        "source_hash": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-033",
+    "source_key": [
+      "bojonegoro",
+      "sumberrejo"
+    ],
+    "parent_code": "3522",
+    "target_code": "3522120",
+    "target_name": "SUMBEREJO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_bridge_name",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/274/line/6",
+      "bridge_hash": "7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34",
+      "bridge_record": {
+        "kode_bps": "3522120",
+        "nama_bps": "SUMBERREJO",
+        "kode_dagri": "352212",
+        "nama_dagri": "Sumberejo",
+        "source_hash": "7193c303cff2d7f8d7f26aa2dbd1607066328d11f2dc79384f5a2177f955dd34",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-034",
+    "source_key": [
+      "kabupaten pasuruan",
+      "bangil"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514150",
+    "target_name": "BANGIL",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/179/line/20",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514150",
+        "nama_bps": "BANGIL",
+        "kode_dagri": "351414",
+        "nama_dagri": "Bangil",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-035",
+    "source_key": [
+      "kabupaten pasuruan",
+      "beji"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514140",
+    "target_name": "BEJI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/179/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514140",
+        "nama_bps": "BEJI",
+        "kode_dagri": "351413",
+        "nama_dagri": "Beji",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-036",
+    "source_key": [
+      "kabupaten pasuruan",
+      "gempol"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514130",
+    "target_name": "GEMPOL",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/178/line/29",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514130",
+        "nama_bps": "GEMPOL",
+        "kode_dagri": "351412",
+        "nama_dagri": "Gempol",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-037",
+    "source_key": [
+      "kabupaten pasuruan",
+      "gondang wetan"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514190",
+    "target_name": "GONDANG WETAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/181/line/10",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514190",
+        "nama_bps": "GONDANG WETAN",
+        "kode_dagri": "351418",
+        "nama_dagri": "Gondangwetan",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-038",
+    "source_key": [
+      "kabupaten pasuruan",
+      "grati"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514220",
+    "target_name": "GRATI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/182/line/26",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514220",
+        "nama_bps": "GRATI",
+        "kode_dagri": "351420",
+        "nama_dagri": "Grati",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-039",
+    "source_key": [
+      "kabupaten pasuruan",
+      "kejayan"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514070",
+    "target_name": "KEJAYAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/176/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514070",
+        "nama_bps": "KEJAYAN",
+        "kode_dagri": "351406",
+        "nama_dagri": "Kejayan",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-040",
+    "source_key": [
+      "kabupaten pasuruan",
+      "kraton"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514170",
+    "target_name": "KRATON",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/180/line/14",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514170",
+        "nama_bps": "KRATON",
+        "kode_dagri": "351416",
+        "nama_dagri": "Kraton",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-041",
+    "source_key": [
+      "kabupaten pasuruan",
+      "lekok"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514230",
+    "target_name": "LEKOK",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/183/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514230",
+        "nama_bps": "LEKOK",
+        "kode_dagri": "351422",
+        "nama_dagri": "Lekok",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-042",
+    "source_key": [
+      "kabupaten pasuruan",
+      "lumbang"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514050",
+    "target_name": "LUMBANG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/175/line/8",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514050",
+        "nama_bps": "LUMBANG",
+        "kode_dagri": "351404",
+        "nama_dagri": "Lumbang",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-043",
+    "source_key": [
+      "kabupaten pasuruan",
+      "nguling"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514240",
+    "target_name": "NGULING",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/183/line/14",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514240",
+        "nama_bps": "NGULING",
+        "kode_dagri": "351421",
+        "nama_dagri": "Nguling",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-044",
+    "source_key": [
+      "kabupaten pasuruan",
+      "pandaan"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514120",
+    "target_name": "PANDAAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/178/line/11",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514120",
+        "nama_bps": "PANDAAN",
+        "kode_dagri": "351411",
+        "nama_dagri": "Pandaan",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-045",
+    "source_key": [
+      "kabupaten pasuruan",
+      "pasrepan"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514060",
+    "target_name": "PASREPAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/175/line/20",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514060",
+        "nama_bps": "PASREPAN",
+        "kode_dagri": "351405",
+        "nama_dagri": "Pasrepan",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-046",
+    "source_key": [
+      "kabupaten pasuruan",
+      "pohjentrek"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514180",
+    "target_name": "POHJENTREK",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/181/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514180",
+        "nama_bps": "POHJENTREK",
+        "kode_dagri": "351417",
+        "nama_dagri": "Pohjentrek",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-047",
+    "source_key": [
+      "kabupaten pasuruan",
+      "prigen"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514100",
+    "target_name": "PRIGEN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/177/line/16",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514100",
+        "nama_bps": "PRIGEN",
+        "kode_dagri": "351410",
+        "nama_dagri": "Prigen",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-048",
+    "source_key": [
+      "kabupaten pasuruan",
+      "purwodadi"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514010",
+    "target_name": "PURWODADI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/174/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514010",
+        "nama_bps": "PURWODADI",
+        "kode_dagri": "351401",
+        "nama_dagri": "Purwodadi",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-049",
+    "source_key": [
+      "kabupaten pasuruan",
+      "purwosari"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514090",
+    "target_name": "PURWOSARI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/177/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514090",
+        "nama_bps": "PURWOSARI",
+        "kode_dagri": "351408",
+        "nama_dagri": "Purwosari",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-050",
+    "source_key": [
+      "kabupaten pasuruan",
+      "puspo"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514030",
+    "target_name": "PUSPO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/174/line/31",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514030",
+        "nama_bps": "PUSPO",
+        "kode_dagri": "351403",
+        "nama_dagri": "Puspo",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-051",
+    "source_key": [
+      "kabupaten pasuruan",
+      "rejoso"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514200",
+    "target_name": "REJOSO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/182/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514200",
+        "nama_bps": "REJOSO",
+        "kode_dagri": "351423",
+        "nama_dagri": "Rejoso",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-052",
+    "source_key": [
+      "kabupaten pasuruan",
+      "rembang"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514160",
+    "target_name": "REMBANG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/180/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514160",
+        "nama_bps": "REMBANG",
+        "kode_dagri": "351415",
+        "nama_dagri": "Rembang",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-053",
+    "source_key": [
+      "kabupaten pasuruan",
+      "sukorejo"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514110",
+    "target_name": "SUKOREJO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/178/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514110",
+        "nama_bps": "SUKOREJO",
+        "kode_dagri": "351409",
+        "nama_dagri": "Sukorejo",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-054",
+    "source_key": [
+      "kabupaten pasuruan",
+      "tosari"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514040",
+    "target_name": "TOSARI",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/175/line/6",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514040",
+        "nama_bps": "TOSARI",
+        "kode_dagri": "351424",
+        "nama_dagri": "Tosari",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-055",
+    "source_key": [
+      "kabupaten pasuruan",
+      "tutur"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514020",
+    "target_name": "TUTUR",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/174/line/19",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514020",
+        "nama_bps": "TUTUR",
+        "kode_dagri": "351402",
+        "nama_dagri": "Tutur",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-056",
+    "source_key": [
+      "kabupaten pasuruan",
+      "winongan"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514210",
+    "target_name": "WINONGAN",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/182/line/8",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514210",
+        "nama_bps": "WINONGAN",
+        "kode_dagri": "351419",
+        "nama_dagri": "Winongan",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-057",
+    "source_key": [
+      "kabupaten pasuruan",
+      "wonorejo"
+    ],
+    "parent_code": "3514",
+    "target_code": "3514080",
+    "target_name": "WONOREJO",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "explicit_parent_descriptor",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/176/line/24",
+      "bridge_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+      "bridge_record": {
+        "kode_bps": "3514080",
+        "nama_bps": "WONOREJO",
+        "kode_dagri": "351407",
+        "nama_dagri": "Wonorejo",
+        "source_hash": "6ecae590f774ca29a010ce78a6757957becf06815e889f739de5bcedb430986d",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-058",
+    "source_key": [
+      "kediri",
+      "kayenkidul"
+    ],
+    "parent_code": "3506",
+    "target_code": "3506191",
+    "target_name": "KAYEN KIDUL",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "reviewed_word_spacing",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/89/line/30",
+      "bridge_hash": "5584337413504e41ffb02c337b986d858bdef53e4d53f4cef125c5b12e0390b4",
+      "bridge_record": {
+        "kode_bps": "3506191",
+        "nama_bps": "KAYEN KIDUL",
+        "kode_dagri": "350624",
+        "nama_dagri": "Kayen Kidul",
+        "source_hash": "5584337413504e41ffb02c337b986d858bdef53e4d53f4cef125c5b12e0390b4",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-059",
+    "source_key": [
+      "kota surabaya",
+      "karangpilang"
+    ],
+    "parent_code": "3578",
+    "target_code": "3578010",
+    "target_name": "KARANG PILANG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "reviewed_word_spacing",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/403/line/6",
+      "bridge_hash": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+      "bridge_record": {
+        "kode_bps": "3578010",
+        "nama_bps": "KARANG PILANG",
+        "kode_dagri": "357801",
+        "nama_dagri": "Karang Pilang",
+        "source_hash": "1fd2c216597c4c3116ec2c238dd5e47a47fbd7c7058ec6ceaf77afc2053201fa",
+        "period": "2023_1.2022"
+      }
+    }
+  },
+  {
+    "decision_id": "alias-060",
+    "source_key": [
+      "sumenep",
+      "giligenting"
+    ],
+    "parent_code": "3529",
+    "target_code": "3529040",
+    "target_name": "GILIGENTENG",
+    "master_edition": "2023",
+    "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+    "basis": "official_giligenting_table",
+    "status": "approved",
+    "reviewer": "Codex technical source review",
+    "reviewed_at": "2026-10-24",
+    "scopes": [
+      {
+        "dataset": "combined_historical",
+        "source_id": "archive-42e2f19ed6a77a43",
+        "source_hash": "f97584411a5c738ab7ce16a2fbedd38b1e1844d0a8e3bd22c1ee8cd51798cb09",
+        "source_edition": "archive-baseline",
+        "observation_period": null
+      },
+      {
+        "dataset": "area",
+        "source_id": "archive-153ba08285163260",
+        "source_hash": "34070b0b738bb50e6a012092546a88fc3b8bc31bd9809b8f9f1314bd559fc96d",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      },
+      {
+        "dataset": "population",
+        "source_id": "archive-debc88ea7c1b1db2",
+        "source_hash": "cd481304e8f49d8eb5520783f8ad7a52c182965c9e7e22c4ce659799482fe169",
+        "source_edition": "archive-baseline",
+        "observation_period": 2023
+      }
+    ],
+    "evidence": {
+      "master_hash": "64389efb56742edcd495bfd95cf8dcb40bba881209d0172448b7d4e75cf68e3f",
+      "master_locator": "pdf/page/358/line/15",
+      "bridge_hash": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+      "bridge_record": {
+        "kode_bps": "3529040",
+        "nama_bps": "GILIGENTENG",
+        "kode_dagri": "352908",
+        "nama_dagri": "Giliginting",
+        "source_hash": "f50a94e97b365b7f364c95d6824f96413975dbeaa8227f3a451e8b4346347b58",
+        "period": "2023_1.2022"
+      },
+      "supplemental_hashes": {
+        "table": "22dd82369171ea15cd325fe2fbb6c6dbcb4ac8f082c8c98e304f214fc4ec660f",
+        "catalog": "852b4e293ae87f38be58dd207484fb01edcb403a70aab44cd2fc944e631de16d"
+      }
+    },
+    "supplemental_receipts": "docs/pekerjaan/WF-063/supplemental-receipts.json"
+  }
+]

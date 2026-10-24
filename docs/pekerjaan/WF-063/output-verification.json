@@ -1,0 +1,56 @@
+{
+  "output_path": "data/processed/crosswalk.json",
+  "output_sha256": "3714685d57d7128c8403f8b8e559e2cb5fca9f8617b6c3a1493ba9d55f9985b8",
+  "content_sha256": "92f9361eb4b25047977d422984191fb7357b293c528683a7dcb0a08c336716e8",
+  "repeat_byte_identical": true,
+  "datasets": {
+    "area": {
+      "rows": 666,
+      "districts": 666
+    },
+    "combined_historical": {
+      "rows": 667,
+      "districts": 666
+    },
+    "coordinates_csv": {
+      "rows": 973,
+      "districts": 665
+    },
+    "coordinates_xlsx": {
+      "rows": 973,
+      "districts": 665
+    },
+    "counts_historical": {
+      "rows": 665,
+      "districts": 665
+    },
+    "facilities_archive": {
+      "rows": 973,
+      "districts": 665
+    },
+    "facilities_csv": {
+      "rows": 973,
+      "districts": 665
+    },
+    "facilities_official": {
+      "rows": 973,
+      "districts": 665
+    },
+    "facilities_xlsx": {
+      "rows": 973,
+      "districts": 665
+    },
+    "population": {
+      "rows": 666,
+      "districts": 666
+    }
+  },
+  "retained_master_without_facility_assignment": [
+    {
+      "code": "3578240",
+      "name": "PABEAN CANTIAN",
+      "parent": "3578",
+      "interpretation": "No assignment in this selected facility snapshot; not a claim about real-world service coverage."
+    }
+  ]
+}

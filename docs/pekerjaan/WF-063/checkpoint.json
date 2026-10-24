@@ -1,0 +1,55 @@
+{
+  "ticket_id": "WF-063",
+  "status": "done",
+  "predecessor_commit": "6f7f20f5b24feb1090bee484de51e5de9e5d33fa",
+  "next_action": "WF-064 after verified Git delivery.",
+  "completed": [
+    "Validated official 666-district/38-parent master and pinned 2020 boundary linkage.",
+    "Reviewed 60 source-scoped aliases with official bridge/master and supplemental BPS evidence.",
+    "Mapped all 8502 normalized details and all 973 facility codes without conflicting assignments.",
+    "Retained and quarantined the Ijen/Sempol duplicate-observation group; no automatic aggregation."
+  ],
+  "checks": [
+    {
+      "command": "crosswalk.py with committed input paths in handoff.md",
+      "exit_code": 0,
+      "actual": {
+        "input_rows": 8502,
+        "mapped_rows": 8502,
+        "unmatched_rows": 0,
+        "facility_codes": 973,
+        "facility_conflicts": 0,
+        "observation_collision_groups": 1,
+        "mapped_districts": 666,
+        "unknown_or_mixed_period_rows": 7251,
+        "methods": {
+          "unique_exact_official_name_with_parent": 8101,
+          "official_bridge_name": 320,
+          "explicit_parent_descriptor": 72,
+          "reviewed_word_spacing": 6,
+          "official_giligenting_table": 3
+        }
+      }
+    },
+    {
+      "command": "Repeat crosswalk.py and compare output SHA-256",
+      "exit_code": 0,
+      "actual": "Byte-identical; see output-verification.json"
+    },
+    {
+      "command": "python -m pytest tests/python -q",
+      "exit_code": 0,
+      "actual": "131 passed"
+    },
+    {
+      "command": "python -m compileall -q python scripts/etl tests/python",
+      "exit_code": 0
+    }
+  ],
+  "review": "Codex technical source review; no independent reviewer, lecturer or UAT acceptance claimed.",
+  "data_quality_accepted": false,
+  "remaining_quality_work": [
+    "Select non-duplicated observations during indicator curation.",
+    "Validate coordinates, geometry and actual analysis periods before publication."
+  ]
+}

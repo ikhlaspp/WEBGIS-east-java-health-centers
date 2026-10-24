@@ -1,0 +1,22 @@
+[
+  {
+    "source_id": "giligenting-2023",
+    "edition": "alias-evidence",
+    "source_url": "https://sumenepkab.bps.go.id/id/statistics-table/1/MTE0IzE%3D/jumlah-desa-kelurahan-menurut-kecamatan-di-kabupaten-sumenep-2023.html",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-10-24T12:41:02.986070+00:00",
+    "sha256": "22dd82369171ea15cd325fe2fbb6c6dbcb4ac8f082c8c98e304f214fc4ec660f",
+    "bytes": 125516,
+    "raw_path": "data\\raw\\giligenting-2023\\22dd82369171ea15cd325fe2fbb6c6dbcb4ac8f082c8c98e304f214fc4ec660f.bin"
+  },
+  {
+    "source_id": "giligenting-catalog",
+    "edition": "alias-evidence",
+    "source_url": "https://sumenepkab.bps.go.id/id/publication/2018/09/27/26c277363888239134dc720e/giligenteng-subdistrict-in-figures-2018.html",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-10-24T12:41:03.925719+00:00",
+    "sha256": "852b4e293ae87f38be58dd207484fb01edcb403a70aab44cd2fc944e631de16d",
+    "bytes": 113572,
+    "raw_path": "data\\raw\\giligenting-catalog\\852b4e293ae87f38be58dd207484fb01edcb403a70aab44cd2fc944e631de16d.bin"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "pipeline_version": "crosswalk-1.0",
+  "target_boundary_set": "803ade4feaab704116ff9aaf6fc003a45e8d72293283ed13a50eccd8513ddf75",
+  "master_edition": "2023",
+  "analysis_mode": "mixed_period_exploration",
+  "data_quality_accepted": false,
+  "publication_allowed": false,
+  "strict_temporal_alignment_verified": false,
+  "unmatched": [],
+  "many_to_one_observation_conflicts": [
+    {
+      "dataset": "combined_historical",
+      "region_code": "3511151",
+      "source_rows": [
+        {
+          "locator": "xlsx/Gabungan/row/106",
+          "key": [
+            "bondowoso",
+            "ijen"
+          ]
+        },
+        {
+          "locator": "xlsx/Gabungan/row/113",
+          "key": [
+            "bondowoso",
+            "sempol"
+          ]
+        }
+      ],
+      "decision": "retain_all_rows_no_sum_no_automatic_selection"
+    }
+  ],
+  "facility_conflicts": [],
+  "summary": {
+    "input_rows": 8502,
+    "mapped_rows": 8502,
+    "unmatched_rows": 0,
+    "facility_codes": 973,
+    "facility_conflicts": 0,
+    "observation_collision_groups": 1,
+    "mapped_districts": 666,
+    "unknown_or_mixed_period_rows": 7251,
+    "methods": {
+      "unique_exact_official_name_with_parent": 8101,
+      "official_bridge_name": 320,
+      "explicit_parent_descriptor": 72,
+      "reviewed_word_spacing": 6,
+      "official_giligenting_table": 3
+    }
+  },
+  "input_identity": {
+    "normalization_batch": "aa13005be54777d3e00d1610444fa4d52bdac3bdd4d7b8d6f4f1d70fe741b47c",
+    "staging_sha256": "7fcc156d89893c75cd9a5cfa34d9898149b676ecb671afa68e4159d44f0ed70b",
+    "regions_sha256": "627f2252391503fa0e499e203e0719a91e3e9e774370a835cc2eff7a976be5c3",
+    "decisions_sha256": "8ce00ecf7b537a8f3fc07afc5c0666e1eeb218447e2320303af8f20bc372e7f8"
+  },
+  "content_sha256": "92f9361eb4b25047977d422984191fb7357b293c528683a7dcb0a08c336716e8"
+}

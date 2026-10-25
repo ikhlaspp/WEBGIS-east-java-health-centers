@@ -1,0 +1,98 @@
+﻿kabupaten,kecamatan,master_count_exact_name,merged_count,in_merged,population_missing,area_missing,review_status
+Bojonegoro,Kepoh Baru,0,1,True,False,False,pending_name_and_code_reconciliation
+Bojonegoro,Kepohbaru,1,,False,False,False,pending_name_and_code_reconciliation
+Bojonegoro,Sumberejo,2,,False,False,False,pending_name_and_code_reconciliation
+Bojonegoro,Sumberrejo,0,2,True,False,False,pending_name_and_code_reconciliation
+Bondowoso,Sempol,1,1,True,True,True,pending_name_and_code_reconciliation
+Bondowoso,Sumber Wringin,0,1,True,False,False,pending_name_and_code_reconciliation
+Bondowoso,Sumberwringin,1,,False,False,False,pending_name_and_code_reconciliation
+Jember,Gumuk Mas,0,2,True,False,False,pending_name_and_code_reconciliation
+Jember,Gumukmas,2,,False,False,False,pending_name_and_code_reconciliation
+Jember,Sumber Baru,0,2,True,False,False,pending_name_and_code_reconciliation
+Jember,Sumberbaru,2,,False,False,False,pending_name_and_code_reconciliation
+Jombang,Bandar Kedung Mulyo,0,1,True,False,False,pending_name_and_code_reconciliation
+Jombang,Bandarkedungmulyo,1,,False,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Bangil,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Beji,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Gempol,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Gondang Wetan,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Grati,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Kejayan,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Kraton,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Lekok,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Lumbang,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Nguling,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Pandaan,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Pasrepan,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Pohjentrek,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Prigen,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Purwodadi,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Purwosari,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Puspo,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Rejoso,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Rembang,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Sukorejo,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Tosari,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Tutur,0,2,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Winongan,0,1,True,False,False,pending_name_and_code_reconciliation
+Kabupaten Pasuruan,Wonorejo,0,1,True,False,False,pending_name_and_code_reconciliation
+Kediri,Kayen Kidul,2,,False,False,False,pending_name_and_code_reconciliation
+Kediri,Kayenkidul,0,2,True,False,False,pending_name_and_code_reconciliation
+Kota Madiun,Mangu Harjo,0,2,True,False,False,pending_name_and_code_reconciliation
+Kota Madiun,Manguharjo,2,,False,False,False,pending_name_and_code_reconciliation
+Kota Mojokerto,Prajurit Kulon,0,2,True,False,False,pending_name_and_code_reconciliation
+Kota Mojokerto,Prajuritkulon,2,,False,False,False,pending_name_and_code_reconciliation
+Kota Pasuruan,Bugul Kidul,1,,False,False,False,pending_name_and_code_reconciliation
+Kota Pasuruan,Bugulkidul,0,1,True,False,False,pending_name_and_code_reconciliation
+Kota Surabaya,Asem Rowo,1,,False,False,False,pending_name_and_code_reconciliation
+Kota Surabaya,Asemrowo,0,1,True,False,False,pending_name_and_code_reconciliation
+Kota Surabaya,Karang Pilang,1,,False,False,False,pending_name_and_code_reconciliation
+Kota Surabaya,Karangpilang,0,1,True,False,False,pending_name_and_code_reconciliation
+Lamongan,Karang Geneng,0,1,True,False,False,pending_name_and_code_reconciliation
+Lamongan,Karanggeneng,1,,False,False,False,pending_name_and_code_reconciliation
+Mojokerto,Dawar Blandong,0,1,True,False,False,pending_name_and_code_reconciliation
+Mojokerto,Dawarblandong,1,,False,False,False,pending_name_and_code_reconciliation
+Mojokerto,Gedeg,2,,False,False,False,pending_name_and_code_reconciliation
+Mojokerto,Gedek,0,2,True,False,False,pending_name_and_code_reconciliation
+Pasuruan,Bangil,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Beji,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Gempol,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Gondangwetan,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Grati,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Kejayan,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Kraton,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Lekok,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Lumbang,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Nguling,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Pandaan,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Pasrepan,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Pohjentrek,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Prigen,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Purwodadi,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Purwosari,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Puspo,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Rejoso,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Rembang,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Sukorejo,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Tosari,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Tutur,2,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Winongan,1,,False,False,False,pending_name_and_code_reconciliation
+Pasuruan,Wonorejo,1,,False,False,False,pending_name_and_code_reconciliation
+Probolinggo,Pajarakan,0,1,True,False,False,pending_name_and_code_reconciliation
+Probolinggo,Pejarakan,1,,False,False,False,pending_name_and_code_reconciliation
+Sampang,Karang Penang,0,1,True,False,False,pending_name_and_code_reconciliation
+Sampang,Karangpenang,1,,False,False,False,pending_name_and_code_reconciliation
+Sidoarjo,Balong Bendo,0,1,True,False,False,pending_name_and_code_reconciliation
+Sidoarjo,Balongbendo,1,,False,False,False,pending_name_and_code_reconciliation
+Sumenep,Giligenting,0,1,True,False,False,pending_name_and_code_reconciliation
+Sumenep,Giliginting,1,,False,False,False,pending_name_and_code_reconciliation
+Sumenep,Guluk Guluk,0,1,True,False,False,pending_name_and_code_reconciliation
+Sumenep,Guluk-Guluk,1,,False,False,False,pending_name_and_code_reconciliation
+Tulungagung,Campur Darat,0,1,True,False,False,pending_name_and_code_reconciliation
+Tulungagung,Campurdarat,1,,False,False,False,pending_name_and_code_reconciliation
+Tulungagung,Pager Wojo,0,1,True,False,False,pending_name_and_code_reconciliation
+Tulungagung,Pagerwojo,1,,False,False,False,pending_name_and_code_reconciliation
+Tulungagung,Pucang Laban,0,1,True,False,False,pending_name_and_code_reconciliation
+Tulungagung,Pucanglaban,1,,False,False,False,pending_name_and_code_reconciliation
+Tulungagung,Tanggung Gunung,0,1,True,False,False,pending_name_and_code_reconciliation
+Tulungagung,Tanggunggunung,1,,False,False,False,pending_name_and_code_reconciliation

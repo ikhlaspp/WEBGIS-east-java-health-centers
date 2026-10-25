@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-22T23:14:11.352930+00:00",
+  "status": "passed",
+  "ticket_count": 160,
+  "wbs_level_3_count": 160,
+  "one_ticket_per_wbs": true,
+  "phase_counts": {
+    "1": 12,
+    "2": 16,
+    "3": 24,
+    "4": 52,
+    "5": 24,
+    "6": 12,
+    "7": 12,
+    "8": 8
+  },
+  "priority_counts": {
+    "P0": 156,
+    "P1": 4
+  },
+  "ticket_status_counts": {
+    "in_review": 41,
+    "blocked": 11,
+    "not_started": 108
+  },
+  "stage_gate_count": 8,
+  "minimum_task_specific_steps": 4,
+  "github_closing_task_count": 160,
+  "execution_handoff_count": 160,
+  "implementation_handoff_count": 52,
+  "ticket_word_count_min": 1184,
+  "ticket_word_count_max": 2182,
+  "local_links_checked": 2478,
+  "errors": [],
+  "scope_of_check": "Validasi dokumen, pemetaan, urutan, dan tautan; bukan pengujian aplikasi atau penerimaan gerbang."
+}

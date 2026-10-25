@@ -1,0 +1,33 @@
+{
+  "Data_Gabungan_Kecamatan_Jawa_Timur.xlsx / Catatan": [
+    "Catatan / Notes",
+    "Rekap per kecamatan gabungan dari 3 sumber, tahun data 2023.",
+    "1) Jumlah Penduduk : workbook \"Data_Penduduk_Per_Kecamatan_Jawa_Timur_2024\" (kolom Jumlah). Kolom Laki-laki/Perempuan untuk 5 kabupaten/kota (Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) tidak dicetak terpisah di buku (hasil OCR dokumen scan), sehingga di tabel ini hanya dipakai kolom Jumlah.",
+    "2) Luas (km2) : workbook \"Data_Luas_Wilayah_Per_Kecamatan_Jawa_Timur_2024\" (kolom Luas). Luas 8 wilayah (Malang, Tulungagung, Kota Probolinggo, Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) berasal dari CSV BPS dengan tahun sumber bervariasi (lihat Catatan workbook luas).",
+    "3) Jumlah Puskesmas : dihitung dari \"puskesmas_jatim_alamat.csv\" (973 puskesmas).",
+    "Ejaan puskesmas yang digabung ke nama resmi kecamatan: Sumberejo->Sumberrejo, Kepohbaru->Kepoh Baru, Sumberwringin->Sumber Wringin, Gumukmas->Gumuk Mas, Sumberbaru->Sumber Baru, Bandarkedungmulyo->Bandarkedungmulyo, Karanggeneng->Karang Geneng, Dawarblandong->Dawar Blandong, Balongbendo->Balong Bendo, Campurdarat->Campur Darat, Pagerwojo->Pager Wojo, Pucanglaban->Pucang Laban, Tanggunggunung->Tanggung Gunung, Gedeg->Gedek, Pejarakan->Pajarakan, Giliginting->Giligenting, Guluk-Guluk->Guluk Guluk, Karangpenang->Karang Penang, Kayen Kidul->Kayen Kidul, Manguharjo->Mangu Harjo, Prajuritkulon->Prajurit Kulon, Bugul Kidul->Bugul Kidul, Karang Pilang->Karang Pilang, Asem Rowo->Asem Rowo.",
+    "Kecamatan \"Sempol\" (Bondowoso, 1 puskesmas) ada di data puskesmas tetapi tidak tercantum pada daftar kecamatan kedua workbook; barisnya ditampilkan tersendiri dengan luas dan jumlah penduduk kosong.",
+    "Baris TOTAL per kabupaten (italic) = jumlah kecamatan, dan baris JAWA TIMUR TOTAL = rekap seluruh provinsi.",
+    "Angka penduduk hasil OCR 5 wilayah kemungkinan memiliki selisih sangat kecil terhadap angka resmi per kecamatan."
+  ],
+  "Data_Luas_Wilayah_Per_Kecamatan_Jawa_Timur_2024.xlsx / Catatan": [
+    "Catatan / Notes",
+    "Sumber utama: BPS, publikasi \"<Region> Dalam Angka 2024\", Tabel 1.1.1 \"Luas Daerah dan Jumlah Pulau Menurut Kecamatan, 2023\" (data tahun 2023).",
+    "Luas dalam satuan km2 (kilometer persegi), sesuai angka yang dicetak di buku.",
+    "Total per kabupaten/kota = angka yang dicetak di baris \"Kabupaten/Kota ...\" pada tabel sumber.",
+    "Selisih kecil antara jumlah kecamatan dan angka total (mis. Kota Surabaya 335,54 vs 335,93; Kota Kediri 67,24 vs 67,23; Kota Mojokerto 20,20 vs 20,21) disebabkan pembulatan 2 angka desimal pada nilai per kecamatan oleh BPS.",
+    "Kabupaten Malang, Kabupaten Tulungagung, dan Kota Probolinggo: buku Dalam Angka 2024 tidak mencetak luas per kecamatan (nilai \"...\" / keterangan \"data belum tersedia\"), hanya total (Malang 3.473,439 km2; Tulungagung 1.144,53 km2; Kota Probolinggo 54,676 km2). Oleh karena itu ketiga sheet diisi dari data CSV BPS edisi lama: Malang 2019 (total 2.977,05 km2), Tulungagung 2021 (total 1.055,65 km2), Kota Probolinggo 2021 (total 56,67 km2). Angka dari CSV hanya berlaku untuk tahun tersebut, TIDAK sama dengan total 2023 di buku.",
+    "5 wilayah lain (Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) tidak tersedia dari PDF (dokumen scan tanpa teks), diisi dari CSV BPS: Bojonegoro 2023 (total 2.307,06 km2), Jember 2023 (total 3.314,13 km2), Lamongan 2023 (total 1.812,80 km2), Lumajang 2025 (total 1.790,90 km2), Kota Madiun 2025 (total 33,23 km2). Nilai Lamongan di CSV dalam hektar (x100 km2), sudah dikonversi ke km2.",
+    "Total 38 kabupaten/kota di Jawa Timur: 29 kabupaten + 9 kota, 666 kecamatan. Untuk 8 wilayah (Malang, Tulungagung, Kota Probolinggo, Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) luas per kecamatan tidak terbit di buku 2023, diambil dari CSV BPS dengan tahun sumber bervariasi.",
+    "Sumber data wilayah per kabupaten/kota pada buku berasal dari Kepmendagri / Permendagri terkait (mis. Kepmendagri 100.1.1-6117 Tahun 2022)."
+  ],
+  "Data_Penduduk_Per_Kecamatan_Jawa_Timur_2024 .xlsx / Catatan": [
+    "Catatan / Notes",
+    "Sumber utama: BPS, publikasi \"<Region> Dalam Angka 2024\", Tabel 3.1.1 / 3.1.3 \"Jumlah Penduduk Menurut Kecamatan, 2023\" (data tahun 2023).",
+    "33 kabupaten/kota pertama diisi dari data CSV BPS (Sensus Penduduk per kecamatan, jenis kelamin lengkap).",
+    "5 kabupaten/kota berikut (Bojonegoro, Jember, Lamongan, Lumajang, Kota Madiun) TIDAK tersedia sebagai teks di PDF (dokumen scan tanpa lapisan teks), sehingga diisi dari hasil OCR (pembacaan otomatis gambar) pada dokumen scan, lalu diverifikasi bahwa jumlah per kecamatan = angka total yang dicetak di buku.",
+    "Verifikasi OCR Bojonegoro: total 1.363.058 (28 kecamatan); Jember: laki-laki 1.298.852, perempuan 1.301.811, jumlah 2.600.663 (31 kecamatan); Lamongan: total 1.385.835 (27 kecamatan); Lumajang: total 1.108.487 (21 kecamatan); Kota Madiun: total 202.544 (3 kecamatan). Jumlah per kecamatan yang tertera di sheet dihitung ulang = total tersebut, sehingga konsisten.",
+    "Kolom yang TIDAK diisi pada sheet Bojonegoro, Lamongan, Lumajang, dan Kota Madiun (Laki-laki / Perempuan) tidak dicetak terpisah di tabel sumber (hanya kolom \"Jumlah Penduduk\"), sehingga data Sensus per jenis kelamin dari CSV tidak digabung agar tidak terjadi campuran sumber data.",
+    "Angka kemungkinan memiliki selisih sangat kecil (ratusan orang atau kurang) terhadap angka resmi per kecamatan karena keterbatasan hasil OCR pada dokumen scan. Untuk data resmi silakan gunakan CSV BPS atau buku cetak resmi."
+  ]
+}

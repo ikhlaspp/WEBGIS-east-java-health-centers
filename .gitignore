@@ -68,4 +68,4 @@ env/
 Thumbs.db
 
 # Local planning and generated runtime output
-/Planning/
+# /Planning/

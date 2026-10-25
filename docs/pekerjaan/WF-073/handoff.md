@@ -1,0 +1,7 @@
+# Schema implementation handoff
+
+2026-10-25. Continue under the user's explicit instruction to defer manual location evidence and implement independently. WF-072 live CI PostGIS probe passed in run40162756077; development Supabase provisioning remains open and is not replaced by CI. No production DB operation.
+
+Implement versioned Laravel migration for app/gis/staging, PostGIS pinned to extensions, UUID domain identities, composite boundary/release/review FKs, geometry checks, input revision/freeze triggers, immutable raw/quality/audit evidence, and indexes. Move existing framework queue tables to app within the same migration history; update queue config. Existing public starter users/password-reset/sessions are legacy scaffold, unused by the new domain; app auth integration belongs to its subsequent task. No second schema manager.
+
+CI creates a separate empty gis_schema_testing database from template0; this avoids relocating the preinstalled public PostGIS in the original gis_testing service used by connection tests. Domain tests require RUN_POSTGIS_TESTS=1, loopback host, and explicit disposable DB identity. They run Laravel migrations then transaction-scoped synthetic fixtures. No real source data imported. Local syntax/Pint pass; local DB tests are skipped, not passed. Await actual CI results before task closure. Runtime grants, RLS, publication/validation functions and their concurrency proof remain WF-074; no runtime access granted by this migration.

@@ -90,6 +90,8 @@ jobs:
       - run: composer check-platform-reqs
       - run: cp .env.example .env
       - run: php artisan key:generate --no-interaction
+      - name: Create disposable schema test database
+        run: docker exec "${{ job.services.postgres.id }}" psql -U gis_ci -d postgres -v ON_ERROR_STOP=1 -c 'CREATE DATABASE gis_schema_testing TEMPLATE template0'
       - run: php vendor/bin/pint --test
       - run: npm ci --ignore-scripts
       - run: npm run lint

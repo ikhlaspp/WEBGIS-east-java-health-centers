@@ -1,0 +1,15 @@
+# Draft import implementation — 2026-10-25
+
+Command: `php artisan gis:import path/to/batch.json --sha256=<expected digest> --token-file=<private capability file>`.
+
+The transport is canonical UTF-8 JSON (`format: gis-import-v1`), not an alternate CSV parser. Existing Python normalization handles original spreadsheets/CSV. Each bounded file is at most 20 MiB / 50,000 rows; split large geometry inputs into dependency-ordered files. Envelope: source_id, target_release_id, pipeline_version, parameters (object), rows. Each row has row_no, source_locator, dataset, raw_fields (object), normalized_fields (object), disposition (accepted/quarantined/aggregate), errors (array). The service's field allowlist defines the supported columns. Missing fact values remain null.
+
+SHA-256 is checked before SQL. Duplicate JSON keys and row numbers, unknown columns, cross-release rows, approval/publication fields, and noncanonical geometry CRS overrides are rejected. GeoJSON is longitude/latitude 4326; database geometry validity and bounds constraints also apply. Source, region, alias, and draft prerequisites precede fact/facility/review inserts. Files cannot accept reviews, select verified locations, or publish releases.
+
+An active admin's non-revoked, unexpired import capability is checked by PostgreSQL. Only the capability hash is stored; credentials are read from a private file, not a command argument. Tokens have an eight-hour maximum lifetime. Capability provisioning is a separate operator workflow; no account or token was fabricated for deployment. CI uses synthetic fixtures only.
+
+A transaction-level advisory lock serializes the identity (source, target, file hash, pipeline, operation, canonical parameter hash). Repeated completed/failed identities return the existing batch. Corrected content has a new identity; existing domain identities cannot be silently overwritten. Interrupted transactions roll back. A domain failure rolls back all fact/facility/review promotions in that batch; staging keeps the row partition and SQLSTATE without SQL bindings. Valid bootstrap references and the draft may remain after a domain failure. Bootstrap failures roll back the complete transaction and produce a private command report, since an import batch cannot reference nonexistent prerequisites.
+
+`accepted_rows` means parsed rows, not published or domain-promoted rows. The checkpoint separately records promoted_domain_rows. Aggregate rows never become domain facts. Pre-quarantined input blocks promotion. Import success is a processing outcome, not quality acceptance. Reports are on the private local storage disk. Real source review, curated deployment loading, and Supabase credentials remain pending as recorded in `docs/PEKERJAAN-LOKASI-DITUNDA.txt`.
+
+Local: six input/command checks passed; seven PostgreSQL tests skipped because no disposable local PostGIS service is configured. CI must execute repeat-run, middle failure, invalid token, aggregate partition, and conflicting identity tests against the dedicated database using gis_worker. CI evidence will be recorded after the pushed run; skipped tests are not database verification.

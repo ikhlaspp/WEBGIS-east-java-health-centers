@@ -1,0 +1,11 @@
+{
+  "ticket_id": "WF-075",
+  "status": "in_progress",
+  "scope": "Canonical draft import command, immutable staging, token-bound batch audit, transactional promotion and idempotency",
+  "predecessor_commit": "5d19cbb456389ffe76275941aed4e23627539996",
+  "predecessor_ci_success": 40173430238,
+  "local_validation_tests": 6,
+  "database_tests": "7 pending isolated CI PostGIS execution",
+  "deployment": "Not run against Supabase; actual curated load remains gated by deferred review and credentials",
+  "next_action": "Run real database CI, inspect results, then record delivery evidence"
+}

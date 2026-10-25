@@ -1,0 +1,18 @@
+{
+  "review_id": "COPY_FROM_CANDIDATE",
+  "release_id": "COPY_FROM_CANDIDATE",
+  "facility_code": "COPY_FROM_CANDIDATE",
+  "source_id": "COPY_FROM_CANDIDATE",
+  "candidate_lon": null,
+  "candidate_lat": null,
+  "precision_level": "unknown",
+  "centroid_candidate": null,
+  "evidence_url": null,
+  "evidence_note": null,
+  "evidence_sha256": null,
+  "observed_at": null,
+  "reviewer_id": null,
+  "reviewed_at": null,
+  "decision_reason": null,
+  "result_status": "pending"
+}

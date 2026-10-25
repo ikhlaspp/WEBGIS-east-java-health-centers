@@ -1,0 +1,28 @@
+{
+  "pipeline_version": "location-queue-1.0",
+  "release_id": "draft-historical-2024",
+  "summary": {
+    "facilities": 973,
+    "baseline_candidates": 565,
+    "baseline_missing": 408,
+    "without_any_candidate": 405,
+    "candidate_records": 1133,
+    "verified": 0
+  },
+  "input_identity": {
+    "facility_master_sha256": "6cf8ece0fc223f17e80b3cd57d490791521b6c20e1a9a799fc2a54a2927108b0",
+    "boundary_manifest_content_sha256": "f3a327ed18a74beffe7539e2f6dc64b22a3bb24bc41652566fc239c0a3b1494f"
+  },
+  "input_queue_sha256": "59bf350f624c10dc6dfbea39f51254ff12d92d7c53fc78de259c504c0d4f61c9",
+  "output_path": "data/staging/location_queue.json",
+  "output_sha256": "61f19f6148fcb8912614e74bf2b5b188a8c678174e1991db65b4e8b730f287ad",
+  "provider_status": "not_selected",
+  "publication_allowed": false,
+  "provider_setup": {
+    "provider": "photon-komoot-trial",
+    "scope": "one-time setup trial; 25 unique queries maximum",
+    "config": "docs/pekerjaan/WF-067/provider-trial.json",
+    "smoke": "docs/pekerjaan/WF-067/provider-smoke.json",
+    "full_queue_provider_permission": false
+  }
+}

@@ -1,0 +1,5 @@
+# WF-067 handoff
+
+Started 2026-10-25 after WF-066 commit 078d5b121fb28859e4f9d946abb458fe6a40c8cb was verified on origin/main. Inputs: WF-064 pinned facility master, WF-066 geometry manifest, WF-039 review/evidence contract. User authorized autonomous work and no paid services. OPEN-04 provider selection remains unresolved; implement local queue/evidence and a configurable provider adapter without inventing provider permission or accepted locations. Public Nominatim is not enabled by default; its current policy requires deliberate informed developer selection. Independent location review and publication remain separate.
+
+Completed setup: actual queue 973 facilities, baseline 565/408, 1133 source-linked candidate records, 405 without any candidate. Photon selected only for a bounded one-time setup trial under published reasonable-use allowance; one actual search no_match, repeat cache hit verified. No paid account or public Nominatim use. Generic provider selection for large/recurring workloads remains open. 30 focused / 215 full tests pass. No location accepted; next WF-068 reviews original candidates. Commit/push verification pending.

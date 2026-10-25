@@ -1,0 +1,13 @@
+{
+  "facility_code": "35010200001",
+  "query": "DONOROJO, Jl. Donorojo-Kalak RT 02 RW 01 Dsn. Druju Ds. Donorojo Kec.Donorojo 63554, Donorojo, Pacitan, Jawa Timur, Indonesia",
+  "provider": "photon-komoot-trial",
+  "status": "no_match",
+  "candidate_count": 0,
+  "cache_repeat_hit": true,
+  "response_sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+  "response_bytes": 42,
+  "acquired_at": "2026-10-25T03:31:55.639464+00:00",
+  "response_private_path": "data/raw/geocoder/photon-komoot-trial/ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c.bin",
+  "verified_locations": 0
+}

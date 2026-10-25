@@ -1,0 +1,16 @@
+{
+  "adapter": "photon",
+  "provider_id": "photon-komoot-trial",
+  "endpoint": "https://photon.komoot.io/api",
+  "edition": "setup-trial-2026-10-25",
+  "user_agent": "GIS-puskesmas-academic/1.0 (+https://github.com/ikhlaspp/WEBGIS-east-java-health-centers)",
+  "terms_url": "https://github.com/komoot/photon#demo-server",
+  "attribution": "OpenStreetMap contributors, ODbL 1.0; search by Photon/komoot",
+  "selection_reason": "Small one-time setup trial under the documented reasonable-use allowance; not authorization for the complete queue or recurring bulk jobs. Private OSM-derived response cache retains provenance and attribution.",
+  "selected_by": "Codex technical selection under the owner's autonomous implementation instruction",
+  "selected_at": "2026-10-25T03:31:53.500280+00:00",
+  "batch_permitted": true,
+  "cache_permitted": true,
+  "interval_seconds": 2,
+  "max_unique_queries": 25
+}

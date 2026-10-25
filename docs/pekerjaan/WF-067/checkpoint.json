@@ -1,0 +1,18 @@
+{
+  "ticket_id": "WF-067",
+  "status": "done",
+  "predecessor_commit": "078d5b121fb28859e4f9d946abb458fe6a40c8cb",
+  "predecessor_push": "verified origin/main",
+  "summary": {
+    "facilities": 973,
+    "baseline_candidates": 565,
+    "baseline_missing": 408,
+    "without_any_candidate": 405,
+    "candidate_records": 1133,
+    "verified": 0
+  },
+  "tests_passed": 215,
+  "provider_scope": "Photon small setup trial only; full-queue acquisition not authorized by this configuration",
+  "delivery": "pending_commit_and_verified_push",
+  "next_action": "Verify delivery, then WF-068 existing-coordinate review. Do not equate candidate or completed search with accepted location."
+}

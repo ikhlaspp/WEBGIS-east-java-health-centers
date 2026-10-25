@@ -1,0 +1,10 @@
+{
+  "ticket_id": "WF-082",
+  "status": "in_progress",
+  "scope": "Published release catalog, edition-scoped region choices and sanitized source metadata",
+  "predecessor_commit": "bdffbc67ebe5a4a7affd8b958f8dc9bfda7f01d9",
+  "predecessor_ci_success": 40195785007,
+  "local_validation": "8 query/error-envelope cases passed; three routes registered",
+  "database_tests": "7 pending isolated CI execution",
+  "next_action": "Verify runtime-role HTTP cases and recorded example responses in CI before closing"
+}

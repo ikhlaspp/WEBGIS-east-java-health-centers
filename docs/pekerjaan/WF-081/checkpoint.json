@@ -1,11 +1,15 @@
 {
   "ticket_id": "WF-081",
-  "status": "in_progress",
+  "status": "done",
   "scope": "Validated analysis bundles, immutable result persistence, thematic layers and artifact manifests",
   "predecessor_commit": "8bf9c513caa5dd270b3a77a72e7d1505ed6603e1",
   "predecessor_ci_success": 40193596054,
-  "next_action": "Push and verify real persistence integration before closing the item",
+  "next_action": "WF-082 published reference API",
   "limits": "Real candidate load and review remain deferred; use synthetic fixtures only",
   "python_tests": "32 manifest/export cases passed; 352 full Python regressions passed",
-  "database_tests": "7 pending real CI execution including Python exporter integration"
+  "database_tests": "All 7 real PostgreSQL/Python persistence tests passed",
+  "implementation_commit": "bdffbc67ebe5a4a7affd8b958f8dc9bfda7f01d9",
+  "ci_run": 40195785007,
+  "ci_result": "success",
+  "delivery": "verified origin/work/continued-implementation"
 }

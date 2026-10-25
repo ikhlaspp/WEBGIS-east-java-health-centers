@@ -1,0 +1,10 @@
+{
+  "synthetic_contract_example": true,
+  "actual_ci_capture": "application-results/reports/reference-api.json",
+  "regions": {
+    "data": [{"code": "3501", "name": "Fixture", "parent_code": null, "level": "regency", "edition": "one"}],
+    "meta_identity_example": {"release_id": "00000000-0000-4000-8000-000000000006", "analysis_run_id": "00000000-0000-4000-8000-000000000008", "boundary_set_id": "00000000-0000-4000-8000-000000000003"}
+  },
+  "no_active_release_error": {"status": 503, "code": "NO_PUBLISHED_RELEASE"},
+  "draft_or_withdrawn_error": {"status": 404, "code": "NOT_FOUND"}
+}

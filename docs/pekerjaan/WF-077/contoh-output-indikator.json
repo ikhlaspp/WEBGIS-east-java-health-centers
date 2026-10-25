@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "status": "candidate_calculation",
+  "example": {
+    "source": {
+      "population": 30001,
+      "facility_count": 1,
+      "area_km2": "2",
+      "coordinate_present": 0,
+      "eligible": 0
+    },
+    "parameters": {
+      "T": 30000,
+      "ratio_scale": 30000
+    },
+    "formula_version": "district-indicators-v1",
+    "values": {
+      "density": "15000.500000000000",
+      "ratio": "30001.000000000000",
+      "facilities_per_30000": "0.999966667778",
+      "need": 2,
+      "deficit": 1,
+      "without_facility": false,
+      "coordinate_percentage": "0.000000000000",
+      "eligible_percentage": "0.000000000000"
+    },
+    "reasons": {},
+    "completeness": "complete"
+  }
+}

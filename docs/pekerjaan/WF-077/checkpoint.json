@@ -1,0 +1,9 @@
+{
+  "ticket_id": "WF-077",
+  "status": "in_progress",
+  "scope": "Independent indicator implementation on frozen synthetic oracles; actual candidate load remains blocked",
+  "predecessor_delivery": "71cfc9cdb34bc1690f6245c5a4a1c0eefc5ac6e4 verified on origin/work/continued-implementation",
+  "python_tests": "38 passed locally",
+  "sql_reference": "Pending isolated CI execution",
+  "next_action": "Verify CI and push evidence; then continue regency/province aggregation"
+}

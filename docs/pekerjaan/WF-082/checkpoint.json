@@ -1,10 +1,12 @@
 {
   "ticket_id": "WF-082",
-  "status": "in_progress",
+  "status": "done",
   "scope": "Published release catalog, edition-scoped region choices and sanitized source metadata",
   "predecessor_commit": "bdffbc67ebe5a4a7affd8b958f8dc9bfda7f01d9",
   "predecessor_ci_success": 40195785007,
   "local_validation": "8 query/error-envelope cases passed; three routes registered",
-  "database_tests": "7 pending isolated CI execution",
-  "next_action": "Verify runtime-role HTTP cases and recorded example responses in CI before closing"
+  "database_tests": "7 runtime-role HTTP cases passed in isolated PostGIS CI",
+  "delivery_commit": "d9e77e9916e38f265026e210dcd63c0b205ae14a",
+  "ci_success": 40219287647,
+  "next_action": "Implement facility list and detail API; real dataset acceptance remains deferred"
 }

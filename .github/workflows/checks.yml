@@ -113,6 +113,7 @@ jobs:
           path: |
             reports/phpunit.xml
             reports/reference-api.json
+            reports/facility-api.json
             playwright-report/
             test-results/
           retention-days: 7

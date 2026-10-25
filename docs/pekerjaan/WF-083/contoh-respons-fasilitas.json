@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "purpose": "Contract example; executed response evidence is reports/facility-api.json in CI",
+  "request": "/api/v1/facilities/35010100001",
+  "expected_fields": {
+    "data.code": "35010100001",
+    "data.coordinate_status": "missing",
+    "data.location": null,
+    "data.coordinate_source": null
+  },
+  "private_fields_absent": ["source_row", "selected_review_id", "private_path", "sha256"]
+}

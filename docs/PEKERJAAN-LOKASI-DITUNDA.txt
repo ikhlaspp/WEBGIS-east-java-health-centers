@@ -1,0 +1,46 @@
+﻿PEKERJAAN DITUNDA - REVIEW LOKASI PUSKESMAS
+Tanggal: 25 Oktober 2026
+
+Keputusan pengguna: review lokasi dikerjakan nanti; lanjutkan pekerjaan implementasi yang tidak memerlukan hasil review tersebut. Ini pengecualian urutan kerja, bukan persetujuan kualitas data atau penyelesaian WF-068.
+
+SUDAH SELESAI
+- WF-066: validasi 666 polygon kecamatan; commit 078d5b1 di main.
+- WF-067: antrean 973 fasilitas dan setup geocoder; commit 9c3e697 di main.
+- Screening WF-068: 565 kandidat, 44 batch (maksimal25 per kabupaten).
+- 543 titik di dalam kecamatan yang ditugaskan, 22 di luar, 3 di luar semua polygon terpilih, 8 dekat batas (<=50m), 5 kelompok koordinat identik.
+- 221 tes lulus pada checkpoint screening. Tidak ada lokasi yang dinyatakan verified.
+- Backup screening: branch work/location-evidence-review, commit f84899e.
+
+DIKERJAKAN NANTI
+1. WF-068: review bukti lokasi 565 kandidat; cocokkan kode/nama/alamat dengan bangunan atau POI, catat sumber, reviewer, tanggal, alasan dan keputusan. Containment polygon saja tidak membuktikan lokasi fasilitas.
+2. WF-069: pencarian/review 408 fasilitas yang tidak punya koordinat pada CSV awal. Tiga mempunyai kandidat tambahan XLSX, sehingga405 belum punya kandidat dari sumber mana pun.
+3. WF-070: putuskan konflik wilayah, titik identik, centroid dan kepulauan tanpa menghapus atau memindahkan fasilitas otomatis.
+4. WF-071: kualitas/cakupan analisis belum boleh diterima sebelum hasil review dan temuan sumber ditangani. Total luas Lamongan (-0,60km2) dan Kota Surabaya (-0,39km2) masih menjadi temuan WF-065.
+
+PRIORITAS SAAT MELANJUTKAN REVIEW
+- Tambak35250200032, Kendalkerep35730200010, Trajeng35750200008: titik sumber berada dalam footprint OSM bernama cocok; belum accepted.
+- Trajeng: dua halaman pemerintah berbeda menyebut Panggungrejo/Gadingrejo; perlu diselesaikan.
+- HDX Healthsites2026-09-29:193 nama cocok di sekitar titik;12 hampir sama posisi (<1m). Ini petunjuk, bukan verifikasi lokasi2024.
+- Sumber Trenggalek mengembalikan HTTP403; host PDF Kemenkes gagal DNS. Jangan menganggap kegagalan akses sebagai hasil kosong.
+
+LOKASI FILE
+- docs/pekerjaan/WF-068/checkpoint.json
+- docs/pekerjaan/WF-068/handoff.md
+- docs/pekerjaan/WF-068/ringkasan-review-kandidat.md
+- docs/pekerjaan/WF-068/review-565-kandidat.json
+- data/staging/location_queue.json (lokal/privat)
+- data/staging/location_reviews.json (lokal/privat)
+- data/staging/location-evidence-discovery.json (lokal/privat)
+- data/staging/location-footprint-review.png (lokal/privat)
+
+BATASAN
+- Arsip asli tidak diubah. Missing tetapnull, kandidat tetapunverified.
+- Photon hanya trial kecil maksimal25 queryunik; jangan menjalankan seluruh antrean melalui konfigurasi trial.
+- Pekerjaan DB/aplikasi boleh dilanjutkan menggunakan fixture atau data belum dipublikasikan. Impor/publikasi rilis nyata tetap menunggu gerbang kualitas.
+- Catatan tunggal ini adalah pengingat pekerjaan tertunda; bukan checklist penerimaan yang sudah lulus.
+
+LANJUTAN IMPLEMENTASI (25 Oktober 2026)
+- WF-072 mulai dipersiapkan terpisah dari review lokasi: konfigurasi CA/TLS dan command read-only gis:check-database.
+- Pengujian lokal command:5 lulus,1 pengujian PostGIS nyata dilewati karena DB lokal belum dikonfigurasi; tes nyata dijalankan pada CI.
+- Provisioning development/test Supabase belum selesai. .env masih memakai host placeholder dan tidak berisi password/DB_URL; .env.testing belum tersedia.
+- Nanti lengkapi environment privat untuk dev/test terpisah (jangan kirim atau commit password), provider CA, lalu jalankan command dengan --expected-database yang benar. Detail operasional: docs/pekerjaan/WF-072/log-provisioning-DB-dev-test.md.

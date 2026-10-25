@@ -1,0 +1,13 @@
+{
+  "review_date": "2026-10-25",
+  "reviewer": "Codex technical visual review",
+  "image_path": "data/staging/location-footprint-review.png",
+  "image_sha256": "44b5d3e3743c98590be9fa1a77fc7d27beb1e4eebde16b0f4e404f575dac3e96",
+  "codes": [
+    "35250200032",
+    "35730200010",
+    "35750200008"
+  ],
+  "finding": "All three unchanged source points visibly lie inside their corresponding named healthsite footprints. This is map evidence, not a survey or proof of 2024 occupancy. Trajeng district conflict and temporal limitations remain.",
+  "accepted_locations": 0
+}

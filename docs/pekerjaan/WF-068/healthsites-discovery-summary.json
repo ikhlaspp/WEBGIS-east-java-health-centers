@@ -1,0 +1,12 @@
+{
+  "source_total_features": 17862,
+  "valid_features_in_broad_east_java_extent": 3327,
+  "reviewed_baseline_codes": 565,
+  "with_nearby_name_match": 193,
+  "with_name_match_covering_original_point": 3,
+  "with_no_healthsite_within_search_window": 96,
+  "output_path": "data/staging/location-evidence-discovery.json",
+  "output_sha256": "4fcce969c624ad5f7e1e02afd79d8e59b88a8fec381c1d2c741114c19089c808",
+  "publication_allowed": false,
+  "caveat": "0.05-degree discovery window is not a matching tolerance; representative-point distance does not verify facility location. 2026 supplement differs from 2024 facility period."
+}

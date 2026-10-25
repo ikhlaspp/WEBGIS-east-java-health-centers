@@ -1,0 +1,10 @@
+{
+  "source_id": "hdx-healthsites-catalog",
+  "edition": "discovery-2026-10-25",
+  "source_url": "https://data.humdata.org/api/3/action/package_show?id=indonesia-healthsites",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-25T03:54:31.812702+00:00",
+  "sha256": "16e86779d0595253820d8e5248df35941b6e6c3fae5cf5a3b5622511d125668b",
+  "bytes": 21090,
+  "raw_path": "data\\raw\\hdx-healthsites-catalog\\16e86779d0595253820d8e5248df35941b6e6c3fae5cf5a3b5622511d125668b.bin"
+}

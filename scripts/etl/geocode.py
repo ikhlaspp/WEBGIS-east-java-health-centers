@@ -46,7 +46,33 @@ def main():
     review.add_argument('--candidate-file', required=True, help='One candidate record from queue or search output')
     review.add_argument('--decision-file', required=True)
     review.add_argument('--output', required=True)
+    audit_parser = sub.add_parser('audit-existing')
+    audit_parser.add_argument('--queue-report', required=True)
+    audit_parser.add_argument('--normalization-report', required=True)
+    audit_parser.add_argument('--boundary-manifest', required=True)
+    audit_parser.add_argument('--output', default='data/staging/location_reviews.json')
+    audit_parser.add_argument('--report', required=True)
     args = parser.parse_args()
+    if args.command == 'audit-existing':
+        from gis_pipeline.etl.audit_locations import audit
+        queue_report, normalized, boundary = load(args.queue_report), load(args.normalization_report), load(args.boundary_manifest)
+        receipts = [({'path': queue_report['output_path'], 'sha256': queue_report['output_sha256']}, 'data/staging'),
+                    (normalized['outputs']['accepted'], 'data/staging'), (boundary['outputs']['analysis'], 'data/processed')]
+        documents = []
+        for receipt, within in receipts:
+            raw = local_path(ROOT, receipt['path'], within).read_bytes()
+            if hashlib.sha256(raw).hexdigest() != receipt['sha256']:
+                raise ValueError('Screening input checksum mismatch')
+            documents.append(json.loads(raw))
+        result = audit(documents[0], documents[1]['rows'], documents[2])
+        result['input_hashes'] = [receipt['sha256'] for receipt, _ in receipts]
+        output = local_path(ROOT, args.output, 'data/staging')
+        immutable_json(output, result)
+        report = {k: v for k, v in result.items() if k != 'records'}
+        report.update(output_path=args.output, output_sha256=hashlib.sha256(output.read_bytes()).hexdigest())
+        atomic_json(local_path(ROOT, args.report, 'docs/pekerjaan'), report)
+        print(json.dumps(result['summary']))
+        return 0
     if args.command == 'init':
         result = load_inputs(ROOT, load(args.facility_evidence), load(args.boundary_manifest), args.release_id)
         output = local_path(ROOT, args.output, 'data/staging')

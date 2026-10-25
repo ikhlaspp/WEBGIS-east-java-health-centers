@@ -1,0 +1,10 @@
+{
+  "source_id": "kendalkerep-official-profile",
+  "edition": "observed-2026-10-25",
+  "source_url": "https://puskkendalkerep.malangkota.go.id/profil/",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-25T03:58:29.421364+00:00",
+  "sha256": "6ff1ed4f743daad575335203fabbb54a23d56645d1058606ee4b450148d9664b",
+  "bytes": 75511,
+  "raw_path": "data\\raw\\kendalkerep-official-profile\\6ff1ed4f743daad575335203fabbb54a23d56645d1058606ee4b450148d9664b.bin"
+}

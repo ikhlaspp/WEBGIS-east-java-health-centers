@@ -1,0 +1,36 @@
+{
+  "ticket_id": "WF-068",
+  "status": "in_progress",
+  "predecessor_commit": "9c3e697524bec2c92f36f50f016c49597440a14c",
+  "predecessor_push": "verified origin/main",
+  "next_action": "Continue facility evidence decisions in 44 batches; 12 near-exact named OSM matches (<1m, indicative only) include the three reviewed footprints. Keep all snapshots unverified until valid accepted decisions and quality constraints.",
+  "screening_summary": {
+    "screened": 565,
+    "batches": 44,
+    "inside_assigned_boundary": 543,
+    "outside_assigned_boundary": 22,
+    "not_covered_by_selected_boundaries": 3,
+    "near_boundary_50m": 8,
+    "duplicate_groups": 5,
+    "verified": 0,
+    "historical_status_counts": {
+      "Ditemukan": 565
+    },
+    "queries_with_full_address": 0
+  },
+  "tests_passed": 221,
+  "facility_evidence_review_complete": false,
+  "supplemental_discovery": {
+    "source_total_features": 17862,
+    "valid_features_in_broad_east_java_extent": 3327,
+    "reviewed_baseline_codes": 565,
+    "with_nearby_name_match": 193,
+    "with_name_match_covering_original_point": 3,
+    "with_no_healthsite_within_search_window": 96,
+    "output_path": "data/staging/location-evidence-discovery.json",
+    "output_sha256": "4fcce969c624ad5f7e1e02afd79d8e59b88a8fec381c1d2c741114c19089c808",
+    "publication_allowed": false,
+    "caveat": "0.05-degree discovery window is not a matching tolerance; representative-point distance does not verify facility location. 2026 supplement differs from 2024 facility period."
+  },
+  "delivery": "unfinished review saved separately; main remains at completed WF-067"
+}

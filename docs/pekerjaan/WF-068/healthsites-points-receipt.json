@@ -1,0 +1,10 @@
+{
+  "source_id": "hdx-healthsites-points",
+  "edition": "2026-09-29",
+  "source_url": "https://data.humdata.org/dataset/07dc1fd2-0381-46df-920b-643953916590/resource/5dc963e1-f3e4-4799-b02b-98eaa4dc6daa/download/indonesia.geojson",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-25T03:55:22.886900+00:00",
+  "sha256": "8b01e5110a7b5bf5bb197b5465eb67c8db205e3bd0af358a77a6a2d24ae1ebc8",
+  "bytes": 18178880,
+  "raw_path": "data\\raw\\hdx-healthsites-points\\8b01e5110a7b5bf5bb197b5465eb67c8db205e3bd0af358a77a6a2d24ae1ebc8.bin"
+}

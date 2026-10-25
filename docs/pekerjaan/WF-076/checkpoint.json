@@ -1,0 +1,11 @@
+{
+  "ticket_id": "WF-076",
+  "status": "blocked",
+  "scope": "Actual curated dataset load",
+  "blocking_dependencies": [
+    "WF-071",
+    "WF-072"
+  ],
+  "user_decision": "Deferred review; continue independent implementation, not publication",
+  "next_independent_ticket": "WF-077"
+}

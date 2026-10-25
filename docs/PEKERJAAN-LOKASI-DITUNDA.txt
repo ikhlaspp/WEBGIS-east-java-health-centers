@@ -44,3 +44,5 @@ LANJUTAN IMPLEMENTASI (25 Oktober 2026)
 - Pengujian lokal command:5 lulus,1 pengujian PostGIS nyata dilewati karena DB lokal belum dikonfigurasi; tes nyata dijalankan pada CI.
 - Provisioning development/test Supabase belum selesai. .env masih memakai host placeholder dan tidak berisi password/DB_URL; .env.testing belum tersedia.
 - Nanti lengkapi environment privat untuk dev/test terpisah (jangan kirim atau commit password), provider CA, lalu jalankan command dengan --expected-database yang benar. Detail operasional: docs/pekerjaan/WF-072/log-provisioning-DB-dev-test.md.
+
+- WF-076: pemuatan dataset nyata dan rekonsiliasi DB menunggu WF-071 dan provisioning WF-072. Manifest yang tersedia hanya pin input, bukan bukti impor selesai. WF-077 boleh dilanjutkan dengan fixture sintetis.

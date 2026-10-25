@@ -1,0 +1,33 @@
+{
+  "ticket_id": "WF-076",
+  "status": "blocked",
+  "release_id": null,
+  "database_import_performed": false,
+  "available_inputs": [
+    {
+      "path": "data/processed/facility-master.json",
+      "sha256": "6cf8ece0fc223f17e80b3cd57d490791521b6c20e1a9a799fc2a54a2927108b0",
+      "bytes": 3014057
+    },
+    {
+      "path": "data/processed/indicator-decisions.json",
+      "sha256": "debaf267d8f5584ee2a3171348ead6598618be66cd09a732c4395fbc73898cb3",
+      "bytes": 3052583
+    },
+    {
+      "path": "data/processed/crosswalk.json",
+      "sha256": "3714685d57d7128c8403f8b8e559e2cb5fca9f8617b6c3a1493ba9d55f9985b8",
+      "bytes": 10723474
+    },
+    {
+      "path": "docs/pekerjaan/WF-066/manifest-geometri.json",
+      "sha256": "e697b356aad94236baf68db03695ba4f1e695eb7bee6cd08069b7a490fe6048f",
+      "bytes": 694165
+    }
+  ],
+  "blockers": [
+    "WF-071 final spatial quality acceptance is deferred with location review",
+    "Supabase development/test credentials and provisioning are not configured"
+  ],
+  "next_action": "After review and provisioning, export canonical bounded batches, import into an actual draft, and reconcile file/database identities and counts."
+}

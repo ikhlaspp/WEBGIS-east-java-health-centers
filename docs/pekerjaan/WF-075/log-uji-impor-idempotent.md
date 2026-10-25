@@ -13,3 +13,5 @@ A transaction-level advisory lock serializes the identity (source, target, file 
 `accepted_rows` means parsed rows, not published or domain-promoted rows. The checkpoint separately records promoted_domain_rows. Aggregate rows never become domain facts. Pre-quarantined input blocks promotion. Import success is a processing outcome, not quality acceptance. Reports are on the private local storage disk. Real source review, curated deployment loading, and Supabase credentials remain pending as recorded in `docs/PEKERJAAN-LOKASI-DITUNDA.txt`.
 
 Local: six input/command checks passed; seven PostgreSQL tests skipped because no disposable local PostGIS service is configured. CI must execute repeat-run, middle failure, invalid token, aggregate partition, and conflicting identity tests against the dedicated database using gis_worker. CI evidence will be recorded after the pushed run; skipped tests are not database verification.
+
+CI 40176096861 completed successfully for f8c90045c081d71b7602cf451617925a0ecae5af: seven import tests executed on isolated PostGIS, with application and Python jobs both successful. Remote branch SHA was verified.

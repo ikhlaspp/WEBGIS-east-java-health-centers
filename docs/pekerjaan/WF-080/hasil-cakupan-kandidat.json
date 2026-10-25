@@ -1,0 +1,144 @@
+{
+  "synthetic": true,
+  "geometry_omitted_in_summary": true,
+  "status": "candidate_artifact",
+  "release_id": "fixture",
+  "analysis_run_id": "fixture-run",
+  "code_revision": null,
+  "source_input_hash": null,
+  "method_version": "python-union-clip-geodesic-v1",
+  "buffer_method_version": "python-local-aeqd-buffer-v1",
+  "parameters": {
+    "radii_m": [
+      1000,
+      3000,
+      5000
+    ],
+    "quad_segs": 32,
+    "storage_crs": "EPSG:4326"
+  },
+  "versions": null,
+  "dataset_registered_count": 2,
+  "dataset_eligible_count": 2,
+  "dataset_excluded_count": 0,
+  "results": [
+    {
+      "district_id": "neighbour",
+      "radius_m": 1000,
+      "covered_area_m2": 1570165.5753923138,
+      "geometry_area_m2": 24439504.848552704,
+      "coverage_pct": 6.424702894442226,
+      "registered_count": 2,
+      "eligible_count": 2,
+      "excluded_count": 0,
+      "contributing_count": 2,
+      "contributing_facility_codes": [
+        "35010100001",
+        "35010100002"
+      ],
+      "exclusion_reasons": {},
+      "completeness": "complete",
+      "reason": "",
+      "numeric_adjustment_m2": 0
+    },
+    {
+      "district_id": "neighbour",
+      "radius_m": 3000,
+      "covered_area_m2": 11941081.398451224,
+      "geometry_area_m2": 24439504.848552704,
+      "coverage_pct": 48.85975175212426,
+      "registered_count": 2,
+      "eligible_count": 2,
+      "excluded_count": 0,
+      "contributing_count": 2,
+      "contributing_facility_codes": [
+        "35010100001",
+        "35010100002"
+      ],
+      "exclusion_reasons": {},
+      "completeness": "complete",
+      "reason": "",
+      "numeric_adjustment_m2": 0
+    },
+    {
+      "district_id": "neighbour",
+      "radius_m": 5000,
+      "covered_area_m2": 21369411.42643463,
+      "geometry_area_m2": 24439504.848552704,
+      "coverage_pct": 87.43798844885401,
+      "registered_count": 2,
+      "eligible_count": 2,
+      "excluded_count": 0,
+      "contributing_count": 2,
+      "contributing_facility_codes": [
+        "35010100001",
+        "35010100002"
+      ],
+      "exclusion_reasons": {},
+      "completeness": "complete",
+      "reason": "",
+      "numeric_adjustment_m2": 0
+    },
+    {
+      "district_id": "target",
+      "radius_m": 1000,
+      "covered_area_m2": 2660671.6059697275,
+      "geometry_area_m2": 20773334.793418765,
+      "coverage_pct": 12.808110168294498,
+      "registered_count": 0,
+      "eligible_count": 0,
+      "excluded_count": 0,
+      "contributing_count": 2,
+      "contributing_facility_codes": [
+        "35010100001",
+        "35010100002"
+      ],
+      "exclusion_reasons": {},
+      "completeness": "complete",
+      "reason": "",
+      "numeric_adjustment_m2": 0
+    },
+    {
+      "district_id": "target",
+      "radius_m": 3000,
+      "covered_area_m2": 14385031.813258084,
+      "geometry_area_m2": 20773334.793418765,
+      "coverage_pct": 69.24758088342864,
+      "registered_count": 0,
+      "eligible_count": 0,
+      "excluded_count": 0,
+      "contributing_count": 2,
+      "contributing_facility_codes": [
+        "35010100001",
+        "35010100002"
+      ],
+      "exclusion_reasons": {},
+      "completeness": "complete",
+      "reason": "",
+      "numeric_adjustment_m2": 0
+    },
+    {
+      "district_id": "target",
+      "radius_m": 5000,
+      "covered_area_m2": 19551603.449146748,
+      "geometry_area_m2": 20773334.793418765,
+      "coverage_pct": 94.11875196533647,
+      "registered_count": 0,
+      "eligible_count": 0,
+      "excluded_count": 0,
+      "contributing_count": 2,
+      "contributing_facility_codes": [
+        "35010100001",
+        "35010100002"
+      ],
+      "exclusion_reasons": {},
+      "completeness": "complete",
+      "reason": "",
+      "numeric_adjustment_m2": 0
+    }
+  ],
+  "limitations": [
+    "Facilities outside the province are not included",
+    "Straight-line area coverage is not travel accessibility"
+  ]
+}

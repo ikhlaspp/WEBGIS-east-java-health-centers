@@ -1,0 +1,11 @@
+{
+  "ticket_id": "WF-080",
+  "status": "in_progress",
+  "scope": "All-neighbour union/clip coverage with geodesic geometry denominators and explicit unavailable/partial semantics",
+  "predecessor_commit": "0e015a1e681ef561b04343fdced1f928c8711a0e",
+  "predecessor_ci_success": 40191461157,
+  "python_tests": "13 coverage and 33 buffer tests passed locally",
+  "postgis_tests": "2 pending isolated CI execution",
+  "real_data": "Not calculated; accepted point review and actual candidate load remain deferred",
+  "next_action": "Verify canonical SQL/Python equivalence in CI, then versioned run manifests and analysis orchestration"
+}

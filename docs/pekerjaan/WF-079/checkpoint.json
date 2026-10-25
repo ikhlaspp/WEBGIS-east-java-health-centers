@@ -1,11 +1,16 @@
 {
   "ticket_id": "WF-079",
-  "status": "in_progress",
+  "status": "done",
   "scope": "Canonical PostGIS buffer service and independent per-point AEQD reference with strict eligibility",
   "predecessor_commit": "35b0afbf6bd8f134a88cb4089eae52aab767c936",
   "predecessor_ci_success": 40182956247,
   "python_tests": "33 passed",
-  "postgis_tests": "3 pending real CI execution",
+  "postgis_tests": "3 passed, including twelve independent radius/area cases and worker-role service",
   "actual_eligible_dataset": "Deferred WF-071; no real point verified by these tests",
-  "next_action": "Verify SQL radius/area comparisons and restricted-worker service in CI, then coverage union/clip"
+  "next_action": "WF-080 union/clip coverage",
+  "implementation_commit": "0e015a1e681ef561b04343fdced1f928c8711a0e",
+  "ci_run": 40191461157,
+  "ci_result": "success",
+  "python_regressions": 307,
+  "delivery": "verified origin/work/continued-implementation"
 }

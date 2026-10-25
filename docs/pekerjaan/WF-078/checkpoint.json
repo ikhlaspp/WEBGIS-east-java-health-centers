@@ -1,10 +1,15 @@
 {
   "ticket_id": "WF-078",
-  "status": "in_progress",
+  "status": "done",
   "scope": "Regency/province aggregates using exact administrative membership and same-release provenance",
   "predecessor_commit": "b12544a04de5c6179e09559701e30339bc8c64da",
   "predecessor_ci_success": 40178837833,
   "local_tests": "15 aggregate and 38 district tests passed",
   "real_dataset": "Not loaded or published; WF-076 remains blocked",
-  "next_action": "Verify pushed CI, then independent buffer implementation on synthetic reviewed points"
+  "next_action": "WF-079 synthetic buffer implementation",
+  "implementation_commit": "35b0afbf6bd8f134a88cb4089eae52aab767c936",
+  "ci_run": 40182956247,
+  "ci_result": "success",
+  "python_regressions": 274,
+  "delivery": "verified origin/work/continued-implementation"
 }

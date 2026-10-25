@@ -1,0 +1,90 @@
+{
+  "synthetic": true,
+  "method": "python-local-aeqd-buffer-v1",
+  "cases": [
+    {
+      "name": "mainland",
+      "longitude": 112,
+      "latitude": -7,
+      "radius_m": 1000,
+      "python_geodesic_area_m2": 3140331.150735233
+    },
+    {
+      "name": "mainland",
+      "longitude": 112,
+      "latitude": -7,
+      "radius_m": 3000,
+      "python_geodesic_area_m2": 28262979.889988124
+    },
+    {
+      "name": "mainland",
+      "longitude": 112,
+      "latitude": -7,
+      "radius_m": 5000,
+      "python_geodesic_area_m2": 78508274.89161351
+    },
+    {
+      "name": "madura",
+      "longitude": 113.2,
+      "latitude": -7,
+      "radius_m": 1000,
+      "python_geodesic_area_m2": 3140331.150600439
+    },
+    {
+      "name": "madura",
+      "longitude": 113.2,
+      "latitude": -7,
+      "radius_m": 3000,
+      "python_geodesic_area_m2": 28262979.889996793
+    },
+    {
+      "name": "madura",
+      "longitude": 113.2,
+      "latitude": -7,
+      "radius_m": 5000,
+      "python_geodesic_area_m2": 78508274.8916376
+    },
+    {
+      "name": "bawean",
+      "longitude": 112.7,
+      "latitude": -5.8,
+      "radius_m": 1000,
+      "python_geodesic_area_m2": 3140331.1504714107
+    },
+    {
+      "name": "bawean",
+      "longitude": 112.7,
+      "latitude": -5.8,
+      "radius_m": 3000,
+      "python_geodesic_area_m2": 28262979.889882218
+    },
+    {
+      "name": "bawean",
+      "longitude": 112.7,
+      "latitude": -5.8,
+      "radius_m": 5000,
+      "python_geodesic_area_m2": 78508274.89128594
+    },
+    {
+      "name": "remote-island",
+      "longitude": 115.6,
+      "latitude": -6.8,
+      "radius_m": 1000,
+      "python_geodesic_area_m2": 3140331.1503318083
+    },
+    {
+      "name": "remote-island",
+      "longitude": 115.6,
+      "latitude": -6.8,
+      "radius_m": 3000,
+      "python_geodesic_area_m2": 28262979.8901956
+    },
+    {
+      "name": "remote-island",
+      "longitude": 115.6,
+      "latitude": -6.8,
+      "radius_m": 5000,
+      "python_geodesic_area_m2": 78508274.89163294
+    }
+  ]
+}

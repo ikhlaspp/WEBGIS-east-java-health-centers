@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "status": "candidate_artifact",
+  "release_id": "release-fixture",
+  "analysis_run_id": "run-fixture",
+  "code_revision": "synthetic-reference-v1",
+  "input_hash": "9d7ffcdedf695fe201a0e352ac810b3927bbda67f8fb601b8aaaa6933c5cc0f2",
+  "method_version": "python-local-aeqd-buffer-v1",
+  "parameters": {
+    "radii_m": [
+      1000,
+      3000,
+      5000
+    ],
+    "quad_segs": 32,
+    "storage_crs": "EPSG:4326",
+    "projection": "per-point WGS84 azimuthal equidistant, metre units, always_xy"
+  },
+  "versions": {
+    "pyproj": "3.8.0",
+    "proj": "9.8.1",
+    "shapely": "2.2.0",
+    "geos": "3.14.1"
+  },
+  "registered_count": 1,
+  "eligible_count": 1,
+  "excluded_count": 0,
+  "excluded": [],
+  "radius_checks": [
+    {
+      "facility_code": "35010100001",
+      "radius_m": 1000,
+      "vertices": 128,
+      "midpoints": 128,
+      "max_error_m": 0.3011876482138405,
+      "tolerance_m": 10.0
+    },
+    {
+      "facility_code": "35010100001",
+      "radius_m": 3000,
+      "vertices": 128,
+      "midpoints": 128,
+      "max_error_m": 0.9036010387462738,
+      "tolerance_m": 30.0
+    },
+    {
+      "facility_code": "35010100001",
+      "radius_m": 5000,
+      "vertices": 128,
+      "midpoints": 128,
+      "max_error_m": 1.5060652960155494,
+      "tolerance_m": 50.0
+    }
+  ],
+  "limitations": [
+    "Straight-line distance, not travel time or routes",
+    "Facilities outside the province are not included"
+  ],
+  "synthetic": true,
+  "geometry_output": "Omitted from this evidence summary; generated and validated in tests"
+}

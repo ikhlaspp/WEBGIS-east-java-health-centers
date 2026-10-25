@@ -7,3 +7,5 @@ P/F is sum(P)/sum(F) for complete population scope. P=30000+90000 and F=1+2 give
 Run `.venv/Scripts/python.exe -m pytest tests/python/test_indicators.py tests/python/test_aggregates.py -q`: 53 passed (15 aggregation cases and 38 indicator regressions). Tests cover weighted totals, null coverage, retained administrative F, exact membership, parent references, mixed provenance, filter rejection, deterministic ordering and non-mutation. ringkasan-agregat-kandidat.json is explicitly synthetic, not research output.
 
 CLI: `python scripts/analysis/aggregates.py --input indicators.json --sha256 <hash> --master master.json --master-sha256 <hash> --output new-aggregates.json`. Both file digests are retained; existing output cannot be overwritten. Actual WF-076 loading and final quality acceptance remain pending. CI evidence is recorded after the pushed run.
+
+CI 40182956247 succeeded for 35b0afbf6bd8f134a88cb4089eae52aab767c936, including all274 Python tests and application regressions. Remote delivery verified.

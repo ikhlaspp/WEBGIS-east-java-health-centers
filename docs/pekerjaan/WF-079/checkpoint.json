@@ -1,0 +1,11 @@
+{
+  "ticket_id": "WF-079",
+  "status": "in_progress",
+  "scope": "Canonical PostGIS buffer service and independent per-point AEQD reference with strict eligibility",
+  "predecessor_commit": "35b0afbf6bd8f134a88cb4089eae52aab767c936",
+  "predecessor_ci_success": 40182956247,
+  "python_tests": "33 passed",
+  "postgis_tests": "3 pending real CI execution",
+  "actual_eligible_dataset": "Deferred WF-071; no real point verified by these tests",
+  "next_action": "Verify SQL radius/area comparisons and restricted-worker service in CI, then coverage union/clip"
+}

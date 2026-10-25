@@ -1,0 +1,158 @@
+{
+  "synthetic": true,
+  "status": "candidate_calculation",
+  "release_id": "fixture",
+  "boundary_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "formula_version": "district-indicators-v1",
+  "method_version": "test",
+  "code_revision": "test",
+  "source_input_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "parameters": {
+    "T": 30000,
+    "ratio_scale": 30000
+  },
+  "regencies": [
+    {
+      "regency_id": "r1",
+      "province_id": "p1",
+      "members": 2,
+      "population": 120000,
+      "facility_count": 3,
+      "area_km2": "4.000000000000",
+      "ratio": "40000.000000000000",
+      "density": "30000.000000000000",
+      "facilities_per_30000": "0.750000000000",
+      "sum_deficit": 1,
+      "complete_population_subset": {
+        "members": 2,
+        "population": 120000,
+        "facility_count": 3
+      },
+      "coordinate_percentage": "33.333333333333",
+      "eligible_percentage": "33.333333333333",
+      "district_ids": [
+        "d1",
+        "d2"
+      ],
+      "input_coverage": {
+        "population": {
+          "known_districts": 2,
+          "expected_districts": 2,
+          "percentage": "100.000000000000"
+        },
+        "area": {
+          "known_districts": 2,
+          "expected_districts": 2,
+          "percentage": "100.000000000000"
+        },
+        "coordinate_presence": {
+          "known_districts": 2,
+          "expected_districts": 2,
+          "percentage": "100.000000000000"
+        },
+        "eligibility": {
+          "known_districts": 2,
+          "expected_districts": 2,
+          "percentage": "100.000000000000"
+        }
+      },
+      "completeness": "complete",
+      "administrative_facility_scope": "full_master"
+    },
+    {
+      "regency_id": "r2",
+      "province_id": "p1",
+      "members": 1,
+      "population": 30001,
+      "facility_count": 1,
+      "area_km2": "2.000000000000",
+      "ratio": "30001.000000000000",
+      "density": "15000.500000000000",
+      "facilities_per_30000": "0.999966667778",
+      "sum_deficit": 1,
+      "complete_population_subset": {
+        "members": 1,
+        "population": 30001,
+        "facility_count": 1
+      },
+      "coordinate_percentage": "100.000000000000",
+      "eligible_percentage": "0.000000000000",
+      "district_ids": [
+        "d3"
+      ],
+      "input_coverage": {
+        "population": {
+          "known_districts": 1,
+          "expected_districts": 1,
+          "percentage": "100.000000000000"
+        },
+        "area": {
+          "known_districts": 1,
+          "expected_districts": 1,
+          "percentage": "100.000000000000"
+        },
+        "coordinate_presence": {
+          "known_districts": 1,
+          "expected_districts": 1,
+          "percentage": "100.000000000000"
+        },
+        "eligibility": {
+          "known_districts": 1,
+          "expected_districts": 1,
+          "percentage": "100.000000000000"
+        }
+      },
+      "completeness": "complete",
+      "administrative_facility_scope": "full_master"
+    }
+  ],
+  "provinces": [
+    {
+      "province_id": "p1",
+      "members": 3,
+      "population": 150001,
+      "facility_count": 4,
+      "area_km2": "6.000000000000",
+      "ratio": "37500.250000000000",
+      "density": "25000.166666666667",
+      "facilities_per_30000": "0.799994666702",
+      "sum_deficit": 2,
+      "complete_population_subset": {
+        "members": 3,
+        "population": 150001,
+        "facility_count": 4
+      },
+      "coordinate_percentage": "50.000000000000",
+      "eligible_percentage": "25.000000000000",
+      "district_ids": [
+        "d1",
+        "d2",
+        "d3"
+      ],
+      "input_coverage": {
+        "population": {
+          "known_districts": 3,
+          "expected_districts": 3,
+          "percentage": "100.000000000000"
+        },
+        "area": {
+          "known_districts": 3,
+          "expected_districts": 3,
+          "percentage": "100.000000000000"
+        },
+        "coordinate_presence": {
+          "known_districts": 3,
+          "expected_districts": 3,
+          "percentage": "100.000000000000"
+        },
+        "eligibility": {
+          "known_districts": 3,
+          "expected_districts": 3,
+          "percentage": "100.000000000000"
+        }
+      },
+      "completeness": "complete",
+      "administrative_facility_scope": "full_master"
+    }
+  ]
+}

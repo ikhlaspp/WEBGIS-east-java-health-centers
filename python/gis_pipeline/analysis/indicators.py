@@ -106,12 +106,22 @@ def aggregate(members, T=30000):
     subset_facilities = sum(row['source']['facility_count'] for row in complete_subset)
     return {
         'members': len(rows), 'population': population, 'facility_count': facilities,
+        'area_km2': total_area,
         'ratio': ratio, 'density': density,
+        'facilities_per_30000': _scaled_ratio(population, facilities),
         'sum_deficit': sum(row['values']['deficit'] for row in rows) if population_complete else None,
         'complete_population_subset': {'members': len(complete_subset), 'population': subset_population, 'facility_count': subset_facilities},
         'coordinate_percentage': _quality_total(rows, 'coordinate_present', facilities),
         'eligible_percentage': _quality_total(rows, 'eligible', facilities),
     }
+
+
+def _scaled_ratio(population, facilities):
+    if population is None or population == 0:
+        return None
+    with localcontext() as context:
+        context.prec = 60
+        return Decimal(facilities) * 30000 / population
 
 
 def _quality_total(rows, key, facilities):

@@ -9,3 +9,5 @@ P and F are administrative counts; missing coordinates do not subtract facilitie
 CLI: `python scripts/analysis/indicators.py --input snapshot.json --sha256 <digest> --output new-output.json --threshold 30000`. Input contains release_id, method_version, code_revision, boundary_hash and districts (district_id,P,F,A,optional coordinate_present/eligible). Output retains source fields, parameters, formula version and hashes. It is a candidate calculation, not an accepted/published analysis run. Existing output files are not overwritten. No real curated dataset or deployment database was processed.
 
 Run: `.venv/Scripts/python.exe -m pytest tests/python/test_indicators.py -q` -> 38 passed. Full Python regression and real SQL CI results will be appended after execution.
+
+CI 40178837833 succeeded at b12544a04de5c6179e09559701e30339bc8c64da: 259 Python regressions and the real PostgreSQL comparison of all nine frozen formula examples passed. Delivery is verified on origin/work/continued-implementation.

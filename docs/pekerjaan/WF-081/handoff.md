@@ -1,0 +1,3 @@
+# Handoff
+
+Implementation covers canonical preparation, independent Python validation/export, fixed-v1 shared legends, private artifact hashes, transactional trusted DB persistence and finished-output immutability. See laporan-validasi-layer.md for the authorization boundary: operator token commands remain WF-086; worker/runtime have no new direct writes. Run the seven real CI persistence tests before marking this item done. The checked-in manifest is a synthetic local export, not a real research run. Actual location review and dataset loading remain deferred. Next independent application item is WF-082 after CI/delivery verification.

@@ -1,11 +1,16 @@
 {
   "ticket_id": "WF-080",
-  "status": "in_progress",
+  "status": "done",
   "scope": "All-neighbour union/clip coverage with geodesic geometry denominators and explicit unavailable/partial semantics",
   "predecessor_commit": "0e015a1e681ef561b04343fdced1f928c8711a0e",
   "predecessor_ci_success": 40191461157,
   "python_tests": "13 coverage and 33 buffer tests passed locally",
-  "postgis_tests": "2 pending isolated CI execution",
+  "postgis_tests": "2 passed, including six Python/PostGIS region-radius comparisons, far-away zero and no-eligible null cases",
   "real_data": "Not calculated; accepted point review and actual candidate load remain deferred",
-  "next_action": "Verify canonical SQL/Python equivalence in CI, then versioned run manifests and analysis orchestration"
+  "next_action": "WF-081 result persistence and thematic artifacts",
+  "implementation_commit": "8bf9c513caa5dd270b3a77a72e7d1505ed6603e1",
+  "ci_run": 40193596054,
+  "ci_result": "success",
+  "python_regressions": 320,
+  "delivery": "verified origin/work/continued-implementation"
 }

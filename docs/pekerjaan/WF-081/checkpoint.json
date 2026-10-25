@@ -1,0 +1,11 @@
+{
+  "ticket_id": "WF-081",
+  "status": "in_progress",
+  "scope": "Validated analysis bundles, immutable result persistence, thematic layers and artifact manifests",
+  "predecessor_commit": "8bf9c513caa5dd270b3a77a72e7d1505ed6603e1",
+  "predecessor_ci_success": 40193596054,
+  "next_action": "Push and verify real persistence integration before closing the item",
+  "limits": "Real candidate load and review remain deferred; use synthetic fixtures only",
+  "python_tests": "32 manifest/export cases passed; 352 full Python regressions passed",
+  "database_tests": "7 pending real CI execution including Python exporter integration"
+}

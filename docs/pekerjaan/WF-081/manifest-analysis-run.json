@@ -1,0 +1,61 @@
+{
+  "schema_version": "analysis-manifest-v1",
+  "release_id": "fixture-release",
+  "analysis_run_id": "fixture-run",
+  "boundary_set_id": "fixture-boundary",
+  "input_revision": 1,
+  "input_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "boundary_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "method_version": "fixture",
+  "code_revision": "cccccccccccccccccccccccccccccccccccccccc",
+  "parameters": {
+    "T": 30000,
+    "radii_m": [
+      1000,
+      3000,
+      5000
+    ],
+    "quad_segs": 32,
+    "legend_version": "fixed-v1"
+  },
+  "validation_status": "passed",
+  "artifacts": [
+    {
+      "kind": "thematic_density",
+      "path": "density.geojson",
+      "bytes": 1584,
+      "sha256": "b778c9831570984bcca9dea14610d58e85dd3e3579af681fac95a00ee4d0eec8"
+    },
+    {
+      "kind": "thematic_facility_count",
+      "path": "facility_count.geojson",
+      "bytes": 1588,
+      "sha256": "096145f921dabf0fcdf066f9ecf2271158ddb863969c10a0ca206aec8ef6435d"
+    },
+    {
+      "kind": "thematic_indicative_deficit",
+      "path": "indicative_deficit.geojson",
+      "bytes": 1569,
+      "sha256": "9e331f6e3585770a64fc04f552b4e04b7bee648b0904353a4854e368eb89f037"
+    },
+    {
+      "kind": "thematic_population_per_facility",
+      "path": "population_per_facility.geojson",
+      "bytes": 1642,
+      "sha256": "af2144add66bdb1ad64b0c25a1239ce80852aa0e99d53bcec4a41cb454e14577"
+    },
+    {
+      "kind": "analysis_results",
+      "path": "results.json",
+      "bytes": 1963,
+      "sha256": "f28af35d70a4c0e17ad10fb26bf110da024db604951b12589179429a844b4016"
+    }
+  ],
+  "environment": {},
+  "warnings": [
+    "Synthetic fixture only"
+  ],
+  "publication_allowed": false,
+  "content_hash": "43ecd1ae0cd19b305998ba7870bf97f08bb62866fd17d2030ed8e2117f152489",
+  "generated_at": "2026-10-25T12:59:57.919351+00:00"
+}

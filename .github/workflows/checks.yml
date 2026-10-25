@@ -96,6 +96,13 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run lint
       - run: npm run build
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock
+      - name: Install locked exporter dependencies for database integration tests
+        run: python -m pip install --require-hashes -r requirements.lock
       - run: php artisan test --log-junit reports/phpunit.xml
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e

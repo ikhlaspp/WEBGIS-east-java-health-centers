@@ -1,1 +1,14 @@
-{"ticket_id":"WF-073","status":"in_progress","authorization":"User requested autonomous continuation after deferring manual location review; independent schema implementation only","predecessor_ci":"WF-072 connection probe passed in GitHub run40162756077; live development provisioning remains pending","local_syntax":"passed","local_constraint_tests":"19 skipped: no local PostGIS; not a database pass","next_action":"Run migration and adversarial constraint tests on a new isolated CI database; fix failures before claiming completion. WF-074 role/RLS/publication functions remain separate."}
+{
+  "ticket_id": "WF-073",
+  "status": "done",
+  "authorization": "User requested autonomous continuation after deferring manual location review; independent schema implementation only",
+  "predecessor_ci": "WF-072 connection probe passed in GitHub run40162756077; live development provisioning remains pending",
+  "local_syntax": "passed",
+  "local_constraint_tests": "19 skipped: no local PostGIS; not a database pass",
+  "next_action": "WF-074 role grants/RLS and protected lifecycle functions; dev Supabase and manual location evidence remain deferred/pending.",
+  "implementation_commit": "57e9ce05066007656dbd61e86c51b9aee6e61f4b",
+  "delivery": "verified origin/work/continued-implementation",
+  "ci_run": 40169928192,
+  "ci_result": "success",
+  "real_postgis_constraint_tests": 19
+}

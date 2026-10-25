@@ -1,0 +1,28 @@
+{
+  "ticket_id": "WF-066",
+  "status": "done",
+  "predecessor_commit": "92fec9703034b987e2ab1d2b9b24844122689dd1",
+  "predecessor_push": "verified origin/main",
+  "summary": {
+    "districts": 666,
+    "parents": 38,
+    "invalid": 0,
+    "empty": 0,
+    "missing_codes": [],
+    "extra_codes": [],
+    "duplicate_codes": [],
+    "components": 1191,
+    "display_components": 1191,
+    "source_vertices": 886297,
+    "display_vertices": 161014,
+    "retained_original_display": 21,
+    "max_relative_area_change": 0.004898641136282649,
+    "without_facility_assignment": [
+      "3578240"
+    ]
+  },
+  "tests_passed": 185,
+  "publication_allowed": false,
+  "delivery": "pending_commit_and_verified_push",
+  "next_action": "Verify Git delivery, then WF-067 geocoding queue."
+}

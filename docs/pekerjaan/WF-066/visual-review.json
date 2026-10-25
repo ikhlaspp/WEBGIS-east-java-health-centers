@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-25",
+  "reviewer": "Codex technical self-review; no independent acceptance claimed",
+  "image_path": "data/staging/boundary-review.png",
+  "sha256": "4cd8dc79675db82b7dd436cb6a19c6a5eb217b902c2649937ee3c8724c591244",
+  "panels": [
+    "East Java overview",
+    "Madura",
+    "Bawean",
+    "Kangean / Sapeken",
+    "Masalembu",
+    "Southern coast"
+  ],
+  "finding": "Original/display outlines align at reviewed scales; island groups remain visible. Numerical per-component guards cover all 1191 components. This is not independent cartographic ground-truth validation."
+}

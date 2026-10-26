@@ -7,10 +7,10 @@
     "C1_review": "passed; commit 7f4b9f4ba41bbd593a1d1cbb8c3296d402e70e06; full CI 40282014248 succeeded",
     "C2_analysis": "passed; commit f6b6df88d9fe0ca24d462ab88d2d779b2945069d; application and Python CI 40317265675 succeeded",
     "C3_validation": "passed; commit 74e659d085c838a3cbb80dd3f1a255a3987a410a; application and Python CI 40320631163 succeeded",
-    "C4_publish": "implemented; nine database publication cases including competing connections pending CI",
-    "C5_rollback": "pending",
+    "C4_publish": "passed; commit 616f33c9bf22a8e626c72f3f92aeb2a0c9799d1b; full application and Python CI 40365612170 succeeded",
+    "C5_rollback": "implemented; ten database cases including both publish/rollback race orders pending CI",
     "C6_integration": "pending"
   },
-  "local_validation": "Two release validation input tests passed; nine database validation cases passed in CI; Pint and whitespace checks passed",
-  "next_action": "Verify C4 atomic publication and real two-connection conflict regression in isolated CI; C5-C6 remain pending"
+  "local_validation": "Three lifecycle CLI/input tests passed; nineteen publication/rollback database cases require CI; Pint and whitespace checks passed",
+  "next_action": "Verify C5 historical rollback and mixed-operation races in CI, then complete C6 integration, outbox delivery and deployment prerequisites"
 }

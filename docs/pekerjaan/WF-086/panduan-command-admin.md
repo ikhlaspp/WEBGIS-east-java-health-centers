@@ -28,6 +28,8 @@ Same-input/parameter/code retries reuse the successful analysis identity and ver
 Validation/publish/rollback commands remain pending C3–C6. Analysis does not publish data or mark files publicly sanitized.
 # Release validation
 
+Rollback: `php artisan gis:rollback <previously-published-release-uuid> --expected-version=<active-pointer-version> --operation-id=<uuid> --reason="Evidence-backed rollback reason" --token-file=<private-token-path>`. Requires the separate rollback ability and trusted verifier-role access. The target must remain published, have valid acceptance/private artifacts and differ from the active release. It changes the active pointer and records audit/outbox atomically; it does not alter historical release status, publication time, data or prior audit. Reuse the exact operation ID/arguments only for retry. A withdrawn target cannot be restored through rollback.
+
 Publication after validation: `php artisan gis:publish <release-uuid> --expected-version=<active-pointer-version> --operation-id=<uuid> --reason="Evidence-backed publication reason" --token-file=<private-token-path>`. Requires publish ability and trusted verifier-role access. Reuse the same operation UUID and exact arguments for a retry; use a new UUID for a different operation. A stale pointer version is rejected, never silently overwritten. The command rechecks private files, C3 acceptance and the run before atomically updating status/pointer/audit/outbox. Synthetic test success is not acceptance of actual research data.
 
 `php artisan gis:validate <release-uuid> --run-id=<run-uuid> --expected-revision=<revision> --reason="Evidence-backed acceptance reason" --token-file=<private-token-path>`

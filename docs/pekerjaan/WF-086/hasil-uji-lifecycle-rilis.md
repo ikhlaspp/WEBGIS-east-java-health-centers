@@ -21,6 +21,10 @@ C2 retest: application and Python jobs in CI 40317265675 succeeded on f6b6df88d9
 C1 and C2 are verified. C3 validation, C4 publication, C5 rollback and C6 lifecycle integration remain pending; WF-086 is not complete.
 # C3 validation verification
 
+C4 full retest: CI 40365612170 succeeded on 616f33c9bf22a8e626c72f3f92aeb2a0c9799d1b, including application/PostGIS, Python and browser checks. Frozen verification no longer requests draft-only locking reads; draft preparation still locks inputs.
+
+C5 local verification: three lifecycle input/CLI tests passed; ten rollback DB cases plus nine publication regressions skipped locally pending CI. Rollback tests cover two actual synthetic release versions, historical immutability, implicit/explicit context, retries, invalid targets/capabilities/files/version, atomic outbox failure, direct-role denial and both orders of a publish/rollback race with a second PDO connection. No actual Supabase data was changed.
+
 C4 local checks: two publication input/CLI tests passed; nine PostGIS cases skipped locally pending isolated CI. Cases cover atomic publish and exact retry, fresh public context, artifact tampering, wrong ability, stale pointer, missing acceptance, injected outbox failure, conflicting operation reuse, repeat publication, role denial and a competing PDO connection blocked on the pointer lock. Pint and whitespace checks passed. No production publication was attempted.
 
 Local targeted tests: two input/CLI tests passed, nine PostGIS cases skipped locally, Pint and whitespace checks passed. Isolated CI pending: real Python files plus explicit partial scope freeze; atomic report/audit; frozen input denial; tampered file, stale revision, wrong ability, zero eligible points, missing explicit partial acceptance, wrong run, injected audit failure; runtime/worker/publisher direct attestation denial. No live Supabase schema or research data was changed.

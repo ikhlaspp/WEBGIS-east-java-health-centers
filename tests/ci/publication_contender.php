@@ -11,8 +11,9 @@ $pdo->beginTransaction();
 try {
     $pdo->exec('SET LOCAL ROLE gis_artifact_verifier');
     $pdo->exec("SET LOCAL statement_timeout='15s'");
-    $statement = $pdo->prepare('SELECT gis.publish_release(?,?::uuid,0,?::uuid,?,?::jsonb)');
-    $statement->execute([str_repeat('A', 43), $input['release'], $input['operation'], 'Second competing publication', json_encode($input['manifest'], JSON_THROW_ON_ERROR)]);
+    $function = ($input['action'] ?? 'publish') === 'rollback' ? 'gis.rollback_release' : 'gis.publish_release';
+    $statement = $pdo->prepare('SELECT '.$function.'(?,?::uuid,?::bigint,?::uuid,?,?::jsonb)');
+    $statement->execute([str_repeat('A', 43), $input['release'], $input['version'] ?? 0, $input['operation'], 'Second competing lifecycle operation', json_encode($input['manifest'], JSON_THROW_ON_ERROR)]);
     $pdo->commit();
     echo 'UNEXPECTED_SUCCESS'.PHP_EOL;
     exit(1);

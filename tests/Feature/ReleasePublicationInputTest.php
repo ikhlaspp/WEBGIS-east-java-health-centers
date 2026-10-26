@@ -18,4 +18,9 @@ class ReleasePublicationInputTest extends TestCase
     {
         $this->artisan('gis:publish', ['release' => 'invalid'])->assertFailed();
     }
+
+    public function test_rollback_command_requires_explicit_version_and_token(): void
+    {
+        $this->artisan('gis:rollback', ['release' => 'invalid'])->assertFailed();
+    }
 }

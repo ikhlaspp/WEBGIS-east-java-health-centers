@@ -1,0 +1,10 @@
+{
+  "ticket_id": "WF-084",
+  "status": "in_progress",
+  "scope": "Statistics, unpaginated point GeoJSON, region metrics, stored coverage and release/run cache isolation",
+  "predecessor_commit": "d5d7e82cd76a2d8a7180066f52fa06ddf637bef8",
+  "predecessor_ci_success": 40220627497,
+  "local_validation": "17 validation cases / 68 assertions passed; Pint and whitespace checks passed",
+  "database_tests": "5 isolated integration cases pending CI, including real Python export and analysis persistence",
+  "next_action": "Verify CI before closing and continuing to admin authentication"
+}

@@ -114,6 +114,7 @@ jobs:
             reports/phpunit.xml
             reports/reference-api.json
             reports/facility-api.json
+            reports/map-statistics-api.json
             playwright-report/
             test-results/
           retention-days: 7

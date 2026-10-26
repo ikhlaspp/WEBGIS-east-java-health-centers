@@ -1,10 +1,12 @@
 {
   "ticket_id": "WF-083",
-  "status": "in_progress",
+  "status": "done",
   "scope": "Release-scoped facility list, literal search, validated filters, pagination and public detail",
   "predecessor_commit": "d9e77e9916e38f265026e210dcd63c0b205ae14a",
   "predecessor_ci_success": 40219287647,
   "local_validation": "15 invalid-query cases passed, 75 assertions; Pint and whitespace checks passed",
-  "database_tests": "6 cases pending isolated PostGIS CI",
-  "next_action": "Verify CI and captured synthetic HTTP responses before closing"
+  "database_tests": "6 cases passed in isolated PostGIS CI",
+  "delivery_commit": "d5d7e82cd76a2d8a7180066f52fa06ddf637bef8",
+  "ci_success": 40220627497,
+  "next_action": "Implement map and statistics endpoints"
 }

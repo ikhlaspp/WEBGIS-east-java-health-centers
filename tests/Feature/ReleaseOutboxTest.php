@@ -97,7 +97,7 @@ class ReleaseOutboxTest extends GisDatabaseTestCase
             Cache::swap($store);
             DB::statement('RESET ROLE');
             $this->assertSame('gis_schema_testing', DB::selectOne('SELECT current_database() AS name')->name);
-            $tables = DB::select("SELECT schemaname,tablename FROM pg_tables WHERE schemaname IN ('app','gis','staging')");
+            $tables = DB::select("SELECT schemaname,tablename FROM pg_tables WHERE schemaname IN ('app','gis','staging') AND NOT(schemaname='app' AND tablename='backup_environment')");
             $names = array_map(fn ($row) => '"'.str_replace('"', '""', $row->schemaname).'"."'.str_replace('"', '""', $row->tablename).'"', $tables);
             DB::statement('TRUNCATE TABLE '.implode(',', $names).' RESTART IDENTITY');
             DB::insert('INSERT INTO app.active_release(singleton) VALUES(1)');

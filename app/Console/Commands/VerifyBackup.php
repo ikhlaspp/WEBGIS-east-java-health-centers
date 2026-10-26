@@ -9,14 +9,15 @@ use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use Throwable;
 
-#[Signature('gis:verify-backup {checkpoint} {--token-file=}')]
+#[Signature('gis:verify-backup {checkpoint?} {--context} {--token-file=}')]
 #[Description('Verify private backup bytes and register a database-bound publication prerequisite')]
 class VerifyBackup extends Command
 {
     public function handle(BackupVerificationService $backups, OperatorTokenService $tokens): int
     {
         try {
-            $result = $backups->verify($tokens->read((string) $this->option('token-file')), (string) $this->argument('checkpoint'));
+            $token = $tokens->read((string) $this->option('token-file'));
+            $result = $this->option('context') ? $backups->context($token) : $backups->verify($token, (string) $this->argument('checkpoint'));
             $this->line(json_encode($result, JSON_THROW_ON_ERROR));
 
             return self::SUCCESS;

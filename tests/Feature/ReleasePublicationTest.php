@@ -88,7 +88,7 @@ class ReleasePublicationTest extends GisDatabaseTestCase
         if (in_array($case, ['missing_backup', 'expired_backup'], true)) {
             DB::statement('TRUNCATE TABLE app.backup_checkpoints');
             if ($case === 'expired_backup') {
-                DB::insert("INSERT INTO app.backup_checkpoints(id,database_name,completed_at,manifest_sha256,inventory,verified_by) VALUES(?,current_database(),clock_timestamp()-interval '25 hours',?,'[{},{}]',?)", [$this->id(90), str_repeat('b', 64), $this->id(1)]);
+                DB::insert("INSERT INTO app.backup_checkpoints(id,database_name,instance_id,completed_at,manifest_sha256,inventory,verified_by) SELECT ?,current_database(),instance_id,clock_timestamp()-interval '25 hours',?,'[{},{}]',? FROM app.backup_environment WHERE singleton", [$this->id(90), str_repeat('b', 64), $this->id(1)]);
             }
         }
         if ($case === 'tampered_file') {
@@ -194,7 +194,7 @@ class ReleasePublicationTest extends GisDatabaseTestCase
             DB::statement('RESET ROLE');
             // Only the dedicated disposable test database reaches this committed-fixture cleanup.
             $this->assertSame('gis_schema_testing', DB::selectOne('SELECT current_database() AS name')->name);
-            $tables = DB::select("SELECT schemaname,tablename FROM pg_tables WHERE schemaname IN ('app','gis','staging')");
+            $tables = DB::select("SELECT schemaname,tablename FROM pg_tables WHERE schemaname IN ('app','gis','staging') AND NOT(schemaname='app' AND tablename='backup_environment')");
             $names = array_map(fn ($row) => '"'.str_replace('"', '""', $row->schemaname).'"."'.str_replace('"', '""', $row->tablename).'"', $tables);
             DB::statement('TRUNCATE TABLE '.implode(',', $names).' RESTART IDENTITY');
             DB::insert('INSERT INTO app.active_release(singleton) VALUES(1)');

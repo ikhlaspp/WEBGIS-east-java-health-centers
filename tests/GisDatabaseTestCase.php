@@ -51,7 +51,7 @@ abstract class GisDatabaseTestCase extends TestCase
     {
         DB::insert("INSERT INTO app.users(id,name,email,password_hash) VALUES(?,'Fixture','fixture@example.test','fixture-only')", [$this->id(1)]);
         // Synthetic prerequisite only; this never represents an actual database backup or restore drill.
-        DB::insert("INSERT INTO app.backup_checkpoints(id,database_name,completed_at,manifest_sha256,inventory,verified_by) VALUES(?,current_database(),clock_timestamp(),?,'[{},{}]',?)", [$this->id(90), str_repeat('b', 64), $this->id(1)]);
+        DB::insert("INSERT INTO app.backup_checkpoints(id,database_name,instance_id,completed_at,manifest_sha256,inventory,verified_by) SELECT ?,current_database(),instance_id,clock_timestamp(),?,'[{},{}]',? FROM app.backup_environment WHERE singleton", [$this->id(90), str_repeat('b', 64), $this->id(1)]);
         DB::insert("INSERT INTO gis.data_sources(id,publisher,title,source_url,observation_period,sha256,license_note,limitations,status) VALUES(?,'Fixture','Synthetic','https://example.test/source','synthetic',?,'fixture','not real data','verified')", [$this->id(2), str_repeat('a', 64)]);
         DB::insert("INSERT INTO gis.boundary_sets(id,source_id,name,version,code_system,source_crs) VALUES(?,?,'Fixture','one','fixture','CRS84')", [$this->id(3), $this->id(2)]);
         DB::insert("INSERT INTO gis.boundary_sets(id,source_id,name,version,code_system,source_crs) VALUES(?,?,'Other','two','fixture','CRS84')", [$this->id(30), $this->id(2)]);

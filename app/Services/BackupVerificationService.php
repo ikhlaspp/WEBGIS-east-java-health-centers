@@ -9,6 +9,16 @@ use RuntimeException;
 
 class BackupVerificationService
 {
+    public function context(#[\SensitiveParameter] string $token): array
+    {
+        return DB::transaction(function () use ($token): array {
+            DB::statement('SET LOCAL ROLE gis_worker');
+            $row = DB::selectOne('SELECT gis.backup_context(?) AS context', [$token]);
+
+            return json_decode($row->context, true, 512, JSON_THROW_ON_ERROR);
+        });
+    }
+
     public function verify(#[\SensitiveParameter] string $token, string $checkpoint): array
     {
         if (! Str::isUuid($checkpoint)) {

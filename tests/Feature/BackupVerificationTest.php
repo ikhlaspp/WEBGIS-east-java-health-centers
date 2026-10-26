@@ -21,7 +21,7 @@ class BackupVerificationTest extends GisDatabaseTestCase
         $this->checkpoint = (string) Str::uuid();
         $directory = storage_path('app/private/backups/'.$this->checkpoint);
         mkdir($directory, 0700, true);
-        $manifest = ['schema_version' => 'backup-checkpoint-v1', 'checkpoint_id' => $this->checkpoint, 'database_name' => 'gis_schema_testing', 'completed_at' => gmdate('c', time() - 60), 'files' => []];
+        $manifest = ['schema_version' => 'backup-checkpoint-v1', 'checkpoint_id' => $this->checkpoint, 'database_name' => 'gis_schema_testing', 'instance_id' => DB::table('app.backup_environment')->value('instance_id'), 'completed_at' => gmdate('c', time() - 60), 'files' => []];
         foreach (['database_snapshot' => 'database.snapshot', 'artifact_bundle' => 'artifacts.bundle'] as $kind => $file) {
             file_put_contents($directory.'/'.$file, 'Synthetic byte-verification fixture; not a real backup: '.$kind);
             $manifest['files'][] = ['kind' => $kind, 'path' => $file, 'bytes' => filesize($directory.'/'.$file), 'sha256' => hash_file('sha256', $directory.'/'.$file)];
@@ -54,6 +54,9 @@ class BackupVerificationTest extends GisDatabaseTestCase
     {
         $this->fixture();
         $service = app(BackupVerificationService::class);
+        $context = $service->context(str_repeat('A', 43));
+        $this->assertSame('gis_schema_testing', $context['database_name']);
+        $this->assertTrue(Str::isUuid($context['instance_id']));
         $this->assertFalse($service->verify(str_repeat('A', 43), $this->checkpoint)['replayed']);
         $this->assertTrue($service->verify(str_repeat('A', 43), $this->checkpoint)['replayed']);
         DB::statement('RESET ROLE');
@@ -71,7 +74,7 @@ class BackupVerificationTest extends GisDatabaseTestCase
 
     public static function failures(): array
     {
-        return array_map(fn ($case) => [$case], ['tampered', 'missing', 'stale', 'future', 'wrong_database', 'wrong_ability']);
+        return array_map(fn ($case) => [$case], ['tampered', 'missing', 'stale', 'future', 'wrong_database', 'wrong_instance', 'wrong_ability']);
     }
 
     #[DataProvider('failures')]
@@ -86,6 +89,8 @@ class BackupVerificationTest extends GisDatabaseTestCase
             DB::update("UPDATE app.operator_tokens SET abilities='[\"review\"]'");
         } elseif ($case === 'wrong_database') {
             $manifest['database_name'] = 'different_database';
+        } elseif ($case === 'wrong_instance') {
+            $manifest['instance_id'] = (string) Str::uuid();
         } else {
             $manifest['completed_at'] = gmdate('c', time() + ($case === 'future' ? 3600 : -90000));
         }

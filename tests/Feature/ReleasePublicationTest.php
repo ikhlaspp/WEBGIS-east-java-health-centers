@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Services\LocationReviewService;
 use App\Services\OperatorAnalysisService;
 use App\Services\ReleaseContext;
 use App\Services\ReleaseLifecycleService;
@@ -22,9 +23,9 @@ class ReleasePublicationTest extends GisDatabaseTestCase
     {
         DB::update('UPDATE app.users SET is_admin=true');
         DB::update("UPDATE gis.dataset_releases SET method_version='postgis-analysis-v1',code_revision=? WHERE id=?", [str_repeat('c', 40), $this->id(6)]);
-        DB::insert("INSERT INTO app.operator_tokens(id,user_id,token_hash,abilities,expires_at) VALUES(?,?,?,'[\"analyze\",\"validate\",\"publish\"]',now()+interval '1 hour')", [$this->id(70), $this->id(1), hash('sha256', str_repeat('A', 43))]);
-        DB::insert("INSERT INTO gis.geocode_reviews(id,release_id,facility_code,source_id,candidate_location,provider,query,precision_level,result_status,evidence_url,evidence_note,decision_reason,reviewed_by,reviewed_at) VALUES(?,?,'35010100001',?,extensions.ST_SetSRID(extensions.ST_MakePoint(112.5,-7.5),4326),'fixture','synthetic','facility','accepted','https://example.test/evidence','synthetic','fixture evidence',?,now())", [$this->id(7), $this->id(6), $this->id(2), $this->id(1)]);
-        DB::update("UPDATE gis.facility_snapshots SET coordinate_status='verified',precision_level='facility',location=extensions.ST_SetSRID(extensions.ST_MakePoint(112.5,-7.5),4326),coordinate_source_id=?,selected_review_id=?", [$this->id(2), $this->id(7)]);
+        DB::insert("INSERT INTO app.operator_tokens(id,user_id,token_hash,abilities,expires_at) VALUES(?,?,?,'[\"review\",\"analyze\",\"validate\",\"publish\"]',now()+interval '1 hour')", [$this->id(70), $this->id(1), hash('sha256', str_repeat('A', 43))]);
+        DB::insert("INSERT INTO gis.geocode_reviews(id,release_id,facility_code,source_id,candidate_location,provider,query,precision_level,result_status,evidence_url,evidence_note,decision_reason) VALUES(?,?,'35010100001',?,extensions.ST_SetSRID(extensions.ST_MakePoint(112.5,-7.5),4326),'fixture','synthetic','facility','pending','https://example.test/evidence','synthetic','')", [$this->id(7), $this->id(6), $this->id(2)]);
+        app(LocationReviewService::class)->decide(str_repeat('A', 43), ['release_id' => $this->id(6), 'facility_code' => '35010100001', 'review_id' => $this->id(7), 'decision' => 'accepted', 'reason' => 'Synthetic facility evidence reviewed', 'expected_revision' => (int) DB::table('gis.dataset_releases')->value('input_revision'), 'operation_id' => (string) Str::uuid(), 'confirmed_facility_point' => true]);
         $this->run = (string) Str::uuid();
         app(OperatorAnalysisService::class)->run(str_repeat('A', 43), $this->id(6), $this->run, 30000, str_repeat('c', 40));
         $revision = (int) DB::table('gis.dataset_releases')->value('input_revision');

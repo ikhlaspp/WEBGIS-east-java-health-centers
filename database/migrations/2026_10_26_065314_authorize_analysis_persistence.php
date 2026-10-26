@@ -76,7 +76,7 @@ SELECT to_jsonb(q) FROM (WITH buffers AS MATERIALIZED (
  extensions.ST_UnaryUnion(extensions.ST_Collect(b.geom)),d.geom),3)) AS covered,
  count(DISTINCT b.facility_code) AS contributing_count
  FROM regions d CROSS JOIN (VALUES(1000),(3000),(5000)) rad(radius_m)
- LEFT JOIN buffers b ON b.radius_m=rad.radius_m AND b.geom && d.geom
+ LEFT JOIN buffers b ON b.radius_m=rad.radius_m AND b.geom OPERATOR(extensions.&&) d.geom
  AND extensions.ST_Intersects(b.geom,d.geom) AND NOT extensions.ST_Touches(b.geom,d.geom)
  GROUP BY d.id,d.geom,rad.radius_m
 )

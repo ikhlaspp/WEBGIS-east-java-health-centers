@@ -149,6 +149,9 @@ class OperatorAnalysisTest extends GisDatabaseTestCase
         foreach (['release_id', 'analysis_run_id', 'boundary_set_id', 'input_revision', 'input_hash', 'boundary_hash', 'method_version', 'code_revision', 'parameters'] as $field) {
             $manifest[$field] = $bundle[$field];
         }
+        foreach ($manifest['artifacts'] as $index => $artifact) {
+            $manifest['artifacts'][$index]['sha256'] = hash('sha256', 'unverified-submitted-artifact:'.$next.':'.$artifact['kind']);
+        }
         $result = DB::selectOne('SELECT gis.persist_operator_analysis(?,?::jsonb,?::jsonb) AS result', [str_repeat('A', 43), json_encode($bundle, JSON_THROW_ON_ERROR), json_encode($manifest, JSON_THROW_ON_ERROR)]);
         $this->assertSame('succeeded', json_decode($result->result, true)['status']);
         DB::statement('RESET ROLE');

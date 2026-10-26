@@ -6,11 +6,11 @@
   "checkpoints": {
     "C1_review": "passed; commit 7f4b9f4ba41bbd593a1d1cbb8c3296d402e70e06; full CI 40282014248 succeeded",
     "C2_analysis": "passed; commit f6b6df88d9fe0ca24d462ab88d2d779b2945069d; application and Python CI 40317265675 succeeded",
-    "C3_validation": "pending",
+    "C3_validation": "implemented; nine isolated database cases pending CI",
     "C4_publish": "pending",
     "C5_rollback": "pending",
     "C6_integration": "pending"
   },
   "local_validation": "Two analysis entry-point tests passed / five assertions; nine database cases require CI; Pint and whitespace checks passed",
-  "next_action": "Implement C3 release quality validation with independent artifact verification; C4-C6 remain pending"
+  "next_action": "Verify C3 file attestation, scope acceptance and atomic freeze in CI; C4-C6 remain pending"
 }

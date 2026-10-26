@@ -130,7 +130,7 @@ class AnalysisRunService
         });
     }
 
-    private function verifyArtifacts(array $fresh, string $directory): array
+    public function verifyArtifacts(array $fresh, string $directory): array
     {
         if (! preg_match('~^analysis/[0-9a-f-]{36}$~D', $directory)) {
             throw new InvalidArgumentException('Artifacts must be inside a private analysis UUID directory.');

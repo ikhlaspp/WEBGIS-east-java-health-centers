@@ -26,3 +26,8 @@ Use a token with analyze ability and the worker connection. Explicit run UUID an
 Same-input/parameter/code retries reuse the successful analysis identity and verify its existing files. A conflicting or corrupted directory is not overwritten. Failed exports or database transactions do not create a successful run; privately generated files may remain for diagnosis. Token expiry/revocation is checked again after export. No raw capability enters the Python command, input bundle, artifact manifest or audit output.
 
 Validation/publish/rollback commands remain pending C3–C6. Analysis does not publish data or mark files publicly sanitized.
+# Release validation
+
+`php artisan gis:validate <release-uuid> --run-id=<run-uuid> --expected-revision=<revision> --reason="Evidence-backed acceptance reason" --token-file=<private-token-path>`
+
+The token needs `validate`. The trusted CLI database login must be allowed to assume `gis_worker` and `gis_artifact_verifier`; web/runtime logins must not receive verifier membership. The command checks private file bytes/content before finalization; sending a manifest directly as worker/publisher is denied. Missing indicators or excluded points require explicit `--allow-partial` and the recorded reason. Zero eligible points, pending review decisions, stale inputs, inconsistent method/code, unverified sources and corrupt artifacts block acceptance. A successful result means `validated`, not published; no active pointer changes. No actual dataset acceptance has been performed.

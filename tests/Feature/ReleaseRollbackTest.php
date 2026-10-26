@@ -2,9 +2,11 @@
 
 namespace Tests\Feature;
 
+use App\Services\LocationReviewService;
 use App\Services\OperatorAnalysisService;
 use App\Services\ReleaseContext;
 use App\Services\ReleaseLifecycleService;
+use App\Services\ReleaseOutboxService;
 use App\Services\ReleaseValidationService;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
@@ -24,14 +26,14 @@ class ReleaseRollbackTest extends GisDatabaseTestCase
         DB::statement('RESET ROLE');
         if ($number === 6) {
             DB::update('UPDATE app.users SET is_admin=true');
-            DB::insert("INSERT INTO app.operator_tokens(id,user_id,token_hash,abilities,expires_at) VALUES(?,?,?,'[\"analyze\",\"validate\",\"publish\",\"rollback\"]',now()+interval '1 hour')", [$this->id(70), $this->id(1), hash('sha256', str_repeat('A', 43))]);
+            DB::insert("INSERT INTO app.operator_tokens(id,user_id,token_hash,abilities,expires_at) VALUES(?,?,?,'[\"review\",\"analyze\",\"validate\",\"publish\",\"rollback\"]',now()+interval '1 hour')", [$this->id(70), $this->id(1), hash('sha256', str_repeat('A', 43))]);
             DB::update("UPDATE gis.dataset_releases SET method_version='postgis-analysis-v1',code_revision=? WHERE id=?", [str_repeat('c', 40), $this->id(6)]);
         } else {
             DB::insert('INSERT INTO gis.dataset_releases(id,label,boundary_set_id,facility_period,population_policy,area_policy,method_version,code_revision) SELECT ?,?,boundary_set_id,facility_period,population_policy,area_policy,method_version,code_revision FROM gis.dataset_releases WHERE id=?', [$this->id($number), 'Fixture '.$number, $this->id(6)]);
             DB::insert("INSERT INTO gis.facility_snapshots(release_id,boundary_set_id,district_id,facility_code,name,address,service_type,area_type,source_id,source_row,coordinate_status,precision_level) SELECT ?,boundary_set_id,district_id,facility_code,name,address,service_type,area_type,source_id,source_row,'missing','unknown' FROM gis.facility_snapshots WHERE release_id=?", [$this->id($number), $this->id(6)]);
         }
-        DB::insert("INSERT INTO gis.geocode_reviews(id,release_id,facility_code,source_id,candidate_location,provider,query,precision_level,result_status,evidence_url,evidence_note,decision_reason,reviewed_by,reviewed_at) VALUES(?,?,'35010100001',?,extensions.ST_SetSRID(extensions.ST_MakePoint(112.5,-7.5),4326),'fixture','synthetic','facility','accepted','https://example.test/evidence','synthetic','fixture evidence',?,now())", [$this->id(100 + $number), $this->id($number), $this->id(2), $this->id(1)]);
-        DB::update("UPDATE gis.facility_snapshots SET coordinate_status='verified',precision_level='facility',location=extensions.ST_SetSRID(extensions.ST_MakePoint(112.5,-7.5),4326),coordinate_source_id=?,selected_review_id=? WHERE release_id=?", [$this->id(2), $this->id(100 + $number), $this->id($number)]);
+        DB::insert("INSERT INTO gis.geocode_reviews(id,release_id,facility_code,source_id,candidate_location,provider,query,precision_level,result_status,evidence_url,evidence_note,decision_reason) VALUES(?,?,'35010100001',?,extensions.ST_SetSRID(extensions.ST_MakePoint(112.5,-7.5),4326),'fixture','synthetic','facility','pending','https://example.test/evidence','synthetic','')", [$this->id(100 + $number), $this->id($number), $this->id(2)]);
+        app(LocationReviewService::class)->decide(str_repeat('A', 43), ['release_id' => $this->id($number), 'facility_code' => '35010100001', 'review_id' => $this->id(100 + $number), 'decision' => 'accepted', 'reason' => 'Synthetic facility evidence reviewed', 'expected_revision' => (int) DB::table('gis.dataset_releases')->where('id', $this->id($number))->value('input_revision'), 'operation_id' => (string) Str::uuid(), 'confirmed_facility_point' => true]);
         $this->runs[$number] = (string) Str::uuid();
         app(OperatorAnalysisService::class)->run(str_repeat('A', 43), $this->id($number), $this->runs[$number], 30000, str_repeat('c', 40));
         $revision = (int) DB::table('gis.dataset_releases')->where('id', $this->id($number))->value('input_revision');
@@ -67,6 +69,7 @@ class ReleaseRollbackTest extends GisDatabaseTestCase
     public function test_rollback_switches_pointer_once_and_preserves_both_release_histories(): void
     {
         $this->versions();
+        DB::statement('TRUNCATE TABLE app.backup_checkpoints');
         $history = DB::select('SELECT to_jsonb(r)::text AS row FROM gis.dataset_releases r ORDER BY id');
         $operation = (string) Str::uuid();
         $service = app(ReleaseLifecycleService::class);
@@ -77,6 +80,9 @@ class ReleaseRollbackTest extends GisDatabaseTestCase
         $this->assertEquals($history, DB::select('SELECT to_jsonb(r)::text AS row FROM gis.dataset_releases r ORDER BY id'));
         $this->assertSame(1, DB::table('app.audit_logs')->where('action', 'release.rolled_back')->count());
         $this->assertSame(1, DB::table('app.outbox_events')->where('event_type', 'release.rolled_back')->count());
+        foreach (['location.reviewed', 'analysis.completed', 'release.validated', 'release.published'] as $action) {
+            $this->assertSame(2, DB::table('app.audit_logs')->where('action', $action)->where('actor_id', $this->id(1))->where('token_id', $this->id(70))->count());
+        }
         $audit = DB::table('app.audit_logs')->where('action', 'release.rolled_back')->sole();
         $this->assertSame($this->id(8), json_decode($audit->before_json, true)['release_id']);
         $this->assertStringNotContainsString(str_repeat('A', 43), json_encode($audit));
@@ -179,6 +185,8 @@ class ReleaseRollbackTest extends GisDatabaseTestCase
             $this->assertSame(3, DB::table('app.active_release')->value('version'));
             $this->assertSame(3, DB::table('app.outbox_events')->count());
             $this->assertSame('published', DB::table('gis.dataset_releases')->where('id', $this->id(8))->value('status'));
+            $this->assertSame(['delivered' => 3, 'failed' => 0], app(ReleaseOutboxService::class)->dispatch(str_repeat('A', 43)));
+            $this->assertSame(3, DB::table('app.outbox_events')->whereNotNull('delivered_at')->count());
         } finally {
             if (DB::transactionLevel() > 0) {
                 DB::rollBack();

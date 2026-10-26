@@ -21,6 +21,8 @@ C2 retest: application and Python jobs in CI 40317265675 succeeded on f6b6df88d9
 C1 and C2 are verified. C3 validation, C4 publication, C5 rollback and C6 lifecycle integration remain pending; WF-086 is not complete.
 # C3 validation verification
 
+C5 full CI 40368726652 passed on 4c92537. C6 outbox and authorized review integration passed full CI 40411750024 on a5222bd. Final C6 changes add a database-enforced 24-hour backup prerequisite, private-byte attestation and full authorized review/analysis/validation/publication/rollback/event coverage. Four local input tests passed; 33 targeted DB cases skipped locally and queued for CI. Synthetic backup fixtures are not evidence of an actual backup or restored dataset.
+
 C4 full retest: CI 40365612170 succeeded on 616f33c9bf22a8e626c72f3f92aeb2a0c9799d1b, including application/PostGIS, Python and browser checks. Frozen verification no longer requests draft-only locking reads; draft preparation still locks inputs.
 
 C5 local verification: three lifecycle input/CLI tests passed; ten rollback DB cases plus nine publication regressions skipped locally pending CI. Rollback tests cover two actual synthetic release versions, historical immutability, implicit/explicit context, retries, invalid targets/capabilities/files/version, atomic outbox failure, direct-role denial and both orders of a publish/rollback race with a second PDO connection. No actual Supabase data was changed.

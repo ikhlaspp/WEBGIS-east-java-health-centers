@@ -46,3 +46,10 @@ LANJUTAN IMPLEMENTASI (25 Oktober 2026)
 - Nanti lengkapi environment privat untuk dev/test terpisah (jangan kirim atau commit password), provider CA, lalu jalankan command dengan --expected-database yang benar. Detail operasional: docs/pekerjaan/WF-072/log-provisioning-DB-dev-test.md.
 
 - WF-076: pemuatan dataset nyata dan rekonsiliasi DB menunggu WF-071 dan provisioning WF-072. Manifest yang tersedia hanya pin input, bukan bukti impor selesai. WF-077 boleh dilanjutkan dengan fixture sintetis.
+
+PEMBARUAN DEPLOYMENT (27 Oktober 2026)
+- Konfigurasi Supabase privat sudah diuji dengan TLS dan tabel sementara yang di-rollback. Catatan placeholder di atas merupakan riwayat lama; pemasangan PostGIS/skema aplikasi dan pemuatan dataset nyata tetap terpisah.
+- Sebelum publikasi nyata, selesaikan review lokasi dan mutu data; hasil CI memakai fixture sintetis, bukan penerimaan Archives.
+- Siapkan backup DB dan artefak nyata. gis:verify-backup memeriksa file privat dan mencatat checkpoint; publikasi baru ditolak jika tidak ada checkpoint untuk database terkait yang selesai dalam 24 jam terakhir.
+- Format manifest dan perintah: docs/pekerjaan/WF-086/panduan-command-admin.md. Pemeriksaan hash bukan bukti restore berhasil; drill pemulihan tetap pekerjaan deployment.
+- Pengiriman event setelah commit: gis:dispatch-release-events memakai capability publish. Jangan menaruh token, backup atau password di Git.

@@ -78,13 +78,19 @@ class ReleasePublicationTest extends GisDatabaseTestCase
 
     public static function rejectionCases(): array
     {
-        return array_map(fn ($case) => [$case], ['tampered_file', 'wrong_ability', 'stale_pointer', 'outbox_failure', 'missing_acceptance']);
+        return array_map(fn ($case) => [$case], ['tampered_file', 'wrong_ability', 'stale_pointer', 'outbox_failure', 'missing_acceptance', 'missing_backup', 'expired_backup']);
     }
 
     #[DataProvider('rejectionCases')]
     public function test_failures_do_not_partially_publish(string $case): void
     {
         $this->candidate();
+        if (in_array($case, ['missing_backup', 'expired_backup'], true)) {
+            DB::statement('TRUNCATE TABLE app.backup_checkpoints');
+            if ($case === 'expired_backup') {
+                DB::insert("INSERT INTO app.backup_checkpoints(id,database_name,completed_at,manifest_sha256,inventory,verified_by) VALUES(?,current_database(),clock_timestamp()-interval '25 hours',?,'[{},{}]',?)", [$this->id(90), str_repeat('b', 64), $this->id(1)]);
+            }
+        }
         if ($case === 'tampered_file') {
             file_put_contents(storage_path('app/private/analysis/'.$this->run.'/density.geojson'), '{}');
         } elseif ($case === 'wrong_ability') {

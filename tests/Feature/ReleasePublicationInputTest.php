@@ -23,4 +23,10 @@ class ReleasePublicationInputTest extends TestCase
     {
         $this->artisan('gis:rollback', ['release' => 'invalid'])->assertFailed();
     }
+
+    public function test_backup_and_dispatch_commands_require_private_capabilities(): void
+    {
+        $this->artisan('gis:verify-backup', ['checkpoint' => 'invalid'])->assertFailed();
+        $this->artisan('gis:dispatch-release-events', ['--limit' => 'invalid'])->assertFailed();
+    }
 }

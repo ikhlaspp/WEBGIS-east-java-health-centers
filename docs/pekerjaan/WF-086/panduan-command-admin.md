@@ -28,6 +28,8 @@ Same-input/parameter/code retries reuse the successful analysis identity and ver
 Validation/publish/rollback commands remain pending C3–C6. Analysis does not publish data or mark files publicly sanitized.
 # Release validation
 
+Publication after validation: `php artisan gis:publish <release-uuid> --expected-version=<active-pointer-version> --operation-id=<uuid> --reason="Evidence-backed publication reason" --token-file=<private-token-path>`. Requires publish ability and trusted verifier-role access. Reuse the same operation UUID and exact arguments for a retry; use a new UUID for a different operation. A stale pointer version is rejected, never silently overwritten. The command rechecks private files, C3 acceptance and the run before atomically updating status/pointer/audit/outbox. Synthetic test success is not acceptance of actual research data.
+
 `php artisan gis:validate <release-uuid> --run-id=<run-uuid> --expected-revision=<revision> --reason="Evidence-backed acceptance reason" --token-file=<private-token-path>`
 
 The token needs `validate`. The trusted CLI database login must be allowed to assume `gis_worker` and `gis_artifact_verifier`; web/runtime logins must not receive verifier membership. The command checks private file bytes/content before finalization; sending a manifest directly as worker/publisher is denied. Missing indicators or excluded points require explicit `--allow-partial` and the recorded reason. Zero eligible points, pending review decisions, stale inputs, inconsistent method/code, unverified sources and corrupt artifacts block acceptance. A successful result means `validated`, not published; no active pointer changes. No actual dataset acceptance has been performed.

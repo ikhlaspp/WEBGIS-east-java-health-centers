@@ -11,15 +11,15 @@ class AnalysisRunService
 {
     public function __construct(private CoverageService $coverage) {}
 
-    public function prepare(string $releaseId, string $runId, int $threshold, string $codeRevision): array
+    public function prepare(string $releaseId, string $runId, int $threshold, string $codeRevision, bool $verifyFrozen = false): array
     {
         if ($threshold < 1 || ! Str::isUuid($runId) || ! preg_match('/^[0-9a-f]{40}$/D', $codeRevision)) {
             throw new InvalidArgumentException('A positive threshold, run UUID and code commit are required.');
         }
 
-        return DB::transaction(function () use ($releaseId, $runId, $threshold, $codeRevision): array {
+        return DB::transaction(function () use ($releaseId, $runId, $threshold, $codeRevision, $verifyFrozen): array {
             $release = DB::selectOne('SELECT id,boundary_set_id,input_revision,status,facility_period,population_policy,area_policy FROM gis.dataset_releases WHERE id=? FOR SHARE', [$releaseId]);
-            if ($release === null || $release->status !== 'draft') {
+            if ($release === null || ! in_array($release->status, $verifyFrozen ? ['validated', 'published'] : ['draft'], true)) {
                 throw new InvalidArgumentException('Analysis preparation requires a draft release.');
             }
             $coverage = $this->coverage->generate($releaseId, $runId, $codeRevision);

@@ -7,10 +7,10 @@
     "C1_review": "passed; commit 7f4b9f4ba41bbd593a1d1cbb8c3296d402e70e06; full CI 40282014248 succeeded",
     "C2_analysis": "passed; commit f6b6df88d9fe0ca24d462ab88d2d779b2945069d; application and Python CI 40317265675 succeeded",
     "C3_validation": "passed; commit 74e659d085c838a3cbb80dd3f1a255a3987a410a; application and Python CI 40320631163 succeeded",
-    "C4_publish": "pending",
+    "C4_publish": "implemented; nine database publication cases including competing connections pending CI",
     "C5_rollback": "pending",
     "C6_integration": "pending"
   },
   "local_validation": "Two release validation input tests passed; nine database validation cases passed in CI; Pint and whitespace checks passed",
-  "next_action": "Implement C4 atomic publish with expected active-pointer version, artifact acceptance rechecks, audit/outbox and concurrent-connection tests; C5-C6 remain pending"
+  "next_action": "Verify C4 atomic publication and real two-connection conflict regression in isolated CI; C5-C6 remain pending"
 }

@@ -7,14 +7,14 @@ use InvalidArgumentException;
 
 class BufferService
 {
-    public function generate(string $releaseId, string $runId, string $codeRevision): array
+    public function generate(string $releaseId, string $runId, string $codeRevision, bool $lockRelease = true): array
     {
         if ($runId === '' || $codeRevision === '') {
             throw new InvalidArgumentException('Explicit analysis run identity and code revision required.');
         }
 
-        return DB::transaction(function () use ($releaseId, $runId, $codeRevision): array {
-            $release = DB::selectOne('SELECT id,input_revision,boundary_set_id FROM gis.dataset_releases WHERE id=? FOR SHARE', [$releaseId]);
+        return DB::transaction(function () use ($releaseId, $runId, $codeRevision, $lockRelease): array {
+            $release = DB::selectOne('SELECT id,input_revision,boundary_set_id FROM gis.dataset_releases WHERE id=?'.($lockRelease ? ' FOR SHARE' : ''), [$releaseId]);
             if ($release === null) {
                 throw new InvalidArgumentException('Unknown candidate release.');
             }

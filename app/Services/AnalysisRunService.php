@@ -18,11 +18,11 @@ class AnalysisRunService
         }
 
         return DB::transaction(function () use ($releaseId, $runId, $threshold, $codeRevision, $verifyFrozen): array {
-            $release = DB::selectOne('SELECT id,boundary_set_id,input_revision,status,facility_period,population_policy,area_policy FROM gis.dataset_releases WHERE id=? FOR SHARE', [$releaseId]);
+            $release = DB::selectOne('SELECT id,boundary_set_id,input_revision,status,facility_period,population_policy,area_policy FROM gis.dataset_releases WHERE id=?'.($verifyFrozen ? '' : ' FOR SHARE'), [$releaseId]);
             if ($release === null || ! in_array($release->status, $verifyFrozen ? ['validated', 'published'] : ['draft'], true)) {
-                throw new InvalidArgumentException('Analysis preparation requires a draft release.');
+                throw new InvalidArgumentException($verifyFrozen ? 'Frozen verification requires a validated or published release.' : 'Analysis preparation requires a draft release.');
             }
-            $coverage = $this->coverage->generate($releaseId, $runId, $codeRevision);
+            $coverage = $this->coverage->generate($releaseId, $runId, $codeRevision, ! $verifyFrozen);
             $records = DB::select(file_get_contents(base_path('scripts/analysis/sql/indicators.sql')), [$releaseId, $releaseId, $threshold]);
             if ($records === []) {
                 throw new RuntimeException('Analysis requires a nonempty administrative master.');

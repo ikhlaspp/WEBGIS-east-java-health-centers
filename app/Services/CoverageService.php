@@ -9,10 +9,10 @@ class CoverageService
 {
     public function __construct(private BufferService $buffers) {}
 
-    public function generate(string $releaseId, string $runId, string $codeRevision): array
+    public function generate(string $releaseId, string $runId, string $codeRevision, bool $lockRelease = true): array
     {
-        return DB::transaction(function () use ($releaseId, $runId, $codeRevision): array {
-            $buffer = $this->buffers->generate($releaseId, $runId, $codeRevision);
+        return DB::transaction(function () use ($releaseId, $runId, $codeRevision, $lockRelease): array {
+            $buffer = $this->buffers->generate($releaseId, $runId, $codeRevision, $lockRelease);
             $excluded = array_column($buffer['excluded'], 'reason', 'facility_code');
             $counts = [];
             foreach (DB::table('gis.facility_snapshots')->where('release_id', $releaseId)->get(['facility_code', 'district_id']) as $facility) {

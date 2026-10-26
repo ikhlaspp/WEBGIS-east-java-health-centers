@@ -1,0 +1,16 @@
+{
+  "ticket_id": "WF-086",
+  "status": "in_progress",
+  "predecessor_commit": "dcc245c1b1d1de6126dfa76e40b267730d17c5f1",
+  "predecessor_ci_success": 40276247650,
+  "checkpoints": {
+    "C1_review": "implemented; isolated database CI pending",
+    "C2_analysis": "pending",
+    "C3_validation": "pending",
+    "C4_publish": "pending",
+    "C5_rollback": "pending",
+    "C6_integration": "pending"
+  },
+  "local_validation": "Three capability validation tests passed / six assertions; eight database cases require CI; Pint and whitespace checks passed",
+  "next_action": "Verify C1 database enforcement, then implement capability-authenticated analysis persistence"
+}

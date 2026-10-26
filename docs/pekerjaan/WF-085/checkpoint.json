@@ -1,10 +1,12 @@
 {
   "ticket_id": "WF-085",
-  "status": "in_progress",
+  "status": "done",
   "scope": "Internal admin provisioning, Laravel session authentication, CSRF, login throttling, expiration and authorization",
   "predecessor_commit": "5345967142db281c55cae47c0f8eeb19f535c416",
   "predecessor_ci_success": 40270155964,
   "local_validation": "Four HTTP/CLI validation cases passed, 11 assertions; Pint passed",
-  "database_tests": "Eight synthetic PostGIS/authentication cases pending CI",
-  "next_action": "Verify full CI, then implement authenticated internal lifecycle commands"
+  "database_tests": "Eight synthetic PostGIS/authentication cases passed",
+  "delivery_commit": "dcc245c1b1d1de6126dfa76e40b267730d17c5f1",
+  "ci_success": 40276247650,
+  "next_action": "Implement authenticated internal lifecycle commands"
 }

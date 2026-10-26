@@ -22,3 +22,5 @@ C1 and C2 are verified. C3 validation, C4 publication, C5 rollback and C6 lifecy
 # C3 validation verification
 
 Local targeted tests: two input/CLI tests passed, nine PostGIS cases skipped locally, Pint and whitespace checks passed. Isolated CI pending: real Python files plus explicit partial scope freeze; atomic report/audit; frozen input denial; tampered file, stale revision, wrong ability, zero eligible points, missing explicit partial acceptance, wrong run, injected audit failure; runtime/worker/publisher direct attestation denial. No live Supabase schema or research data was changed.
+
+C3 retest: application and Python jobs succeeded in CI 40320631163 on 74e659d085c838a3cbb80dd3f1a255a3987a410a. All nine isolated DB cases above passed, including injected audit failure rolling back the quality report and candidate status. C1-C3 are verified; C4-C6 remain pending.

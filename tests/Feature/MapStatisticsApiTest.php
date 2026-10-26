@@ -107,13 +107,15 @@ class MapStatisticsApiTest extends GisDatabaseTestCase
     public function test_cache_separates_runs_and_checks_visibility_before_a_hit(): void
     {
         [$first, $second] = $this->prepareFixture(true);
-        $this->getJson('/api/v1/statistics?analysis_run_id='.$first)->assertOk()->assertJsonPath('data.indicative_deficit', 0);
-        $this->getJson('/api/v1/statistics?analysis_run_id='.$second)->assertOk()->assertJsonPath('data.indicative_deficit', 61)->assertJsonPath('data.T', 500);
-        $this->getJson('/api/v1/statistics?analysis_run_id='.$first)->assertOk()->assertJsonPath('data.indicative_deficit', 0);
-        $this->getJson('/api/v1/statistics?analysis_run_id='.$this->id(999))->assertNotFound();
+        $url = '/api/v1/statistics?release_id='.$this->id(6).'&analysis_run_id=';
+        $this->getJson($url.$first)->assertOk()->assertJsonPath('data.indicative_deficit', 0);
+        $this->getJson($url.$second)->assertOk()->assertJsonPath('data.indicative_deficit', 61)->assertJsonPath('data.T', 500);
+        $this->getJson($url.$first)->assertOk()->assertJsonPath('data.indicative_deficit', 0);
+        $this->getJson($url.$this->id(999))->assertNotFound();
         DB::statement('RESET ROLE');
         DB::update("UPDATE gis.dataset_releases SET status='withdrawn'");
-        $this->getJson('/api/v1/statistics?analysis_run_id='.$first)->assertNotFound();
+        $this->getJson($url.$first)->assertNotFound();
+        $this->getJson('/api/v1/statistics')->assertStatus(503)->assertJsonPath('error.code', 'NO_PUBLISHED_RELEASE');
     }
 
     public function test_missing_population_stays_null_without_erasing_facility_counts(): void

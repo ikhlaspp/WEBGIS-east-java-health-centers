@@ -9,6 +9,7 @@ return new class extends Migration
     {
         DB::unprepared(<<<'SQL'
 GRANT CREATE ON SCHEMA gis TO gis_lifecycle_owner;
+GRANT SELECT(id,code) ON gis.regencies TO gis_lifecycle_owner;
 GRANT SELECT,INSERT ON gis.analysis_runs,gis.indicator_results,gis.coverage_results,gis.artifacts TO gis_lifecycle_owner;
 GRANT UPDATE(status,finished_at,output_manifest) ON gis.analysis_runs TO gis_lifecycle_owner;
 GRANT EXECUTE ON FUNCTION gis.valid_geometry(extensions.geometry,text) TO gis_lifecycle_owner;

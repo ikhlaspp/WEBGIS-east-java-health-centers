@@ -15,4 +15,14 @@ php artisan gis:review-location RELEASE_UUID FACILITY_CODE REVIEW_UUID accepted 
 
 For rejection use `rejected` and an explanatory reason; do not pass facility confirmation unless actually established. The candidate must already exist. Acceptance requires verified evidence source, facility precision, evidence URL or note+hash, and point containment in the assigned district. The command does not manufacture coordinates or evidence. Use the same operation UUID and identical arguments for a retry. A stale revision, changed operation request, expired/revoked/wrong-ability token or non-draft release is rejected atomically.
 
-Analysis/validation/publish/rollback commands are pending C2–C6; this guide does not claim they are implemented.
+## Analysis checkpoint
+
+```powershell
+php artisan gis:analyze RELEASE_UUID --run-id=RUN_UUID --threshold=30000 --code-revision=FULL_GIT_COMMIT --token-file=PRIVATE_TOKEN_PATH
+```
+
+Use a token with analyze ability and the worker connection. Explicit run UUID and 40-character code commit are required. Python defaults to .venv/Scripts/python.exe on Windows and python on Linux; GIS_PYTHON_BINARY can select an installed interpreter. The command prepares a hash-pinned private input, invokes the existing Python exporter, validates file hashes and geometry/metric contents, then calls restricted database persistence. It never invokes Python from a public HTTP request.
+
+Same-input/parameter/code retries reuse the successful analysis identity and verify its existing files. A conflicting or corrupted directory is not overwritten. Failed exports or database transactions do not create a successful run; privately generated files may remain for diagnosis. Token expiry/revocation is checked again after export. No raw capability enters the Python command, input bundle, artifact manifest or audit output.
+
+Validation/publish/rollback commands remain pending C3–C6. Analysis does not publish data or mark files publicly sanitized.

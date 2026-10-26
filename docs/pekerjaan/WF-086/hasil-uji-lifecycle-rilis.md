@@ -7,3 +7,11 @@ Pending CI cases cover evidenced acceptance and exact retry, actor/token audit w
 C2–C6 remain pending. C1 verification alone is not full lifecycle acceptance.
 
 Initial CI 40281498309 passed 161 application cases but exposed use of SQLSTATE 40001 for a logical stale-revision conflict. Laravel treats 40001 as a serialization/deadlock error and changes nested transaction handling. Review conflicts now use explicit domain SQLSTATE P4090; the regression retains the expected rejection and verifies subsequent reads/requests see unchanged state. Retest required. This migration has not been applied to the real Supabase database.
+
+C1 retest: full CI 40282014248 succeeded on 7f4b9f4; revision conflict correctly rolls back and does not invoke deadlock handling.
+
+## C2 analysis verification
+
+Local `php artisan test --compact tests/Feature/OperatorAnalysisValidationTest.php tests/Feature/OperatorAnalysisTest.php`: two validation cases passed / five assertions, nine database integration cases skipped locally. Pint and whitespace checks passed. Pending isolated CI covers real Python export followed by restricted persistence, same/different run-ID idempotency, audited actor identity, private artifact registration, valid-point monotonic coverage, wrong ability before export, Python executable failure, tampered artifact retry, direct function recomputation despite forged submitted result values, forbidden runtime/publisher calls, stale revision, and injected midway failure with complete database rollback.
+
+Tests use synthetic data and isolated storage paths, removed after each case. No live Supabase schema/data or actual review decision was changed.

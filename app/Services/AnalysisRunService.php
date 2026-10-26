@@ -64,11 +64,13 @@ class AnalysisRunService
     }
 
     /** Trusted internal persistence; worker/runtime have no direct write grants. Operator entry points belong to the lifecycle service. */
-    public function persist(array $prepared, string $actorId, string $relativeDirectory): array
+    public function persist(array $prepared, string $actorId, string $relativeDirectory, #[\SensitiveParameter] ?string $operatorToken = null): array
     {
-        return DB::transaction(function () use ($prepared, $actorId, $relativeDirectory): array {
-            $actor = DB::selectOne('SELECT id FROM app.users WHERE id=? AND is_admin AND is_active', [$actorId]);
-            if ($actor === null) {
+        return DB::transaction(function () use ($prepared, $actorId, $relativeDirectory, $operatorToken): array {
+            $actor = $operatorToken === null
+                ? DB::selectOne('SELECT id FROM app.users WHERE id=? AND is_admin AND is_active', [$actorId])
+                : DB::selectOne("SELECT actor_id AS id FROM gis.operator_identity(?,'analyze')", [$operatorToken]);
+            if ($actor === null || $actor->id !== $actorId) {
                 throw new InvalidArgumentException('An active internal administrator is required.');
             }
             DB::selectOne('SELECT id FROM gis.dataset_releases WHERE id=? FOR UPDATE', [$prepared['release_id']]);
@@ -78,6 +80,9 @@ class AnalysisRunService
             }
             $parametersHash = hash('sha256', json_encode($fresh['parameters'], JSON_THROW_ON_ERROR));
             $key = hash('sha256', json_encode([$fresh['release_id'], $fresh['input_hash'], $fresh['method_version'], $fresh['code_revision'], $parametersHash], JSON_THROW_ON_ERROR));
+            if ($operatorToken !== null) {
+                $key = DB::selectOne('SELECT gis.analysis_identity(?::jsonb) AS identity', [json_encode($fresh, JSON_THROW_ON_ERROR)])->identity;
+            }
             $existing = DB::table('gis.analysis_runs')->where('idempotency_key', $key)->first();
             if ($existing !== null) {
                 if ($existing->status !== 'succeeded') {
@@ -90,6 +95,11 @@ class AnalysisRunService
                 return ['analysis_run_id' => $existing->id, 'status' => $existing->status, 'replayed' => true];
             }
             $manifest = $this->verifyArtifacts($fresh, $relativeDirectory);
+            if ($operatorToken !== null) {
+                $result = DB::selectOne('SELECT gis.persist_operator_analysis(?,?::jsonb,?::jsonb) AS result', [$operatorToken, json_encode($fresh, JSON_THROW_ON_ERROR), json_encode($manifest, JSON_THROW_ON_ERROR)]);
+
+                return json_decode($result->result, true, 512, JSON_THROW_ON_ERROR);
+            }
             $runId = $fresh['analysis_run_id'];
             DB::table('gis.analysis_runs')->insert([
                 'id' => $runId, 'release_id' => $fresh['release_id'], 'method_version' => $fresh['method_version'], 'code_revision' => $fresh['code_revision'],

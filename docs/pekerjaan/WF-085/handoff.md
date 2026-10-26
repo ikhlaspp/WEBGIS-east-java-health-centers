@@ -1,0 +1,7 @@
+# Admin authentication handoff
+
+Implements the WF-035 session design and WF-085 ticket read from main. Login GET/POST and POST logout live under /admin, with a protected landing page. Login uses the existing app.users UUID/password_hash/admin/active schema through a provider selecting only runtime-granted columns. Web authentication does not issue operator tokens or expose publisher credentials. The operate-internal gate requires an active admin; WF-086 must additionally authenticate command-specific operator abilities in the database.
+
+Provision accounts using `php artisan gis:provision-admin EMAIL --name=NAME` from a trusted terminal with a privileged provisioning connection. Passwords are entered twice through hidden prompts, hashed and never supplied as command flags or printed. Existing accounts are never overwritten. Noninteractive use is refused. No real account was provisioned during implementation. The default seeder no longer installs a known-password user.
+
+Runtime cannot rehash passwords by UPDATE, so login rehash is disabled explicitly; password maintenance belongs to the privileged provisioning lifecycle. Remember-me is unsupported and rejected. File sessions remain the local default. Database sessions use app.sessions with an initial absolute-expiry default; middleware enforces idle/absolute expiration from server-side session timestamps on protected requests. Multi-instance hosting still requires shared persistent session/cache storage and HTTPS. Actual Supabase provisioning and deferred data review remain outstanding.

@@ -5,3 +5,5 @@ Local: `php artisan test --compact tests/Feature/OperatorTokenValidationTest.php
 Pending CI cases cover evidenced acceptance and exact retry, actor/token audit without raw token leakage, wrong/expired/revoked/wrong-ability/inactive credentials, stale revision, wrong facility, missing evidence, unconfirmed precision, outside-boundary point, rejected evidence immutability, runtime/publisher EXECUTE denial, worker direct-write denial, frozen release rejection, and private token issuance/revocation. No actual dataset review was performed.
 
 C2–C6 remain pending. C1 verification alone is not full lifecycle acceptance.
+
+Initial CI 40281498309 passed 161 application cases but exposed use of SQLSTATE 40001 for a logical stale-revision conflict. Laravel treats 40001 as a serialization/deadlock error and changes nested transaction handling. Review conflicts now use explicit domain SQLSTATE P4090; the regression retains the expected rejection and verifies subsequent reads/requests see unchanged state. Retest required. This migration has not been applied to the real Supabase database.

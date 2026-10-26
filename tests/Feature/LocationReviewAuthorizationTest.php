@@ -70,7 +70,7 @@ class LocationReviewAuthorizationTest extends GisDatabaseTestCase
     {
         $request = $this->fixture();
         $service = app(LocationReviewService::class);
-        $this->rejected(fn () => $service->decide(str_repeat('A', 43), [...$request, 'expected_revision' => 0]), '40001');
+        $this->rejected(fn () => $service->decide(str_repeat('A', 43), [...$request, 'expected_revision' => 0]), 'P4090');
         $this->rejected(fn () => $service->decide(str_repeat('A', 43), [...$request, 'facility_code' => '35010100002']), '23514');
         $this->assertSame('pending', DB::table('gis.geocode_reviews')->value('result_status'));
         $this->assertSame(0, DB::table('app.audit_logs')->count());

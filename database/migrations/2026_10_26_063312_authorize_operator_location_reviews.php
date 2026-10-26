@@ -53,7 +53,7 @@ BEGIN
  END IF;
  SELECT id,status,input_revision INTO release_row FROM gis.dataset_releases WHERE id=target_release FOR UPDATE;
  IF NOT FOUND OR release_row.status<>'draft' THEN RAISE EXCEPTION 'Review requires a draft' USING ERRCODE='23514'; END IF;
- IF release_row.input_revision<>expected_revision THEN RAISE EXCEPTION 'Stale release revision' USING ERRCODE='40001'; END IF;
+ IF release_row.input_revision<>expected_revision THEN RAISE EXCEPTION 'Stale release revision' USING ERRCODE='P4090'; END IF;
  SELECT * INTO facility_row FROM gis.facility_snapshots WHERE release_id=target_release AND facility_code=target_facility FOR UPDATE;
  IF NOT FOUND THEN RAISE EXCEPTION 'Facility not found' USING ERRCODE='23514'; END IF;
  SELECT * INTO review_row FROM gis.geocode_reviews WHERE id=target_review AND release_id=target_release AND facility_code=target_facility FOR UPDATE;

@@ -14,6 +14,35 @@ class OperatorAnalysisTest extends GisDatabaseTestCase
 {
     private array $runs = [];
 
+    public function test_exact_numeric_batches_preserve_decimal_precision_and_bound_query_count(): void
+    {
+        $verify = new \ReflectionMethod(AnalysisRunService::class, 'verifyNumericValues');
+        $service = app(AnalysisRunService::class);
+        $values = array_fill(0, 2001, ['actual' => '9007199254740993.000', 'expected' => '9007199254740993']);
+        $values[] = ['actual' => null, 'expected' => null];
+        DB::enableQueryLog();
+        DB::flushQueryLog();
+        try {
+            $verify->invoke($service, $values);
+            $this->assertCount(3, DB::getQueryLog());
+        } finally {
+            DB::disableQueryLog();
+            DB::flushQueryLog();
+        }
+
+        $values[2000]['actual'] = '9007199254740992.999999999999999999';
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('Thematic value differs from the recomputed database result.');
+        $verify->invoke($service, $values);
+    }
+
+    public function test_exact_numeric_batches_reject_null_in_place_of_zero(): void
+    {
+        $verify = new \ReflectionMethod(AnalysisRunService::class, 'verifyNumericValues');
+        $this->expectException(RuntimeException::class);
+        $verify->invoke(app(AnalysisRunService::class), [['actual' => null, 'expected' => '0']]);
+    }
+
     private function fixture(): string
     {
         DB::update('UPDATE app.users SET is_admin=true');

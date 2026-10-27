@@ -206,6 +206,7 @@ class AnalysisRunService
                 throw new RuntimeException('Thematic display policy mismatch.');
             }
             $codes = [];
+            $numericValues = [];
             foreach ($data['features'] ?? [] as $feature) {
                 $code = $feature['id'] ?? '';
                 $properties = $feature['properties'] ?? [];
@@ -222,9 +223,10 @@ class AnalysisRunService
                 }
                 $actual = $properties['value_exact'] ?? null;
                 $value = $rows[$code][$metric];
-                if (($actual === null) !== ($value === null) || ($actual !== null && DB::selectOne('SELECT ?::numeric = ?::numeric AS same', [$actual, $value])->same !== true)) {
+                if (($actual === null) !== ($value === null)) {
                     throw new RuntimeException('Thematic value differs from the recomputed database result.');
                 }
+                $numericValues[] = ['actual' => $actual, 'expected' => $value];
                 $display = $properties['value'] ?? null;
                 if (($display === null) !== ($value === null) || ($display !== null && ((! is_float($display) && ! is_int($display)) || ! is_finite((float) $display) || (float) $display !== (float) $value))) {
                     throw new RuntimeException('Thematic numeric display value mismatch.');
@@ -245,12 +247,23 @@ class AnalysisRunService
             if (count($codes) !== count($rows)) {
                 throw new RuntimeException('Incomplete thematic district layer.');
             }
+            $this->verifyNumericValues($numericValues);
         }
         if (count($seen) !== count($expected)) {
             throw new RuntimeException('Incomplete artifact registry.');
         }
 
         return $manifest;
+    }
+
+    private function verifyNumericValues(array $values): void
+    {
+        foreach (array_chunk($values, 1000) as $batch) {
+            $result = DB::selectOne('SELECT NOT EXISTS (SELECT 1 FROM jsonb_to_recordset(?::jsonb) AS pair(actual numeric, expected numeric) WHERE actual IS DISTINCT FROM expected) AS same', [json_encode($batch, JSON_THROW_ON_ERROR | JSON_PRESERVE_ZERO_FRACTION)]);
+            if ($result->same !== true) {
+                throw new RuntimeException('Thematic value differs from the recomputed database result.');
+            }
+        }
     }
 
     private function canonical(mixed $value): string

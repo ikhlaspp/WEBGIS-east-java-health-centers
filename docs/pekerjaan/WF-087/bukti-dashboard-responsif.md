@@ -31,3 +31,5 @@ Test aktual: `tests/browser/dashboard.spec.js`, menyesuaikan direktori Playwrigh
 Seluruh respons API browser memakai fixture sintetis, termasuk angka 973/565/240/408 dan kelayakan 230. Angka tersebut tidak menyatakan koordinat Archives sudah diterima. Server pengujian diarahkan ke loopback, bukan Supabase. Tidak ada migrasi, impor, publikasi atau perubahan data online dalam pekerjaan ini.
 
 Pengujian awal lulus assertion tetapi cleanup server Windows tertahan. Server sementara dihentikan sesuai identitas proses; pengujian ulang dengan izin kontrol proses selesai normal dalam 12.8 detik.
+
+Verifikasi pengiriman: commit `392b065c0b633bd2edf09e0bed19d7ec0dfa8fcb` tersedia pada branch `work/continued-implementation`, diperiksa melalui `git ls-remote`. [Full CI 40450699944](https://github.com/ikhlaspp/WEBGIS-east-java-health-centers/actions/runs/40450699944) berhasil untuk application dan python, termasuk pengujian database terisolasi serta browser.

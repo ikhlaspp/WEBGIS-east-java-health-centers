@@ -162,3 +162,36 @@ test('late filter responses cannot replace the current map or table', async ({ p
     await expect(page.locator('#facility-rows tr')).toHaveCount(1);
     await expect(page.locator('#map-retry')).toBeHidden();
 });
+
+
+test('shared filter URLs restore controls and survive refresh without changing release', async ({ page }) => {
+    const requests = await fixture(page, { filters: true });
+    const query = new URLSearchParams({ release_id: release, analysis_run_id: run, q: 'Tanpa titik', regency_code: '3501', district_code: '3501010', service_type: 'Non Rawat Inap', area_type: 'Perdesaan', coordinate_status: 'missing' });
+    await page.goto(`/peta?${query}`);
+    await expect(page.locator('#facility-rows')).toContainText('Tanpa titik');
+    await expect(page.locator('#filter-district_code')).toBeEnabled();
+    await expect(page.locator('#filter-regency_code')).toHaveValue('3501');
+    await expect(page.locator('#filter-district_code')).toHaveValue('3501010');
+    await expect(page.locator('#filter-q')).toHaveValue('Tanpa titik');
+    await expect(page.locator('#filter-service_type')).toHaveValue('Non Rawat Inap');
+    await expect(page.locator('#filter-area_type')).toHaveValue('Perdesaan');
+    await page.reload();
+    await expect(page.locator('#filter-district_code')).toBeEnabled();
+    await expect(page.locator('#map-counts')).toContainText('1 terdaftar');
+    await page.getByRole('button', { name: 'Reset filter' }).click();
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    const reset = new URL(page.url());
+    expect([...reset.searchParams.keys()].sort()).toEqual(['analysis_run_id', 'release_id']);
+    expect(reset.searchParams.get('release_id')).toBe(release);
+    expect(requests.some((url) => url.pathname.endsWith('/releases'))).toBeFalsy();
+});
+
+test('invalid shared filters fail visibly and can be cleared', async ({ page }) => {
+    const requests = await fixture(page, { filters: true });
+    await page.goto(`/peta?release_id=${release}&analysis_run_id=${run}&coordinate_status=invented`);
+    await expect(page.locator('#map-status')).toContainText('belum dapat dimuat');
+    expect(requests.some((url) => url.pathname.endsWith('/map/points'))).toBeFalsy();
+    await page.getByRole('button', { name: 'Reset filter' }).click();
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    expect(new URL(page.url()).searchParams.has('coordinate_status')).toBeFalsy();
+});

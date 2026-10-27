@@ -40,20 +40,41 @@ async function selectRelease() {
     }
     return true;
 }
-function remember() { history.replaceState(null, '', pinned(location.href)); }
+function remember() {
+    const url = pinned(location.href);
+    if (form) {
+        for (const key of filterKeys) url.searchParams.delete(key);
+        for (const [key, value] of Object.entries(filters)) url.searchParams.set(key, value);
+    }
+    history.replaceState(null, '', url);
+}
 function fields(container, data) {
     for (const [label, value] of [['Nama', data.name], ['Kode', data.code], ['Alamat', data.address], ['Layanan', data.service_type], ['Wilayah', [data.district_name, data.regency_name].filter(Boolean).join(', ')], ['Status lokasi', statusNames[data.coordinate_status]], ['Presisi', data.precision_level]]) {
         container.append(text('dt', label), text('dd', value || 'Belum tersedia'));
     }
 }
 let map, clusters, tiles, tablePage = 1, pageRequest = 0, loadRequest = 0, regionRequest = 0;
-let filters = {};
+const filterKeys = ['q', 'regency_code', 'district_code', 'service_type', 'area_type', 'coordinate_status'];
 const form = byId('map-filters');
+let filters = form ? Object.fromEntries(filterKeys.filter((key) => search.get(key)).map((key) => [key, search.get(key).trim()])) : {};
+let regionsLoaded = false;
+let invalidFilters = false;
+if (form) {
+    for (const [key, value] of Object.entries(filters)) {
+        const control = form.elements[key];
+        if (key === 'regency_code' || key === 'district_code') {
+            if (!(key === 'regency_code' ? /^\d{4}$/ : /^\d{7}$/).test(value) || (key === 'district_code' && !filters.regency_code)) invalidFilters = true;
+            else control.add(new Option(value, value));
+        } else if (key === 'q' ? value.length > 100 : ![...control.options].some((option) => option.value === value)) invalidFilters = true;
+        control.value = value;
+    }
+}
 function options(select, rows, label) {
     select.replaceChildren(new Option(label, ''));
     for (const row of rows) select.add(new Option(row.name, row.code));
 }
-async function loadRegions() {
+async function loadRegions(selectedDistrict = '') {
+    if (typeof selectedDistrict !== 'string') selectedDistrict = '';
     const request = ++regionRequest;
     const parent = form.elements.regency_code.value;
     const district = form.elements.district_code;
@@ -62,10 +83,22 @@ async function loadRegions() {
     byId('region-retry').hidden = true;
     byId('region-status').textContent = 'Memuat wilayah...';
     try {
+        if (!regionsLoaded) {
+            const catalog = await get(root.dataset.regions, { level: 'regency' });
+            if (request !== regionRequest) return;
+            if (!Array.isArray(catalog.data) || catalog.data.some((row) => !/^\d{4}$/.test(row.code))) throw new Error('regions');
+            options(form.elements.regency_code, catalog.data, 'Semua kabupaten/kota');
+            form.elements.regency_code.value = parent;
+            if (parent && form.elements.regency_code.value !== parent) throw new Error('regions');
+            regionsLoaded = true;
+        }
+        if (!parent) { byId('region-status').textContent = ''; return; }
         const body = await get(root.dataset.regions, parent ? { level: 'district', parent_code: parent } : { level: 'regency' });
         if (request !== regionRequest) return;
         if (!Array.isArray(body.data) || body.data.some((row) => !(parent ? /^\d{7}$/ : /^\d{4}$/).test(row.code))) throw new Error('regions');
         options(parent ? district : form.elements.regency_code, body.data, parent ? 'Semua kecamatan' : 'Semua kabupaten/kota');
+        district.value = selectedDistrict;
+        if (selectedDistrict && district.value !== selectedDistrict) throw new Error('regions');
         district.disabled = !parent;
         byId('region-status').textContent = '';
     } catch {
@@ -86,6 +119,7 @@ if (root.id === 'facility-map') {
     byId('map-fit').onclick = () => { if (markers.size) map.fitBounds(clusters.getBounds(), { padding: [35, 35], maxZoom: 14, animate: false }); };
     form.onsubmit = (event) => {
         event.preventDefault();
+        invalidFilters = false;
         filters = Object.fromEntries([...new FormData(form)].map(([key, value]) => [key, value.trim()]).filter(([, value]) => value));
         load();
     };
@@ -94,6 +128,9 @@ if (root.id === 'facility-map') {
         options(form.elements.district_code, [], 'Semua kecamatan');
         form.elements.district_code.disabled = true;
         filters = {};
+        invalidFilters = false;
+        byId('region-status').textContent = '';
+        byId('region-retry').hidden = true;
         load();
     };
     form.elements.regency_code.onchange = loadRegions;
@@ -171,6 +208,7 @@ async function load() {
         byId('previous-page').disabled = byId('next-page').disabled = true;
     } else byId('facility-fields').replaceChildren();
     try {
+        if (invalidFilters) throw new Error('filters');
         if (!await selectRelease()) { byId('map-status').textContent = 'Belum ada rilis publik.'; return; }
         if (!map) {
             const body = await get(root.dataset.endpoint);
@@ -199,7 +237,7 @@ async function load() {
         byId('map-period').textContent = `Periode fasilitas: ${body.meta.source_periods?.facilities || 'Belum tersedia'} · Rilis: ${release}`;
         byId('map-status').textContent = markers.size ? 'Peta siap. Pilih kelompok titik untuk memperbesar; titik bertumpuk dapat dibuka satu per satu.' : 'Tidak ada titik yang dapat dipetakan. Periksa daftar fasilitas.';
         await loadTable(1);
-        if (request === loadRequest && form.elements.regency_code.options.length === 1) loadRegions();
+        if (request === loadRequest && !regionsLoaded) loadRegions(filters.district_code);
     } catch {
         if (request !== loadRequest) return;
         clusters?.clearLayers(); markers.clear();

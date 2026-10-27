@@ -1,4 +1,4 @@
-# Internal operator commands — work in progress
+# Internal operator commands
 
 Provisioning commands require a separate privileged connection and an active admin account. Runtime/worker/publisher roles cannot mint capabilities. Do not put raw tokens in command arguments, source control, logs or browser sessions.
 
@@ -25,7 +25,7 @@ Use a token with analyze ability and the worker connection. Explicit run UUID an
 
 Same-input/parameter/code retries reuse the successful analysis identity and verify its existing files. A conflicting or corrupted directory is not overwritten. Failed exports or database transactions do not create a successful run; privately generated files may remain for diagnosis. Token expiry/revocation is checked again after export. No raw capability enters the Python command, input bundle, artifact manifest or audit output.
 
-Validation/publish/rollback commands remain pending C3–C6. Analysis does not publish data or mark files publicly sanitized.
+Analysis does not publish data or mark files publicly sanitized. Validation, publication and rollback are separate authorized operations described below.
 # Release validation
 
 Backup prerequisite: create a real database snapshot and artifact backup through the deployment backup workflow, place them privately under `storage/app/private/backups/<checkpoint-uuid>/database.snapshot` and `artifacts.bundle`, then run `php artisan gis:verify-backup <checkpoint-uuid> --token-file=<private-token-path>`. Requires publish ability and trusted verifier access. New publication requires a verified checkpoint for the connected database completed within the last 24 hours. The command checks bytes/hashes and records immutable evidence; it neither creates backups nor certifies a restore drill. Never update a manifest timestamp to make an old backup appear fresh.

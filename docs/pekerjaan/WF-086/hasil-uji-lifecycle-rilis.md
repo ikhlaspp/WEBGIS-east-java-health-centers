@@ -1,4 +1,14 @@
-# Lifecycle checks — C1 progress
+# Verified operator lifecycle
+
+WF-086 implementation is complete. Full CI [40413199874](https://github.com/ikhlaspp/WEBGIS-east-java-health-centers/actions/runs/40413199874) succeeded on a80b9bce99bb57d053538b1087ddd758600e44e9, including application/PostGIS, Python and browser checks. All six checkpoints and the final installation-bound backup gate are verified with synthetic inputs. No real dataset acceptance, publication, rollback, backup capture or restore drill is claimed.
+
+Actual regression files are LocationReviewAuthorizationTest, OperatorAnalysisTest, ReleaseValidationTest, ReleasePublicationTest, ReleaseRollbackTest, ReleaseOutboxTest and BackupVerificationTest under tests/Feature, plus local input/capability tests. The concurrency cases use a second PHP/PDO process, observe its lock wait and assert P4090 after the winning transaction commits. Both publish/rollback race orders preserve one consistent pointer and immutable historical releases. Event retries, stale acknowledgements, cache failure, missing/expired backups, wrong database/installation identity and private-byte tampering are exercised.
+
+The final local input suite passed four tests/five assertions; PostGIS cases are intentionally skipped locally and executed in the guarded loopback CI database. Pint and whitespace checks passed. See [handoff.md](handoff.md) and [checkpoint.json](checkpoint.json) for current state and the next ticket.
+
+## Historical checkpoint notes
+
+The pending statements below record earlier stages and are superseded by the successful final run above.
 
 Local: `php artisan test --compact tests/Feature/OperatorTokenValidationTest.php tests/Feature/LocationReviewAuthorizationTest.php` passed three local cases / six assertions and skipped eight isolated database cases. Pint and whitespace checks passed.
 

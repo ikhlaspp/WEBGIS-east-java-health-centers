@@ -24,7 +24,7 @@ async function fixture(page, options = {}) {
             return route.fulfill({ json: { type: 'FeatureCollection', features, meta: { ...meta, filtered_registered: selected.length, filtered_mapped: features.length, filtered_missing: selected.length - features.length } } });
         }
         if (url.pathname.endsWith('/facilities')) return route.fulfill({ json: { data: url.searchParams.get('page') === '2' ? [facilities[3]] : selected, meta: { ...meta, ...(options.mismatch ? { release_id: run } : {}), total: options.pages ? 51 : selected.length } } });
-        return route.fulfill({ json: { data: facilities.find((f) => url.pathname.endsWith(f.code)), meta } });
+        return route.fulfill({ json: { data: options.detail || facilities.find((f) => url.pathname.endsWith(f.code)), meta } });
     });
     return requests;
 }
@@ -194,4 +194,39 @@ test('invalid shared filters fail visibly and can be cleared', async ({ page }) 
     await page.getByRole('button', { name: 'Reset filter' }).click();
     await expect(page.locator('#table-status')).toContainText('4 fasilitas');
     expect(new URL(page.url()).searchParams.has('coordinate_status')).toBeFalsy();
+});
+
+
+test('facility detail shows provenance, safe source links and missing coordinates', async ({ page }) => {
+    const detail = { ...facilities[3], area_type: 'Perdesaan', source: { title: '<img src=x onerror="window.injected=1">', publisher: 'Penerbit uji', observation_period: '2024-S1', publication_year: 2025, license_note: 'Lisensi uji', limitations: 'Koordinat belum tersedia', source_url: 'https://example.test/source' }, coordinate_source: { title: 'Kandidat', source_url: 'javascript:alert(1)' } };
+    await fixture(page, { detail });
+    await page.goto(`/puskesmas/${detail.code}?release_id=${release}&analysis_run_id=${run}`);
+    await expect(page.locator('#facility-fields')).toContainText('Perdesaan');
+    await expect(page.locator('#facility-location-note')).toContainText('belum memiliki koordinat');
+    await expect(page.locator('#facility-sources')).toContainText(detail.source.title);
+    await expect(page.locator('#facility-sources')).toContainText('2024-S1');
+    await expect(page.locator('#facility-sources')).toContainText('Koordinat belum tersedia');
+    await expect(page.locator('#facility-sources img')).toHaveCount(0);
+    await expect(page.locator('#facility-sources a')).toHaveCount(1);
+    await expect(page.locator('#facility-sources a')).toHaveAttribute('href', 'https://example.test/source');
+    expect(await page.evaluate(() => window.injected)).toBeUndefined();
+    await page.getByRole('link', { name: 'Kembali ke peta' }).click();
+    await expect(page).toHaveURL(new RegExp(`release_id=${release}.*analysis_run_id=${run}`));
+});
+
+test('facility detail rejects mismatched identity and invalid coordinates without partial data', async ({ page }) => {
+    const detail = { ...facilities[0], location: { type: 'Point', coordinates: [-7.3, 112.7] } };
+    await fixture(page, { detail });
+    await page.goto(`/puskesmas/${detail.code}?release_id=${release}&analysis_run_id=${run}`);
+    await expect(page.locator('#map-status')).toContainText('belum dapat dimuat');
+    await expect(page.locator('#facility-fields')).toBeEmpty();
+    detail.location = facilities[0].location;
+    detail.code = facilities[1].code;
+    await page.getByRole('button', { name: 'Coba lagi', exact: true }).click();
+    await expect(page.locator('#map-status')).toContainText('belum dapat dimuat');
+    await expect(page.locator('#facility-sources')).toBeEmpty();
+    detail.code = facilities[0].code;
+    await page.getByRole('button', { name: 'Coba lagi', exact: true }).click();
+    await expect(page.locator('#facility-fields')).toContainText('112.7, -7.3');
+    await expect(page.locator('#facility-sources')).toContainText('Informasi sumber belum tersedia.');
 });

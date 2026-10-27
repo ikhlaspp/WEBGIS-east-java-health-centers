@@ -52,6 +52,35 @@ function fields(container, data) {
     for (const [label, value] of [['Nama', data.name], ['Kode', data.code], ['Alamat', data.address], ['Layanan', data.service_type], ['Wilayah', [data.district_name, data.regency_name].filter(Boolean).join(', ')], ['Status lokasi', statusNames[data.coordinate_status]], ['Presisi', data.precision_level]]) {
         container.append(text('dt', label), text('dd', value || 'Belum tersedia'));
     }
+    container.append(text('dt', 'Jenis wilayah'), text('dd', data.area_type || 'Belum tersedia'));
+    const coordinates = data.location?.coordinates;
+    if (data.location !== null && data.location !== undefined && (data.location.type !== 'Point' || !Array.isArray(coordinates) || coordinates.length !== 2 || !coordinates.every(Number.isFinite) || Math.abs(coordinates[0]) > 180 || Math.abs(coordinates[1]) > 90)) throw new Error('geometry');
+    container.append(text('dt', 'Koordinat (bujur, lintang)'), text('dd', coordinates ? coordinates.join(', ') : 'Tidak tersedia'));
+    byId('facility-location-note').textContent = coordinates ? 'Koordinat ditampilkan sesuai sumber. Status lokasi dan presisi perlu diperhatikan; keberadaan titik tidak membuktikan batas layanan atau waktu tempuh.' : 'Fasilitas ini belum memiliki koordinat. Tidak ada titik pengganti yang dibuat.';
+}
+function sources(data) {
+    const container = byId('facility-sources');
+    for (const [key, title] of [['source', 'Sumber data fasilitas'], ['coordinate_source', 'Sumber koordinat']]) {
+        const section = document.createElement('section');
+        section.append(text('h3', title));
+        const source = data[key];
+        if (!source) section.append(text('p', 'Informasi sumber belum tersedia.'));
+        else {
+            const list = document.createElement('dl');
+            for (const [label, field] of [['Judul', 'title'], ['Penerbit', 'publisher'], ['Tahun publikasi', 'publication_year'], ['Periode observasi', 'observation_period'], ['Lisensi', 'license_note'], ['Keterbatasan', 'limitations']]) {
+                list.append(text('dt', label), text('dd', source[field] || 'Belum tersedia'));
+            }
+            section.append(list);
+            try {
+                const url = new URL(source.source_url);
+                if (['http:', 'https:'].includes(url.protocol) && !url.username && !url.password) {
+                    const link = text('a', 'Buka sumber'); link.href = url.href; link.rel = 'noopener noreferrer';
+                    section.append(link);
+                }
+            } catch { /* A missing or invalid source URL is not a navigable citation. */ }
+        }
+        container.append(section);
+    }
 }
 let map, clusters, tiles, tablePage = 1, pageRequest = 0, loadRequest = 0, regionRequest = 0;
 const filterKeys = ['q', 'regency_code', 'district_code', 'service_type', 'area_type', 'coordinate_status'];
@@ -206,13 +235,17 @@ async function load() {
         ++pageRequest; clusters.clearLayers(); markers.clear();
         for (const id of ['facility-rows', 'map-counts', 'map-period', 'table-status', 'table-page']) byId(id).replaceChildren();
         byId('previous-page').disabled = byId('next-page').disabled = true;
-    } else byId('facility-fields').replaceChildren();
+    } else {
+        for (const id of ['facility-fields', 'facility-sources', 'facility-location-note']) byId(id).replaceChildren();
+    }
     try {
         if (invalidFilters) throw new Error('filters');
         if (!await selectRelease()) { byId('map-status').textContent = 'Belum ada rilis publik.'; return; }
         if (!map) {
             const body = await get(root.dataset.endpoint);
-            fields(byId('facility-fields'), body.data); remember();
+            if (request !== loadRequest) return;
+            if (body.data?.code !== root.dataset.endpoint.split('/').at(-1)) throw new Error('identity');
+            fields(byId('facility-fields'), body.data); sources(body.data); remember();
             byId('map-status').textContent = `Periode fasilitas: ${body.meta.source_periods?.facilities || 'Belum tersedia'}. Rilis: ${release}`;
             return;
         }
@@ -241,6 +274,7 @@ async function load() {
     } catch {
         if (request !== loadRequest) return;
         clusters?.clearLayers(); markers.clear();
+        if (!map) for (const id of ['facility-fields', 'facility-sources', 'facility-location-note']) byId(id).replaceChildren();
         byId('map-status').textContent = 'Data belum dapat dimuat. Rilis tidak diganti otomatis. Coba lagi.';
         byId('map-retry').hidden = false;
     }

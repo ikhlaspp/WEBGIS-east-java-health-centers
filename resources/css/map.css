@@ -14,8 +14,8 @@
 .facility-marker.unverified { background: #9b541b; }
 .facility-marker.rejected { background: #61646b; }
 .leaflet-popup-content { overflow-wrap: anywhere; }
-#facility-fields dt { font-weight: 700; margin-top: 16px; }
-#facility-fields dd { margin: 0; overflow-wrap: anywhere; }
+#facility-detail dt { font-weight: 700; margin-top: 16px; }
+#facility-detail dd { margin: 0; overflow-wrap: anywhere; }
 @media (max-width: 560px) { #map-canvas { height: 420px; } .map-page th, .map-page td { padding: 8px; font-size: 13px; } }
 
 .map-filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin-block: 20px; }

@@ -1,11 +1,13 @@
 {
   "ticket_id": "WF-076",
-  "status": "blocked",
+  "status": "in_progress",
   "scope": "Actual curated dataset load",
   "blocking_dependencies": [
-    "WF-071",
-    "WF-072"
+    "WF-071 remains required for quality acceptance/publication"
   ],
-  "user_decision": "Deferred review; continue independent implementation, not publication",
-  "next_independent_ticket": "WF-077"
+  "user_decision": "27 October: continue real draft preparation/import after Supabase migrations; preserve pending location acceptance",
+  "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+  "phase": "Six private canonical batches prepared; database import running; no publication",
+  "expected_counts": {"facilities": 973, "districts": 666, "regencies": 38, "unverified": 565, "missing": 408, "verified": 0},
+  "next_action": "Finish batches, reconcile database identities/values and revoke temporary import capability"
 }

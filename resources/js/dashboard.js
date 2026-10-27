@@ -3,6 +3,8 @@ const root = document.querySelector('#dashboard');
 if (root) {
     const byId = (id) => document.getElementById(id);
     const number = new Intl.NumberFormat('id-ID');
+    const decimal = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 2 });
+    const metricUnits = { population: 'jiwa', area_km2: 'km²', density: 'jiwa/km²', population_per_facility: 'jiwa/fasilitas', indicative_deficit: 'fasilitas' };
     const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     const search = new URLSearchParams(location.search);
     let release = search.get('release_id');
@@ -19,6 +21,9 @@ if (root) {
     }
 
     function clear() {
+        byId('analysis-summary').hidden = true;
+        byId('analysis-note').textContent = '';
+        document.querySelectorAll('[data-metric]').forEach((element) => { element.textContent = ''; });
         document.querySelectorAll('[data-count]').forEach((element) => { element.textContent = '—'; });
         byId('release-details').hidden = true;
         byId('region-list').replaceChildren();
@@ -88,6 +93,19 @@ if (root) {
                 || !Array.isArray(regions.data) || !Array.isArray(sources.data)) throw new Error('counts');
             const dates = stats.meta.source_periods;
             if (!dates || !Number.isSafeInteger(stats.data?.district_count)) throw new Error('shape');
+            for (const key of Object.keys(metricUnits)) {
+                const value = stats.data[key];
+                if (value !== null && (typeof value !== 'number' || !Number.isFinite(value) || value < 0)) throw new Error('metric');
+                if (value !== null && ['population', 'indicative_deficit'].includes(key) && !Number.isSafeInteger(value)) throw new Error('metric');
+            }
+            if (!Number.isSafeInteger(stats.data.T) || stats.data.T <= 0 || !['complete', 'partial'].includes(stats.data.completeness)) throw new Error('metric');
+            document.querySelectorAll('[data-metric]').forEach((element) => {
+                const key = element.dataset.metric;
+                const value = stats.data[key];
+                element.textContent = value === null ? 'Tidak tersedia' : `${decimal.format(value)} ${metricUnits[key]}`;
+            });
+            byId('analysis-note').textContent = `Ambang analisis: ${number.format(stats.data.T)} jiwa per fasilitas. ${stats.data.completeness === 'partial' ? 'Data sumber parsial; sebagian indikator mungkin tidak tersedia.' : 'Data penduduk dan luas tersedia untuk seluruh kecamatan dalam ringkasan.'}`;
+            byId('analysis-summary').hidden = false;
             document.querySelectorAll('[data-count]').forEach((element) => { element.textContent = number.format(counts[element.dataset.count]); });
             byId('release-label').textContent = label;
             byId('facility-period').textContent = dates.facilities || 'Belum tersedia';

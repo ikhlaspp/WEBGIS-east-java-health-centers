@@ -19,6 +19,18 @@
         <p id="coverage-note" class="coverage-note">Kelengkapan lokasi akan ditampilkan setelah data tersedia.</p>
         <div id="release-details" class="period-panel" hidden><h3>Periode sumber</h3><dl><div><dt>Fasilitas</dt><dd id="facility-period"></dd></div><div><dt>Penduduk</dt><dd id="population-period"></dd></div><div><dt>Luas wilayah</dt><dd id="area-period"></dd></div></dl><details><summary>Identitas rilis &amp; analisis</summary><p id="release-identity"></p></details></div>
     </section>
+    <section id="analysis-summary" class="dashboard-section period-panel" aria-labelledby="analysis-title" hidden>
+        <h2 id="analysis-title">Ringkasan indikator</h2>
+        <dl>
+            <div><dt>Penduduk</dt><dd data-metric="population"></dd></div>
+            <div><dt>Luas wilayah sumber</dt><dd data-metric="area_km2"></dd></div>
+            <div><dt>Kepadatan penduduk</dt><dd data-metric="density"></dd></div>
+            <div><dt>Penduduk per fasilitas</dt><dd data-metric="population_per_facility"></dd></div>
+            <div><dt>Defisit indikatif</dt><dd data-metric="indicative_deficit"></dd></div>
+        </dl>
+        <p id="analysis-note"></p>
+        <p>Defisit merupakan jumlah defisit indikatif kecamatan, bukan kebutuhan layanan yang telah ditetapkan. Nilai tidak tersedia tidak berarti nol. Periode sumber mengikuti rilis di atas.</p>
+    </section>
     <section id="wilayah" class="dashboard-section" aria-labelledby="regions-title"><div class="section-heading"><div><p class="eyebrow">CAKUPAN ADMINISTRATIF</p><h2 id="regions-title">Wilayah dalam ringkasan</h2></div><p id="region-summary">Menunggu data rilis.</p></div><ul id="region-list" class="region-list" aria-label="Kabupaten dan kota"></ul><p id="boundary-note" class="muted"></p></section>
     <section id="metode" class="dashboard-section methods" aria-labelledby="methods-title"><div><p class="eyebrow">SUMBER &amp; INTERPRETASI</p><h2 id="methods-title">Kenali batas datanya.</h2><p>Periode fasilitas, penduduk, dan luas wilayah dapat berbeda. Ringkasan ini mempertahankan rilis yang sama selama Anda membacanya.</p></div><div><h3>Bagaimana membaca analisis?</h3><p>Jumlah fasilitas mengikuti wilayah administratif. Analisis radius hanya memakai titik fasilitas yang memenuhi syarat verifikasi. Radius geometris bukan waktu tempuh, wilayah layanan resmi, atau ukuran akses jalan.</p><h3>Sumber pada rilis ini</h3><ul id="source-list" class="source-list"><li>Sumber akan tampil bersama data rilis.</li></ul><ul id="warning-list" class="warning-list" aria-label="Keterbatasan sumber"></ul></div></section>
 </div>

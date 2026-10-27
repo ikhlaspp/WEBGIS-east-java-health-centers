@@ -21,7 +21,7 @@ async function fixtures(page, options = {}) {
         } else if (url.pathname.endsWith('/statistics')) {
             if (options.error?.()) return route.fulfill({ status: 503, json: { error: 'unavailable' } });
             if (options.delay) await new Promise((resolve) => setTimeout(resolve, options.delay));
-            body = { data: { district_count: 666 }, meta: options.zero ? { ...meta, coordinate_coverage: { registered: 0, mapped: 0, verified: 0, missing: 0, eligible: null }, source_periods: { facilities: '2024', population_years: [], area_years: [null] } } : meta };
+            body = { data: { district_count: 666, population: 300000, area_km2: 120.5, density: 2489.63, population_per_facility: 308.32, indicative_deficit: 0, T: 30000, completeness: 'complete', ...options.metrics }, meta: options.zero ? { ...meta, coordinate_coverage: { registered: 0, mapped: 0, verified: 0, missing: 0, eligible: null }, source_periods: { facilities: '2024', population_years: [], area_years: [null] } } : meta };
         } else if (url.pathname.endsWith('/regions')) {
             body = { data: [{ code: '3501', name: 'Kabupaten uji' }, { code: '3571', name: 'Kota uji' }], meta: options.mismatch ? { ...meta, release_id: '00000000-0000-4000-8000-000000000099' } : meta };
         } else {
@@ -115,4 +115,27 @@ test('keyboard navigation exposes a skip link and invalid pinned identities fail
     await expect(page.getByRole('link', { name: 'Lewati ke konten' })).toBeFocused();
     await expect(page.getByRole('status')).toContainText('Data belum dapat dimuat');
     expect(requests).toHaveLength(0);
+});
+
+
+test('analysis summary uses units, distinguishes null from zero and identifies partial sources', async ({ page }) => {
+    await fixtures(page, { metrics: { population: null, density: null, completeness: 'partial' } });
+    await page.goto('/');
+    await expect(page.locator('#analysis-summary')).toBeVisible();
+    await expect(page.locator('[data-metric="population"]')).toHaveText('Tidak tersedia');
+    await expect(page.locator('[data-metric="density"]')).toHaveText('Tidak tersedia');
+    await expect(page.locator('[data-metric="indicative_deficit"]')).toHaveText('0 fasilitas');
+    await expect(page.locator('[data-metric="area_km2"]')).toContainText('120,5');
+    await expect(page.locator('[data-metric="population_per_facility"]')).toHaveText('308,32 jiwa/fasilitas');
+    await expect(page.locator('#analysis-note')).toContainText('30.000 jiwa per fasilitas');
+    await expect(page.locator('#analysis-note')).toContainText('Data sumber parsial');
+});
+
+test('invalid analysis values leave no partial dashboard results', async ({ page }) => {
+    await fixtures(page, { metrics: { density: -1 } });
+    await page.goto('/');
+    await expect(page.getByRole('status')).toContainText('Data belum dapat dimuat');
+    await expect(page.locator('#analysis-summary')).toBeHidden();
+    await expect(page.locator('[data-metric="density"]')).toBeEmpty();
+    await expect(page.locator('#region-list li')).toHaveCount(0);
 });

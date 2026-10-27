@@ -7,7 +7,34 @@
   ],
   "user_decision": "27 October: continue real draft preparation/import after Supabase migrations; preserve pending location acceptance",
   "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
-  "phase": "Six private canonical batches prepared; database import running; no publication",
-  "expected_counts": {"facilities": 973, "districts": 666, "regencies": 38, "unverified": 565, "missing": 408, "verified": 0},
-  "next_action": "Finish batches, reconcile database identities/values and revoke temporary import capability"
+  "phase": "All six batches reconciled; private analysis succeeded; quality acceptance pending",
+  "expected_counts": {
+    "facilities": 973,
+    "districts": 666,
+    "regencies": 38,
+    "unverified": 565,
+    "missing": 408,
+    "verified": 0
+  },
+  "reconciliation": {
+    "facility_identity_mismatches": 0,
+    "missing_facility_ids": 0,
+    "indicator_value_or_year_mismatches": 0,
+    "indicator_rows": 666,
+    "active_automation_accounts": 0,
+    "live_automation_tokens": 0
+  },
+  "implementation_commit": "379cb17f2a2e9cfe528e31951de6eeed36af0214",
+  "ci_success": 40482159998,
+  "next_action": "Resolve source/location quality acceptance before validation and publication; do not promote unverified coordinates automatically",
+  "analysis": {
+    "run_id": "b08c7a1b-426f-4658-9438-25edbb2195fe",
+    "status": "succeeded",
+    "indicator_results": 666,
+    "coverage_results": 1998,
+    "coverage_completeness": "unavailable",
+    "eligible_locations": 0,
+    "private_artifacts": 5,
+    "temporary_input_removed": true
+  }
 }

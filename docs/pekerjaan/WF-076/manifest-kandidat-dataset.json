@@ -1,8 +1,10 @@
 {
   "ticket_id": "WF-076",
-  "status": "blocked",
-  "release_id": null,
-  "database_import_performed": false,
+  "status": "draft_imported_pending_quality_acceptance",
+  "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+  "database_import_performed": true,
+  "private_batch_manifest": "storage/app/private/imports/archives-draft-v2/manifest.json",
+  "successful_batches": 6,
   "available_inputs": [
     {
       "path": "data/processed/facility-master.json",
@@ -26,8 +28,7 @@
     }
   ],
   "blockers": [
-    "WF-071 final spatial quality acceptance is deferred with location review",
-    "Supabase development/test credentials and provisioning are not configured"
+    "WF-071 final spatial quality acceptance is deferred with location review"
   ],
-  "next_action": "After review and provisioning, export canonical bounded batches, import into an actual draft, and reconcile file/database identities and counts."
+  "next_action": "Draft import reconciled. Complete location/source acceptance and analysis validation before publication."
 }

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,6 +27,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if ($this->app->environment('testing')) {
+            Vite::useHotFile(storage_path('framework/testing-vite.hot'));
+        }
+
         Auth::provider('gis-runtime', fn ($app, array $config) => new RuntimeUserProvider($app['hash'], $config['model']));
         Gate::define('operate-internal', fn (User $user): bool => $user->is_active && $user->is_admin);
         RateLimiter::for('public-api', function (Request $request) {

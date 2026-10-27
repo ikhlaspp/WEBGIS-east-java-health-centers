@@ -12,7 +12,7 @@
     <header class="site-header">
         <div class="shell header-inner">
             <a class="brand" href="{{ route('home') }}" aria-label="Puskesmas Jawa Timur — beranda"><span class="brand-symbol" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" focusable="false"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2"/></svg></span><span>PUSKESMAS<span class="brand-region">JAWA TIMUR</span></span></a>
-            <nav aria-label="Navigasi utama"><a href="#ringkasan">Ringkasan</a><a href="#wilayah">Wilayah</a><a href="#metode">Sumber &amp; metode</a></nav>
+            <nav aria-label="Navigasi utama"><a data-release-link href="{{ route('home') }}#ringkasan">Ringkasan</a><a data-release-link href="{{ route('map') }}">Peta</a><a data-release-link href="{{ route('home') }}#wilayah">Wilayah</a><a data-release-link href="{{ route('home') }}#metode">Sumber &amp; metode</a></nav>
             <a class="admin-link" href="{{ route('login') }}">Masuk admin <span aria-hidden="true">↗</span></a>
         </div>
     </header>

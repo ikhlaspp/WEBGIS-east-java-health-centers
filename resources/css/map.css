@@ -1,0 +1,19 @@
+.map-page { padding-block: 40px; }
+.map-page h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.2; margin-block: 12px; }
+.map-page p { margin-block: 12px; overflow-wrap: anywhere; }
+#map-canvas { height: 540px; margin-top: 20px; border: 1px solid var(--line); background: #e7ece5; z-index: 0; }
+.map-toolbar { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-block: 20px; }
+.map-page button { border: 1px solid var(--line); background: white; padding: 8px 12px; border-radius: 4px; cursor: pointer; }
+.map-page button:disabled { opacity: .45; cursor: default; }
+.map-toolbar span { flex: 1; min-width: 160px; }
+.map-table-scroll { overflow-x: auto; }
+.map-page table { border-collapse: collapse; width: 100%; text-align: left; }
+.map-page th, .map-page td { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.map-page td button { display: block; margin-top: 8px; }
+.facility-marker { border-radius: 50%; background: #193d38; color: white; border: 2px solid white; box-shadow: 0 1px 5px #0006; text-align: center; font-size: 18px; }
+.facility-marker.unverified { background: #9b541b; }
+.facility-marker.rejected { background: #61646b; }
+.leaflet-popup-content { overflow-wrap: anywhere; }
+#facility-fields dt { font-weight: 700; margin-top: 16px; }
+#facility-fields dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 560px) { #map-canvas { height: 420px; } .map-page th, .map-page td { padding: 8px; font-size: 13px; } }

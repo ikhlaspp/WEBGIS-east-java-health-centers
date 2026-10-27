@@ -1,0 +1,10 @@
+{
+  "ticket_id": "WF-087",
+  "status": "implemented_local_verified",
+  "predecessor_commit": "253480d964d53e05ed34fcf83fd70daa787da9fd",
+  "scope": "Indonesian responsive public dashboard with release-pinned statistics, region summary, sources and accessible navigation",
+  "local_validation": "10 browser tests passed (12.8s); 360/768/1366px screenshots visually reviewed; Vite build, JavaScript syntax checks, Pint and landing-page PHP test passed",
+  "delivery": "Pending commit, push and full CI verification",
+  "real_data_status": "Synthetic browser fixtures only; no Supabase modification or real-data acceptance",
+  "next_action": "Verify delivery and CI, then WF-088 base map, markers, clusters and safe popups"
+}

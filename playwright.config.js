@@ -16,6 +16,6 @@ export default defineConfig({
         url: 'http://127.0.0.1:8001/up',
         reuseExistingServer: false,
         timeout: 60_000,
-        env: { APP_ENV: 'testing', SESSION_DRIVER: 'array', CACHE_STORE: 'array' },
+        env: { APP_ENV: 'testing', SESSION_DRIVER: 'array', CACHE_STORE: 'array', DB_HOST: '127.0.0.1', DB_DATABASE: 'gis_browser_testing', DB_URL: '' },
     },
 });

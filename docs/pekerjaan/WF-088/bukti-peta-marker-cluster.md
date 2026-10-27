@@ -32,3 +32,5 @@ Screenshot: `test-results/markers-map-clusters-coloc-b1ffc-ides-safe-popups-and-
 Fixture hanya empat identitas sintetis (tiga titik, satu missing). Kasus paging memakai total sintetis 51 untuk memeriksa kontrol halaman. Tidak ada perubahan database asli.
 
 Referensi implementasi: [Leaflet API 1.9.4](https://leafletjs.com/reference.html), [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster), [kebijakan tile OSM](https://operations.osmfoundation.org/policies/tiles/). Kebijakan provider diverifikasi saat implementasi; kesiapan deployment tetap perlu memastikan referer browser dan penggunaan sesuai kebijakan.
+
+Pengiriman: `1756002d92a147d8cd4f0d9d1249e0ccd356920d` sudah ada pada remote `work/continued-implementation` (SHA cocok melalui ls-remote). [CI 40454524048](https://github.com/ikhlaspp/WEBGIS-east-java-health-centers/actions/runs/40454524048) lulus pada kedua job application dan python, termasuk database terisolasi serta browser Linux.

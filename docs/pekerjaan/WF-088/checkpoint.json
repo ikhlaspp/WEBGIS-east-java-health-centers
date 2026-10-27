@@ -1,10 +1,12 @@
 {
   "ticket_id": "WF-088",
-  "status": "implemented_local_verified",
+  "status": "done",
   "predecessor_commit": "0a4bac424ed87c4856ac84a5366cc9384bbb6803",
   "scope": "Leaflet map, marker clustering, safe popups, pinned detail links and paginated table including missing locations",
   "local_validation": "15 browser tests passed in 21.6s; production build, JavaScript syntax checks, Pint and landing-page PHP test passed; desktop and mobile screenshots reviewed",
-  "delivery": "Pending commit, push and full CI",
+  "delivery": "Pushed to origin/work/continued-implementation; remote SHA verified",
+  "delivery_commit": "1756002d92a147d8cd4f0d9d1249e0ccd356920d",
+  "ci_success": 40454524048,
   "real_data_status": "Synthetic fixtures only; no real data or Supabase changes",
-  "next_action": "Verify GitHub delivery and CI, then WF-089 search and hierarchical filters"
+  "next_action": "WF-089 search and hierarchical filters"
 }

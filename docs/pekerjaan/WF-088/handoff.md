@@ -7,3 +7,5 @@ Target aktual: `resources/js/map/markers.js`, `resources/views/map.blade.php`, `
 Lihat [bukti pengujian](bukti-peta-marker-cluster.md). Pengiriman dan CI dicatat dalam [checkpoint](checkpoint.json). Lanjut WF-089 setelah keduanya terverifikasi: pencarian dan filter bertingkat. Pertahankan satu pasangan rilis/run, hitungan missing, status gagal yang jujur, dan perlindungan respons terlambat saat menambah filter.
 
 Data Archives, review koordinat dan Supabase tidak diubah. Penerimaan lokasi asli tetap mengikuti `docs/PEKERJAAN-LOKASI-DITUNDA.txt`.
+
+Pengiriman terverifikasi: commit `1756002d92a147d8cd4f0d9d1249e0ccd356920d` pada `origin/work/continued-implementation`. [Full CI 40454524048](https://github.com/ikhlaspp/WEBGIS-east-java-health-centers/actions/runs/40454524048) berhasil untuk application (PHP/PostGIS dan browser) serta python. WF-088 selesai; antrean berikutnya WF-089.

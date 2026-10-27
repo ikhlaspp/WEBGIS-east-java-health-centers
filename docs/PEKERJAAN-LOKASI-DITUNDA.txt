@@ -53,3 +53,10 @@ PEMBARUAN DEPLOYMENT (27 Oktober 2026)
 - Siapkan backup DB dan artefak nyata. gis:verify-backup memeriksa file privat dan mencatat checkpoint; publikasi baru ditolak jika tidak ada checkpoint untuk database terkait yang selesai dalam 24 jam terakhir.
 - Format manifest dan perintah: docs/pekerjaan/WF-086/panduan-command-admin.md. Pemeriksaan hash bukan bukti restore berhasil; drill pemulihan tetap pekerjaan deployment.
 - Pengiriman event setelah commit: gis:dispatch-release-events memakai capability publish. Jangan menaruh token, backup atau password di Git.
+
+PEMBARUAN MIGRASI SUPABASE (27 Oktober 2026)
+- Driver pdo_pgsql Laragon sudah diaktifkan. Proses PHP yang lama perlu restart agar membaca konfigurasi baru.
+- Pengguna mengaktifkan PostGIS dan menjalankan migrasi awal. Kegagalan SET ROLE gis_lifecycle_owner diperbaiki dengan membership eksplisit untuk administrator migrasi PostgreSQL managed; role aplikasi tidak mendapat membership lifecycle owner.
+- Seluruh 16 migrasi sekarang berstatus Ran pada Supabase. Pemeriksaan read-only: PostgreSQL 17.11, PostGIS 3.3.7 di extensions, TLS aktif, SRID 4326.
+- Probe GET /api/v1/releases melalui kernel aplikasi menghasilkan HTTP 200, daftar kosong dan active_release null. Skema siap, tetapi belum ada dataset publik. Impor, review, analisis, backup dan publikasi nyata tetap belum dikerjakan.
+- Kredensial administrator migrasi bukan kredensial runtime deployment berprivilese minimum. Provisioning login runtime terpisah tetap pekerjaan deployment.

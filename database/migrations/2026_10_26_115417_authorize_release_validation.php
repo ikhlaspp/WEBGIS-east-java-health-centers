@@ -15,6 +15,9 @@ DO $$ BEGIN
  IF EXISTS(SELECT 1 FROM pg_roles WHERE rolname='gis_artifact_verifier' AND (rolcanlogin OR rolsuper OR rolcreatedb OR rolcreaterole OR rolinherit OR rolbypassrls)) THEN
   RAISE EXCEPTION 'Unsafe existing artifact verifier role';
  END IF;
+ IF NOT (SELECT rolsuper FROM pg_roles WHERE rolname=current_user) THEN
+  EXECUTE format('GRANT gis_artifact_verifier TO %I WITH INHERIT FALSE, SET TRUE',current_user);
+ END IF;
 END $$;
 GRANT USAGE ON SCHEMA gis TO gis_artifact_verifier;
 GRANT CREATE ON SCHEMA gis TO gis_lifecycle_owner;

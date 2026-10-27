@@ -19,6 +19,12 @@ BEGIN
   ELSE
    EXECUTE format('CREATE ROLE %I NOLOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOREPLICATION NOBYPASSRLS',name);
   END IF;
+  -- Managed PostgreSQL administrators can create roles without being able to use them.
+  -- Only the migration administrator receives membership, never an application group.
+  IF NOT (SELECT rolsuper FROM pg_roles WHERE rolname=current_user) THEN
+   EXECUTE format('GRANT %I TO %I WITH INHERIT %s, SET TRUE',name,current_user,
+    CASE WHEN name='gis_lifecycle_owner' THEN 'TRUE' ELSE 'FALSE' END);
+  END IF;
  END LOOP;
 END $$;
 REVOKE ALL ON SCHEMA app,gis,staging FROM PUBLIC;

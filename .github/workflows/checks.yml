@@ -103,6 +103,8 @@ jobs:
           cache-dependency-path: requirements.lock
       - name: Install locked exporter dependencies for database integration tests
         run: python -m pip install --require-hashes -r requirements.lock
+      - name: Verify migrations as a managed-database administrator
+        run: php tests/ci/migrate_non_superuser.php
       - run: php artisan test --log-junit reports/phpunit.xml
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e

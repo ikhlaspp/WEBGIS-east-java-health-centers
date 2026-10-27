@@ -15,13 +15,15 @@ async function fixture(page, options = {}) {
     await page.route('**/api/v1/**', (route) => {
         const url = new URL(route.request().url()); requests.push(url);
         if (url.pathname.endsWith('/releases')) return route.fulfill({ json: { data: [], meta: { active_release_id: options.empty ? null : release } } });
+        if (url.pathname.endsWith('/regions')) return route.fulfill({ json: { data: url.searchParams.get('level') === 'district' ? [{ code: '3501010', name: 'Kecamatan uji' }] : [{ code: '3501', name: 'Kabupaten uji' }, { code: '3502', name: 'Kabupaten lain' }], meta } });
+        const selected = options.filters ? facilities.filter((f) => (!url.searchParams.get('q') || f.name.includes(url.searchParams.get('q'))) && (!url.searchParams.get('coordinate_status') || f.coordinate_status === url.searchParams.get('coordinate_status'))) : facilities;
         if (url.pathname.endsWith('/map/points')) {
             if (options.error?.()) return route.fulfill({ status: 503, json: {} });
-            const features = facilities.filter((f) => f.location).map((f) => ({ type: 'Feature', geometry: f.location, properties: f }));
+            const features = selected.filter((f) => f.location).map((f) => ({ type: 'Feature', geometry: f.location, properties: f }));
             if (options.invalid) features[0] = { ...features[0], geometry: { type: 'Point', coordinates: [-7.3, 112.7] } };
-            return route.fulfill({ json: { type: 'FeatureCollection', features, meta: { ...meta, filtered_registered: 4, filtered_mapped: 3, filtered_missing: 1 } } });
+            return route.fulfill({ json: { type: 'FeatureCollection', features, meta: { ...meta, filtered_registered: selected.length, filtered_mapped: features.length, filtered_missing: selected.length - features.length } } });
         }
-        if (url.pathname.endsWith('/facilities')) return route.fulfill({ json: { data: url.searchParams.get('page') === '2' ? [facilities[3]] : facilities, meta: { ...meta, ...(options.mismatch ? { release_id: run } : {}), total: options.pages ? 51 : 4 } } });
+        if (url.pathname.endsWith('/facilities')) return route.fulfill({ json: { data: url.searchParams.get('page') === '2' ? [facilities[3]] : selected, meta: { ...meta, ...(options.mismatch ? { release_id: run } : {}), total: options.pages ? 51 : selected.length } } });
         return route.fulfill({ json: { data: facilities.find((f) => url.pathname.endsWith(f.code)), meta } });
     });
     return requests;
@@ -105,4 +107,58 @@ test('table responses from another release are rejected', async ({ page }) => {
     await page.goto('/peta');
     await expect(page.locator('#table-status')).toContainText('belum dapat dimuat');
     await expect(page.locator('#facility-rows tr')).toHaveCount(0);
+});
+
+
+test('filters keep points and list aligned, include missing locations, and clear child selection', async ({ page }) => {
+    const requests = await fixture(page, { filters: true });
+    await page.goto('/peta');
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    await page.getByRole('combobox', { name: 'Kabupaten/kota', exact: true }).selectOption('3501');
+    await expect(page.getByRole('combobox', { name: 'Kecamatan', exact: true })).toBeEnabled();
+    await page.getByRole('combobox', { name: 'Kecamatan', exact: true }).selectOption('3501010');
+    await page.getByRole('combobox', { name: 'Status lokasi', exact: true }).selectOption('missing');
+    await page.getByRole('button', { name: 'Terapkan filter' }).click();
+    await expect(page.locator('#map-counts')).toContainText('1 terdaftar');
+    await expect(page.locator('#facility-rows')).toContainText('Tanpa titik');
+    await expect(page.locator('.leaflet-marker-icon')).toHaveCount(0);
+    for (const endpoint of ['/map/points', '/facilities']) {
+        const url = requests.filter((url) => url.pathname.endsWith(endpoint)).at(-1);
+        expect(url.searchParams.get('district_code')).toBe('3501010');
+        expect(url.searchParams.get('coordinate_status')).toBe('missing');
+        expect(url.searchParams.get('analysis_run_id')).toBe(run);
+    }
+    await page.getByRole('combobox', { name: 'Kabupaten/kota', exact: true }).selectOption('3502');
+    await expect(page.getByRole('combobox', { name: 'Kecamatan', exact: true })).toHaveValue('');
+    await page.getByRole('button', { name: 'Reset filter' }).click();
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    await expect(page.getByRole('combobox', { name: 'Kecamatan', exact: true })).toBeDisabled();
+    await page.getByLabel('Nama atau kode').fill('Tidak ditemukan');
+    await page.getByRole('button', { name: 'Terapkan filter' }).click();
+    await expect(page.locator('#map-counts')).toContainText('0 terdaftar');
+    await expect(page.locator('#table-status')).toContainText('0 fasilitas');
+    await expect(page.locator('#facility-rows tr')).toHaveCount(0);
+});
+
+
+test('late filter responses cannot replace the current map or table', async ({ page }) => {
+    await fixture(page, { filters: true });
+    await page.goto('/peta');
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    let delayed;
+    await page.route('**/api/v1/map/points?**', (route) => {
+        if (new URL(route.request().url()).searchParams.get('q') === 'Lama') { delayed = route; return; }
+        return route.fallback();
+    });
+    await page.getByLabel('Nama atau kode').fill('Lama');
+    await page.getByRole('button', { name: 'Terapkan filter' }).click();
+    await expect.poll(() => Boolean(delayed)).toBeTruthy();
+    await page.getByLabel('Nama atau kode').fill('Tanpa titik');
+    await page.getByRole('button', { name: 'Terapkan filter' }).click();
+    await expect(page.locator('#facility-rows')).toContainText('Tanpa titik');
+    await delayed.fulfill({ status: 503, json: {} });
+    await expect(page.locator('#map-status')).toContainText('Tidak ada titik');
+    await expect(page.locator('#map-counts')).toContainText('1 terdaftar');
+    await expect(page.locator('#facility-rows tr')).toHaveCount(1);
+    await expect(page.locator('#map-retry')).toBeHidden();
 });

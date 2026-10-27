@@ -46,7 +46,34 @@ function fields(container, data) {
         container.append(text('dt', label), text('dd', value || 'Belum tersedia'));
     }
 }
-let map, clusters, tiles, tablePage = 1, pageRequest = 0;
+let map, clusters, tiles, tablePage = 1, pageRequest = 0, loadRequest = 0, regionRequest = 0;
+let filters = {};
+const form = byId('map-filters');
+function options(select, rows, label) {
+    select.replaceChildren(new Option(label, ''));
+    for (const row of rows) select.add(new Option(row.name, row.code));
+}
+async function loadRegions() {
+    const request = ++regionRequest;
+    const parent = form.elements.regency_code.value;
+    const district = form.elements.district_code;
+    district.disabled = true;
+    options(district, [], 'Semua kecamatan');
+    byId('region-retry').hidden = true;
+    byId('region-status').textContent = 'Memuat wilayah...';
+    try {
+        const body = await get(root.dataset.regions, parent ? { level: 'district', parent_code: parent } : { level: 'regency' });
+        if (request !== regionRequest) return;
+        if (!Array.isArray(body.data) || body.data.some((row) => !(parent ? /^\d{7}$/ : /^\d{4}$/).test(row.code))) throw new Error('regions');
+        options(parent ? district : form.elements.regency_code, body.data, parent ? 'Semua kecamatan' : 'Semua kabupaten/kota');
+        district.disabled = !parent;
+        byId('region-status').textContent = '';
+    } catch {
+        if (request !== regionRequest) return;
+        byId('region-status').textContent = 'Wilayah belum dapat dimuat.';
+        byId('region-retry').hidden = false;
+    }
+}
 const markers = new Map();
 if (root.id === 'facility-map') {
     map = L.map('map-canvas', { maxZoom: 19 }).setView([-7.5, 112.5], 7);
@@ -57,6 +84,20 @@ if (root.id === 'facility-map') {
     L.control.layers({ OpenStreetMap: tiles }, { Puskesmas: clusters }, { collapsed: false }).addTo(map);
     L.control.scale({ imperial: false }).addTo(map);
     byId('map-fit').onclick = () => { if (markers.size) map.fitBounds(clusters.getBounds(), { padding: [35, 35], maxZoom: 14, animate: false }); };
+    form.onsubmit = (event) => {
+        event.preventDefault();
+        filters = Object.fromEntries([...new FormData(form)].map(([key, value]) => [key, value.trim()]).filter(([, value]) => value));
+        load();
+    };
+    form.onreset = () => {
+        ++regionRequest;
+        options(form.elements.district_code, [], 'Semua kecamatan');
+        form.elements.district_code.disabled = true;
+        filters = {};
+        load();
+    };
+    form.elements.regency_code.onchange = loadRegions;
+    byId('region-retry').onclick = loadRegions;
     byId('previous-page').onclick = () => loadTable(tablePage - 1);
     byId('next-page').onclick = () => loadTable(tablePage + 1);
 }
@@ -81,7 +122,7 @@ async function loadTable(page) {
     byId('facility-rows').replaceChildren();
     byId('table-status').textContent = 'Memuat daftar…';
     try {
-        const body = await get(root.dataset.facilities, { page, per_page: 50 });
+        const body = await get(root.dataset.facilities, { ...filters, page, per_page: 50 });
         if (request !== pageRequest) return;
         if (!Array.isArray(body.data) || !Number.isSafeInteger(body.meta.total) || body.meta.total < 0) throw new Error('shape');
         for (const facility of body.data) {
@@ -120,9 +161,11 @@ async function loadTable(page) {
     }
 }
 async function load() {
+    const request = ++loadRequest;
     byId('map-retry').hidden = true;
     byId('map-status').textContent = 'Memuat data…';
     if (map) {
+        map.closePopup();
         ++pageRequest; clusters.clearLayers(); markers.clear();
         for (const id of ['facility-rows', 'map-counts', 'map-period', 'table-status', 'table-page']) byId(id).replaceChildren();
         byId('previous-page').disabled = byId('next-page').disabled = true;
@@ -135,7 +178,8 @@ async function load() {
             byId('map-status').textContent = `Periode fasilitas: ${body.meta.source_periods?.facilities || 'Belum tersedia'}. Rilis: ${release}`;
             return;
         }
-        const body = await get(root.dataset.points);
+        const body = await get(root.dataset.points, filters);
+        if (request !== loadRequest) return;
         if (body.type !== 'FeatureCollection' || !Array.isArray(body.features)) throw new Error('shape');
         for (const feature of body.features) {
             const coordinates = feature.geometry?.coordinates;
@@ -155,7 +199,9 @@ async function load() {
         byId('map-period').textContent = `Periode fasilitas: ${body.meta.source_periods?.facilities || 'Belum tersedia'} · Rilis: ${release}`;
         byId('map-status').textContent = markers.size ? 'Peta siap. Pilih kelompok titik untuk memperbesar; titik bertumpuk dapat dibuka satu per satu.' : 'Tidak ada titik yang dapat dipetakan. Periksa daftar fasilitas.';
         await loadTable(1);
+        if (request === loadRequest && form.elements.regency_code.options.length === 1) loadRegions();
     } catch {
+        if (request !== loadRequest) return;
         clusters?.clearLayers(); markers.clear();
         byId('map-status').textContent = 'Data belum dapat dimuat. Rilis tidak diganti otomatis. Coba lagi.';
         byId('map-retry').hidden = false;

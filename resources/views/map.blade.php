@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Peta puskesmas · Jawa Timur')
 @section('content')
-<section id="facility-map" class="map-page" data-releases="{{ route('api.v1.releases') }}" data-regions="{{ route('api.v1.regions') }}" data-points="{{ route('api.v1.map.points') }}" data-facilities="{{ route('api.v1.facilities.index') }}" data-detail-base="{{ url('/puskesmas') }}">
+<section id="facility-map" class="map-page" data-thematic="{{ route('api.v1.map.regions') }}" data-releases="{{ route('api.v1.releases') }}" data-regions="{{ route('api.v1.regions') }}" data-points="{{ route('api.v1.map.points') }}" data-facilities="{{ route('api.v1.facilities.index') }}" data-detail-base="{{ url('/puskesmas') }}">
     <p class="eyebrow">PERSEBARAN FASILITAS</p><h1>Peta puskesmas Jawa Timur</h1>
     <p>Titik menunjukkan lokasi yang tersedia, termasuk lokasi yang belum terverifikasi. Radius bukan waktu tempuh atau batas layanan.</p>
     <p id="map-status" role="status" aria-live="polite">Memuat rilis peta…</p>
@@ -20,6 +20,19 @@
     <a href="#facility-table">Lewati peta ke daftar fasilitas</a>
     <p id="tile-status" role="status" hidden>Peta dasar belum dapat dimuat. Titik dan daftar fasilitas tetap dapat digunakan. <button id="tile-retry" type="button">Muat ulang peta dasar</button></p>
     <div id="map-canvas" aria-label="Peta interaktif puskesmas; gunakan tombol panah untuk menggeser" tabindex="0"></div>
+    <section aria-labelledby="thematic-title">
+        <h2 id="thematic-title">Indikator wilayah</h2>
+        <div class="map-filters">
+            <label for="thematic-metric">Indikator<select id="thematic-metric"><option value="">Tanpa warna wilayah</option><option value="count">Jumlah fasilitas</option><option value="density">Kepadatan penduduk</option><option value="population_per_facility">Penduduk per fasilitas</option><option value="indicative_deficit">Defisit indikatif</option></select></label>
+            <label for="thematic-level">Tingkat wilayah<select id="thematic-level"><option value="regency">Kabupaten/kota</option><option value="district">Kecamatan dalam kabupaten/kota terpilih</option></select></label>
+        </div>
+        <p>Warna menggunakan seluruh fasilitas dalam wilayah pada rilis yang sama. Filter nama, layanan, jenis wilayah, status lokasi, dan kecamatan pada daftar tidak mengubah indikator. Untuk tingkat kecamatan, pilih kabupaten/kota lalu terapkan filter.</p>
+        <p>Defisit bersifat indikatif, bukan kebutuhan layanan resmi. Kepadatan adalah penduduk per km². Nilai tidak tersedia berbeda dari nol.</p>
+        <p id="thematic-status" role="status" aria-live="polite"></p><button id="thematic-retry" type="button" hidden>Coba lagi indikator</button>
+        <button id="thematic-fit" type="button" disabled>Tampilkan seluruh wilayah</button>
+        <ul id="thematic-legend" class="thematic-legend" aria-label="Legenda indikator"></ul>
+        <details><summary>Nilai indikator per wilayah</summary><div class="map-table-scroll"><table><thead><tr><th>Wilayah</th><th>Nilai</th></tr></thead><tbody id="thematic-rows"></tbody></table></div></details>
+    </section>
     <div class="map-toolbar"><button id="map-fit" type="button">Tampilkan semua titik</button><span>Hijau: terverifikasi · Jingga: belum terverifikasi · Abu-abu: ditolak. Angka pada kelompok menunjukkan jumlah titik.</span></div>
     <section id="facility-table" aria-labelledby="facility-list-title">
         <h2 id="facility-list-title">Daftar fasilitas</h2><p>Fasilitas tanpa koordinat tetap tercantum di sini, tanpa marker pengganti.</p>

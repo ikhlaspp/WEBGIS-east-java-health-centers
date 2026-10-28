@@ -21,3 +21,5 @@
 .map-filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin-block: 20px; }
 .map-filters label { display: grid; gap: 6px; flex: 1 1 180px; min-width: 0; }
 .map-filters input, .map-filters select { width: 100%; min-width: 0; padding: 8px; border: 1px solid var(--line); background: white; border-radius: 4px; font: inherit; }
+.thematic-legend { display: flex; flex-wrap: wrap; gap: 12px 20px; list-style: none; padding: 0; }
+.legend-swatch { display: inline-block; width: 18px; height: 18px; margin-right: 8px; border: 1px solid #435b55; vertical-align: middle; }

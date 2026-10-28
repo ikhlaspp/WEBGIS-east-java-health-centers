@@ -1,4 +1,6 @@
 import { expect, test } from '@playwright/test';
+import { readFileSync } from 'node:fs';
+const legends = JSON.parse(readFileSync(new URL('../../resources/analysis-legends.json', import.meta.url), 'utf8'));
 
 const release = '00000000-0000-4000-8000-000000000006';
 const run = '00000000-0000-4000-8000-000000000007';
@@ -15,6 +17,14 @@ async function fixture(page, options = {}) {
     await page.route('**/api/v1/**', (route) => {
         const url = new URL(route.request().url()); requests.push(url);
         if (url.pathname.endsWith('/releases')) return route.fulfill({ json: { data: [], meta: { active_release_id: options.empty ? null : release } } });
+        if (url.pathname.endsWith('/map/regions')) {
+            if (options.themeError?.()) return route.fulfill({ status: 503, json: {} });
+            const metric = url.searchParams.get('metric') === 'count' ? 'facility_count' : url.searchParams.get('metric');
+            const level = url.searchParams.get('level');
+            const codes = level === 'district' ? ['3501010'] : ['3501', '3502'];
+            const features = codes.map((code, index) => ({ type: 'Feature', id: code, geometry: { type: 'Polygon', coordinates: [[[112 + index, -7], [112.5 + index, -7], [112.5 + index, -7.5], [112 + index, -7]]] }, properties: { code, name: index ? '<img src=x onerror="window.injected=1">' : 'Wilayah uji', metric, value: index ? null : 0, class: index ? 'no_data' : 0, without_facility: Boolean(index), completeness: index ? 'partial' : 'complete' } }));
+            return route.fulfill({ json: { type: 'FeatureCollection', features, meta: { ...meta, ...(options.themeMismatch ? { analysis_run_id: release } : {}), metric, level, legend: legends[metric] } } });
+        }
         if (url.pathname.endsWith('/regions')) return route.fulfill({ json: { data: url.searchParams.get('level') === 'district' ? [{ code: '3501010', name: 'Kecamatan uji' }] : [{ code: '3501', name: 'Kabupaten uji' }, { code: '3502', name: 'Kabupaten lain' }], meta } });
         const selected = options.filters ? facilities.filter((f) => (!url.searchParams.get('q') || f.name.includes(url.searchParams.get('q'))) && (!url.searchParams.get('coordinate_status') || f.coordinate_status === url.searchParams.get('coordinate_status'))) : facilities;
         if (url.pathname.endsWith('/map/points')) {
@@ -229,4 +239,85 @@ test('facility detail rejects mismatched identity and invalid coordinates withou
     await page.getByRole('button', { name: 'Coba lagi', exact: true }).click();
     await expect(page.locator('#facility-fields')).toContainText('112.7, -7.3');
     await expect(page.locator('#facility-sources')).toContainText('Informasi sumber belum tersedia.');
+});
+
+
+test('thematic metrics show fixed legends, real zero, missing values and safe region text', async ({ page }, testInfo) => {
+    const requests = await fixture(page);
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    for (const metric of ['count', 'density', 'population_per_facility', 'indicative_deficit']) {
+        await page.locator('#thematic-metric').selectOption(metric);
+        await expect(page.locator('#thematic-status')).toContainText('2 wilayah. 1 nilai tidak tersedia.');
+        await expect(page.locator('#thematic-legend')).toContainText('Data tidak tersedia');
+        await page.getByText('Nilai indikator per wilayah', { exact: true }).evaluate((element) => { element.parentElement.open = true; });
+        await expect(page.locator('#thematic-rows tr')).toHaveCount(2);
+        await expect(page.locator('#thematic-rows tr').first()).toContainText('0 ');
+        await expect(page.locator('#thematic-rows tr').last()).toContainText(metric === 'population_per_facility' ? 'Tanpa fasilitas; rasio tidak tersedia' : 'Data tidak tersedia');
+        await expect(page.locator('#thematic-rows img')).toHaveCount(0);
+    }
+    await page.screenshot({ path: testInfo.outputPath('thematic-desktop.png'), fullPage: true });
+    await page.setViewportSize({ width: 360, height: 800 });
+    await page.locator('#thematic-fit').click();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+    await page.screenshot({ path: testInfo.outputPath('thematic-mobile.png'), fullPage: true });
+    const queries = requests.filter((url) => url.pathname.endsWith('/map/regions'));
+    expect(queries).toHaveLength(4);
+    expect(queries.every((url) => url.searchParams.get('analysis_run_id') === run && url.searchParams.get('release_id') === release)).toBeTruthy();
+    await page.locator('#thematic-metric').selectOption('');
+    await expect(page.locator('#thematic-legend')).toBeEmpty();
+    await expect(page.locator('#thematic-rows')).toBeEmpty();
+});
+
+test('district thematic view requires applied parent and failure preserves facility data', async ({ page }) => {
+    let failure = false;
+    const requests = await fixture(page, { themeError: () => failure });
+    await page.goto('/peta');
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    await page.locator('#thematic-level').selectOption('district');
+    await page.locator('#thematic-metric').selectOption('count');
+    await expect(page.locator('#thematic-status')).toContainText('Pilih kabupaten/kota');
+    await page.locator('#filter-regency_code').selectOption('3501');
+    await page.getByRole('button', { name: 'Terapkan filter' }).click();
+    await expect(page.locator('#thematic-status')).toContainText('1 wilayah');
+    expect(requests.filter((url) => url.pathname.endsWith('/map/regions')).at(-1).searchParams.get('parent_code')).toBe('3501');
+    failure = true;
+    await page.locator('#thematic-metric').selectOption('density');
+    await expect(page.locator('#thematic-status')).toContainText('belum dapat dimuat');
+    await expect(page.locator('#thematic-legend')).toBeEmpty();
+    await expect(page.locator('#facility-rows tr')).toHaveCount(4);
+    failure = false;
+    await page.locator('#thematic-retry').click();
+    await expect(page.locator('#thematic-status')).toContainText('1 wilayah');
+});
+
+test('thematic responses from another run are rejected', async ({ page }) => {
+    await fixture(page, { themeMismatch: true });
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    await page.locator('#thematic-metric').selectOption('count');
+    await expect(page.locator('#thematic-status')).toContainText('belum dapat dimuat');
+    await expect(page.locator('#thematic-rows')).toBeEmpty();
+    await expect(page.locator('#thematic-legend')).toBeEmpty();
+    await expect(page.locator('#facility-rows tr')).toHaveCount(4);
+});
+
+
+test('switching thematic metrics ignores a delayed failure from the previous selection', async ({ page }) => {
+    await fixture(page);
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    let delayed;
+    await page.route('**/api/v1/map/regions?**', (route) => {
+        if (new URL(route.request().url()).searchParams.get('metric') === 'count') { delayed = route; return; }
+        return route.fallback();
+    });
+    await page.locator('#thematic-metric').selectOption('count');
+    await expect.poll(() => Boolean(delayed)).toBeTruthy();
+    await page.locator('#thematic-metric').selectOption('density');
+    await expect(page.locator('#thematic-status')).toContainText('Kepadatan penduduk: 2 wilayah');
+    await delayed.fulfill({ status: 503, json: {} });
+    await expect(page.locator('#thematic-status')).toContainText('Kepadatan penduduk: 2 wilayah');
+    await expect(page.locator('#thematic-retry')).toBeHidden();
+    await expect(page.locator('#thematic-rows tr')).toHaveCount(2);
 });

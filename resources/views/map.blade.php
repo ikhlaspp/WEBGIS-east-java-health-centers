@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Peta puskesmas · Jawa Timur')
 @section('content')
-<section id="facility-map" class="map-page" data-thematic="{{ route('api.v1.map.regions') }}" data-releases="{{ route('api.v1.releases') }}" data-regions="{{ route('api.v1.regions') }}" data-points="{{ route('api.v1.map.points') }}" data-facilities="{{ route('api.v1.facilities.index') }}" data-detail-base="{{ url('/puskesmas') }}">
+<section id="facility-map" class="map-page" data-coverage="{{ route('api.v1.analysis.buffers') }}" data-thematic="{{ route('api.v1.map.regions') }}" data-releases="{{ route('api.v1.releases') }}" data-regions="{{ route('api.v1.regions') }}" data-points="{{ route('api.v1.map.points') }}" data-facilities="{{ route('api.v1.facilities.index') }}" data-detail-base="{{ url('/puskesmas') }}">
     <p class="eyebrow">PERSEBARAN FASILITAS</p><h1>Peta puskesmas Jawa Timur</h1>
     <p>Titik menunjukkan lokasi yang tersedia, termasuk lokasi yang belum terverifikasi. Radius bukan waktu tempuh atau batas layanan.</p>
     <p id="map-status" role="status" aria-live="polite">Memuat rilis peta…</p>
@@ -34,6 +34,16 @@
         <details><summary>Nilai indikator per wilayah</summary><div class="map-table-scroll"><table><thead><tr><th>Wilayah</th><th>Nilai</th></tr></thead><tbody id="thematic-rows"></tbody></table></div></details>
     </section>
     <div class="map-toolbar"><button id="map-fit" type="button">Tampilkan semua titik</button><span>Hijau: terverifikasi · Jingga: belum terverifikasi · Abu-abu: ditolak. Angka pada kelompok menunjukkan jumlah titik.</span></div>
+    <section aria-labelledby="coverage-title">
+        <h2 id="coverage-title">Cakupan radius geometris</h2>
+        <div class="map-filters"><label for="coverage-radius">Radius analisis<select id="coverage-radius"><option value="">Tanpa lapisan cakupan</option><option value="1000">1 km</option><option value="3000">3 km</option><option value="5000">5 km</option></select></label></div>
+        <p>Hanya titik yang memenuhi syarat verifikasi dan presisi yang digunakan. Area cakupan merupakan gabungan radius yang dipotong batas kecamatan; bukan waktu tempuh, akses jalan, atau batas layanan resmi.</p>
+        <p>Filter kabupaten/kota dan kecamatan menentukan wilayah hasil. Filter nama, layanan, jenis wilayah, dan status lokasi tidak menghitung ulang analisis. Persentase memakai luas geometri wilayah, bukan luas dari tabel sumber. Cakupan parsial tidak mewakili seluruh fasilitas.</p>
+        <p><span class="coverage-swatch" aria-hidden="true"></span>Hijau kebiruan bergaris putus: area tercakup. Tanpa titik layak, hasil ditampilkan sebagai tidak tersedia, bukan 0%.</p>
+        <p id="coverage-status" role="status" aria-live="polite"></p>
+        <button id="coverage-retry" type="button" hidden>Coba lagi cakupan</button><button id="coverage-fit" type="button" disabled>Tampilkan area cakupan</button>
+        <details><summary>Hasil cakupan per kecamatan</summary><div class="map-table-scroll"><table class="coverage-table"><thead><tr><th>Kecamatan</th><th>Cakupan</th><th>Layak / terdaftar</th><th>Dikecualikan</th><th>Kelengkapan</th></tr></thead><tbody id="coverage-rows"></tbody></table></div></details>
+    </section>
     <section id="facility-table" aria-labelledby="facility-list-title">
         <h2 id="facility-list-title">Daftar fasilitas</h2><p>Fasilitas tanpa koordinat tetap tercantum di sini, tanpa marker pengganti.</p>
         <p id="table-status" role="status"></p>

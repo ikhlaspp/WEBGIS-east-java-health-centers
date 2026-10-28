@@ -17,6 +17,18 @@ async function fixture(page, options = {}) {
     await page.route('**/api/v1/**', (route) => {
         const url = new URL(route.request().url()); requests.push(url);
         if (url.pathname.endsWith('/releases')) return route.fulfill({ json: { data: [], meta: { active_release_id: options.empty ? null : release } } });
+        if (url.pathname.endsWith('/analysis/buffers')) {
+            if (options.coverageError?.()) return route.fulfill({ status: 503, json: {} });
+            const radius = Number(url.searchParams.get('radius_m'));
+            const features = [0, 1, 2].map((index) => {
+                const unavailable = options.coverageUnavailable || index === 0;
+                const value = unavailable ? null : index === 1 ? 0 : radius / 100;
+                const code = `350101${index}`;
+                return { type: 'Feature', id: code, geometry: value > 0 ? { type: 'Polygon', coordinates: [[[112, -7], [112.5, -7], [112.5, -7.5], [112, -7]]] } : null, properties: { code, name: `Kecamatan ${index}`, radius_m: radius, coverage_pct: value, covered_area_m2: value === null ? null : value * 100, geometry_area_m2: unavailable ? null : 10000, registered_count: 2, eligible_count: unavailable ? 0 : 1, excluded_count: unavailable ? 2 : 1, contributing_count: value > 0 ? 1 : 0, completeness: unavailable ? 'unavailable' : 'partial', reason: unavailable ? 'no_eligible_points' : 'excluded_locations_in_dataset' } };
+            });
+            if (options.coverageInvalid) features[0].properties.coverage_pct = 0;
+            return route.fulfill({ json: { type: 'FeatureCollection', features, meta: { ...meta, ...(options.coverageMismatch ? { analysis_run_id: release } : {}), radius_m: radius } } });
+        }
         if (url.pathname.endsWith('/map/regions')) {
             if (options.themeError?.()) return route.fulfill({ status: 503, json: {} });
             const metric = url.searchParams.get('metric') === 'count' ? 'facility_count' : url.searchParams.get('metric');
@@ -320,4 +332,102 @@ test('switching thematic metrics ignores a delayed failure from the previous sel
     await expect(page.locator('#thematic-status')).toContainText('Kepadatan penduduk: 2 wilayah');
     await expect(page.locator('#thematic-retry')).toBeHidden();
     await expect(page.locator('#thematic-rows tr')).toHaveCount(2);
+});
+
+
+test('coverage distinguishes unavailable, zero and partial results for each radius', async ({ page }, testInfo) => {
+    const requests = await fixture(page);
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    await page.getByText('Hasil cakupan per kecamatan', { exact: true }).click();
+    for (const radius of ['1000', '3000', '5000']) {
+        await page.locator('#coverage-radius').selectOption(radius);
+        await expect(page.locator('#coverage-status')).toContainText(`Radius ${Number(radius) / 1000} km: 3 kecamatan; 1 tidak tersedia, 2 parsial`);
+        await expect(page.locator('#coverage-rows tr').nth(0)).toContainText('Tidak tersedia');
+        await expect(page.locator('#coverage-rows tr').nth(0)).not.toContainText('0%');
+        await expect(page.locator('#coverage-rows tr').nth(1)).toContainText('0%');
+        await expect(page.locator('#coverage-rows tr').nth(2)).toContainText(`${Number(radius) / 100}%`);
+        await expect(page.locator('#coverage-fit')).toBeEnabled();
+    }
+    await page.setViewportSize({ width: 360, height: 800 });
+    await page.locator('#coverage-fit').click();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+    await page.screenshot({ path: testInfo.outputPath('coverage-mobile.png'), fullPage: true });
+    const queries = requests.filter((url) => url.pathname.endsWith('/analysis/buffers'));
+    expect(queries).toHaveLength(3);
+    expect(queries.every((url) => url.searchParams.get('release_id') === release && url.searchParams.get('analysis_run_id') === run)).toBeTruthy();
+    await page.locator('#coverage-radius').selectOption('');
+    await expect(page.locator('#coverage-rows')).toBeEmpty();
+    await expect(page.locator('#coverage-fit')).toBeDisabled();
+});
+
+test('no eligible locations have no coverage polygon and never display zero percent', async ({ page }) => {
+    await fixture(page, { coverageUnavailable: true });
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    await page.locator('#coverage-radius').selectOption('1000');
+    await expect(page.locator('#coverage-status')).toContainText('3 tidak tersedia');
+    await expect(page.locator('#coverage-status')).toContainText('0 layak analisis, 6 dikecualikan');
+    await expect(page.locator('#coverage-rows')).not.toContainText('0%');
+    await expect(page.locator('#coverage-fit')).toBeDisabled();
+});
+
+test('coverage uses applied geography and retries without changing facility results', async ({ page }) => {
+    let failure = false;
+    const requests = await fixture(page, { coverageError: () => failure });
+    await page.goto('/peta');
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    await page.locator('#filter-regency_code').selectOption('3501');
+    await expect(page.locator('#filter-district_code')).toBeEnabled();
+    await page.locator('#filter-district_code').selectOption('3501010');
+    await page.getByRole('button', { name: 'Terapkan filter' }).click();
+    await expect(page.locator('#table-status')).toContainText('4 fasilitas');
+    failure = true;
+    await page.locator('#coverage-radius').selectOption('3000');
+    await expect(page.locator('#coverage-status')).toContainText('belum dapat dimuat');
+    await expect(page.locator('#coverage-rows')).toBeEmpty();
+    await expect(page.locator('#facility-rows tr')).toHaveCount(4);
+    failure = false;
+    await page.locator('#coverage-retry').click();
+    await expect(page.locator('#coverage-status')).toContainText('Radius 3 km');
+    const query = requests.filter((url) => url.pathname.endsWith('/analysis/buffers')).at(-1);
+    expect(query.searchParams.get('regency_code')).toBe('3501');
+    expect(query.searchParams.get('district_code')).toBe('3501010');
+    expect(query.searchParams.has('coordinate_status')).toBeFalsy();
+});
+
+test('coverage ignores old radius failures and rejects a different analysis run', async ({ page }) => {
+    await fixture(page);
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    let delayed;
+    await page.route('**/api/v1/analysis/buffers?**', (route) => {
+        if (new URL(route.request().url()).searchParams.get('radius_m') === '1000') { delayed = route; return; }
+        return route.fallback();
+    });
+    await page.locator('#coverage-radius').selectOption('1000');
+    await expect.poll(() => Boolean(delayed)).toBeTruthy();
+    await page.locator('#coverage-radius').selectOption('5000');
+    await expect(page.locator('#coverage-status')).toContainText('Radius 5 km');
+    await delayed.fulfill({ status: 503, json: {} });
+    await expect(page.locator('#coverage-status')).toContainText('Radius 5 km');
+    await expect(page.locator('#coverage-retry')).toBeHidden();
+    await page.unroute('**/api/v1/analysis/buffers?**');
+    await page.unroute('**/api/v1/**');
+    await fixture(page, { coverageMismatch: true });
+    await page.locator('#coverage-radius').selectOption('3000');
+    await expect(page.locator('#coverage-status')).toContainText('belum dapat dimuat');
+    await expect(page.locator('#coverage-rows')).toBeEmpty();
+});
+
+
+test('unavailable coverage cannot masquerade as zero percent', async ({ page }) => {
+    await fixture(page, { coverageInvalid: true });
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    await page.locator('#coverage-radius').selectOption('1000');
+    await expect(page.locator('#coverage-status')).toContainText('belum dapat dimuat');
+    await expect(page.locator('#coverage-rows')).toBeEmpty();
+    await expect(page.locator('#coverage-fit')).toBeDisabled();
+    await expect(page.locator('#facility-rows tr')).toHaveCount(4);
 });

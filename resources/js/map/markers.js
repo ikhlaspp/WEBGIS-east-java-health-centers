@@ -5,6 +5,7 @@ import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import '../../css/map.css';
 import { thematicMap } from './thematic';
+import { coverageMap } from './coverage';
 
 const root = document.querySelector('#facility-map, #facility-detail');
 const byId = (id) => document.getElementById(id);
@@ -84,7 +85,7 @@ function sources(data) {
     }
 }
 let map, clusters, tiles, tablePage = 1, pageRequest = 0, loadRequest = 0, regionRequest = 0;
-let thematic, mapReady = false;
+let thematic, coverage, mapReady = false;
 const filterKeys = ['q', 'regency_code', 'district_code', 'service_type', 'area_type', 'coordinate_status'];
 const form = byId('map-filters');
 let filters = form ? Object.fromEntries(filterKeys.filter((key) => search.get(key)).map((key) => [key, search.get(key).trim()])) : {};
@@ -148,6 +149,7 @@ if (root.id === 'facility-map') {
     L.control.layers({ OpenStreetMap: tiles }, { Puskesmas: clusters }, { collapsed: false }).addTo(map);
     L.control.scale({ imperial: false }).addTo(map);
     thematic = thematicMap(map, root.dataset.thematic, get, () => ({ ready: mapReady, parent: filters.regency_code }));
+    coverage = coverageMap(map, root.dataset.coverage, get, () => ({ ready: mapReady, regency: filters.regency_code, district: filters.district_code }));
     byId('map-fit').onclick = () => { if (markers.size) map.fitBounds(clusters.getBounds(), { padding: [35, 35], maxZoom: 14, animate: false }); };
     form.onsubmit = (event) => {
         event.preventDefault();
@@ -236,6 +238,7 @@ async function load() {
     if (map) {
         mapReady = false;
         thematic.clear();
+        coverage.clear();
         map.closePopup();
         ++pageRequest; clusters.clearLayers(); markers.clear();
         for (const id of ['facility-rows', 'map-counts', 'map-period', 'table-status', 'table-page']) byId(id).replaceChildren();
@@ -272,6 +275,7 @@ async function load() {
         clusters.addLayers([...markers.values()]);
         mapReady = true;
         thematic.load();
+        coverage.load();
         byId('map-fit').click(); remember();
         byId('map-counts').textContent = `${body.meta.filtered_registered} terdaftar · ${body.meta.filtered_mapped} memiliki koordinat · ${body.meta.filtered_missing} tanpa koordinat`;
         byId('map-period').textContent = `Periode fasilitas: ${body.meta.source_periods?.facilities || 'Belum tersedia'} · Rilis: ${release}`;

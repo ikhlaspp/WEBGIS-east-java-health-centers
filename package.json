@@ -5,7 +5,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "lint": "node --check vite.config.js && node --check playwright.config.js && node --check resources/js/app.js && node --check resources/js/dashboard.js && node --check resources/js/public-navigation.js && node --check resources/js/map/markers.js && node --check resources/js/map/thematic.js && node --check tests/browser/health.spec.js && node --check tests/browser/dashboard.spec.js && node --check tests/browser/markers.spec.js",
+        "lint": "node --check vite.config.js && node --check playwright.config.js && node --check resources/js/app.js && node --check resources/js/dashboard.js && node --check resources/js/public-navigation.js && node --check resources/js/map/markers.js && node --check resources/js/map/thematic.js && node --check resources/js/map/coverage.js && node --check tests/browser/health.spec.js && node --check tests/browser/dashboard.spec.js && node --check tests/browser/markers.spec.js",
         "test:e2e": "playwright test"
     },
     "devDependencies": {

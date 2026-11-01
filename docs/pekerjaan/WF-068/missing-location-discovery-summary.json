@@ -1,0 +1,11 @@
+{
+  "reviewed_missing_facilities": 408,
+  "with_supplemental_name_and_region_candidate": 41,
+  "with_multiple_supplemental_candidates": 1,
+  "without_supplemental_candidate": 367,
+  "accepted_locations": 0,
+  "database_modified": false,
+  "caveat": "Exact normalized name and representative point inside historical assigned region are discovery criteria, not identity/address or 2024 location verification. Generated points must not be imported as facility coordinates.",
+  "output_path": "data/staging/missing-location-discovery.json",
+  "output_sha256": "2087717ff082a9a58f920892208f69cf10ceb1f37e3877a81a869332f9133de0"
+}

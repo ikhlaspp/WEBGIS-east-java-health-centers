@@ -1,0 +1,10 @@
+{
+  "source_id": "tambak-osm-history",
+  "edition": "accessed-2026-10-28",
+  "source_url": "https://api.openstreetmap.org/api/0.6/way/1295378350/history.json",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-28T06:07:43.964703+00:00",
+  "sha256": "6096159de2cb56af9744696ad3b0be84c4420bf237b35a1c6cd780923a150af8",
+  "bytes": 1594,
+  "raw_path": "data\\raw\\tambak-osm-history\\6096159de2cb56af9744696ad3b0be84c4420bf237b35a1c6cd780923a150af8.bin"
+}

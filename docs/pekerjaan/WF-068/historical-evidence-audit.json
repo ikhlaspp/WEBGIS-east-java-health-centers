@@ -1,0 +1,279 @@
+{
+  "reviewed_at": "2026-11-01",
+  "reviewer": "Codex automated desktop evidence review",
+  "database_modified": false,
+  "accepted_decisions": 0,
+  "verified_locations": 0,
+  "visual_review": {
+    "path": "data/staging/historical-footprint-review.png",
+    "sha256": "becee64a2b5fd775e1957eb352be9865f89b023074fbb97e29884db37e2c8353",
+    "inspected": true
+  },
+  "historical_records": [
+    {
+      "facility_code": "35250200032",
+      "cutoff": "2024-12-31T23:59:59Z",
+      "way_id": 1295378350,
+      "way_version": 1,
+      "way_timestamp": "2024-06-23T16:51:49Z",
+      "tags": {
+        "addr:city": "Kabupaten Gresik",
+        "addr:street": "Jalan Bhakti No.44",
+        "amenity": "clinic",
+        "building": "yes",
+        "contact:instagram": "https://www.instagram.com/puskesmas.tambak_gresik/",
+        "contact:mobile": "6285236303095",
+        "contact:phone": "(3525) 421101",
+        "healthcare": "clinic",
+        "name": "Puskesmas Tambak",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:type": "public",
+        "operator:wikidata": "Q12490745"
+      },
+      "baseline_point": [
+        112.6485803,
+        -5.7331677
+      ],
+      "historical_footprint_covers": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.6484505,
+              -5.7330239
+            ],
+            [
+              112.6487717,
+              -5.7332015
+            ],
+            [
+              112.6487102,
+              -5.7333116
+            ],
+            [
+              112.648389,
+              -5.7331339
+            ],
+            [
+              112.6484505,
+              -5.7330239
+            ]
+          ]
+        ]
+      },
+      "node_history_receipts": [
+        {
+          "node_id": 12003491682,
+          "selected_version": 1,
+          "selected_timestamp": "2024-06-23T16:51:49Z",
+          "receipt": {
+            "source_id": "osm-node-12003491682-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/12003491682/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:25.309595+00:00",
+            "sha256": "5a17d2bbcbc8f043823ac6fd44780750618961e42acd0d2f478e801e187706d9",
+            "bytes": 438,
+            "raw_path": "data\\raw\\osm-node-12003491682-history\\5a17d2bbcbc8f043823ac6fd44780750618961e42acd0d2f478e801e187706d9.bin"
+          }
+        },
+        {
+          "node_id": 12003491683,
+          "selected_version": 1,
+          "selected_timestamp": "2024-06-23T16:51:49Z",
+          "receipt": {
+            "source_id": "osm-node-12003491683-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/12003491683/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:26.220089+00:00",
+            "sha256": "47595d441cc3385d01a40b3fc50a34688194910f1f0710d6b817859b40af9511",
+            "bytes": 438,
+            "raw_path": "data\\raw\\osm-node-12003491683-history\\47595d441cc3385d01a40b3fc50a34688194910f1f0710d6b817859b40af9511.bin"
+          }
+        },
+        {
+          "node_id": 12003491684,
+          "selected_version": 1,
+          "selected_timestamp": "2024-06-23T16:51:49Z",
+          "receipt": {
+            "source_id": "osm-node-12003491684-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/12003491684/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:27.259952+00:00",
+            "sha256": "1c5a84e1920bacab8462570ba0723827f888f477650876fbf559ed7a7acef3c3",
+            "bytes": 438,
+            "raw_path": "data\\raw\\osm-node-12003491684-history\\1c5a84e1920bacab8462570ba0723827f888f477650876fbf559ed7a7acef3c3.bin"
+          }
+        },
+        {
+          "node_id": 12003491685,
+          "selected_version": 1,
+          "selected_timestamp": "2024-06-23T16:51:49Z",
+          "receipt": {
+            "source_id": "osm-node-12003491685-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/12003491685/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:28.292996+00:00",
+            "sha256": "89edbfc22016b1d3904ea3729449428247f0cf1de30e50e4e54ca1dd3d17c254",
+            "bytes": 438,
+            "raw_path": "data\\raw\\osm-node-12003491685-history\\89edbfc22016b1d3904ea3729449428247f0cf1de30e50e4e54ca1dd3d17c254.bin"
+          }
+        }
+      ],
+      "accepted": false,
+      "limitation": "Reconstructed OSM geometry at year end is historical map evidence, not a field survey; identity and source review remain separate."
+    },
+    {
+      "facility_code": "35730200010",
+      "cutoff": "2024-12-31T23:59:59Z",
+      "way_id": 629408229,
+      "way_version": 2,
+      "way_timestamp": "2021-01-20T07:37:28Z",
+      "tags": {
+        "building": "hospital",
+        "name": "Puskesmas Kendalkerep"
+      },
+      "baseline_point": [
+        112.6508591,
+        -7.9612097
+      ],
+      "historical_footprint_covers": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.6507723,
+              -7.9612032
+            ],
+            [
+              112.6506562,
+              -7.9611499
+            ],
+            [
+              112.6506901,
+              -7.9610922
+            ],
+            [
+              112.650716,
+              -7.9610314
+            ],
+            [
+              112.6510004,
+              -7.9611864
+            ],
+            [
+              112.65094,
+              -7.9612948
+            ],
+            [
+              112.6507723,
+              -7.9612032
+            ]
+          ]
+        ]
+      },
+      "node_history_receipts": [
+        {
+          "node_id": 5942224887,
+          "selected_version": 2,
+          "selected_timestamp": "2021-01-20T07:37:28Z",
+          "receipt": {
+            "source_id": "osm-node-5942224887-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224887/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:29.325071+00:00",
+            "sha256": "3302dc968ae8103795003295c9d479551bdcdb10f118280ceb47be1ff3ca39f6",
+            "bytes": 774,
+            "raw_path": "data\\raw\\osm-node-5942224887-history\\3302dc968ae8103795003295c9d479551bdcdb10f118280ceb47be1ff3ca39f6.bin"
+          }
+        },
+        {
+          "node_id": 5942224888,
+          "selected_version": 1,
+          "selected_timestamp": "2018-10-01T07:56:09Z",
+          "receipt": {
+            "source_id": "osm-node-5942224888-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224888/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:30.241067+00:00",
+            "sha256": "394fd256d3255a290501a982a9cd35e70bd82711a60523b7807edb684fa43007",
+            "bytes": 605,
+            "raw_path": "data\\raw\\osm-node-5942224888-history\\394fd256d3255a290501a982a9cd35e70bd82711a60523b7807edb684fa43007.bin"
+          }
+        },
+        {
+          "node_id": 5942224889,
+          "selected_version": 1,
+          "selected_timestamp": "2018-10-01T07:56:09Z",
+          "receipt": {
+            "source_id": "osm-node-5942224889-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224889/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:31.260674+00:00",
+            "sha256": "e5d90963ebb6668ce2fdfded35a1957b81f0e5294d1f4ea9a2cb80d0d942c0c4",
+            "bytes": 605,
+            "raw_path": "data\\raw\\osm-node-5942224889-history\\e5d90963ebb6668ce2fdfded35a1957b81f0e5294d1f4ea9a2cb80d0d942c0c4.bin"
+          }
+        },
+        {
+          "node_id": 5942224890,
+          "selected_version": 1,
+          "selected_timestamp": "2018-10-01T07:56:09Z",
+          "receipt": {
+            "source_id": "osm-node-5942224890-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224890/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:32.224788+00:00",
+            "sha256": "a5d2be003107d77ffe776a377a39e8c1d47e189b4ed423fbef5d05fea30a7249",
+            "bytes": 605,
+            "raw_path": "data\\raw\\osm-node-5942224890-history\\a5d2be003107d77ffe776a377a39e8c1d47e189b4ed423fbef5d05fea30a7249.bin"
+          }
+        },
+        {
+          "node_id": 8341106870,
+          "selected_version": 1,
+          "selected_timestamp": "2021-01-20T07:37:28Z",
+          "receipt": {
+            "source_id": "osm-node-8341106870-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/8341106870/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:33.139451+00:00",
+            "sha256": "7b2905126e31cabee55eef1b42bec2c88222d6c285a2edc08d34be95100143e4",
+            "bytes": 583,
+            "raw_path": "data\\raw\\osm-node-8341106870-history\\7b2905126e31cabee55eef1b42bec2c88222d6c285a2edc08d34be95100143e4.bin"
+          }
+        },
+        {
+          "node_id": 8341106871,
+          "selected_version": 1,
+          "selected_timestamp": "2021-01-20T07:37:28Z",
+          "receipt": {
+            "source_id": "osm-node-8341106871-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/8341106871/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:34.185279+00:00",
+            "sha256": "338cdd5fa9bafb02f4bde1ef2f10aeae0b31a7d02a92b3f9d2f1199a900640ea",
+            "bytes": 583,
+            "raw_path": "data\\raw\\osm-node-8341106871-history\\338cdd5fa9bafb02f4bde1ef2f10aeae0b31a7d02a92b3f9d2f1199a900640ea.bin"
+          }
+        }
+      ],
+      "accepted": false,
+      "limitation": "Reconstructed OSM geometry at year end is historical map evidence, not a field survey; identity and source review remain separate."
+    }
+  ],
+  "verified_receipt_count": 19
+}

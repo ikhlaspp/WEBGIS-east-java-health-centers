@@ -1,0 +1,10 @@
+{
+  "source_id": "trajeng-osm-history",
+  "edition": "accessed-2026-10-28",
+  "source_url": "https://api.openstreetmap.org/api/0.6/way/1536417875/history.json",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-28T06:07:45.944397+00:00",
+  "sha256": "d29d087d393af8e4e90b8162d7a79e8446f6c7b25c8548007cdd2bc5a3911ceb",
+  "bytes": 740,
+  "raw_path": "data\\raw\\trajeng-osm-history\\d29d087d393af8e4e90b8162d7a79e8446f6c7b25c8548007cdd2bc5a3911ceb.bin"
+}

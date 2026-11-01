@@ -1,0 +1,10 @@
+{
+  "source_id": "kendalkerep-osm-history",
+  "edition": "accessed-2026-10-28",
+  "source_url": "https://api.openstreetmap.org/api/0.6/way/629408229/history.json",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-28T06:07:44.943603+00:00",
+  "sha256": "208e6756431bda35be3a608700f6a316a59743775ad34fc782de9f71f5bdc8a4",
+  "bytes": 1229,
+  "raw_path": "data\\raw\\kendalkerep-osm-history\\208e6756431bda35be3a608700f6a316a59743775ad34fc782de9f71f5bdc8a4.bin"
+}

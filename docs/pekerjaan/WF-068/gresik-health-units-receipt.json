@@ -1,0 +1,10 @@
+{
+  "source_id": "gresik-health-units",
+  "edition": "accessed-2026-10-28",
+  "source_url": "https://dinkes.gresikkab.go.id/pages/unit-dinkes",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-28T06:07:40.070547+00:00",
+  "sha256": "24132046e6e3b664d3da49af8894f46c36c1d14cf375870c5fb02a9a62c7ad56",
+  "bytes": 24058,
+  "raw_path": "data\\raw\\gresik-health-units\\24132046e6e3b664d3da49af8894f46c36c1d14cf375870c5fb02a9a62c7ad56.bin"
+}

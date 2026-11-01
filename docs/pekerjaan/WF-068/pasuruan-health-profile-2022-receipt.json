@@ -1,0 +1,10 @@
+{
+  "source_id": "pasuruan-health-profile-2022",
+  "edition": "2022",
+  "source_url": "https://ppid.pasuruankota.go.id/userfiles/2024/06/41f616a044fade63f60f2bc203af3d1b.pdf",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-10-28T06:07:39.577847+00:00",
+  "sha256": "67824906640e66e6410a1cb60b11ef4bdba74b003aef637649a9d67451977d7e",
+  "bytes": 5969499,
+  "raw_path": "data\\raw\\pasuruan-health-profile-2022\\67824906640e66e6410a1cb60b11ef4bdba74b003aef637649a9d67451977d7e.bin"
+}

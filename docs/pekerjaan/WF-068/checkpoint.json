@@ -3,7 +3,7 @@
   "status": "in_progress",
   "predecessor_commit": "9c3e697524bec2c92f36f50f016c49597440a14c",
   "predecessor_push": "verified origin/main",
-  "next_action": "Bind Tambak historical evidence to a formal live-release decision; reconcile Kendalkerep address conflict; seek historical Trajeng point evidence and review 41 supplementary missing-location candidates.",
+  "next_action": "Resolve Kendalkerep address conflict and obtain historical Trajeng point evidence; individually review 41 missing-coordinate candidates. Recompute analysis after further input decisions; publication quality gates remain outstanding.",
   "screening_summary": {
     "screened": 565,
     "batches": 44,
@@ -51,5 +51,24 @@
     "caveat": "Exact normalized name and representative point inside historical assigned region are discovery criteria, not identity/address or 2024 location verification. Generated points must not be imported as facility coordinates.",
     "output_path": "data/staging/missing-location-discovery.json",
     "output_sha256": "2087717ff082a9a58f920892208f69cf10ceb1f37e3877a81a869332f9133de0"
+  },
+  "live_location_review": {
+    "decision": "accepted",
+    "replayed": false,
+    "review_id": "053a66a2-3a07-4de4-88e4-12222adf306d",
+    "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+    "request_hash": "247c3d9beec6aef695eccb85e86fa81b3c2a10ceb351957205b893bb6fb4f450",
+    "facility_code": "35250200032",
+    "input_revision": 2351,
+    "source_id": "a2c2d6df-363e-4384-89c6-bcfb5adb9da0",
+    "review_method": "Codex desktop review of historical OSM and official address; not field survey",
+    "coordinates_unchanged": true,
+    "verified": 1,
+    "unverified": 564,
+    "missing": 408,
+    "active_temporary_review_actors": 0,
+    "active_temporary_review_tokens": 0,
+    "default_analysis_run_id": null,
+    "published": false
   }
 }

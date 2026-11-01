@@ -1,0 +1,19 @@
+{
+  "decision": "accepted",
+  "replayed": false,
+  "review_id": "053a66a2-3a07-4de4-88e4-12222adf306d",
+  "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+  "request_hash": "247c3d9beec6aef695eccb85e86fa81b3c2a10ceb351957205b893bb6fb4f450",
+  "facility_code": "35250200032",
+  "input_revision": 2351,
+  "source_id": "a2c2d6df-363e-4384-89c6-bcfb5adb9da0",
+  "review_method": "Codex desktop review of historical OSM and official address; not field survey",
+  "coordinates_unchanged": true,
+  "verified": 1,
+  "unverified": 564,
+  "missing": 408,
+  "active_temporary_review_actors": 0,
+  "active_temporary_review_tokens": 0,
+  "default_analysis_run_id": null,
+  "published": false
+}

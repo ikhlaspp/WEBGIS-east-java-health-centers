@@ -1,0 +1,189 @@
+{
+  "reviewed_at": "2026-11-01",
+  "reviewer": "Codex desktop evidence review",
+  "source_receipt": {
+    "source_id": "trajeng-land-inventory-2024",
+    "edition": "2024",
+    "source_url": "https://ppid.pasuruankota.go.id/userfiles/2025/07/54c498ba897908a9f760a1d0e1424330.pdf",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-11-01T11:15:45.299880+00:00",
+    "sha256": "5030d8dd75cc91bafd6b6a3298479e62865412756a064ac87e8f3a1bfe60f085",
+    "bytes": 90410,
+    "raw_path": "data\\raw\\trajeng-land-inventory-2024\\5030d8dd75cc91bafd6b6a3298479e62865412756a064ac87e8f3a1bfe60f085.bin"
+  },
+  "profile_receipt": {
+    "source_id": "pasuruan-health-profile-2024",
+    "edition": "2024",
+    "source_url": "https://ppid.pasuruankota.go.id/userfiles/2025/07/91834d4da3a6d0b4ea1030d20e15d2af.pdf",
+    "acquired_from": "https_download",
+    "acquired_at": "2026-11-01T11:15:49.837945+00:00",
+    "sha256": "6c7e07863e9c4f2d43ae330502840952e747871ecaf876b5103c0903bbee0cc1",
+    "bytes": 11422070,
+    "raw_path": "data\\raw\\pasuruan-health-profile-2024\\6c7e07863e9c4f2d43ae330502840952e747871ecaf876b5103c0903bbee0cc1.bin"
+  },
+  "method": "Visually checked inventory main-use rows against facility name/address and official 2024 profile code; WGS84 geodesic distance; historical district containment. No distance threshold is an acceptance rule.",
+  "records": [
+    {
+      "facility_code": "35750200001",
+      "name": "GADINGREJO",
+      "original_lon_lat": [
+        112.901894,
+        -7.6322293
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 2,
+      "inventory_row": 1,
+      "candidate_lon_lat": [
+        112.90155633363187,
+        -7.634984079900136
+      ],
+      "separation_metres": 306.932,
+      "candidate_in_assigned_boundary": true,
+      "reason": "Shared health-centre and village-office parcel; independently distinguish facility building.",
+      "visual_review_sha256": "204f1625996aadeab20c669c1c6807797879463b5bf6bc054f83033e4857905f"
+    },
+    {
+      "facility_code": "35750200002",
+      "name": "KARANGKETUG",
+      "original_lon_lat": [
+        112.8810634,
+        -7.6320192
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 7,
+      "inventory_row": 1,
+      "candidate_lon_lat": [
+        112.8787665,
+        -7.6315429
+      ],
+      "separation_metres": 258.856,
+      "candidate_in_assigned_boundary": true,
+      "reason": "Main-site address matches; substantial displacement requires independent site confirmation.",
+      "visual_review_sha256": "d92ff3f22b2915118a3487b8ba9d481f5bc9bc759366de9ba2f12a73c4b98a74"
+    },
+    {
+      "facility_code": "35750200003",
+      "name": "KEBONAGUNG",
+      "original_lon_lat": [
+        112.8959066,
+        -7.6594653
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 10,
+      "candidate_lon_lat": null,
+      "reason": "Inventory row is Pustu Purutrejo, not the main Kebonagung site.",
+      "visual_review_sha256": "8d47fc06ef019aa375263e43c4dd306a9083050e8ce454c4ddbcf7f66845f247"
+    },
+    {
+      "facility_code": "35750200004",
+      "name": "SEKARGADUNG",
+      "original_lon_lat": [
+        112.9048143,
+        -7.670507
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 22,
+      "candidate_lon_lat": null,
+      "reason": "KH Mansyur/Tembokrejo address and duplicated coordinate differ from main Sekarsono site; no main-site candidate inferred.",
+      "visual_review_sha256": "e10b1a70dc829b903990353275c125feb233aa27b117b0e9d95e0e4387e78947"
+    },
+    {
+      "facility_code": "35750200005",
+      "name": "BUGUL KIDUL",
+      "original_lon_lat": [
+        112.9185017,
+        -7.6488379
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 17,
+      "inventory_row": 1,
+      "candidate_lon_lat": [
+        112.9162496,
+        -7.6527898
+      ],
+      "separation_metres": 502.756,
+      "candidate_in_assigned_boundary": true,
+      "reason": "Main-site address matches; substantial displacement requires independent site confirmation.",
+      "visual_review_sha256": "12b7aca99a57fb8509be9ee7f5bbb535accd270de2903a1f7ab0cc7fffab1d67"
+    },
+    {
+      "facility_code": "35750200006",
+      "name": "KANDANGSAPI",
+      "original_lon_lat": [
+        112.9123479,
+        -7.6442383
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 13,
+      "inventory_row": 2,
+      "candidate_lon_lat": [
+        112.90952,
+        -7.6429
+      ],
+      "separation_metres": 345.346,
+      "candidate_in_assigned_boundary": true,
+      "reason": "Use main clinic row 2, not official residence row 1; displaced original needs independent confirmation.",
+      "visual_review_sha256": "e55dda05adc460c4169658981e242232579ef9ea8707bc0328ef471fa8b94ec8"
+    },
+    {
+      "facility_code": "35750200007",
+      "name": "KEBONSARI",
+      "original_lon_lat": [
+        112.9033898,
+        -7.6454216
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 11,
+      "inventory_row": 1,
+      "candidate_lon_lat": [
+        112.902423,
+        -7.645816
+      ],
+      "separation_metres": 115.246,
+      "candidate_in_assigned_boundary": true,
+      "reason": "Main-site address matches; displaced original needs independent confirmation.",
+      "visual_review_sha256": "9d57b60816e89890a68dbbb8efada7c6cbe16422c5ab92ba9e7a6d499abff816"
+    },
+    {
+      "facility_code": "35750200008",
+      "name": "TRAJENG",
+      "original_lon_lat": [
+        112.9117871,
+        -7.6366675
+      ],
+      "decision": "pending",
+      "precision_level": "unknown",
+      "original_point_changed": false,
+      "inventory_page": 23,
+      "inventory_row": 1,
+      "candidate_lon_lat": [
+        112.91192,
+        -7.636757
+      ],
+      "separation_metres": 17.692,
+      "candidate_in_assigned_boundary": true,
+      "reason": "Same coordinate reused for two parcels; village-office land-use note remains ambiguous.",
+      "visual_review_sha256": "3193912e94acac8fdfede6637e4dd25853a4a88d7b005025ac3b00800a854ddd"
+    }
+  ],
+  "summary": {
+    "reviewed": 8,
+    "pending_candidates": 6,
+    "main_site_not_identified": 2,
+    "accepted": 0
+  }
+}

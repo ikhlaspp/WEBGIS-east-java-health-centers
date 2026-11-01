@@ -1,0 +1,59 @@
+{
+    "release": {
+        "id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+        "status": "draft",
+        "input_revision": 2360,
+        "default_analysis_run_id": null
+    },
+    "original_facilities_checked": 8,
+    "mismatches": [],
+    "reviews": [
+        {
+            "facility_code": "35750200001",
+            "result_status": "pending",
+            "precision_level": "unknown"
+        },
+        {
+            "facility_code": "35750200002",
+            "result_status": "pending",
+            "precision_level": "unknown"
+        },
+        {
+            "facility_code": "35750200005",
+            "result_status": "pending",
+            "precision_level": "unknown"
+        },
+        {
+            "facility_code": "35750200006",
+            "result_status": "pending",
+            "precision_level": "unknown"
+        },
+        {
+            "facility_code": "35750200007",
+            "result_status": "pending",
+            "precision_level": "unknown"
+        },
+        {
+            "facility_code": "35750200008",
+            "result_status": "pending",
+            "precision_level": "unknown"
+        }
+    ],
+    "source_status": "pending",
+    "counts": [
+        {
+            "coordinate_status": "verified",
+            "count": 2
+        },
+        {
+            "coordinate_status": "unverified",
+            "count": 563
+        },
+        {
+            "coordinate_status": "missing",
+            "count": 408
+        }
+    ],
+    "active_actors": 0,
+    "active_tokens": 0
+}

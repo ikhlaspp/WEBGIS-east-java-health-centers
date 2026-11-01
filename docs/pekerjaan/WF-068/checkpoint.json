@@ -3,7 +3,7 @@
   "status": "in_progress",
   "predecessor_commit": "9c3e697524bec2c92f36f50f016c49597440a14c",
   "predecessor_push": "verified origin/main",
-  "next_action": "Review Trajeng parcel-versus-building ambiguity and remaining individual candidates. Official Pasuruan 2024 land inventory also contains other facility sites worth reviewing. Reanalysis required before eventual validation/publication.",
+  "next_action": "Independently corroborate six Pasuruan inventory site candidates before any coordinate replacement. Main sites of Kebonagung and Sekargadung are not identified by the inspected inventory rows. Continue individual review of 41 missing-coordinate candidates; rerun analysis after decisions.",
   "screening_summary": {
     "screened": 565,
     "batches": 44,
@@ -94,5 +94,14 @@
     "file": "trajeng-2024-evidence-review.json",
     "status": "pending",
     "identity_and_district_resolved": true
+  },
+  "pasuruan_inventory_review": {
+    "reviewed": 8,
+    "pending_candidates_imported": 6,
+    "accepted": 0,
+    "main_site_not_identified": 2,
+    "report": "pasuruan-inventory-review.json",
+    "live_verification": "pasuruan-candidates-live-verification.json",
+    "input_revision": 2360
   }
 }

@@ -1,0 +1,19 @@
+{
+  "decision": "accepted",
+  "replayed": false,
+  "review_id": "f1636e88-256d-4d6e-ac87-29004b9d4315",
+  "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+  "request_hash": "b3d9ce5c09d5c8508b91c3c8147019eab908b392d87667ce23a2821f25430ee3",
+  "facility_code": "35730200010",
+  "input_revision": 2354,
+  "source_id": "ee85ce53-5b45-4dc6-9a3a-b613c320d497",
+  "review_method": "Codex desktop review; official 2021 address table and historical OSM footprint",
+  "coordinates_unchanged": true,
+  "verified": 2,
+  "unverified": 563,
+  "missing": 408,
+  "active_temporary_review_actors": 0,
+  "active_temporary_review_tokens": 0,
+  "default_analysis_run_id": null,
+  "published": false
+}

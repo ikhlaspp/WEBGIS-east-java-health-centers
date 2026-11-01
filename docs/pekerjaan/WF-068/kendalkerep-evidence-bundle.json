@@ -1,0 +1,206 @@
+{
+  "reviewed_at": "2026-11-01",
+  "reviewer": "Codex desktop evidence review",
+  "historical_records": [
+    {
+      "facility_code": "35730200010",
+      "cutoff": "2024-12-31T23:59:59Z",
+      "way_id": 629408229,
+      "way_version": 2,
+      "way_timestamp": "2021-01-20T07:37:28Z",
+      "tags": {
+        "building": "hospital",
+        "name": "Puskesmas Kendalkerep"
+      },
+      "baseline_point": [
+        112.6508591,
+        -7.9612097
+      ],
+      "historical_footprint_covers": true,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.6507723,
+              -7.9612032
+            ],
+            [
+              112.6506562,
+              -7.9611499
+            ],
+            [
+              112.6506901,
+              -7.9610922
+            ],
+            [
+              112.650716,
+              -7.9610314
+            ],
+            [
+              112.6510004,
+              -7.9611864
+            ],
+            [
+              112.65094,
+              -7.9612948
+            ],
+            [
+              112.6507723,
+              -7.9612032
+            ]
+          ]
+        ]
+      },
+      "node_history_receipts": [
+        {
+          "node_id": 5942224887,
+          "selected_version": 2,
+          "selected_timestamp": "2021-01-20T07:37:28Z",
+          "receipt": {
+            "source_id": "osm-node-5942224887-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224887/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:29.325071+00:00",
+            "sha256": "3302dc968ae8103795003295c9d479551bdcdb10f118280ceb47be1ff3ca39f6",
+            "bytes": 774,
+            "raw_path": "data\\raw\\osm-node-5942224887-history\\3302dc968ae8103795003295c9d479551bdcdb10f118280ceb47be1ff3ca39f6.bin"
+          }
+        },
+        {
+          "node_id": 5942224888,
+          "selected_version": 1,
+          "selected_timestamp": "2018-10-01T07:56:09Z",
+          "receipt": {
+            "source_id": "osm-node-5942224888-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224888/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:30.241067+00:00",
+            "sha256": "394fd256d3255a290501a982a9cd35e70bd82711a60523b7807edb684fa43007",
+            "bytes": 605,
+            "raw_path": "data\\raw\\osm-node-5942224888-history\\394fd256d3255a290501a982a9cd35e70bd82711a60523b7807edb684fa43007.bin"
+          }
+        },
+        {
+          "node_id": 5942224889,
+          "selected_version": 1,
+          "selected_timestamp": "2018-10-01T07:56:09Z",
+          "receipt": {
+            "source_id": "osm-node-5942224889-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224889/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:31.260674+00:00",
+            "sha256": "e5d90963ebb6668ce2fdfded35a1957b81f0e5294d1f4ea9a2cb80d0d942c0c4",
+            "bytes": 605,
+            "raw_path": "data\\raw\\osm-node-5942224889-history\\e5d90963ebb6668ce2fdfded35a1957b81f0e5294d1f4ea9a2cb80d0d942c0c4.bin"
+          }
+        },
+        {
+          "node_id": 5942224890,
+          "selected_version": 1,
+          "selected_timestamp": "2018-10-01T07:56:09Z",
+          "receipt": {
+            "source_id": "osm-node-5942224890-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/5942224890/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:32.224788+00:00",
+            "sha256": "a5d2be003107d77ffe776a377a39e8c1d47e189b4ed423fbef5d05fea30a7249",
+            "bytes": 605,
+            "raw_path": "data\\raw\\osm-node-5942224890-history\\a5d2be003107d77ffe776a377a39e8c1d47e189b4ed423fbef5d05fea30a7249.bin"
+          }
+        },
+        {
+          "node_id": 8341106870,
+          "selected_version": 1,
+          "selected_timestamp": "2021-01-20T07:37:28Z",
+          "receipt": {
+            "source_id": "osm-node-8341106870-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/8341106870/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:33.139451+00:00",
+            "sha256": "7b2905126e31cabee55eef1b42bec2c88222d6c285a2edc08d34be95100143e4",
+            "bytes": 583,
+            "raw_path": "data\\raw\\osm-node-8341106870-history\\7b2905126e31cabee55eef1b42bec2c88222d6c285a2edc08d34be95100143e4.bin"
+          }
+        },
+        {
+          "node_id": 8341106871,
+          "selected_version": 1,
+          "selected_timestamp": "2021-01-20T07:37:28Z",
+          "receipt": {
+            "source_id": "osm-node-8341106871-history",
+            "edition": "accessed-2026-10-29",
+            "source_url": "https://api.openstreetmap.org/api/0.6/node/8341106871/history.json",
+            "acquired_from": "https_download",
+            "acquired_at": "2026-10-29T01:48:34.185279+00:00",
+            "sha256": "338cdd5fa9bafb02f4bde1ef2f10aeae0b31a7d02a92b3f9d2f1199a900640ea",
+            "bytes": 583,
+            "raw_path": "data\\raw\\osm-node-8341106871-history\\338cdd5fa9bafb02f4bde1ef2f10aeae0b31a7d02a92b3f9d2f1199a900640ea.bin"
+          }
+        }
+      ],
+      "accepted": false,
+      "limitation": "Reconstructed OSM geometry at year end is historical map evidence, not a field survey; identity and source review remain separate."
+    }
+  ],
+  "receipts": [
+    {
+      "source_id": "malang-health-profile-2021",
+      "edition": "2021",
+      "source_url": "https://dinkes.malangkota.go.id/wp-content/uploads/sites/104/2023/05/Profilkes-2021.pdf",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-11-01T11:06:35.082799+00:00",
+      "sha256": "161337a05a9c9f296a35b409be9789330146bb01c1f143649d7f54117ed4f765",
+      "bytes": 13773316,
+      "raw_path": "data\\raw\\malang-health-profile-2021\\161337a05a9c9f296a35b409be9789330146bb01c1f143649d7f54117ed4f765.bin"
+    },
+    {
+      "source_id": "kendalkerep-official-profile",
+      "edition": "observed-2026-10-25",
+      "source_url": "https://puskkendalkerep.malangkota.go.id/profil/",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-25T03:58:29.421364+00:00",
+      "sha256": "6ff1ed4f743daad575335203fabbb54a23d56645d1058606ee4b450148d9664b",
+      "bytes": 75511,
+      "raw_path": "data\\raw\\kendalkerep-official-profile\\6ff1ed4f743daad575335203fabbb54a23d56645d1058606ee4b450148d9664b.bin"
+    },
+    {
+      "source_id": "kendalkerep-history-2015",
+      "edition": "2015",
+      "source_url": "https://dinkes.malangkota.go.id/2015/05/15/puskesmas-kendalkerep/",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-28T06:07:43.223249+00:00",
+      "sha256": "3ff3852c878239f7cf40e39ddef1951aa1def889d747ebb34939577687581ef1",
+      "bytes": 113205,
+      "raw_path": "data\\raw\\kendalkerep-history-2015\\3ff3852c878239f7cf40e39ddef1951aa1def889d747ebb34939577687581ef1.bin"
+    },
+    {
+      "source_id": "kendalkerep-osm-history",
+      "edition": "accessed-2026-10-28",
+      "source_url": "https://api.openstreetmap.org/api/0.6/way/629408229/history.json",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-10-28T06:07:44.943603+00:00",
+      "sha256": "208e6756431bda35be3a608700f6a316a59743775ad34fc782de9f71f5bdc8a4",
+      "bytes": 1229,
+      "raw_path": "data\\raw\\kendalkerep-osm-history\\208e6756431bda35be3a608700f6a316a59743775ad34fc782de9f71f5bdc8a4.bin"
+    }
+  ],
+  "official_table": {
+    "physical_page": 34,
+    "printed_page": 12,
+    "table": "Lampiran 2.2",
+    "row": 11,
+    "legacy_code": "1033249",
+    "legacy_code_mapping_asserted": false,
+    "name_address_match": true,
+    "visually_inspected": true,
+    "render_sha256": "5dc0d004af60f1ce3f94ce2307dc9e8c69c88ed8611fd96f46dc119a92d3d4f4"
+  },
+  "decision_basis": "Desktop verification by Codex: unchanged CSV point lies in named Kendalkerep OSM way 629408229 v2 (2021-01-20), reconstructed at 2024-12-31. Official Malang health profile 2021, physical page 34, printed page 12, table 2.2 row 11 confirms Sulfat 100/Blimbing and distinguishes Kendalsari in row 16. Current official profile agrees. The conflicting 2015 article names Kendalsari and Sulfat 02; retained but outweighed by the later dated table and named historical footprint. No claim about cause of discrepancy. Not field survey or proof of occupancy throughout 2024.",
+  "original_coordinate_preserved": true
+}

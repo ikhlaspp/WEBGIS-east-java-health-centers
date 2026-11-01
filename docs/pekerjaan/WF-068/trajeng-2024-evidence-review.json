@@ -1,0 +1,52 @@
+{
+  "facility_code": "35750200008",
+  "reviewed_at": "2026-11-01",
+  "receipts": [
+    {
+      "source_id": "trajeng-land-inventory-2024",
+      "edition": "2024",
+      "source_url": "https://ppid.pasuruankota.go.id/userfiles/2025/07/54c498ba897908a9f760a1d0e1424330.pdf",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-11-01T11:15:45.299880+00:00",
+      "sha256": "5030d8dd75cc91bafd6b6a3298479e62865412756a064ac87e8f3a1bfe60f085",
+      "bytes": 90410,
+      "raw_path": "data\\raw\\trajeng-land-inventory-2024\\5030d8dd75cc91bafd6b6a3298479e62865412756a064ac87e8f3a1bfe60f085.bin"
+    },
+    {
+      "source_id": "pasuruan-health-profile-2024",
+      "edition": "2024",
+      "source_url": "https://ppid.pasuruankota.go.id/userfiles/2025/07/91834d4da3a6d0b4ea1030d20e15d2af.pdf",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-11-01T11:15:49.837945+00:00",
+      "sha256": "6c7e07863e9c4f2d43ae330502840952e747871ecaf876b5103c0903bbee0cc1",
+      "bytes": 11422070,
+      "raw_path": "data\\raw\\pasuruan-health-profile-2024\\6c7e07863e9c4f2d43ae330502840952e747871ecaf876b5103c0903bbee0cc1.bin"
+    }
+  ],
+  "identity_confirmed_by_2024_code": true,
+  "retained_district": "Panggungrejo",
+  "profile_locator": "physical page 24, printed page 10, table 3.1 row 8",
+  "inventory_locator": "physical page 23, rows 1 and 2, dated 2024-12-31",
+  "original_lon_lat": [
+    112.9117871,
+    -7.6366675
+  ],
+  "inventory_lon_lat": [
+    112.91192,
+    -7.636757
+  ],
+  "geodesic_distance_metres": 17.692,
+  "decision": "pending",
+  "database_modified": false,
+  "reason": "2024 official profile confirms current facility code, name, Maluku 1 and Panggungrejo. Land inventory repeats the same coordinate for the health-centre parcel and adjoining yard with a village-office land-use note. It establishes a historical site candidate but does not independently identify the exact facility building point. Preserve both points; no automatic replacement or facility-precision assertion.",
+  "visual_inspection": [
+    {
+      "path": "data/staging/trajeng-land-inventory-2024-page23.png",
+      "sha256": "3193912e94acac8fdfede6637e4dd25853a4a88d7b005025ac3b00800a854ddd"
+    },
+    {
+      "path": "data/staging/pasuruan-health-profile-2024-page24.png",
+      "sha256": "a26178a4d47ab3d9c9c4e287611f598b9356aee177f571a1248b4ea6e9a9f539"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source_id": "trajeng-land-inventory-2024",
+  "edition": "2024",
+  "source_url": "https://ppid.pasuruankota.go.id/userfiles/2025/07/54c498ba897908a9f760a1d0e1424330.pdf",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-11-01T11:15:45.299880+00:00",
+  "sha256": "5030d8dd75cc91bafd6b6a3298479e62865412756a064ac87e8f3a1bfe60f085",
+  "bytes": 90410,
+  "raw_path": "data\\raw\\trajeng-land-inventory-2024\\5030d8dd75cc91bafd6b6a3298479e62865412756a064ac87e8f3a1bfe60f085.bin"
+}

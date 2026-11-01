@@ -1,0 +1,10 @@
+{
+  "source_id": "malang-health-profile-2021",
+  "edition": "2021",
+  "source_url": "https://dinkes.malangkota.go.id/wp-content/uploads/sites/104/2023/05/Profilkes-2021.pdf",
+  "acquired_from": "https_download",
+  "acquired_at": "2026-11-01T11:06:35.082799+00:00",
+  "sha256": "161337a05a9c9f296a35b409be9789330146bb01c1f143649d7f54117ed4f765",
+  "bytes": 13773316,
+  "raw_path": "data\\raw\\malang-health-profile-2021\\161337a05a9c9f296a35b409be9789330146bb01c1f143649d7f54117ed4f765.bin"
+}

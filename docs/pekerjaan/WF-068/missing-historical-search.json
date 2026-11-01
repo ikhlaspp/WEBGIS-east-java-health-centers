@@ -1,0 +1,1379 @@
+{
+  "reviewed_at": "2026-11-01",
+  "facilities_searched": 41,
+  "osm_objects_checked": 43,
+  "historical_objects": 40,
+  "post_2024_only_objects": 3,
+  "historical_point_candidates": 23,
+  "historical_point_candidates_in_assigned_district": 23,
+  "accepted": 0,
+  "records": [
+    {
+      "facility_code": "35020200030",
+      "name": "SETONO",
+      "osm_object": "node/13986281114",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-13986281114-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/13986281114/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:03.837401+00:00",
+        "sha256": "2c804fb76a51526741afdd6968e755a242c78c06959595051d64fce6bfc5d0fc",
+        "bytes": 490,
+        "raw_path": "data\\raw\\missing-node-13986281114-history\\2c804fb76a51526741afdd6968e755a242c78c06959595051d64fce6bfc5d0fc.bin"
+      },
+      "first_timestamp": "2026-07-03T16:29:01Z",
+      "status": "no_record_by_2024_cutoff"
+    },
+    {
+      "facility_code": "35030200002",
+      "name": "BODAG",
+      "osm_object": "way/1058635401",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-1058635401-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/1058635401/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:04.856975+00:00",
+        "sha256": "ec7505a1cdef34f9e5d94dbe33b3641c96dcce228f2855b051e5b9668c17f3f3",
+        "bytes": 822,
+        "raw_path": "data\\raw\\missing-way-1058635401-history\\ec7505a1cdef34f9e5d94dbe33b3641c96dcce228f2855b051e5b9668c17f3f3.bin"
+      },
+      "first_timestamp": "2022-05-09T17:40:26Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2022-05-10T12:50:33Z",
+      "tags": {
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Puskesmas Bodag"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35030200021",
+      "name": "PUCANGANAK",
+      "osm_object": "way/484678046",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-484678046-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/484678046/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:05.558685+00:00",
+        "sha256": "2db39a31eb8ce1e3e9320f3e4b81142f7060ee6138ab2e6bae5dfb6a2b9897f0",
+        "bytes": 938,
+        "raw_path": "data\\raw\\missing-way-484678046-history\\2db39a31eb8ce1e3e9320f3e4b81142f7060ee6138ab2e6bae5dfb6a2b9897f0.bin"
+      },
+      "first_timestamp": "2017-04-04T08:41:08Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2017-04-13T06:56:05Z",
+      "tags": {
+        "amenity": "hospital",
+        "building": "yes",
+        "name": "PUSKESMAS PUCANGANAK"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35040200008",
+      "name": "KALIDAWIR",
+      "osm_object": "node/9234227180",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-9234227180-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/9234227180/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:06.858446+00:00",
+        "sha256": "29d1cbea4a16e23a8ff42f81f6f8061c8a0a79ef0ebcac13160f91d0efe7da70",
+        "bytes": 942,
+        "raw_path": "data\\raw\\missing-node-9234227180-history\\29d1cbea4a16e23a8ff42f81f6f8061c8a0a79ef0ebcac13160f91d0efe7da70.bin"
+      },
+      "first_timestamp": "2021-11-08T03:10:47Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2021-11-08T05:28:14Z",
+      "tags": {
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Puskesmas Kalidawir",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:wikidata": "Q12490745",
+        "operator:wikipedia": "id:Kementerian Kesehatan Republik Indonesia"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        111.9771593,
+        -8.1806183
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35070200034",
+      "name": "ARDIMULYO",
+      "osm_object": "way/329611673",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-329611673-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/329611673/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:07.876367+00:00",
+        "sha256": "f949966bb8d35b49d284082c43f9a9abf5525eca3ac7415d6c789fc02d7507cc",
+        "bytes": 623,
+        "raw_path": "data\\raw\\missing-way-329611673-history\\f949966bb8d35b49d284082c43f9a9abf5525eca3ac7415d6c789fc02d7507cc.bin"
+      },
+      "first_timestamp": "2015-02-22T06:13:21Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2015-02-22T06:13:21Z",
+      "tags": {
+        "amenity": "clinic",
+        "building": "yes",
+        "building:structure": "unreinforced_masonry",
+        "building:walls": "brick",
+        "name": "Puskesmas Ardimulyo"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35080200014",
+      "name": "SUMBERSARI",
+      "osm_object": "way/201368745",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-201368745-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/201368745/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:08.870259+00:00",
+        "sha256": "09982bc67dcc008054b489fe72b291ae95549d275b3eb4b06325dcdbb4569b88",
+        "bytes": 866,
+        "raw_path": "data\\raw\\missing-way-201368745-history\\09982bc67dcc008054b489fe72b291ae95549d275b3eb4b06325dcdbb4569b88.bin"
+      },
+      "first_timestamp": "2013-01-16T07:37:14Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2014-11-09T16:55:29Z",
+      "tags": {
+        "amenity": "hospital",
+        "name": "Puskesmas Sumbersari",
+        "operator:type": "government"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35090200019",
+      "name": "KEMUNINGSARI KIDUL",
+      "osm_object": "node/9494173401",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-9494173401-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/9494173401/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:09.857634+00:00",
+        "sha256": "635530acc14dfcce43f787dbbfcf728bb0fa4d6dd26d8ae5e96b5e0c58595c54",
+        "bytes": 524,
+        "raw_path": "data\\raw\\missing-node-9494173401-history\\635530acc14dfcce43f787dbbfcf728bb0fa4d6dd26d8ae5e96b5e0c58595c54.bin"
+      },
+      "first_timestamp": "2022-02-10T03:07:04Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2022-02-10T03:07:04Z",
+      "tags": {
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Puskesmas Kemuningsari Kidul"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        113.6285103,
+        -8.2942713
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35090200043",
+      "name": "JELBUK",
+      "osm_object": "node/11329065524",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-11329065524-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/11329065524/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:10.858137+00:00",
+        "sha256": "69352fe41311f4247088a20c8c47acc75f8efcad904221ae2dc4cbb7c345ca21",
+        "bytes": 649,
+        "raw_path": "data\\raw\\missing-node-11329065524-history\\69352fe41311f4247088a20c8c47acc75f8efcad904221ae2dc4cbb7c345ca21.bin"
+      },
+      "first_timestamp": "2023-11-06T10:55:22Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2023-11-06T10:55:22Z",
+      "tags": {
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Puskesmas Jelbuk",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:wikidata": "Q12490745"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        113.7601463,
+        -8.0804602
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35090200045",
+      "name": "MANGLI",
+      "osm_object": "node/3222391346",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-3222391346-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/3222391346/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:11.974920+00:00",
+        "sha256": "c4f477f1156ed2990c91b216984fe2fa63c8530450f1602172d3998d70d90901",
+        "bytes": 1300,
+        "raw_path": "data\\raw\\missing-node-3222391346-history\\c4f477f1156ed2990c91b216984fe2fa63c8530450f1602172d3998d70d90901.bin"
+      },
+      "first_timestamp": "2014-12-06T21:59:19Z",
+      "status": "historical_record_found",
+      "version": 4,
+      "timestamp": "2023-01-07T18:57:42Z",
+      "tags": {
+        "addr:street": "Jalan Otto Iskandardinata",
+        "amenity": "clinic",
+        "building": "hospital",
+        "name": "Puskesmas Mangli"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        113.6522109,
+        -8.1950712
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35090200050",
+      "name": "BANJARSENGON",
+      "osm_object": "node/11329358317",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-11329358317-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/11329358317/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:12.847320+00:00",
+        "sha256": "08d78f1cad53299938b6a6c26ee1ef9eb966dd1e726b8857435cb5f057ae9a20",
+        "bytes": 656,
+        "raw_path": "data\\raw\\missing-node-11329358317-history\\08d78f1cad53299938b6a6c26ee1ef9eb966dd1e726b8857435cb5f057ae9a20.bin"
+      },
+      "first_timestamp": "2023-11-06T14:34:29Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2023-11-06T14:34:29Z",
+      "tags": {
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Puskesmas Banjar Sengon",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:wikidata": "Q12490745"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        113.6800351,
+        -8.1409478
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35100200002",
+      "name": "SUMBERAGUNG",
+      "osm_object": "way/706603574",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-706603574-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/706603574/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:13.496825+00:00",
+        "sha256": "383c76f1a87c57b49aef062d6e55a8ba7814f027a846149708fcada5b464810d",
+        "bytes": 891,
+        "raw_path": "data\\raw\\missing-way-706603574-history\\383c76f1a87c57b49aef062d6e55a8ba7814f027a846149708fcada5b464810d.bin"
+      },
+      "first_timestamp": "2019-07-23T08:55:56Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2019-09-18T09:57:44Z",
+      "tags": {
+        "amenity": "clinic",
+        "building": "yes",
+        "building:levels": "1",
+        "building:roof": "tile",
+        "building:structure": "plastered",
+        "building:walls": "brick",
+        "name": "Puskesmas Sumberagung",
+        "operator:type": "government"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35100200015",
+      "name": "BENCULUK",
+      "osm_object": "node/6283763385",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-6283763385-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/6283763385/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:14.901543+00:00",
+        "sha256": "84c510e1a71c054f3ac7ee376b743878f93c3af6f62551dc8ef4cb63aaf66f21",
+        "bytes": 1604,
+        "raw_path": "data\\raw\\missing-node-6283763385-history\\84c510e1a71c054f3ac7ee376b743878f93c3af6f62551dc8ef4cb63aaf66f21.bin"
+      },
+      "first_timestamp": "2019-02-17T04:50:11Z",
+      "status": "historical_record_found",
+      "version": 4,
+      "timestamp": "2019-09-13T00:35:43Z",
+      "tags": {
+        "addr:housenumber": "71",
+        "addr:postcode": "68482",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "internet_access": "wlan",
+        "name": "Puskesmas Benculuk",
+        "opening_hours": "24/7",
+        "phone": "+62 333 396685"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        114.2310712,
+        -8.4291953
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35100200020",
+      "name": "TULUNGREJO",
+      "osm_object": "way/456376695",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-456376695-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/456376695/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:15.856088+00:00",
+        "sha256": "d31690f9476d78c7dc18fc3847d521050b388b40e0779e447b0cb154feb581f6",
+        "bytes": 842,
+        "raw_path": "data\\raw\\missing-way-456376695-history\\d31690f9476d78c7dc18fc3847d521050b388b40e0779e447b0cb154feb581f6.bin"
+      },
+      "first_timestamp": "2016-11-28T13:59:34Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2020-12-20T13:58:40Z",
+      "tags": {
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Puskesmas Tulungrejo"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35100200030",
+      "name": "BADEAN",
+      "osm_object": "way/726044755",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-726044755-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/726044755/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:16.570790+00:00",
+        "sha256": "b395e94c2b28f13ac0af96ab91aa276158a3550b3c5b4b7073344d41fbbe7037",
+        "bytes": 663,
+        "raw_path": "data\\raw\\missing-way-726044755-history\\b395e94c2b28f13ac0af96ab91aa276158a3550b3c5b4b7073344d41fbbe7037.bin"
+      },
+      "first_timestamp": "2019-09-19T06:32:20Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2019-09-19T06:32:20Z",
+      "tags": {
+        "addr:full": "DUSUN JATISARI RT01 RW01",
+        "amenity": "clinic",
+        "building": "yes",
+        "name": "PUSKESMAS BADEAN"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35100200043",
+      "name": "KLATAK",
+      "osm_object": "way/646660753",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-646660753-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/646660753/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:17.972249+00:00",
+        "sha256": "cef1cbd65a410726a308d2b0aaf747d85b8f593c9562d6019a0556e3206a45f6",
+        "bytes": 795,
+        "raw_path": "data\\raw\\missing-way-646660753-history\\cef1cbd65a410726a308d2b0aaf747d85b8f593c9562d6019a0556e3206a45f6.bin"
+      },
+      "first_timestamp": "2018-11-20T04:01:55Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2019-09-18T05:39:12Z",
+      "tags": {
+        "addr:full": "Jl. Yos Sudarso Rt 02/01",
+        "amenity": "clinic",
+        "building": "yes",
+        "name": "Puskesmas Klatak"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35110200006",
+      "name": "TLOGOSARI",
+      "osm_object": "node/5468386045",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-5468386045-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/5468386045/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:18.876880+00:00",
+        "sha256": "6df07cf99ab131fd3541445b7f3df8c3c70dff91951288810a3228442d190e9e",
+        "bytes": 1064,
+        "raw_path": "data\\raw\\missing-node-5468386045-history\\6df07cf99ab131fd3541445b7f3df8c3c70dff91951288810a3228442d190e9e.bin"
+      },
+      "first_timestamp": "2018-03-10T00:47:45Z",
+      "status": "historical_record_found",
+      "version": 3,
+      "timestamp": "2023-10-25T17:37:34Z",
+      "tags": {
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Puskesmas Tlogosari"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        113.9191743,
+        -7.9866318
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35120200007",
+      "name": "BUNGATAN",
+      "osm_object": "way/333196714",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-333196714-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/333196714/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:19.897475+00:00",
+        "sha256": "1565525537d63a36b1c91b6bf5689f8d88d6e6d787f8ea0ed91b41788030ead5",
+        "bytes": 785,
+        "raw_path": "data\\raw\\missing-way-333196714-history\\1565525537d63a36b1c91b6bf5689f8d88d6e6d787f8ea0ed91b41788030ead5.bin"
+      },
+      "first_timestamp": "2015-03-17T03:05:16Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2015-03-17T03:05:16Z",
+      "tags": {
+        "access:roof": "no",
+        "amenity": "clinic",
+        "building": "yes",
+        "building:condition": "good",
+        "building:levels": "1",
+        "building:roof": "tile",
+        "building:structure": "reinforced_masonry",
+        "building:walls": "brick",
+        "capacity:persons": "250",
+        "M:hazard_prone": "no",
+        "name": "Puskesmas Bungatan",
+        "rooms": "10",
+        "water_supply": "pipeline"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35170200001",
+      "name": "BANDARKEDUNGMULYO",
+      "osm_object": "node/2347668046",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2347668046-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2347668046/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:20.929009+00:00",
+        "sha256": "dfa4f4f48b0f3f99bab2b8b01a3280ad772b418da3042cb279aa935ebefc4df4",
+        "bytes": 499,
+        "raw_path": "data\\raw\\missing-node-2347668046-history\\dfa4f4f48b0f3f99bab2b8b01a3280ad772b418da3042cb279aa935ebefc4df4.bin"
+      },
+      "first_timestamp": "2013-06-16T14:44:10Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2013-06-16T14:44:10Z",
+      "tags": {
+        "amenity": "hospital",
+        "name": "Puskesmas Bandar KedungMulyo"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.1267498,
+        -7.5895998
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200004",
+      "name": "PLUMBON GAMBANG",
+      "osm_object": "node/2348030221",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2348030221-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2348030221/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:21.880372+00:00",
+        "sha256": "0ad41e72a007ab6979bd8dbba1a8797619b3a9a610dabc5132cc5e4aaf7ba2fc",
+        "bytes": 874,
+        "raw_path": "data\\raw\\missing-node-2348030221-history\\0ad41e72a007ab6979bd8dbba1a8797619b3a9a610dabc5132cc5e4aaf7ba2fc.bin"
+      },
+      "first_timestamp": "2013-06-16T16:36:31Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2014-09-21T05:18:58Z",
+      "tags": {
+        "amenity": "hospital",
+        "emergency": "no",
+        "name": "Puskesmas Plumbon Gambang"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.1764443,
+        -7.6148194
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200005",
+      "name": "CUKIR",
+      "osm_object": "node/2348030176",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2348030176-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2348030176/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:22.864629+00:00",
+        "sha256": "9ff71c3bba07c17da4ee29a78ea4d305419836865e300b8c0579e27406e83f3e",
+        "bytes": 1547,
+        "raw_path": "data\\raw\\missing-node-2348030176-history\\9ff71c3bba07c17da4ee29a78ea4d305419836865e300b8c0579e27406e83f3e.bin"
+      },
+      "first_timestamp": "2013-06-16T16:36:30Z",
+      "status": "historical_record_found",
+      "version": 3,
+      "timestamp": "2015-10-13T12:15:08Z",
+      "tags": {
+        "amenity": "hospital",
+        "emergency": "no",
+        "is_in:country": "Indonesia",
+        "is_in:county": "Bareng",
+        "is_in:region": "Jombang",
+        "is_in:state": "Jawa Timur",
+        "name": "Puskesmas Cukir"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.2425607,
+        -7.6114132
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200007",
+      "name": "PULOREJO",
+      "osm_object": "node/2347668229",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2347668229-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2347668229/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:23.894439+00:00",
+        "sha256": "f2c812899bfd8ff3850f8a469d3efe5ec47c296e8cc31ed8fef106328c2b2a80",
+        "bytes": 842,
+        "raw_path": "data\\raw\\missing-node-2347668229-history\\f2c812899bfd8ff3850f8a469d3efe5ec47c296e8cc31ed8fef106328c2b2a80.bin"
+      },
+      "first_timestamp": "2013-06-16T14:44:12Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2014-09-21T05:18:58Z",
+      "tags": {
+        "amenity": "hospital",
+        "name": "Puskesmas Pulorejo"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.2336529,
+        -7.6774235
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200010",
+      "name": "JAPANAN",
+      "osm_object": "node/2347668140",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2347668140-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2347668140/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:24.879750+00:00",
+        "sha256": "33fd44885e46c156d6603ba1e420d2ca7791b7977a58cf7ae0c2308f4907558d",
+        "bytes": 1172,
+        "raw_path": "data\\raw\\missing-node-2347668140-history\\33fd44885e46c156d6603ba1e420d2ca7791b7977a58cf7ae0c2308f4907558d.bin"
+      },
+      "first_timestamp": "2013-06-16T14:44:11Z",
+      "status": "historical_record_found",
+      "version": 3,
+      "timestamp": "2024-01-25T11:47:14Z",
+      "tags": {
+        "amenity": "hospital",
+        "name": "Puskesmas Japanan"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.3227505,
+        -7.6348687
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200012",
+      "name": "WONOSALAM",
+      "osm_object": "node/2347668282",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2347668282-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2347668282/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:25.865109+00:00",
+        "sha256": "bc94e29a6f4f6325d511cbd888a231a13ed44a77c5803b1d4ce0127e742e3456",
+        "bytes": 1177,
+        "raw_path": "data\\raw\\missing-node-2347668282-history\\bc94e29a6f4f6325d511cbd888a231a13ed44a77c5803b1d4ce0127e742e3456.bin"
+      },
+      "first_timestamp": "2013-06-16T14:44:12Z",
+      "status": "historical_record_found",
+      "version": 3,
+      "timestamp": "2023-10-04T20:39:55Z",
+      "tags": {
+        "amenity": "hospital",
+        "name": "Puskesmas Wonosalam"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.3696413,
+        -7.7086313
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200016",
+      "name": "JOGOLOYO",
+      "osm_object": "node/2348030190",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2348030190-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2348030190/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:26.881124+00:00",
+        "sha256": "f4eeb8d9432b0b9550096df16bac7a2e7fc0af209ba116a72c2be455eae0946e",
+        "bytes": 1171,
+        "raw_path": "data\\raw\\missing-node-2348030190-history\\f4eeb8d9432b0b9550096df16bac7a2e7fc0af209ba116a72c2be455eae0946e.bin"
+      },
+      "first_timestamp": "2013-06-16T16:36:30Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2014-09-27T13:52:09Z",
+      "tags": {
+        "amenity": "hospital",
+        "is_in:country": "Indonesia",
+        "is_in:county": "Bareng",
+        "is_in:region": "Jombang",
+        "is_in:state": "Jawa Timur",
+        "name": "Puskesmas Jogoloyo"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.3128452,
+        -7.5584465
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200018",
+      "name": "JARAKKULON",
+      "osm_object": "node/2347668149",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2347668149-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2347668149/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:27.882906+00:00",
+        "sha256": "7106903674f4eefb7d89d03bbc70088b58c2ae456c04d0a6355f4a656e3514b7",
+        "bytes": 867,
+        "raw_path": "data\\raw\\missing-node-2347668149-history\\7106903674f4eefb7d89d03bbc70088b58c2ae456c04d0a6355f4a656e3514b7.bin"
+      },
+      "first_timestamp": "2013-06-16T14:44:11Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2014-09-06T14:52:02Z",
+      "tags": {
+        "amenity": "hospital",
+        "emergency": "no",
+        "name": "Puskesmas Jarak Kulon"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.2866267,
+        -7.5974919
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200023",
+      "name": "TAMBAKREJO",
+      "osm_object": "node/2348030233",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2348030233-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2348030233/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:28.884026+00:00",
+        "sha256": "8c0e2bf7b45bc7c83bec32bc049ba0cf5839cd19d438a4420e9eaf45919c30df",
+        "bytes": 1179,
+        "raw_path": "data\\raw\\missing-node-2348030233-history\\8c0e2bf7b45bc7c83bec32bc049ba0cf5839cd19d438a4420e9eaf45919c30df.bin"
+      },
+      "first_timestamp": "2013-06-16T16:36:32Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2014-10-21T02:55:34Z",
+      "tags": {
+        "amenity": "hospital",
+        "is_in:country": "Indonesia",
+        "is_in:county": "Ngoro",
+        "is_in:region": "Jombang",
+        "is_in:state": "Jawa Timur",
+        "name": "Puskesmas Tambak Rejo"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.2327512,
+        -7.5208017
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200027",
+      "name": "JATIWATES",
+      "osm_object": "node/2348030185",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2348030185-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2348030185/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:29.882903+00:00",
+        "sha256": "e964822f698a1ce6080805d58fa5f2173da710412286d316d59ecd4d14425c68",
+        "bytes": 1178,
+        "raw_path": "data\\raw\\missing-node-2348030185-history\\e964822f698a1ce6080805d58fa5f2173da710412286d316d59ecd4d14425c68.bin"
+      },
+      "first_timestamp": "2013-06-16T16:36:30Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2014-09-23T03:04:58Z",
+      "tags": {
+        "amenity": "hospital",
+        "is_in:country": "Indonesia",
+        "is_in:county": "Bareng",
+        "is_in:region": "Jombang",
+        "is_in:state": "Jawa Timur",
+        "name": "Puskesmas Jati Wates"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.272688,
+        -7.4598711
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200029",
+      "name": "BLIMBING KESAMBEN",
+      "osm_object": "node/2347668078",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2347668078-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2347668078/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:30.918350+00:00",
+        "sha256": "895a9e4bca76b9613f47c39ffa5eb45cd45a80d0f13465326598e882fdaa5973",
+        "bytes": 1807,
+        "raw_path": "data\\raw\\missing-node-2347668078-history\\895a9e4bca76b9613f47c39ffa5eb45cd45a80d0f13465326598e882fdaa5973.bin"
+      },
+      "first_timestamp": "2013-06-16T14:44:10Z",
+      "status": "historical_record_found",
+      "version": 4,
+      "timestamp": "2021-04-03T20:49:06Z",
+      "tags": {
+        "amenity": "hospital",
+        "is_in:country": "Indonesia",
+        "is_in:state": "Jawa Timur",
+        "name": "Puskesmas Blimbing Kesamben"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.3875495,
+        -7.473927
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35170200031",
+      "name": "KEBOAN",
+      "osm_object": "node/2347668169",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-2347668169-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/2347668169/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:31.956167+00:00",
+        "sha256": "5dc2cc8962e9bb14d34fc049d065dab3e7019bcbd32f002b60aac3e8afca8c7c",
+        "bytes": 852,
+        "raw_path": "data\\raw\\missing-node-2347668169-history\\5dc2cc8962e9bb14d34fc049d065dab3e7019bcbd32f002b60aac3e8afca8c7c.bin"
+      },
+      "first_timestamp": "2013-06-16T14:44:11Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2023-10-11T11:02:31Z",
+      "tags": {
+        "amenity": "hospital",
+        "name": "Puskesmas Keboan",
+        "place": "village"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.3247413,
+        -7.4487536
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35180200006",
+      "name": "TANJUNGANOM",
+      "osm_object": "node/11205306358",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-11205306358-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/11205306358/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:32.543649+00:00",
+        "sha256": "bf40c7e6132d2847ff5d384b489157e8e33451dc97908b3e37d3752e8d2426e9",
+        "bytes": 1736,
+        "raw_path": "data\\raw\\missing-node-11205306358-history\\bf40c7e6132d2847ff5d384b489157e8e33451dc97908b3e37d3752e8d2426e9.bin"
+      },
+      "first_timestamp": "2023-09-20T13:59:57Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2023-09-20T13:59:57Z",
+      "tags": {
+        "addr:city": "Kabupaten Nganjuk",
+        "addr:postcode": "64482",
+        "addr:street": "Jl. A. Yani No.25, Dipan Barat, Warujayeng, Kec. Tanjunganom, Kabupaten Nganjuk, Jawa Timur 64482",
+        "healthcare": "centre",
+        "name": "Puskesmas Tanjunganom",
+        "phone": "0358772800"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        112.0182132,
+        -7.6292967
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35180200015",
+      "name": "BAGOR",
+      "osm_object": "node/9738032021",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-9738032021-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/9738032021/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:33.927231+00:00",
+        "sha256": "3d401ae023a19ea1db6f208b528bcd5a6d5f26600063d605a104cb27280fec0f",
+        "bytes": 487,
+        "raw_path": "data\\raw\\missing-node-9738032021-history\\3d401ae023a19ea1db6f208b528bcd5a6d5f26600063d605a104cb27280fec0f.bin"
+      },
+      "first_timestamp": "2022-05-13T16:32:40Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2022-05-13T16:32:40Z",
+      "tags": {
+        "amenity": "clinic",
+        "name": "Puskesmas Bagor"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        111.8500419,
+        -7.5695502
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35190200009",
+      "name": "WUNGU",
+      "osm_object": "node/11681890452",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-11681890452-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/11681890452/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:34.922971+00:00",
+        "sha256": "7dc418da35af4b3791887e3eb28bdb5bef9f2f007b2543b8a755a0a67c5145c3",
+        "bytes": 765,
+        "raw_path": "data\\raw\\missing-node-11681890452-history\\7dc418da35af4b3791887e3eb28bdb5bef9f2f007b2543b8a755a0a67c5145c3.bin"
+      },
+      "first_timestamp": "2024-03-01T15:02:28Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2024-03-02T05:10:28Z",
+      "tags": {
+        "healthcare": "clinic",
+        "name": "Puskesmas Wungu",
+        "survey:date": "2024-03-02"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        111.6139952,
+        -7.686684
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35200200007",
+      "name": "KAWEDANAN",
+      "osm_object": "way/1134682831",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-1134682831-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/1134682831/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:35.932901+00:00",
+        "sha256": "ea4d5236cc79467c1918145d1fa950c719b9a956d610a117f73651390be4f5d8",
+        "bytes": 716,
+        "raw_path": "data\\raw\\missing-way-1134682831-history\\ea4d5236cc79467c1918145d1fa950c719b9a956d610a117f73651390be4f5d8.bin"
+      },
+      "first_timestamp": "2023-01-24T03:01:32Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2023-01-24T03:01:32Z",
+      "tags": {
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Puskesmas Kawedanan",
+        "operator": "Ministry of Health",
+        "operator:en": "Ministry of Health",
+        "operator:id": "Kementerian Kesehatan",
+        "operator:type": "government",
+        "operator:wikidata": "Q12490745"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35210200017",
+      "name": "GEMARANG",
+      "osm_object": "node/4670724332",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-4670724332-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/4670724332/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:36.939065+00:00",
+        "sha256": "7515226955cab145dd24bc3f4112491b9f2e74e024b670e756ee936cc16c1e45",
+        "bytes": 495,
+        "raw_path": "data\\raw\\missing-node-4670724332-history\\7515226955cab145dd24bc3f4112491b9f2e74e024b670e756ee936cc16c1e45.bin"
+      },
+      "first_timestamp": "2017-02-07T08:54:12Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2017-02-07T08:54:12Z",
+      "tags": {
+        "amenity": "hospital",
+        "name": "Puskesmas Gemarang"
+      },
+      "visible": true,
+      "historical_lon_lat": [
+        111.3703264,
+        -7.3953531
+      ],
+      "inside_assigned_boundary": true
+    },
+    {
+      "facility_code": "35240200002",
+      "name": "BLULUK",
+      "osm_object": "way/853508316",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-853508316-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/853508316/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:37.959003+00:00",
+        "sha256": "56bb152f2e168e86e1fd534bf1e05de6db34be212d843d3adfe8061f640c74cd",
+        "bytes": 540,
+        "raw_path": "data\\raw\\missing-way-853508316-history\\56bb152f2e168e86e1fd534bf1e05de6db34be212d843d3adfe8061f640c74cd.bin"
+      },
+      "first_timestamp": "2020-09-30T19:11:12Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2020-09-30T19:11:12Z",
+      "tags": {
+        "amenity": "hospital",
+        "location": "outdoor",
+        "name": "Puskesmas Bluluk"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35250200017",
+      "name": "GENDING",
+      "osm_object": "node/13088579433",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-node-13088579433-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/node/13088579433/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:39.013315+00:00",
+        "sha256": "6ad0c013f1bbf649dd83f2bbba937e120d0d200afd441a04f125c6e7bd34f690",
+        "bytes": 545,
+        "raw_path": "data\\raw\\missing-node-13088579433-history\\6ad0c013f1bbf649dd83f2bbba937e120d0d200afd441a04f125c6e7bd34f690.bin"
+      },
+      "first_timestamp": "2025-08-22T06:26:26Z",
+      "status": "no_record_by_2024_cutoff"
+    },
+    {
+      "facility_code": "35270200007",
+      "name": "TANJUNG",
+      "osm_object": "way/328686851",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-328686851-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/328686851/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:39.958490+00:00",
+        "sha256": "48919f91409a01f6206982b0f1af16ec40a3d5b33f88a082d944d74ac7fec365",
+        "bytes": 768,
+        "raw_path": "data\\raw\\missing-way-328686851-history\\48919f91409a01f6206982b0f1af16ec40a3d5b33f88a082d944d74ac7fec365.bin"
+      },
+      "first_timestamp": "2015-02-17T02:27:46Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2015-02-17T02:27:46Z",
+      "tags": {
+        "amenity": "clinic",
+        "building": "yes",
+        "building:condition": "good",
+        "building:levels": "1",
+        "building:roof": "tile",
+        "building:structure": "reinforced_masonry",
+        "building:walls": "bata (brick)1",
+        "capacity:persons": "2000",
+        "M:hazard_prone": "no",
+        "name": "PUSKESMAS TANJUNG",
+        "rooms": "10",
+        "water_supply": "pipeline"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35270200007",
+      "name": "TANJUNG",
+      "osm_object": "way/328686852",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-328686852-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/328686852/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:41.011537+00:00",
+        "sha256": "f05cf44e7aa70a0b5b8a405c4851a0aff47fae7099c7d4b906b60c8359bd4043",
+        "bytes": 1326,
+        "raw_path": "data\\raw\\missing-way-328686852-history\\f05cf44e7aa70a0b5b8a405c4851a0aff47fae7099c7d4b906b60c8359bd4043.bin"
+      },
+      "first_timestamp": "2015-02-17T02:27:47Z",
+      "status": "historical_record_found",
+      "version": 2,
+      "timestamp": "2015-02-20T11:45:01Z",
+      "tags": {
+        "access:roof": "no",
+        "addr:full": "Jalan Raya Tanjung",
+        "amenity": "clinic",
+        "building": "yes",
+        "building:condition": "good",
+        "building:levels": "2",
+        "building:roof": "tile",
+        "building:structure": "reinforced_masonry",
+        "building:walls": "bata (brick)1",
+        "capacity:persons": "2000",
+        "M:hazard_prone": "no",
+        "name": "PUSKESMAS TANJUNG",
+        "rooms": "10",
+        "water_supply": "pipeline"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35270200007",
+      "name": "TANJUNG",
+      "osm_object": "way/328686853",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-328686853-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/328686853/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:41.969775+00:00",
+        "sha256": "a4f3bec24c63f5c709500a6d403b2677d22d83f714969072bc9a9be2f39864d1",
+        "bytes": 768,
+        "raw_path": "data\\raw\\missing-way-328686853-history\\a4f3bec24c63f5c709500a6d403b2677d22d83f714969072bc9a9be2f39864d1.bin"
+      },
+      "first_timestamp": "2015-02-17T02:27:47Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2015-02-17T02:27:47Z",
+      "tags": {
+        "amenity": "clinic",
+        "building": "yes",
+        "building:condition": "good",
+        "building:levels": "1",
+        "building:roof": "tile",
+        "building:structure": "reinforced_masonry",
+        "building:walls": "bata (brick)1",
+        "capacity:persons": "2000",
+        "M:hazard_prone": "no",
+        "name": "PUSKESMAS TANJUNG",
+        "rooms": "10",
+        "water_supply": "pipeline"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35270200009",
+      "name": "JRANGOAN",
+      "osm_object": "way/328713200",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-328713200-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/328713200/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:42.981121+00:00",
+        "sha256": "6d0108ceab3ba831b68f35adafa498e77e0ff6de4103c79a502029871337c4e4",
+        "bytes": 713,
+        "raw_path": "data\\raw\\missing-way-328713200-history\\6d0108ceab3ba831b68f35adafa498e77e0ff6de4103c79a502029871337c4e4.bin"
+      },
+      "first_timestamp": "2015-02-17T08:16:03Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2015-02-17T08:16:03Z",
+      "tags": {
+        "amenity": "clinic",
+        "building": "yes",
+        "building:roof": "tile",
+        "building:structure": "unreinforced_masonry",
+        "building:walls": "brick",
+        "capacity:persons": "200",
+        "M:hazard_prone": "no",
+        "name": "PUSKESMAS JRANGOAN",
+        "rooms": "5",
+        "water_supply": "pipeline"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35270200017",
+      "name": "KARANGPENANG",
+      "osm_object": "way/328949623",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-328949623-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/328949623/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:43.955887+00:00",
+        "sha256": "b1393755c2da11514aa32b655461253a7491351d55630057d70ab33e5f741a86",
+        "bytes": 781,
+        "raw_path": "data\\raw\\missing-way-328949623-history\\b1393755c2da11514aa32b655461253a7491351d55630057d70ab33e5f741a86.bin"
+      },
+      "first_timestamp": "2015-02-18T12:34:55Z",
+      "status": "historical_record_found",
+      "version": 1,
+      "timestamp": "2015-02-18T12:34:55Z",
+      "tags": {
+        "access:roof": "no",
+        "amenity": "clinic",
+        "building": "yes",
+        "building:condition": "good",
+        "building:levels": "1",
+        "building:roof": "tile",
+        "building:structure": "reinforced_masonry",
+        "building:walls": "brick",
+        "capacity:persons": "50",
+        "M:hazard_prone": "no",
+        "name": "Puskesmas Karang Penang",
+        "rooms": "5",
+        "water_supply": "pump"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    },
+    {
+      "facility_code": "35770200002",
+      "name": "NGEGONG",
+      "osm_object": "way/1561042667",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-1561042667-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/1561042667/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:44.961151+00:00",
+        "sha256": "c1c2d2e079566fc5b1dca2c9c5b51578d1e27ff11d8f105c4b14b92d49451422",
+        "bytes": 992,
+        "raw_path": "data\\raw\\missing-way-1561042667-history\\c1c2d2e079566fc5b1dca2c9c5b51578d1e27ff11d8f105c4b14b92d49451422.bin"
+      },
+      "first_timestamp": "2026-09-21T13:41:44Z",
+      "status": "no_record_by_2024_cutoff"
+    },
+    {
+      "facility_code": "35780200045",
+      "name": "TANAH KALIKEDINDING",
+      "osm_object": "way/451271293",
+      "accepted": false,
+      "receipt": {
+        "source_id": "missing-way-451271293-history",
+        "edition": "accessed-2026-11-01",
+        "source_url": "https://api.openstreetmap.org/api/0.6/way/451271293/history.json",
+        "acquired_from": "https_download",
+        "acquired_at": "2026-11-01T11:40:45.962601+00:00",
+        "sha256": "8174d5ddad45727a58c4e6c7a9f38f8565bb376fc50faab0e6a8dbc4bce74dfa",
+        "bytes": 3068,
+        "raw_path": "data\\raw\\missing-way-451271293-history\\8174d5ddad45727a58c4e6c7a9f38f8565bb376fc50faab0e6a8dbc4bce74dfa.bin"
+      },
+      "first_timestamp": "2016-11-04T03:25:13Z",
+      "status": "historical_record_found",
+      "version": 4,
+      "timestamp": "2017-03-22T05:11:51Z",
+      "tags": {
+        "access:roof": "no",
+        "addr:full": "Jalan Kedung Cowek No. 226",
+        "amenity": "clinic",
+        "backup_generator": "no",
+        "building": "clinic",
+        "building:condition": "good",
+        "building:floor": "ceramics",
+        "building:levels": "1",
+        "building:roof": "tile",
+        "building:structure": "confined_masonry",
+        "building:walls": "brick",
+        "capacity:persons": "250-500",
+        "name": "Puskesmas Tanah Kali Kedinding",
+        "operator:type": "government"
+      },
+      "visible": true,
+      "geometry_requires_node_history_reconstruction": true
+    }
+  ],
+  "tanjunganom_official_corroboration": {
+    "url": "https://dinkes.nganjukkab.go.id/informasi/detail-paten/53",
+    "finding": "Official web profile matches Tanjunganom and Ahmad Yani 25. Historical node also carries matching street address and phone.",
+    "raw_download": "retry_deferred; web text accessible; no raw official-source receipt claimed"
+  },
+  "limitations": "Point records are genuine map points, not verified building locations. Ways need historical node reconstruction; 367 missing facilities still lack a candidate in the prior supplement search.",
+  "official_followup_sources": [
+    {
+      "facility": "Tanjunganom",
+      "url": "https://dinkes.nganjukkab.go.id/informasi/detail-paten/53",
+      "finding": "Official address corroborates Ahmad Yani 25; local fetch deferred, web text read."
+    },
+    {
+      "facility": "Cukir",
+      "url": "https://pkmcukir.jombangkab.go.id/",
+      "finding": "Official site lists Mojowarno 16; other official 2025 document lists 09, so preserve address-number discrepancy."
+    },
+    {
+      "facility": "Cukir",
+      "url": "https://pkmcukir.jombangkab.go.id/storage/dokumen/3EXBt6JfQu6zTczxPzqnYKxCESZGRUugQhQirpqS.pdf",
+      "finding": "Search excerpt reports Mojowarno 09; PDF not visually reviewed in this pass."
+    },
+    {
+      "facility": "Keboan",
+      "url": "https://pkmkeboan.jombangkab.go.id/",
+      "finding": "Official site identifies Keboan in Ngusikan; precise address/point corroboration remains."
+    }
+  ]
+}

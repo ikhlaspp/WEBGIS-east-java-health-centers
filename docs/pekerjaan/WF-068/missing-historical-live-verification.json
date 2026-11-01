@@ -1,0 +1,12 @@
+{
+    "candidate_count": 23,
+    "all_pending": true,
+    "all_snapshots_still_missing": true,
+    "release": {
+        "id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+        "status": "draft",
+        "input_revision": 2383
+    },
+    "active_actors": 0,
+    "active_tokens": 0
+}

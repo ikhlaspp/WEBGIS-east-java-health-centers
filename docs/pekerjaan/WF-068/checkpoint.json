@@ -3,7 +3,7 @@
   "status": "in_progress",
   "predecessor_commit": "9c3e697524bec2c92f36f50f016c49597440a14c",
   "predecessor_push": "verified origin/main",
-  "next_action": "Independently corroborate six Pasuruan inventory site candidates before any coordinate replacement. Main sites of Kebonagung and Sekargadung are not identified by the inspected inventory rows. Continue individual review of 41 missing-coordinate candidates; rerun analysis after decisions.",
+  "next_action": "Agent to corroborate identity/address for 23 historical missing-coordinate point candidates using official sources; reconstruct historical geometry for remaining way candidates and broaden search beyond the 41 known matches. User is not expected to perform research.",
   "screening_summary": {
     "screened": 565,
     "batches": 44,
@@ -103,5 +103,16 @@
     "report": "pasuruan-inventory-review.json",
     "live_verification": "pasuruan-candidates-live-verification.json",
     "input_revision": 2360
+  },
+  "missing_coordinate_search": {
+    "searched_facilities": 41,
+    "objects_checked": 43,
+    "historical_point_candidates_imported": 23,
+    "historical_objects": 40,
+    "post_2024_only_objects": 3,
+    "accepted": 0,
+    "report": "missing-historical-search.json",
+    "live_verification": "missing-historical-live-verification.json",
+    "input_revision": 2383
   }
 }

@@ -3,7 +3,7 @@
   "status": "in_progress",
   "predecessor_commit": "9c3e697524bec2c92f36f50f016c49597440a14c",
   "predecessor_push": "verified origin/main",
-  "next_action": "Agent to corroborate identity/address for 23 historical missing-coordinate point candidates using official sources; reconstruct historical geometry for remaining way candidates and broaden search beyond the 41 known matches. User is not expected to perform research.",
+  "next_action": "Continue independent official location/address corroboration for remaining 22 historical missing-point candidates. Prioritize candidates with address evidence; resolve Mangli and Cukir number conflicts and village/county tags. Reanalysis needed before release validation.",
   "screening_summary": {
     "screened": 565,
     "batches": 44,
@@ -74,20 +74,16 @@
   "latest_live_location_review": {
     "decision": "accepted",
     "replayed": false,
-    "review_id": "f1636e88-256d-4d6e-ac87-29004b9d4315",
+    "review_id": "ae23dfb8-ed9a-5ef2-abfe-de702be1fa09",
     "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
-    "request_hash": "b3d9ce5c09d5c8508b91c3c8147019eab908b392d87667ce23a2821f25430ee3",
-    "facility_code": "35730200010",
-    "input_revision": 2354,
-    "source_id": "ee85ce53-5b45-4dc6-9a3a-b613c320d497",
-    "review_method": "Codex desktop review; official 2021 address table and historical OSM footprint",
-    "coordinates_unchanged": true,
-    "verified": 2,
+    "request_hash": "fea03cf05e8bc70191f1e2a80059da53870cf8d88603771a996935c657f99650",
+    "facility_code": "35180200006",
+    "input_revision": 2387,
+    "verified": 3,
     "unverified": 563,
-    "missing": 408,
-    "active_temporary_review_actors": 0,
-    "active_temporary_review_tokens": 0,
-    "default_analysis_run_id": null,
+    "missing": 407,
+    "active_review_actors": 0,
+    "active_review_tokens": 0,
     "published": false
   },
   "trajeng_historical_review": {
@@ -114,5 +110,10 @@
     "report": "missing-historical-search.json",
     "live_verification": "missing-historical-live-verification.json",
     "input_revision": 2383
+  },
+  "missing_point_assessment": {
+    "file": "missing-point-assessment.json",
+    "accepted": 1,
+    "pending": 22
   }
 }

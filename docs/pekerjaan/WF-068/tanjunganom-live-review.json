@@ -1,0 +1,15 @@
+{
+  "decision": "accepted",
+  "replayed": false,
+  "review_id": "ae23dfb8-ed9a-5ef2-abfe-de702be1fa09",
+  "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+  "request_hash": "fea03cf05e8bc70191f1e2a80059da53870cf8d88603771a996935c657f99650",
+  "facility_code": "35180200006",
+  "input_revision": 2387,
+  "verified": 3,
+  "unverified": 563,
+  "missing": 407,
+  "active_review_actors": 0,
+  "active_review_tokens": 0,
+  "published": false
+}

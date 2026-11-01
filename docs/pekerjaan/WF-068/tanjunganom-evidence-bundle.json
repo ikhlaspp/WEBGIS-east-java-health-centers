@@ -1,0 +1,54 @@
+{
+  "facility_code": "35180200006",
+  "name": "TANJUNGANOM",
+  "reviewed_at": "2026-11-01",
+  "method": "Codex desktop evidence review, not field survey",
+  "historical_node": {
+    "facility_code": "35180200006",
+    "name": "TANJUNGANOM",
+    "osm_object": "node/11205306358",
+    "accepted": false,
+    "receipt": {
+      "source_id": "missing-node-11205306358-history",
+      "edition": "accessed-2026-11-01",
+      "source_url": "https://api.openstreetmap.org/api/0.6/node/11205306358/history.json",
+      "acquired_from": "https_download",
+      "acquired_at": "2026-11-01T11:40:32.543649+00:00",
+      "sha256": "bf40c7e6132d2847ff5d384b489157e8e33451dc97908b3e37d3752e8d2426e9",
+      "bytes": 1736,
+      "raw_path": "data\\raw\\missing-node-11205306358-history\\bf40c7e6132d2847ff5d384b489157e8e33451dc97908b3e37d3752e8d2426e9.bin"
+    },
+    "first_timestamp": "2023-09-20T13:59:57Z",
+    "status": "historical_record_found",
+    "version": 1,
+    "timestamp": "2023-09-20T13:59:57Z",
+    "tags": {
+      "addr:city": "Kabupaten Nganjuk",
+      "addr:postcode": "64482",
+      "addr:street": "Jl. A. Yani No.25, Dipan Barat, Warujayeng, Kec. Tanjunganom, Kabupaten Nganjuk, Jawa Timur 64482",
+      "healthcare": "centre",
+      "name": "Puskesmas Tanjunganom",
+      "phone": "0358772800"
+    },
+    "visible": true,
+    "historical_lon_lat": [
+      112.0182132,
+      -7.6292967
+    ],
+    "inside_assigned_boundary": true
+  },
+  "official_corroboration": [
+    {
+      "url": "https://dinkes.nganjukkab.go.id/informasi/detail-paten/53",
+      "access": "Web tool text; direct download deferred",
+      "finding": "Official health department profile identifies Tanjunganom at Ahmad Yani 25 in Tanjunganom."
+    },
+    {
+      "url": "https://dinkes.nganjukkab.go.id/upload_file/informasi/5b1df2af399e1a4704902d1c2271c23d.pdf",
+      "locator": "physical page 6, printed page 3",
+      "access": "Web tool extracted text; local PDF download deferred, not visually inspected",
+      "finding": "Facility identity, street number and telephone 0358 772800 match historical node. Cover says 2023; foreword mentions 2024, so document year ambiguity is retained."
+    }
+  ],
+  "decision_basis": "Accept historical mapped facility POI after matching name, Ahmad Yani 25/Warujayeng/Tanjunganom address and telephone 0358 772800 to official Dinkes profile. Node 11205306358 v1 dated 2023-09-20 existed before cutoff, lies in assigned district and is an actual facility POI, not a generated centroid. Desktop verification only; not survey-grade accuracy or proof of continuous occupancy."
+}

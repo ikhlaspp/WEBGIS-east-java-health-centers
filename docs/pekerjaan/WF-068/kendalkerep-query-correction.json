@@ -1,0 +1,10 @@
+{
+    "review_id": "f1636e88-256d-4d6e-ac87-29004b9d4315",
+    "original_query": "TAMBAK, Jl. Bakti Kepulauan Bawean, Kec. Kendalkerep",
+    "correction": {
+        "query": "KENDALKEREP, Jl. Sulfat No.100, Kel. Bunulrejo, Kec. Blimbing",
+        "reason": "The one-off review helper retained a Tambak query label. Facility code, historical object, coordinates, evidence bundle and decision reason refer to Kendalkerep. This audit annotation corrects descriptive provenance without altering the immutable original review or location."
+    },
+    "immutable_review_changed": false,
+    "coordinates_changed": false
+}

@@ -1,0 +1,333 @@
+{
+  "records": [
+    {
+      "facility_code": "35040200008",
+      "name": "KALIDAWIR",
+      "master_address": "Jl. Melati No.02 Desa Kalidawir, Kec. Kalidawir",
+      "historical_point": [
+        111.9771593,
+        -8.1806183
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35090200019",
+      "name": "KEMUNINGSARI KIDUL",
+      "master_address": "Jl. Jember - Ambulu No. 42 Kec. Jenggawah",
+      "historical_point": [
+        113.6285103,
+        -8.2942713
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35090200043",
+      "name": "JELBUK",
+      "master_address": "Jl. Diponegoro no. 21 Kec. Jelbuk",
+      "historical_point": [
+        113.7601463,
+        -8.0804602
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35090200045",
+      "name": "MANGLI",
+      "master_address": "Jl. Otto Iskandardinata No. 82 Kel. Mangli Kec. Kaliwates",
+      "historical_point": [
+        113.6522109,
+        -8.1950712
+      ],
+      "decision": "pending",
+      "issues": [
+        "Official PPID directory says Otista 8; official registry/strategic plan says Otto Iskandardinata 82. Resolve street-number discrepancy."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35090200050",
+      "name": "BANJARSENGON",
+      "master_address": "Jl. Kasuari Kel. Banjarsengon",
+      "historical_point": [
+        113.6800351,
+        -8.1409478
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35100200015",
+      "name": "BENCULUK",
+      "master_address": "Jl. Raya Benculuk No. 71 Dusun Purwosari RT.01 RW.08, Desa Benculuk, Kec. Cluring",
+      "historical_point": [
+        114.2310712,
+        -8.4291953
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35110200006",
+      "name": "TLOGOSARI",
+      "master_address": "Jl. Raya Pakisan Ds. Pakisan, Kec. Tlogosari",
+      "historical_point": [
+        113.9191743,
+        -7.9866318
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200001",
+      "name": "BANDARKEDUNGMULYO",
+      "master_address": "Jl. Raja Bandar Kedungmulyo No. 14 Km 17, Kec. Bandar Kedung Mulyo",
+      "historical_point": [
+        112.1267498,
+        -7.5895998
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200004",
+      "name": "PLUMBON GAMBANG",
+      "master_address": "Jl. Plumbon Gambang, Kec. Gudo",
+      "historical_point": [
+        112.1764443,
+        -7.6148194
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200005",
+      "name": "CUKIR",
+      "master_address": "Jl. Raya Mojowarno 16 Cukir, Kec. Diwek",
+      "historical_point": [
+        112.2425607,
+        -7.6114132
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point.",
+        "Historical county tag differs from master district: Bareng",
+        "Official website and document disagree on house number 16 versus 09."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200007",
+      "name": "PULOREJO",
+      "master_address": "Jl. Klotok 35, Pulorejo, Kec. Ngoro",
+      "historical_point": [
+        112.2336529,
+        -7.6774235
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200010",
+      "name": "JAPANAN",
+      "master_address": "Jl. Raya Sumberboto 60 Ds. Japanan, Kec. Mojowarno",
+      "historical_point": [
+        112.3227505,
+        -7.6348687
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200012",
+      "name": "WONOSALAM",
+      "master_address": "Jl. Anjasmoro 360 Ds. Wonosalam, Kec. Wonosalam",
+      "historical_point": [
+        112.3696413,
+        -7.7086313
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200016",
+      "name": "JOGOLOYO",
+      "master_address": "Jl. Raya Jogoloyo, Kec. Sumobito",
+      "historical_point": [
+        112.3128452,
+        -7.5584465
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point.",
+        "Historical county tag differs from master district: Bareng"
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200018",
+      "name": "JARAKKULON",
+      "master_address": "Jl. Raya Jarakkulon, Desa/Kel. Jarakkulon, Kec. Jogoroto",
+      "historical_point": [
+        112.2866267,
+        -7.5974919
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200023",
+      "name": "TAMBAKREJO",
+      "master_address": "Jl. Garuda 03 Tambak Rejo, Kec. Jombang",
+      "historical_point": [
+        112.2327512,
+        -7.5208017
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point.",
+        "Historical county tag differs from master district: Ngoro"
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200027",
+      "name": "JATIWATES",
+      "master_address": "Jl. Seruni 2 Jati Wates, Kec. Tembelang",
+      "historical_point": [
+        112.272688,
+        -7.4598711
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point.",
+        "Historical county tag differs from master district: Bareng"
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200029",
+      "name": "BLIMBING KESAMBEN",
+      "master_address": "Jl. Yodium 02 Blimbing, Kec. Kesamben",
+      "historical_point": [
+        112.3875495,
+        -7.473927
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35170200031",
+      "name": "KEBOAN",
+      "master_address": "Jl. Pendidikan 20 Keboan, Kec. Ngusikan",
+      "historical_point": [
+        112.3247413,
+        -7.4487536
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point.",
+        "Node also tagged as village; investigate centroid/feature conflation before acceptance."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35180200006",
+      "name": "TANJUNGANOM",
+      "master_address": "Jl. A Yani No. 25, Kel. Warujayeng, Kec. Tanjunganom",
+      "historical_point": [
+        112.0182132,
+        -7.6292967
+      ],
+      "decision": "accepted",
+      "issues": [],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35180200015",
+      "name": "BAGOR",
+      "master_address": "Jl.Raya Madiun No.100 Ds.Petak, Kec.Bagor",
+      "historical_point": [
+        111.8500419,
+        -7.5695502
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35190200009",
+      "name": "WUNGU",
+      "master_address": "Jl. Raya Kare No. 113, Ds. Wungu, Kec. Wungu",
+      "historical_point": [
+        111.6139952,
+        -7.686684
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    },
+    {
+      "facility_code": "35210200017",
+      "name": "GEMARANG",
+      "master_address": "Jl. Raya Ngawi-Solo Km.9 Ds.Gemarang Kec.Kedunggalar 63254",
+      "historical_point": [
+        111.3703264,
+        -7.3953531
+      ],
+      "decision": "pending",
+      "issues": [
+        "Historical map node has no street address; name and district alone do not confirm exact facility point."
+      ],
+      "scope": "Historical map metadata checked against master; independent official web evidence examined for Tanjunganom, Mangli, Benculuk, Bagor and Wungu, with varying success."
+    }
+  ],
+  "accepted": 1,
+  "pending": 22,
+  "caveat": "Pending does not mean coordinate is wrong; evidence is insufficient for facility-level acceptance."
+}

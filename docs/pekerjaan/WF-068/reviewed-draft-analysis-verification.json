@@ -1,0 +1,39 @@
+{
+    "run": {
+        "id": "55ef14ec-91bf-4647-ba4a-0a243a8300d7",
+        "status": "succeeded",
+        "input_revision": 2404
+    },
+    "indicator_results": 666,
+    "coverage": [
+        {
+            "completeness": "partial",
+            "count": 1998,
+            "numeric_coverage_count": 1998,
+            "eligible_count": 9
+        }
+    ],
+    "artifacts": [
+        {
+            "sanitized": false,
+            "count": 5
+        }
+    ],
+    "active_analysis_actors": 0,
+    "active_analysis_tokens": 0,
+    "coordinate_counts": [
+        {
+            "coordinate_status": "verified",
+            "count": 3
+        },
+        {
+            "coordinate_status": "unverified",
+            "count": 563
+        },
+        {
+            "coordinate_status": "missing",
+            "count": 407
+        }
+    ],
+    "input_removed": true
+}

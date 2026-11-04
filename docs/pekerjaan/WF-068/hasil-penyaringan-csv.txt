@@ -1,0 +1,22 @@
+HASIL PENYARINGAN CSV KOORDINAT - 4 NOVEMBER 2026
+
+973 kode fasilitas unik diperiksa terhadap master dan batas kecamatan proyek.
+213 baris lolos penyaringan awal sebagai kandidat; 739 ditahan karena temuan.
+18 titik cocok dengan kandidat historis yang sudah tersimpan; 3 fasilitas yang
+sudah terverifikasi dipertahankan. Kategori status ini berjumlah 973.
+
+17 kandidat tambahan untuk fasilitas baseline-missing disimpan di Supabase
+sebagai pending, precision unknown. Semuanya terkait fasilitas yang sudah
+pernah ditemukan dalam pencarian supplement, bukan 17 fasilitas baru.
+Setono, Gending, Ngegong belum punya bukti historis sebelum 2025 pada objek
+OSM yang diketahui. CSV tidak menyelesaikan kekurangan tersebut.
+
+CSV asli dipertahankan. Tidak ada koordinat baru yang dianggap verified hanya
+karena lolos filter. Tiga titik verified (Tambak, Kendalkerep, Tanjunganom)
+tetap dipertahankan; CSV Tambak bertentangan dengan titik verified di Bawean.
+
+Detail per baris: final-csv-screening.json.
+Bukti impor dan status snapshot: final-csv-live-verification.json.
+Temuan dapat tumpang tindih; jangan menjumlahkan issue_counts sebagai total baris.
+
+4 November 2026: Screened all 973 rows of puskesmas_jatim_koordinat_final.csv. Statuses: 213 screened candidates, 739 held, 18 matching existing historical candidates, 3 verified points preserved. Imported 17 additional pending points for already-known missing facilities; no new location accepted. Source CSV unchanged. Read-back verified all 17 remain pending with snapshots missing. Draft revision 2404. Recomputed analysis 55ef14ec-91bf-4647-ba4a-0a243a8300d7 succeeded: 666 indicator rows, 1998 partial coverage rows, 5 private unsanitized artifacts, 3 eligible/970 excluded facilities. Initial PHP 512 MB memory limit was exhausted during verification; reran same run with temporary 2 GB process limit, preserved generated artifacts, revoked abandoned tokens. All temporary analysis accounts/tokens inactive; input removed. Counts remain 3 verified, 563 unverified, 407 missing. No publication. See hasil-penyaringan-csv.txt, final-csv-screening.json, final-csv-live-verification.json and reviewed-draft-analysis-verification.json.

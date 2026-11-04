@@ -3,7 +3,7 @@
   "status": "in_progress",
   "predecessor_commit": "9c3e697524bec2c92f36f50f016c49597440a14c",
   "predecessor_push": "verified origin/main",
-  "next_action": "Continue independent official location/address corroboration for remaining 22 historical missing-point candidates. Prioritize candidates with address evidence; resolve Mangli and Cukir number conflicts and village/county tags. Reanalysis needed before release validation.",
+  "next_action": "Resolve evidence gaps for pending geocoder/historical candidates; review remaining source-quality findings. Latest draft analysis revision 2404 succeeded with only 3 eligible locations; coverage remains partial and publication is not approved.",
   "screening_summary": {
     "screened": 565,
     "batches": 44,
@@ -115,5 +115,52 @@
     "file": "missing-point-assessment.json",
     "accepted": 1,
     "pending": 22
+  },
+  "final_csv_screening": {
+    "date": "2026-11-04",
+    "report": "final-csv-screening.json",
+    "screened_candidates": 213,
+    "pending_missing_candidates_imported": 17,
+    "accepted": 0,
+    "verified_points_preserved": 3
+  },
+  "latest_analysis": {
+    "run": {
+      "id": "55ef14ec-91bf-4647-ba4a-0a243a8300d7",
+      "status": "succeeded",
+      "input_revision": 2404
+    },
+    "indicator_results": 666,
+    "coverage": [
+      {
+        "completeness": "partial",
+        "count": 1998,
+        "numeric_coverage_count": 1998,
+        "eligible_count": 9
+      }
+    ],
+    "artifacts": [
+      {
+        "sanitized": false,
+        "count": 5
+      }
+    ],
+    "active_analysis_actors": 0,
+    "active_analysis_tokens": 0,
+    "coordinate_counts": [
+      {
+        "coordinate_status": "verified",
+        "count": 3
+      },
+      {
+        "coordinate_status": "unverified",
+        "count": 563
+      },
+      {
+        "coordinate_status": "missing",
+        "count": 407
+      }
+    ],
+    "input_removed": true
   }
 }

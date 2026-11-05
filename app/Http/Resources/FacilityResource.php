@@ -21,6 +21,8 @@ class FacilityResource extends JsonResource
             'district_code' => $this->district_code, 'district_name' => $this->district_name,
             'coordinate_status' => $this->coordinate_status, 'precision_level' => $this->precision_level,
             'location' => $this->longitude === null ? null : ['type' => 'Point', 'coordinates' => [(float) $this->longitude, (float) $this->latitude]],
+            'estimated_location' => $this->estimated_location === null ? null : json_decode($this->estimated_location, true, 512, JSON_THROW_ON_ERROR),
+            'location_kind' => $this->estimated_location === null ? 'source' : 'district_estimate',
         ];
     }
 }

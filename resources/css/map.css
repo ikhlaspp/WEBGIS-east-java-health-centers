@@ -13,6 +13,7 @@
 .facility-marker { border-radius: 50%; background: #193d38; color: white; border: 2px solid white; box-shadow: 0 1px 5px #0006; text-align: center; font-size: 18px; }
 .facility-marker.unverified { background: #9b541b; }
 .facility-marker.rejected { background: #61646b; }
+.facility-marker.estimated { background: #6547a5; border-style: dashed; }
 .leaflet-popup-content { overflow-wrap: anywhere; }
 #facility-detail dt { font-weight: 700; margin-top: 16px; }
 #facility-detail dd { margin: 0; overflow-wrap: anywhere; }

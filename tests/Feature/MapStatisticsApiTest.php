@@ -78,10 +78,12 @@ class MapStatisticsApiTest extends GisDatabaseTestCase
     public function test_points_are_unpaginated_and_bbox_preserves_full_filter_counts(): void
     {
         $this->prepareFixture();
-        $this->getJson('/api/v1/map/points')->assertOk()->assertJsonCount(60, 'features')->assertJsonPath('meta.filtered_registered', 61)->assertJsonPath('meta.filtered_missing', 1);
-        $this->getJson('/api/v1/map/points?bbox=112,-8,113,-7')->assertOk()->assertJsonCount(60, 'features');
+        $this->getJson('/api/v1/map/points')->assertOk()->assertJsonCount(61, 'features')->assertJsonPath('meta.filtered_registered', 61)->assertJsonPath('meta.filtered_missing', 1)->assertJsonPath('meta.filtered_estimated', 1)->assertJsonPath('meta.filtered_mapped', 60);
+        $this->getJson('/api/v1/map/points?bbox=112,-8,113,-7')->assertOk()->assertJsonCount(61, 'features');
         $this->getJson('/api/v1/map/points?bbox=110,-8,111,-7')->assertOk()->assertJsonCount(0, 'features')->assertJsonPath('meta.filtered_registered', 61)->assertJsonPath('meta.view_count', 0);
-        $this->getJson('/api/v1/map/points?coordinate_status=missing')->assertOk()->assertJsonCount(0, 'features')->assertJsonPath('meta.filtered_registered', 1);
+        $this->getJson('/api/v1/map/points?coordinate_status=missing')->assertOk()->assertJsonCount(1, 'features')->assertJsonPath('meta.filtered_registered', 1)->assertJsonPath('features.0.properties.location_kind', 'district_estimate')->assertJsonPath('features.0.properties.coordinate_status', 'missing')->assertJsonPath('features.0.geometry.coordinates', [112.5, -7.5]);
+        $this->getJson('/api/v1/facilities/35010100001')->assertOk()->assertJsonPath('data.location', null)->assertJsonPath('data.estimated_location.coordinates', [112.5, -7.5]);
+        $this->assertNull(DB::table('gis.facility_snapshots')->where('facility_code', '35010100001')->value('location'));
         $this->getJson('/api/v1/map/points?q=Marker%202')->assertOk()->assertJsonCount(11, 'features');
         $this->getJson('/api/v1/map/points?regency_code=3599')->assertUnprocessable();
     }

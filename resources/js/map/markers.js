@@ -14,6 +14,7 @@ const search = new URLSearchParams(location.search);
 let release = search.get('release_id');
 let run = search.get('analysis_run_id');
 const statusNames = { verified: 'Terverifikasi', unverified: 'Belum terverifikasi', rejected: 'Ditolak', missing: 'Tanpa koordinat' };
+const locationLabel = (data) => data.location_kind === 'district_estimate' ? 'Lokasi perkiraan berdasarkan kecamatan' : statusNames[data.coordinate_status];
 const text = (tag, value) => { const element = document.createElement(tag); element.textContent = value ?? 'Belum tersedia'; return element; };
 const pinned = (endpoint, parameters = {}) => {
     const url = new URL(endpoint, location.origin);
@@ -55,9 +56,15 @@ function fields(container, data) {
         container.append(text('dt', label), text('dd', value || 'Belum tersedia'));
     }
     container.append(text('dt', 'Jenis wilayah'), text('dd', data.area_type || 'Belum tersedia'));
-    const coordinates = data.location?.coordinates;
+    const displayLocation = data.location ?? data.estimated_location;
+    const coordinates = displayLocation?.coordinates;
     if (data.location !== null && data.location !== undefined && (data.location.type !== 'Point' || !Array.isArray(coordinates) || coordinates.length !== 2 || !coordinates.every(Number.isFinite) || Math.abs(coordinates[0]) > 180 || Math.abs(coordinates[1]) > 90)) throw new Error('geometry');
     container.append(text('dt', 'Koordinat (bujur, lintang)'), text('dd', coordinates ? coordinates.join(', ') : 'Tidak tersedia'));
+    if (data.location_kind === 'district_estimate') {
+        if (data.location != null || data.coordinate_status !== 'missing' || displayLocation?.type !== 'Point' || !Array.isArray(coordinates) || coordinates.length !== 2 || !coordinates.every(Number.isFinite) || Math.abs(coordinates[0]) > 180 || Math.abs(coordinates[1]) > 90) throw new Error('geometry');
+        byId('facility-location-note').textContent = 'Lokasi perkiraan berdasarkan kecamatan, bukan lokasi bangunan puskesmas. Tidak digunakan dalam perhitungan cakupan layanan aktual.';
+        return;
+    }
     byId('facility-location-note').textContent = coordinates ? 'Koordinat ditampilkan sesuai sumber. Status lokasi dan presisi perlu diperhatikan; keberadaan titik tidak membuktikan batas layanan atau waktu tempuh.' : 'Fasilitas ini belum memiliki koordinat. Tidak ada titik pengganti yang dibuat.';
 }
 function sources(data) {
@@ -179,7 +186,8 @@ function detailLink(code) {
 }
 function popup(feature) {
     const box = document.createElement('div');
-    box.append(text('strong', feature.properties.name), text('p', statusNames[feature.properties.coordinate_status]));
+    box.append(text('strong', feature.properties.name), text('p', locationLabel(feature.properties)));
+    if (feature.properties.location_kind === 'district_estimate') box.append(text('p', 'Titik representatif kecamatan; bukan lokasi bangunan dan tidak digunakan untuk analisis cakupan.'));
     const services = text('p', 'Memuat layanan…');
     box.append(services, detailLink(feature.properties.code));
     get(`${root.dataset.facilities}/${encodeURIComponent(feature.properties.code)}`).then((body) => {
@@ -199,7 +207,7 @@ async function loadTable(page) {
         for (const facility of body.data) {
             if (!/^\d{11}$/.test(facility.code)) throw new Error('code');
             const row = document.createElement('tr');
-            row.append(text('td', `${facility.name} (${facility.code})`), text('td', facility.service_type), text('td', statusNames[facility.coordinate_status]));
+            row.append(text('td', `${facility.name} (${facility.code})`), text('td', facility.service_type), text('td', locationLabel(facility)));
             const actions = document.createElement('td');
             actions.append(detailLink(facility.code));
             if (markers.has(facility.code)) {
@@ -265,19 +273,23 @@ async function load() {
             const properties = feature.properties;
             if (feature.geometry?.type !== 'Point' || !Array.isArray(coordinates) || coordinates.length !== 2 || !coordinates.every(Number.isFinite)
                 || Math.abs(coordinates[0]) > 180 || Math.abs(coordinates[1]) > 90 || !/^\d{11}$/.test(properties?.code)
-                || !['verified', 'unverified', 'rejected'].includes(properties.coordinate_status) || markers.has(properties.code)) throw new Error('geometry');
-            const marker = L.marker([coordinates[1], coordinates[0]], { title: properties.name, alt: properties.name, icon: L.divIcon({ className: `facility-marker ${properties.coordinate_status}`, html: '<span aria-hidden="true">+</span>', iconSize: [28, 28] }) });
+                || !['verified', 'unverified', 'rejected', 'missing'].includes(properties.coordinate_status) || markers.has(properties.code)) throw new Error('geometry');
+            const estimated = properties.location_kind === 'district_estimate';
+            if ((properties.coordinate_status === 'missing') !== estimated) throw new Error('geometry');
+            const marker = L.marker([coordinates[1], coordinates[0]], { title: properties.name, alt: `${properties.name}: ${locationLabel(properties)}`, icon: L.divIcon({ className: `facility-marker ${estimated ? 'estimated' : properties.coordinate_status}`, html: `<span aria-hidden="true">${estimated ? '~' : '+'}</span>`, iconSize: [28, 28] }) });
             marker.feature = feature;
             marker.bindPopup(() => popup(feature)); markers.set(properties.code, marker);
         }
         for (const key of ['filtered_registered', 'filtered_mapped', 'filtered_missing']) if (!Number.isSafeInteger(body.meta[key]) || body.meta[key] < 0) throw new Error('counts');
-        if (body.meta.filtered_mapped !== markers.size || body.meta.filtered_registered !== body.meta.filtered_mapped + body.meta.filtered_missing) throw new Error('counts');
+        const estimatedCount = body.meta.filtered_estimated ?? 0;
+        if (!Number.isSafeInteger(estimatedCount) || estimatedCount < 0 || estimatedCount > body.meta.filtered_missing || body.meta.filtered_mapped + estimatedCount !== markers.size || body.meta.filtered_registered !== body.meta.filtered_mapped + body.meta.filtered_missing) throw new Error('counts');
         clusters.addLayers([...markers.values()]);
         mapReady = true;
         thematic.load();
         coverage.load();
         byId('map-fit').click(); remember();
         byId('map-counts').textContent = `${body.meta.filtered_registered} terdaftar · ${body.meta.filtered_mapped} memiliki koordinat · ${body.meta.filtered_missing} tanpa koordinat`;
+        if (estimatedCount) byId('map-counts').textContent += ` · ${estimatedCount} ditampilkan sebagai perkiraan kecamatan`;
         byId('map-period').textContent = `Periode fasilitas: ${body.meta.source_periods?.facilities || 'Belum tersedia'} · Rilis: ${release}`;
         byId('map-status').textContent = markers.size ? 'Peta siap. Pilih kelompok titik untuk memperbesar; titik bertumpuk dapat dibuka satu per satu.' : 'Tidak ada titik yang dapat dipetakan. Periksa daftar fasilitas.';
         await loadTable(1);

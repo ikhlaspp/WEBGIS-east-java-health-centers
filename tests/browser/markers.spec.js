@@ -41,15 +41,38 @@ async function fixture(page, options = {}) {
         const selected = options.filters ? facilities.filter((f) => (!url.searchParams.get('q') || f.name.includes(url.searchParams.get('q'))) && (!url.searchParams.get('coordinate_status') || f.coordinate_status === url.searchParams.get('coordinate_status'))) : facilities;
         if (url.pathname.endsWith('/map/points')) {
             if (options.error?.()) return route.fulfill({ status: 503, json: {} });
-            const features = selected.filter((f) => f.location).map((f) => ({ type: 'Feature', geometry: f.location, properties: f }));
+            const features = selected.filter((f) => f.location || options.estimates).map((f) => ({ type: 'Feature', geometry: f.location || { type: 'Point', coordinates: [112.6, -7.4] }, properties: { ...f, ...(!f.location ? { location_kind: 'district_estimate' } : {}) } }));
             if (options.invalid) features[0] = { ...features[0], geometry: { type: 'Point', coordinates: [-7.3, 112.7] } };
-            return route.fulfill({ json: { type: 'FeatureCollection', features, meta: { ...meta, filtered_registered: selected.length, filtered_mapped: features.length, filtered_missing: selected.length - features.length } } });
+            const mapped = selected.filter((f) => f.location).length;
+            return route.fulfill({ json: { type: 'FeatureCollection', features, meta: { ...meta, filtered_registered: selected.length, filtered_mapped: mapped, filtered_missing: selected.length - mapped, filtered_estimated: options.estimates ? selected.length - mapped : 0 } } });
         }
         if (url.pathname.endsWith('/facilities')) return route.fulfill({ json: { data: url.searchParams.get('page') === '2' ? [facilities[3]] : selected, meta: { ...meta, ...(options.mismatch ? { release_id: run } : {}), total: options.pages ? 51 : selected.length } } });
         return route.fulfill({ json: { data: options.detail || facilities.find((f) => url.pathname.endsWith(f.code)), meta } });
     });
     return requests;
 }
+
+test('district estimates are distinct and do not become verified source coordinates', async ({ page }) => {
+    await fixture(page, { estimates: true });
+    await page.goto('/peta');
+    await expect(page.locator('#map-status')).toContainText('Peta siap');
+    await expect(page.locator('#map-counts')).toContainText('1 ditampilkan sebagai perkiraan kecamatan');
+    const row = page.locator('#facility-rows tr').filter({ hasText: 'Tanpa titik' });
+    await row.getByRole('button', { name: 'Lihat titik' }).click();
+    await expect(page.locator('.leaflet-popup-content')).toContainText('Lokasi perkiraan berdasarkan kecamatan');
+    await expect(page.locator('.leaflet-popup-content')).toContainText('tidak digunakan untuk analisis cakupan');
+    await expect(page.locator('.facility-marker.estimated')).toBeVisible();
+    await page.screenshot({ path: 'test-results/district-estimate.png' });
+});
+
+test('facility detail labels a district estimate separately from missing source coordinates', async ({ page }) => {
+    await fixture(page, { detail: { ...facilities[3], location_kind: 'district_estimate', estimated_location: { type: 'Point', coordinates: [112.6, -7.4] } } });
+    await page.goto(`/puskesmas/${facilities[3].code}`);
+    await expect(page.locator('#facility-fields')).toContainText('112.6, -7.4');
+    await expect(page.locator('#facility-fields')).toContainText('Tanpa koordinat');
+    await expect(page.locator('#facility-location-note')).toContainText('Lokasi perkiraan berdasarkan kecamatan');
+    await expect(page.locator('#facility-location-note')).toContainText('Tidak digunakan dalam perhitungan cakupan');
+});
 
 test('map clusters colocated facilities, includes islands and provides safe popups and detail', async ({ page }, testInfo) => {
     const errors = []; page.on('pageerror', (error) => errors.push(error.message));

@@ -54,14 +54,16 @@ class PublicMapData
             });
         }
         $counts = (clone $query)->selectRaw("count(*) AS registered,count(f.location) AS mapped,count(*) FILTER(WHERE f.location IS NULL) AS missing,count(*) FILTER(WHERE f.coordinate_status='verified') AS verified")->first();
-        $query->whereNotNull('f.location');
+        $displayLocation = 'COALESCE(f.location, CASE WHEN f.coordinate_status=\'missing\' THEN extensions.ST_PointOnSurface(d.geom) END)';
+        $estimated = (clone $query)->whereNull('f.location')->where('f.coordinate_status', 'missing')->count();
+        $query->whereRaw($displayLocation.' IS NOT NULL');
         if (isset($filters['bbox'])) {
-            $query->whereRaw('extensions.ST_Intersects(f.location,extensions.ST_MakeEnvelope(?,?,?,?,4326))', array_map('floatval', explode(',', $filters['bbox'])));
+            $query->whereRaw('extensions.ST_Intersects('.$displayLocation.',extensions.ST_MakeEnvelope(?,?,?,?,4326))', array_map('floatval', explode(',', $filters['bbox'])));
         }
-        $rows = $query->orderBy('f.facility_code')->get(['f.facility_code', 'f.name', 'f.coordinate_status', 'd.code as district_code', 'r.code as regency_code', DB::raw('extensions.ST_AsGeoJSON(f.location) AS geometry')]);
-        $features = $rows->map(fn ($row) => ['type' => 'Feature', 'id' => $row->facility_code, 'geometry' => json_decode($row->geometry, true, 512, JSON_THROW_ON_ERROR), 'properties' => ['code' => $row->facility_code, 'name' => $row->name, 'coordinate_status' => $row->coordinate_status, 'district_code' => $row->district_code, 'regency_code' => $row->regency_code]])->all();
+        $rows = $query->orderBy('f.facility_code')->get(['f.facility_code', 'f.name', 'f.coordinate_status', 'd.code as district_code', 'r.code as regency_code', DB::raw('extensions.ST_AsGeoJSON('.$displayLocation.') AS geometry'), DB::raw("CASE WHEN f.location IS NULL THEN 'district_estimate' ELSE 'source' END AS location_kind")]);
+        $features = $rows->map(fn ($row) => ['type' => 'Feature', 'id' => $row->facility_code, 'geometry' => json_decode($row->geometry, true, 512, JSON_THROW_ON_ERROR), 'properties' => ['code' => $row->facility_code, 'name' => $row->name, 'coordinate_status' => $row->coordinate_status, 'location_kind' => $row->location_kind, 'district_code' => $row->district_code, 'regency_code' => $row->regency_code]])->all();
 
-        return ['type' => 'FeatureCollection', 'features' => $features, 'meta' => ['filtered_registered' => (int) $counts->registered, 'filtered_mapped' => (int) $counts->mapped, 'filtered_missing' => (int) $counts->missing, 'filtered_verified' => (int) $counts->verified, 'filter_count' => (int) $counts->registered, 'view_count' => count($features)]];
+        return ['type' => 'FeatureCollection', 'features' => $features, 'meta' => ['filtered_registered' => (int) $counts->registered, 'filtered_mapped' => (int) $counts->mapped, 'filtered_estimated' => $estimated, 'filtered_missing' => (int) $counts->missing, 'filtered_verified' => (int) $counts->verified, 'filter_count' => (int) $counts->registered, 'view_count' => count($features)]];
     }
 
     private function indicators(array $context, array $filters): array

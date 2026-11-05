@@ -3,7 +3,7 @@
 @section('content')
 <section id="facility-map" class="map-page" data-coverage="{{ route('api.v1.analysis.buffers') }}" data-thematic="{{ route('api.v1.map.regions') }}" data-releases="{{ route('api.v1.releases') }}" data-regions="{{ route('api.v1.regions') }}" data-points="{{ route('api.v1.map.points') }}" data-facilities="{{ route('api.v1.facilities.index') }}" data-detail-base="{{ url('/puskesmas') }}">
     <p class="eyebrow">PERSEBARAN FASILITAS</p><h1>Peta puskesmas Jawa Timur</h1>
-    <p>Titik menunjukkan lokasi yang tersedia, termasuk lokasi yang belum terverifikasi. Radius bukan waktu tempuh atau batas layanan.</p>
+    <p>Titik menunjukkan lokasi sumber dan perkiraan berdasarkan kecamatan. Titik perkiraan bukan lokasi bangunan puskesmas dan tidak digunakan untuk analisis cakupan. Radius bukan waktu tempuh atau batas layanan.</p>
     <p id="map-status" role="status" aria-live="polite">Memuat rilis peta…</p>
     <button id="map-retry" type="button" hidden>Coba lagi</button>
     <form id="map-filters" class="map-filters">
@@ -33,7 +33,7 @@
         <ul id="thematic-legend" class="thematic-legend" aria-label="Legenda indikator"></ul>
         <details><summary>Nilai indikator per wilayah</summary><div class="map-table-scroll"><table><thead><tr><th>Wilayah</th><th>Nilai</th></tr></thead><tbody id="thematic-rows"></tbody></table></div></details>
     </section>
-    <div class="map-toolbar"><button id="map-fit" type="button">Tampilkan semua titik</button><span>Hijau: terverifikasi · Jingga: belum terverifikasi · Abu-abu: ditolak. Angka pada kelompok menunjukkan jumlah titik.</span></div>
+    <div class="map-toolbar"><button id="map-fit" type="button">Tampilkan semua titik</button><span>Hijau: terverifikasi · Jingga: belum terverifikasi · Abu-abu: ditolak · Ungu (~): perkiraan kecamatan. Angka pada kelompok menunjukkan jumlah titik; beberapa fasilitas dapat memakai titik kecamatan yang sama.</span></div>
     <section aria-labelledby="coverage-title">
         <h2 id="coverage-title">Cakupan radius geometris</h2>
         <div class="map-filters"><label for="coverage-radius">Radius analisis<select id="coverage-radius"><option value="">Tanpa lapisan cakupan</option><option value="1000">1 km</option><option value="3000">3 km</option><option value="5000">5 km</option></select></label></div>
@@ -45,7 +45,7 @@
         <details><summary>Hasil cakupan per kecamatan</summary><div class="map-table-scroll"><table class="coverage-table"><thead><tr><th>Kecamatan</th><th>Cakupan</th><th>Layak / terdaftar</th><th>Dikecualikan</th><th>Kelengkapan</th></tr></thead><tbody id="coverage-rows"></tbody></table></div></details>
     </section>
     <section id="facility-table" aria-labelledby="facility-list-title">
-        <h2 id="facility-list-title">Daftar fasilitas</h2><p>Fasilitas tanpa koordinat tetap tercantum di sini, tanpa marker pengganti.</p>
+        <h2 id="facility-list-title">Daftar fasilitas</h2><p>Fasilitas tanpa koordinat ditampilkan menggunakan titik perkiraan di dalam kecamatannya. Status koordinat asli tetap belum tersedia.</p>
         <p id="table-status" role="status"></p>
         <div class="map-table-scroll"><table><thead><tr><th>Fasilitas</th><th>Layanan</th><th>Status lokasi</th><th>Aksi</th></tr></thead><tbody id="facility-rows"></tbody></table></div>
         <div class="map-toolbar"><button id="previous-page" type="button" disabled>Sebelumnya</button><span id="table-page"></span><button id="next-page" type="button" disabled>Berikutnya</button></div>

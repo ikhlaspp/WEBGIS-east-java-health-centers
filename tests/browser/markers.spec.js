@@ -66,10 +66,11 @@ test('district estimates are distinct and do not become verified source coordina
 });
 
 test('facility detail labels a district estimate separately from missing source coordinates', async ({ page }) => {
-    await fixture(page, { detail: { ...facilities[3], location_kind: 'district_estimate', estimated_location: { type: 'Point', coordinates: [112.6, -7.4] } } });
+    await fixture(page, { detail: { ...facilities[3], location_kind: 'district_estimate', district_verified: true, estimated_location: { type: 'Point', coordinates: [112.6, -7.4] } } });
     await page.goto(`/puskesmas/${facilities[3].code}`);
     await expect(page.locator('#facility-fields')).toContainText('112.6, -7.4');
     await expect(page.locator('#facility-fields')).toContainText('Tanpa koordinat');
+    await expect(page.locator('#facility-fields')).toContainText('Wilayah kecamatan terverifikasi');
     await expect(page.locator('#facility-location-note')).toContainText('Lokasi perkiraan berdasarkan kecamatan');
     await expect(page.locator('#facility-location-note')).toContainText('Tidak digunakan dalam perhitungan cakupan');
 });

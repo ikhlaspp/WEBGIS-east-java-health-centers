@@ -14,7 +14,7 @@ const search = new URLSearchParams(location.search);
 let release = search.get('release_id');
 let run = search.get('analysis_run_id');
 const statusNames = { verified: 'Terverifikasi', unverified: 'Belum terverifikasi', rejected: 'Ditolak', missing: 'Tanpa koordinat' };
-const locationLabel = (data) => data.location_kind === 'district_estimate' ? 'Lokasi perkiraan berdasarkan kecamatan' : statusNames[data.coordinate_status];
+const locationLabel = (data) => data.location_kind === 'district_estimate' ? `Lokasi perkiraan berdasarkan kecamatan · ${data.district_verified === true ? 'Wilayah kecamatan terverifikasi' : 'Wilayah kecamatan belum terverifikasi'}` : statusNames[data.coordinate_status];
 const text = (tag, value) => { const element = document.createElement(tag); element.textContent = value ?? 'Belum tersedia'; return element; };
 const pinned = (endpoint, parameters = {}) => {
     const url = new URL(endpoint, location.origin);
@@ -61,6 +61,7 @@ function fields(container, data) {
     if (data.location !== null && data.location !== undefined && (data.location.type !== 'Point' || !Array.isArray(coordinates) || coordinates.length !== 2 || !coordinates.every(Number.isFinite) || Math.abs(coordinates[0]) > 180 || Math.abs(coordinates[1]) > 90)) throw new Error('geometry');
     container.append(text('dt', 'Koordinat (bujur, lintang)'), text('dd', coordinates ? coordinates.join(', ') : 'Tidak tersedia'));
     if (data.location_kind === 'district_estimate') {
+        container.append(text('dt', 'Verifikasi wilayah'), text('dd', data.district_verified === true ? 'Wilayah kecamatan terverifikasi' : 'Wilayah kecamatan belum terverifikasi'));
         if (data.location != null || data.coordinate_status !== 'missing' || displayLocation?.type !== 'Point' || !Array.isArray(coordinates) || coordinates.length !== 2 || !coordinates.every(Number.isFinite) || Math.abs(coordinates[0]) > 180 || Math.abs(coordinates[1]) > 90) throw new Error('geometry');
         byId('facility-location-note').textContent = 'Lokasi perkiraan berdasarkan kecamatan, bukan lokasi bangunan puskesmas. Tidak digunakan dalam perhitungan cakupan layanan aktual.';
         return;

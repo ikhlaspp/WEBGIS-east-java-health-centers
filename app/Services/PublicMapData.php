@@ -60,8 +60,13 @@ class PublicMapData
         if (isset($filters['bbox'])) {
             $query->whereRaw('extensions.ST_Intersects('.$displayLocation.',extensions.ST_MakeEnvelope(?,?,?,?,4326))', array_map('floatval', explode(',', $filters['bbox'])));
         }
-        $rows = $query->orderBy('f.facility_code')->get(['f.facility_code', 'f.name', 'f.coordinate_status', 'd.code as district_code', 'r.code as regency_code', DB::raw('extensions.ST_AsGeoJSON('.$displayLocation.') AS geometry'), DB::raw("CASE WHEN f.location IS NULL THEN 'district_estimate' ELSE 'source' END AS location_kind")]);
+        $rows = $query->orderBy('f.facility_code')->get(['f.facility_code', 'f.name', 'f.address', 'f.coordinate_status', 'd.code as district_code', 'r.code as regency_code', DB::raw('extensions.ST_AsGeoJSON('.$displayLocation.') AS geometry'), DB::raw("CASE WHEN f.location IS NULL THEN 'district_estimate' ELSE 'source' END AS location_kind")]);
         $features = $rows->map(fn ($row) => ['type' => 'Feature', 'id' => $row->facility_code, 'geometry' => json_decode($row->geometry, true, 512, JSON_THROW_ON_ERROR), 'properties' => ['code' => $row->facility_code, 'name' => $row->name, 'coordinate_status' => $row->coordinate_status, 'location_kind' => $row->location_kind, 'district_code' => $row->district_code, 'regency_code' => $row->regency_code]])->all();
+        $verification = app(DistrictVerification::class);
+        foreach ($rows as $index => $row) {
+            $features[$index]['properties']['district_verified'] = $row->location_kind === 'district_estimate'
+                && $verification->matches($context['release']->id, $row->facility_code, $row->district_code, $row->regency_code, $row->name, $row->address);
+        }
 
         return ['type' => 'FeatureCollection', 'features' => $features, 'meta' => ['filtered_registered' => (int) $counts->registered, 'filtered_mapped' => (int) $counts->mapped, 'filtered_estimated' => $estimated, 'filtered_missing' => (int) $counts->missing, 'filtered_verified' => (int) $counts->verified, 'filter_count' => (int) $counts->registered, 'view_count' => count($features)]];
     }

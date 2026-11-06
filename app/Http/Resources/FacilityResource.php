@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Services\DistrictVerification;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -23,6 +24,7 @@ class FacilityResource extends JsonResource
             'location' => $this->longitude === null ? null : ['type' => 'Point', 'coordinates' => [(float) $this->longitude, (float) $this->latitude]],
             'estimated_location' => $this->estimated_location === null ? null : json_decode($this->estimated_location, true, 512, JSON_THROW_ON_ERROR),
             'location_kind' => $this->estimated_location === null ? 'source' : 'district_estimate',
+            'district_verified' => $this->estimated_location !== null && app(DistrictVerification::class)->matches($this->release_id, $this->facility_code, $this->district_code, $this->regency_code, $this->name, $this->address),
         ];
     }
 }

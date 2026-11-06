@@ -81,6 +81,7 @@ class FacilityController extends Controller
     {
         return DB::table('gis.facility_snapshots as f')->join('gis.districts as d', 'd.id', '=', 'f.district_id')->join('gis.regencies as r', 'r.id', '=', 'd.regency_id')
             ->where('f.release_id', $releaseId)->select(['f.facility_code', 'f.name', 'f.address', 'f.service_type', 'f.area_type', 'f.coordinate_status', 'f.precision_level', 'd.code as district_code', 'd.name as district_name', 'r.code as regency_code', 'r.name as regency_name'])
+            ->addSelect('f.release_id')
             ->selectRaw('extensions.ST_X(f.location) AS longitude, extensions.ST_Y(f.location) AS latitude')
             ->selectRaw("CASE WHEN f.location IS NULL AND f.coordinate_status='missing' THEN extensions.ST_AsGeoJSON(extensions.ST_PointOnSurface(d.geom)) END AS estimated_location");
     }

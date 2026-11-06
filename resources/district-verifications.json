@@ -1,0 +1,2414 @@
+{
+  "release_id": "d3ca4b39-815a-5ea5-ad44-ca7867d825be",
+  "scope": "Administrative assignment only: exact normalized district name and parent code in archived master and boundary reference. Not verification of building coordinates.",
+  "input_sha256": {
+    "data/processed/facility-master.json": "6cf8ece0fc223f17e80b3cd57d490791521b6c20e1a9a799fc2a54a2927108b0",
+    "data/processed/boundaries/analysis.geojson": "2c21d39c5c68d573ee6c25ea82272111da2dc79c5375c8abdf5bb39f36cf0329"
+  },
+  "held_codes": [
+    "35070200008",
+    "35070200009",
+    "35110200022",
+    "35130200024",
+    "35160200022",
+    "35290200004",
+    "35710200005",
+    "35710200006"
+  ],
+  "records": {
+    "35010200001": {
+      "district_code": "3501010",
+      "regency_code": "3501",
+      "name": "DONOROJO",
+      "address": "Jl. Donorojo-Kalak RT 02 RW 01 Dsn. Druju Ds. Donorojo Kec.Donorojo 63554"
+    },
+    "35010200002": {
+      "district_code": "3501010",
+      "regency_code": "3501",
+      "name": "KALAK",
+      "address": "RT 04 RW 02 Dsn. Krajan Kulon Ds. Kalak Kec. Donorojo 63554"
+    },
+    "35010200004": {
+      "district_code": "3501020",
+      "regency_code": "3501",
+      "name": "GONDOSARI",
+      "address": "Jl. Gondosari-Ploso RT 01 RW 01 Dsn. Krajan Ds. Gondosari Kec. Punung 63553"
+    },
+    "35010200005": {
+      "district_code": "3501030",
+      "regency_code": "3501",
+      "name": "PRINGKUKU",
+      "address": "Jl.Tumpak Rinjing KM 22 RT 01 RW 09 Dsn. Bulu Ds. Ngadirejan Kec. Pringkuku 63552"
+    },
+    "35010200006": {
+      "district_code": "3501030",
+      "regency_code": "3501",
+      "name": "CANDI",
+      "address": "Jl.Pacitan-Watukarung KM 14 RT 03 RW 02 Dsn. Krajan Ds. Candi Kec. Pringkuku 63552"
+    },
+    "35010200010": {
+      "district_code": "3501050",
+      "regency_code": "3501",
+      "name": "KETROWONOJOYO",
+      "address": "Jl. Pacitan- Lorok KM 17 Dsn. Wonojoyo Ds. Ketro Kec. Kebonagung 63561"
+    },
+    "35010200012": {
+      "district_code": "3501060",
+      "regency_code": "3501",
+      "name": "KEDUNGBENDO",
+      "address": "Jl. Raya Pacitan-Ponorogo KM 19 RT 02 RW 01 Dsn. Krajan Ds. Kedungbendo Kec. Arjosari 63581"
+    },
+    "35010200013": {
+      "district_code": "3501070",
+      "regency_code": "3501",
+      "name": "NAWANGAN",
+      "address": "Jl Raya Nawangan-Pakisbaru KM 1 RT 04 RW 01 Dsn. Krajan Ds. Nawangan Kec. Nawangan 63584"
+    },
+    "35010200014": {
+      "district_code": "3501070",
+      "regency_code": "3501",
+      "name": "PAKISBARU",
+      "address": "Jl. Raya Bandar-Pacitan KM 50 RT 03 RW 06 Dsn. Bulu Ds. Ngromo Kec. Nawangan 63584"
+    },
+    "35010200016": {
+      "district_code": "3501080",
+      "regency_code": "3501",
+      "name": "JERUK",
+      "address": "Jl. Raya Purwantoro-Jeruk RT 01 RW 04 Dsn. Krajan Ds. Jeruk Kec. Bandar 63583"
+    },
+    "35010200017": {
+      "district_code": "3501090",
+      "regency_code": "3501",
+      "name": "TEGALOMBO",
+      "address": "Jl. Raya Pacitan-Ponorogo KM 35 RT 13 RW 03 Dsn. Krajan Ds. Tegalombo Kec. Tegalombo 63518"
+    },
+    "35010200018": {
+      "district_code": "3501090",
+      "regency_code": "3501",
+      "name": "GEMAHARJO",
+      "address": "Jl. Raya Pacitan-Ponorogo KM 46 RT 03 RW 06 Dsn. Dondong Ds. Gemaharjo Kec. Tegalombo 63582"
+    },
+    "35010200020": {
+      "district_code": "3501100",
+      "regency_code": "3501",
+      "name": "BUBAKAN",
+      "address": "Jl Tulakan-Tegalombo KM 14 RT 03 RW 06 Dsn. Saman Ds. Bubakan Kec.Tulakan 63571"
+    },
+    "35010200022": {
+      "district_code": "3501110",
+      "regency_code": "3501",
+      "name": "WONOKARTO",
+      "address": "Jl. Lorok-Ponorogo km 9 Wonokarto RT 01 RW 02 Dsn. Krajan Ds. Wonokarto Kec. Ngadirojo 63572"
+    },
+    "35010200023": {
+      "district_code": "3501120",
+      "regency_code": "3501",
+      "name": "SUDIMORO",
+      "address": "Jl. Raya Sudimoro RT 02 RW 01 Dsn. Krajan Ds. Sudimoro Kec. Sudimoro 63573"
+    },
+    "35010200024": {
+      "district_code": "3501120",
+      "regency_code": "3501",
+      "name": "SUKOREJO",
+      "address": "Jl. Raya Kaligoro No. 04 RT 01 RW 01 Dsn. Krajan Ds. Sumberejo Kec. Sudimoro 63573"
+    },
+    "35020200003": {
+      "district_code": "3502020",
+      "regency_code": "3502",
+      "name": "NAILAN",
+      "address": "Jl.Raya Ponorogo - Pacitan No.49"
+    },
+    "35020200004": {
+      "district_code": "3502030",
+      "regency_code": "3502",
+      "name": "BUNGKAL",
+      "address": "Jl. Pemuda No.53, Kec. Bungkal"
+    },
+    "35020200005": {
+      "district_code": "3502040",
+      "regency_code": "3502",
+      "name": "SAMBIT",
+      "address": "Jl. A.R.Hakim No.11, Tamansari, Kec. Sambit"
+    },
+    "35020200006": {
+      "district_code": "3502040",
+      "regency_code": "3502",
+      "name": "WRINGINANOM",
+      "address": "Jl. Gajah Mada No.29, Wringin Anom, Kec. Sambit"
+    },
+    "35020200007": {
+      "district_code": "3502050",
+      "regency_code": "3502",
+      "name": "SAWOO",
+      "address": "Jl. Sunan Kumbul No.84, Ds. Sawoo, Kec. Sawoo"
+    },
+    "35020200008": {
+      "district_code": "3502050",
+      "regency_code": "3502",
+      "name": "BONDRANG",
+      "address": "Jl. dr. Soetomo 45 Bondrang Sawoo"
+    },
+    "35020200009": {
+      "district_code": "3502060",
+      "regency_code": "3502",
+      "name": "SOOKO",
+      "address": "Jl. Sooko - Pulung No.1, Ds. Sooko, Kec. Sooko"
+    },
+    "35020200010": {
+      "district_code": "3502061",
+      "regency_code": "3502",
+      "name": "PUDAK",
+      "address": "Jl. Pudak - Pulung No.1, Kec. Pudak"
+    },
+    "35020200011": {
+      "district_code": "3502070",
+      "regency_code": "3502",
+      "name": "PULUNG",
+      "address": "Jl. Dr. Sutomo No.33, Ds. Pulung, Kec. Pulung"
+    },
+    "35020200012": {
+      "district_code": "3502070",
+      "regency_code": "3502",
+      "name": "KESUGIHAN",
+      "address": "Jl. Raya Kesugihan - Jenangan No.3, Kec. Pulung"
+    },
+    "35020200015": {
+      "district_code": "3502090",
+      "regency_code": "3502",
+      "name": "RONOWIJAYAN",
+      "address": "Jl. Budi Utomo No.06, Ronowijayan, Kec. Siman"
+    },
+    "35020200016": {
+      "district_code": "3502100",
+      "regency_code": "3502",
+      "name": "JETIS",
+      "address": "Jl. Jend.Sudirman No.51, Kec. Jetis"
+    },
+    "35020200019": {
+      "district_code": "3502120",
+      "regency_code": "3502",
+      "name": "NGRANDU",
+      "address": "Jl. Raya Ngrandu No 18, Ds. Ngrandu, Kec. Kauman"
+    },
+    "35020200020": {
+      "district_code": "3502130",
+      "regency_code": "3502",
+      "name": "JAMBON",
+      "address": "Jl. Merdeka No.1, Ds. Blembem, Kec. Jambon"
+    },
+    "35020200021": {
+      "district_code": "3502140",
+      "regency_code": "3502",
+      "name": "BADEGAN",
+      "address": "Jl. Raya Ponorogo - Solo No.123b, Kec. Badegan"
+    },
+    "35020200022": {
+      "district_code": "3502150",
+      "regency_code": "3502",
+      "name": "SAMPUNG",
+      "address": "Jl. Raya Sampung No.53, Ds. Sampung, Kec. Sampung"
+    },
+    "35020200023": {
+      "district_code": "3502150",
+      "regency_code": "3502",
+      "name": "KUNTI",
+      "address": "Jl. raya Pasar Kunti No 22 kunti Sampung"
+    },
+    "35020200025": {
+      "district_code": "3502170",
+      "regency_code": "3502",
+      "name": "PONOROGO UTARA",
+      "address": "Jl. Pahlawan No.30, Kec. Ponorogo"
+    },
+    "35020200026": {
+      "district_code": "3502170",
+      "regency_code": "3502",
+      "name": "PONOROGO SELATAN",
+      "address": "Jl. Pacar No.28, Kec. Ponorogo"
+    },
+    "35020200028": {
+      "district_code": "3502180",
+      "regency_code": "3502",
+      "name": "SUKOSARI",
+      "address": "Jl. Gunung Wilis No.30, Sukasari, Kec. Babadan"
+    },
+    "35020200029": {
+      "district_code": "3502190",
+      "regency_code": "3502",
+      "name": "JENANGAN",
+      "address": "Jl. Raya Jenangan, Kec. Jenangan"
+    },
+    "35020200030": {
+      "district_code": "3502190",
+      "regency_code": "3502",
+      "name": "SETONO",
+      "address": "Jl. Niken Gandini No.103, Setono, Kec. Jenangan"
+    },
+    "35020200032": {
+      "district_code": "3502120",
+      "regency_code": "3502",
+      "name": "KAUMAN BARU",
+      "address": "Jalan Kartini, Carat, Kec. Kauman"
+    },
+    "35030200002": {
+      "district_code": "3503010",
+      "regency_code": "3503",
+      "name": "BODAG",
+      "address": "Ds. Bodag, Kec. Panggul"
+    },
+    "35030200004": {
+      "district_code": "3503030",
+      "regency_code": "3503",
+      "name": "WATULIMO",
+      "address": "Ds. Prigi, Kec. Watulimo"
+    },
+    "35030200005": {
+      "district_code": "3503030",
+      "regency_code": "3503",
+      "name": "SLAWE",
+      "address": "Jl. Raya Prigi, Ds. Slawe, Kec. Watulimo"
+    },
+    "35030200006": {
+      "district_code": "3503040",
+      "regency_code": "3503",
+      "name": "KAMPAK",
+      "address": "Ds. Bendoagung, Kec. Kampak"
+    },
+    "35030200008": {
+      "district_code": "3503050",
+      "regency_code": "3503",
+      "name": "PANDEAN",
+      "address": "Ds. Pandean, Kec. Dongko"
+    },
+    "35030200013": {
+      "district_code": "3503080",
+      "regency_code": "3503",
+      "name": "KARANGANYAR",
+      "address": "Ds. Karanganyar, Kec. Gandusari"
+    },
+    "35030200015": {
+      "district_code": "3503090",
+      "regency_code": "3503",
+      "name": "BARUHARJO",
+      "address": "Ds. Baruharjo, Kec. Durenan"
+    },
+    "35030200016": {
+      "district_code": "3503100",
+      "regency_code": "3503",
+      "name": "POGALAN",
+      "address": "Ds. Bendorejo, Kec. Pogalan"
+    },
+    "35030200017": {
+      "district_code": "3503100",
+      "regency_code": "3503",
+      "name": "NGULANKULON",
+      "address": "Ds. Ngulankulon, Kec. Pogalan"
+    },
+    "35030200020": {
+      "district_code": "3503120",
+      "regency_code": "3503",
+      "name": "TUGU",
+      "address": "Ds. Gondang, Kec. Tugu"
+    },
+    "35030200021": {
+      "district_code": "3503120",
+      "regency_code": "3503",
+      "name": "PUCANGANAK",
+      "address": "Ds. Pucanganak, Kec. Tugu"
+    },
+    "35030200022": {
+      "district_code": "3503130",
+      "regency_code": "3503",
+      "name": "BENDUNGAN",
+      "address": "Ds. Sumurup, Kec. Bendungan"
+    },
+    "35040200001": {
+      "district_code": "3504010",
+      "regency_code": "3504",
+      "name": "BESUKI",
+      "address": "Jl.Niyama Rt.01,Rw.04, Kec. Besuki"
+    },
+    "35040200004": {
+      "district_code": "3504030",
+      "regency_code": "3504",
+      "name": "BANGUNJAYA",
+      "address": "Jl. Raya Bangunjaya No 1, Ds. Bangunjaya Kec. Pakel"
+    },
+    "35040200005": {
+      "district_code": "3504030",
+      "regency_code": "3504",
+      "name": "PAKEL",
+      "address": "Jl. Empu Sendok No 54, Kec. Pakel"
+    },
+    "35040200008": {
+      "district_code": "3504060",
+      "regency_code": "3504",
+      "name": "KALIDAWIR",
+      "address": "Jl. Melati No.02 Desa Kalidawir, Kec. Kalidawir"
+    },
+    "35040200009": {
+      "district_code": "3504060",
+      "regency_code": "3504",
+      "name": "TUNGGANGRI",
+      "address": "Jl. Raden Fattah Ds. Tunggangri, Kec. Kalidawir"
+    },
+    "35040200012": {
+      "district_code": "3504080",
+      "regency_code": "3504",
+      "name": "BANJAREJO",
+      "address": "Jl. Puskesmas Banjarejo No 1 Kec Rejotangan"
+    },
+    "35040200014": {
+      "district_code": "3504090",
+      "regency_code": "3504",
+      "name": "BALESONO",
+      "address": "Jl. Ds. Balesono, Kec. Ngunut"
+    },
+    "35040200015": {
+      "district_code": "3504100",
+      "regency_code": "3504",
+      "name": "BENDILWUNGU",
+      "address": "Jl. Raya Bendilwungu no 3 Kec Sumbergempol"
+    },
+    "35040200016": {
+      "district_code": "3504100",
+      "regency_code": "3504",
+      "name": "SUMBERGEMPOL",
+      "address": "Jl. Raya Sumbergempol Rt.02 Rw.04, Kec. Sumbergempol"
+    },
+    "35040200017": {
+      "district_code": "3504110",
+      "regency_code": "3504",
+      "name": "BEJI",
+      "address": "Jl. Mastrip, Ds. Beji, Kec. Boyolangu"
+    },
+    "35040200021": {
+      "district_code": "3504130",
+      "regency_code": "3504",
+      "name": "KEDUNGWARU",
+      "address": "Jl. Pahlawan III/5, Kec. Kedungwaru"
+    },
+    "35040200022": {
+      "district_code": "3504130",
+      "regency_code": "3504",
+      "name": "SIMO",
+      "address": "Jl. Iroendini No.15, Ds. Simo, Kec. Kedungwaru"
+    },
+    "35040200023": {
+      "district_code": "3504140",
+      "regency_code": "3504",
+      "name": "NGANTRU",
+      "address": "Jl. Raya Ngantru, Kec. Ngantru"
+    },
+    "35040200024": {
+      "district_code": "3504140",
+      "regency_code": "3504",
+      "name": "PUCUNG",
+      "address": "Jl. Raya Pucung-Ngantru, Kec. Ngantru"
+    },
+    "35040200026": {
+      "district_code": "3504160",
+      "regency_code": "3504",
+      "name": "KAUMAN",
+      "address": "Jl. Sukarno Hatta No 02, Kec. Kauman"
+    },
+    "35040200028": {
+      "district_code": "3504170",
+      "regency_code": "3504",
+      "name": "TIUDAN",
+      "address": "Ds. Tiudan, Kec. Gondang"
+    },
+    "35040200029": {
+      "district_code": "3504180",
+      "regency_code": "3504",
+      "name": "PAGERWOJO",
+      "address": "Ds. Mulyosari Rt.01 Rw.02, Kec. Pager Wojo"
+    },
+    "35040200031": {
+      "district_code": "3504190",
+      "regency_code": "3504",
+      "name": "DONO",
+      "address": "Jl. Raya Dono, Kec. Sendang"
+    },
+    "35050200001": {
+      "district_code": "3505010",
+      "regency_code": "3505",
+      "name": "BAKUNG",
+      "address": "Jl. Trisula No 03, Kec. Bakung"
+    },
+    "35050200003": {
+      "district_code": "3505030",
+      "regency_code": "3505",
+      "name": "PANGGUNGREJO",
+      "address": "Jl. Protokol Panggungrejo Kec. Panggungrejo"
+    },
+    "35050200005": {
+      "district_code": "3505050",
+      "regency_code": "3505",
+      "name": "BINANGUN",
+      "address": "Jl. S.Supriadi No. 19 Kec. Binangun"
+    },
+    "35050200006": {
+      "district_code": "3505060",
+      "regency_code": "3505",
+      "name": "SUTOJAYAN",
+      "address": "Jl. Raya Utara No. 113 Desa/Kel. Kembangarum Kec. Sutojayan"
+    },
+    "35050200010": {
+      "district_code": "3505100",
+      "regency_code": "3505",
+      "name": "SELOPURO",
+      "address": "Jl. Raya Kasim Desa.Selopuro Kec. Selopuro"
+    },
+    "35050200012": {
+      "district_code": "3505120",
+      "regency_code": "3505",
+      "name": "BORO",
+      "address": "Jl. Raya Jarangan RT 1 RW 1 Desa Boro Kec. Selorejo"
+    },
+    "35050200013": {
+      "district_code": "3505130",
+      "regency_code": "3505",
+      "name": "DOKO",
+      "address": "Jl. Sersan Toyib No. 002 Desa Suru Kec. Doko"
+    },
+    "35050200014": {
+      "district_code": "3505140",
+      "regency_code": "3505",
+      "name": "WLINGI",
+      "address": "Jl. P.Sudirman 106, Kec. Wlingi"
+    },
+    "35050200015": {
+      "district_code": "3505150",
+      "regency_code": "3505",
+      "name": "GANDUSARI",
+      "address": "Jl. Raya Kawi 56, Kec. Gandusari"
+    },
+    "35050200016": {
+      "district_code": "3505150",
+      "regency_code": "3505",
+      "name": "SLUMBUNG",
+      "address": "JL. Ahmad Yani No. 7 Desa Slumbung Kec. Gandusari"
+    },
+    "35050200019": {
+      "district_code": "3505180",
+      "regency_code": "3505",
+      "name": "SANANKULON",
+      "address": "Jl. Kediri Kalipucung, Kec. Sanankulon"
+    },
+    "35050200021": {
+      "district_code": "3505190",
+      "regency_code": "3505",
+      "name": "BACEM",
+      "address": "JL. Raya Karanganyar Ds. Gembongan Kec. Ponggok"
+    },
+    "35050200023": {
+      "district_code": "3505210",
+      "regency_code": "3505",
+      "name": "WONODADI",
+      "address": "Jl. Raya Wonodadi No. 4 Ds. Wonodadi. Kec. Wonodadi"
+    },
+    "35050200024": {
+      "district_code": "3505220",
+      "regency_code": "3505",
+      "name": "UDANAWU",
+      "address": "Jl. Raya Blitar-Kediri, Ds. Karanggondang, Kec.Udanawu"
+    },
+    "35060200002": {
+      "district_code": "3506010",
+      "regency_code": "3506",
+      "name": "NGADI",
+      "address": "Jl. Raya Ngadi No.88 Ds Ngadi Kec. Mojo"
+    },
+    "35060200005": {
+      "district_code": "3506030",
+      "regency_code": "3506",
+      "name": "WONOREJO",
+      "address": "Dsn Tegalrejo Ds. Wonorejo, Kec. Ngadiluwih"
+    },
+    "35060200007": {
+      "district_code": "3506040",
+      "regency_code": "3506",
+      "name": "PELAS",
+      "address": "Jl. Raya Pelas RT 004/RW 001 Dsn. Pesantren, Ds. Pelas, Kec. Kras"
+    },
+    "35060200009": {
+      "district_code": "3506060",
+      "regency_code": "3506",
+      "name": "BLABAK",
+      "address": "Jl. Raya Kediri - Blitar No 304 RT 003/RW 003, Ds. Blabak, Kec. Kandat"
+    },
+    "35060200012": {
+      "district_code": "3506080",
+      "regency_code": "3506",
+      "name": "NGANCAR",
+      "address": "Jl. Kelud No 128 Ds. Ngancar, Kec. Ngancar"
+    },
+    "35060200032": {
+      "district_code": "3506191",
+      "regency_code": "3506",
+      "name": "KAYENKIDUL",
+      "address": "Jl. Soekarno Hatta no.12 Ds.KayenKidul Kec. Kayen Kidul"
+    },
+    "35070200001": {
+      "district_code": "3507010",
+      "regency_code": "3507",
+      "name": "DONOMULYO",
+      "address": "Jl. Raya Donomulyo No.343 Rt. 07 Rw.02 Desa Donomulyo, Kec. Donomulyo"
+    },
+    "35070200002": {
+      "district_code": "3507020",
+      "regency_code": "3507",
+      "name": "KALIPARE",
+      "address": "JL.Raya Kalipare 210 Rt 09 Rw 04 Kec.Kalipare"
+    },
+    "35070200004": {
+      "district_code": "3507030",
+      "regency_code": "3507",
+      "name": "SUMBERMANJING KULON",
+      "address": "Jl. A. Yani No. 27 Rt. 03 Rw. 01 Desa Sumbermanjing Kulon, Kec. Pagak"
+    },
+    "35070200006": {
+      "district_code": "3507040",
+      "regency_code": "3507",
+      "name": "WONOKERTO",
+      "address": "Jl.Raya Wonokerto dusun Gumukmojo RT.53 RW.11.Wonokerto Kec. Bantur"
+    },
+    "35070200007": {
+      "district_code": "3507050",
+      "regency_code": "3507",
+      "name": "GEDANGAN",
+      "address": "Jl. Hasanudin no. 60 RT 07 RW 18 Desa Gedangan Kec. Gedangan"
+    },
+    "35070200012": {
+      "district_code": "3507080",
+      "regency_code": "3507",
+      "name": "TIRTOYUDO",
+      "address": "Jl. Samudera No. 66 RT 01 RW 01, Desa Tirtoyudo, Kec. Tirtoyudo,"
+    },
+    "35070200013": {
+      "district_code": "3507090",
+      "regency_code": "3507",
+      "name": "AMPEL GADING",
+      "address": "Jl. Raya Tirtomarto No 75, RT 23/RW 09 Desa Tirtomarto, Kec. Ampelgading,"
+    },
+    "35070200019": {
+      "district_code": "3507140",
+      "regency_code": "3507",
+      "name": "KETAWANG",
+      "address": "Jl. Raya Ketawang No 13, Kec. Gondanglegi"
+    },
+    "35070200022": {
+      "district_code": "3507170",
+      "regency_code": "3507",
+      "name": "SUMBERPUCUNG",
+      "address": "Jl. TGP No.2, Kec. Sumber Pucung"
+    },
+    "35070200024": {
+      "district_code": "3507190",
+      "regency_code": "3507",
+      "name": "NGAJUM",
+      "address": "Jl. A Yani No 22, Rt.01 Rw.01, Desa Ngajum, Kec. Ngajum"
+    },
+    "35070200034": {
+      "district_code": "3507280",
+      "regency_code": "3507",
+      "name": "ARDIMULYO",
+      "address": "Jl. Raya Ardimulyo NO. 2 RT. 1 RW. 2 Desa Ardimulyo, Kec. Singosari"
+    },
+    "35070200036": {
+      "district_code": "3507300",
+      "regency_code": "3507",
+      "name": "DAU",
+      "address": "Jl. Raya Mulyoagung No. 212 RT 002 RW 007 Ds. Mulyoagung Kec. Dau"
+    },
+    "35080200004": {
+      "district_code": "3508030",
+      "regency_code": "3508",
+      "name": "PENANGGAL",
+      "address": "Jl. Mahoni No. 16 Rekesan Timur Desa Penanggal, Kec. Candipuro"
+    },
+    "35080200010": {
+      "district_code": "3508061",
+      "regency_code": "3508",
+      "name": "LABRUK KIDUL",
+      "address": "Jl. Raya Labruk Kidul, Desa Kebonsari, Kec. Sumbersuko"
+    },
+    "35080200014": {
+      "district_code": "3508100",
+      "regency_code": "3508",
+      "name": "SUMBERSARI",
+      "address": "Jl. Raya Sumbersari, Kec. Rowokangkung"
+    },
+    "35080200017": {
+      "district_code": "3508120",
+      "regency_code": "3508",
+      "name": "TUNJUNG",
+      "address": "Jl. Raya Kalipenggung, Kec. Randuangung"
+    },
+    "35080200019": {
+      "district_code": "3508140",
+      "regency_code": "3508",
+      "name": "PADANG",
+      "address": "Jl. Raya Padang No 48, Kec. Padang"
+    },
+    "35080200023": {
+      "district_code": "3508180",
+      "regency_code": "3508",
+      "name": "KEDUNGJAJANG",
+      "address": "Jl. Raya Kedungjajang No.118, Kec. Kedungjajang"
+    },
+    "35090200002": {
+      "district_code": "3509010",
+      "regency_code": "3509",
+      "name": "CAKRU",
+      "address": "Jl. Diponegoro No. 3, Kec. Kencong"
+    },
+    "35090200004": {
+      "district_code": "3509020",
+      "regency_code": "3509",
+      "name": "TEMBOKREJO",
+      "address": "Jl. PB. Sudirman No. 44, Kec. Gumuk Mas"
+    },
+    "35090200006": {
+      "district_code": "3509030",
+      "regency_code": "3509",
+      "name": "KASIYAN",
+      "address": "Jl. Raya Kencong - Desa Mlokorejo Kec. Puger"
+    },
+    "35090200007": {
+      "district_code": "3509040",
+      "regency_code": "3509",
+      "name": "WULUHAN",
+      "address": "Jl. Kartini No. 04, Kec. Wuluhan"
+    },
+    "35090200010": {
+      "district_code": "3509050",
+      "regency_code": "3509",
+      "name": "SABRANG",
+      "address": "Jl. Watu Ulo No. 09, Kec. Ambulu"
+    },
+    "35090200012": {
+      "district_code": "3509060",
+      "regency_code": "3509",
+      "name": "TEMPUREJO",
+      "address": "Jl. Kh. Abdul Aziz No. 119 Dusun Kauman Kec. Tempurejo"
+    },
+    "35090200013": {
+      "district_code": "3509060",
+      "regency_code": "3509",
+      "name": "CURAHNONGKO",
+      "address": "Jl. Bande Alit No. 19, Kec. Tempurejo"
+    },
+    "35090200017": {
+      "district_code": "3509090",
+      "regency_code": "3509",
+      "name": "MUMBULSARI",
+      "address": "Jl. Dr. Soebandi No. 183, Kec. Mumbulsari"
+    },
+    "35090200019": {
+      "district_code": "3509100",
+      "regency_code": "3509",
+      "name": "KEMUNINGSARI KIDUL",
+      "address": "Jl. Jember - Ambulu No. 42 Kec. Jenggawah"
+    },
+    "35090200022": {
+      "district_code": "3509120",
+      "regency_code": "3509",
+      "name": "NOGOSARI",
+      "address": "Jl. KH. Achmad Hafid, Kec. Rambipuji"
+    },
+    "35090200025": {
+      "district_code": "3509140",
+      "regency_code": "3509",
+      "name": "UMBULSARI",
+      "address": "Jl. Agus Salim 52, Kec. Umbulsari"
+    },
+    "35090200026": {
+      "district_code": "3509140",
+      "regency_code": "3509",
+      "name": "PALERAN",
+      "address": "Jl. Semboro No. 03 Ds. Paleran, Kec. Umbulsari"
+    },
+    "35090200028": {
+      "district_code": "3509160",
+      "regency_code": "3509",
+      "name": "JOMBANG",
+      "address": "Jl. Kamboja No. 07, Kec. Jombang"
+    },
+    "35090200029": {
+      "district_code": "3509170",
+      "regency_code": "3509",
+      "name": "SUMBERBARU",
+      "address": "Jl. PB.Sudirman No.6, Kec. Sumberbaru"
+    },
+    "35090200030": {
+      "district_code": "3509170",
+      "regency_code": "3509",
+      "name": "ROWOTENGAH",
+      "address": "Jl. Gajah Mada No. 77 Desa Semberagung Kec. Sumberabaru"
+    },
+    "35090200032": {
+      "district_code": "3509180",
+      "regency_code": "3509",
+      "name": "KLATAKAN",
+      "address": "Jl. Raya Klatakan No. 06, Kec. Tanggul"
+    },
+    "35090200033": {
+      "district_code": "3509190",
+      "regency_code": "3509",
+      "name": "BANGSALSARI",
+      "address": "Jl. Ahmad Yani No. 3, Kec. Bangsalsari"
+    },
+    "35090200034": {
+      "district_code": "3509190",
+      "regency_code": "3509",
+      "name": "SUKOREJO",
+      "address": "Jl. Balung No. 91, Kec. Bangsalsari"
+    },
+    "35090200035": {
+      "district_code": "3509200",
+      "regency_code": "3509",
+      "name": "PANTI",
+      "address": "Jl. PB. Sudirman No. 85, Kec. Panti"
+    },
+    "35090200038": {
+      "district_code": "3509230",
+      "regency_code": "3509",
+      "name": "PAKUSARI",
+      "address": "Jl. PB Sudirman No. 87 Kec. Pakusari"
+    },
+    "35090200040": {
+      "district_code": "3509250",
+      "regency_code": "3509",
+      "name": "LEDOKOMBO",
+      "address": "Jl. Cumedak No. 124, Kec. Ledokombo"
+    },
+    "35090200041": {
+      "district_code": "3509260",
+      "regency_code": "3509",
+      "name": "SUMBERJAMBE",
+      "address": "Jl. Cendrawasih No. 2 Cumedak, Kec. Sumberjambe"
+    },
+    "35090200042": {
+      "district_code": "3509270",
+      "regency_code": "3509",
+      "name": "SUKOWONO",
+      "address": "Jl. Ahmad Yani 102 Kec. Sukowono"
+    },
+    "35090200043": {
+      "district_code": "3509280",
+      "regency_code": "3509",
+      "name": "JELBUK",
+      "address": "Jl. Diponegoro no. 21 Kec. Jelbuk"
+    },
+    "35090200045": {
+      "district_code": "3509710",
+      "regency_code": "3509",
+      "name": "MANGLI",
+      "address": "Jl. Otto Iskandardinata No. 82 Kel. Mangli Kec. Kaliwates"
+    },
+    "35090200048": {
+      "district_code": "3509720",
+      "regency_code": "3509",
+      "name": "GLADAKPAKEM",
+      "address": "Jl. Wolter Monginsidi No. 25 Kec. Sumbersari"
+    },
+    "35090200050": {
+      "district_code": "3509730",
+      "regency_code": "3509",
+      "name": "BANJARSENGON",
+      "address": "Jl. Kasuari Kel. Banjarsengon"
+    },
+    "35100200002": {
+      "district_code": "3510010",
+      "regency_code": "3510",
+      "name": "SUMBERAGUNG",
+      "address": "Jl. Sukamade No.45, Desa Sumberagung, Kec. Pesanggaran"
+    },
+    "35100200003": {
+      "district_code": "3510011",
+      "regency_code": "3510",
+      "name": "SILIRAGUNG",
+      "address": "Jl. Slamet Riyadi No.3, Desa Siliragung, Kec.Siliragung"
+    },
+    "35100200004": {
+      "district_code": "3510020",
+      "regency_code": "3510",
+      "name": "KEBONDALEM",
+      "address": "Jl. Bayangkara 69 Dusun Kebonrejo RT.002 RW.001 Desa Kebondalem , Kec.Bangorejo"
+    },
+    "35100200005": {
+      "district_code": "3510020",
+      "regency_code": "3510",
+      "name": "SAMBIREJO",
+      "address": "Jl. Seneporejo No.30, Desa Sambirejo, Kec.Bangorejo"
+    },
+    "35100200008": {
+      "district_code": "3510030",
+      "regency_code": "3510",
+      "name": "GRAJAGAN",
+      "address": "Jl. Glagahagung No.05, Dusun Curahjati RT.06 RW.01 Desa Grajagan Kec. Purwoharjo"
+    },
+    "35100200009": {
+      "district_code": "3510040",
+      "regency_code": "3510",
+      "name": "TEGALDLIMO",
+      "address": "Jl. Koptu Ruswadi No.12, Desa Tegaldlimo, Kec. Tegaldlimo"
+    },
+    "35100200010": {
+      "district_code": "3510040",
+      "regency_code": "3510",
+      "name": "KEDUNGWUNGU",
+      "address": "Jl. Kalipait No.37 Desa Kedungwungu, Kec.Tegaldlimo"
+    },
+    "35100200012": {
+      "district_code": "3510050",
+      "regency_code": "3510",
+      "name": "SUMBERBERAS",
+      "address": "Jl. Raya Sidomulyo No.381 RT.004 RW.009 Desa Sumberberas, Kec. Muncar"
+    },
+    "35100200014": {
+      "district_code": "3510050",
+      "regency_code": "3510",
+      "name": "TAPANREJO",
+      "address": "Jl. Senopati No.7 Dusun Krajan RT.05 RW.05 Desa Tapanrejo, Kec. Muncar"
+    },
+    "35100200015": {
+      "district_code": "3510060",
+      "regency_code": "3510",
+      "name": "BENCULUK",
+      "address": "Jl. Raya Benculuk No. 71 Dusun Purwosari RT.01 RW.08, Desa Benculuk, Kec. Cluring"
+    },
+    "35100200018": {
+      "district_code": "3510071",
+      "regency_code": "3510",
+      "name": "TEGALSARI",
+      "address": "Jl. Kyai Syafaat Desa Tegalrejo Kec. Tegalsari"
+    },
+    "35100200020": {
+      "district_code": "3510080",
+      "regency_code": "3510",
+      "name": "TULUNGREJO",
+      "address": "Jl. Selat No.45, Dusun Wadungpal RT.11 RW.05 Desa Tulungrejo Kec. Glenmore"
+    },
+    "35100200023": {
+      "district_code": "3510100",
+      "regency_code": "3510",
+      "name": "KEMBIRITAN",
+      "address": "Jl. KH. Hasyim Asyari'i No. 3 Dusun Krajan I RT.02 RW.06 Desa Kembiritan Kec. Genteng"
+    },
+    "35100200025": {
+      "district_code": "3510110",
+      "regency_code": "3510",
+      "name": "PARIJATAH KULON",
+      "address": "Jl. Parijatah, Kec. Srono"
+    },
+    "35100200026": {
+      "district_code": "3510110",
+      "regency_code": "3510",
+      "name": "WONOSOBO",
+      "address": "Jl. Raya Srono No.78, Desa Wonosobo, Kec. Srono"
+    },
+    "35100200027": {
+      "district_code": "3510120",
+      "regency_code": "3510",
+      "name": "GITIK",
+      "address": "Jl. Diponegoro Dusun Timurjo RT.001 RW.001 Desa Gitik Kec. Rogojampi"
+    },
+    "35100200028": {
+      "district_code": "3510120",
+      "regency_code": "3510",
+      "name": "GLADAG",
+      "address": "Jl. Tawangalun Dusun Krajan RT. 001 RW. 007 Desa Gladag Kec. Rogojampi"
+    },
+    "35100200030": {
+      "district_code": "3510121",
+      "regency_code": "3510",
+      "name": "BADEAN",
+      "address": "Jl. Raya Badean No.74, Desa Badean Kec. Blimbingsari"
+    },
+    "35100200032": {
+      "district_code": "3510150",
+      "regency_code": "3510",
+      "name": "KARANGSARI",
+      "address": "Jl. Parijatah No.43, Dusun Dadapan RT. 06 RW. 01 Desa Karangrejo Kec. Sempu"
+    },
+    "35100200033": {
+      "district_code": "3510150",
+      "regency_code": "3510",
+      "name": "GENDOH",
+      "address": "Jl. Genteng No.69, Desa Gendoh, Kec. Sempu"
+    },
+    "35100200035": {
+      "district_code": "3510160",
+      "regency_code": "3510",
+      "name": "SONGGON",
+      "address": "Jl. Ahmad Yani No.65, Desa Songgon, Kec. Songgon"
+    },
+    "35100200036": {
+      "district_code": "3510170",
+      "regency_code": "3510",
+      "name": "PASPAN",
+      "address": "Jl. Raya Licin No. 17 Dusun Krajan RT 04/RW11, Kec. Glagah"
+    },
+    "35100200037": {
+      "district_code": "3510171",
+      "regency_code": "3510",
+      "name": "LICIN",
+      "address": "Jl. Lidjen Dusun Gumuk Batu RT.01 RW.01 Desa Licin, Kec. Licin"
+    },
+    "35100200042": {
+      "district_code": "3510200",
+      "regency_code": "3510",
+      "name": "KELIR",
+      "address": "Jl. Pesucen No.379 Dusun Krajan RT.01 RW.01 Desa Kelir Kec. Kalipuro"
+    },
+    "35100200043": {
+      "district_code": "3510200",
+      "regency_code": "3510",
+      "name": "KLATAK",
+      "address": "Jl. Yos Sudarso No.179, Kec. Kalipuro"
+    },
+    "35100200045": {
+      "district_code": "3510210",
+      "regency_code": "3510",
+      "name": "BAJULMATI",
+      "address": "Jl. Raya Situbondo No.94 Dusun Galekan RT.01 RW.02 Desa Bajulmati, Kec. Wongsorejo"
+    },
+    "35110200004": {
+      "district_code": "3511031",
+      "regency_code": "3511",
+      "name": "JAMBESARI",
+      "address": "Jl. Raya Jambesari Ds. Jambesari, Kec. Jambesari Darus Sholah"
+    },
+    "35110200005": {
+      "district_code": "3511040",
+      "regency_code": "3511",
+      "name": "PUJER",
+      "address": "Jl. Raya Pujer Ds. Pujer, Kec. Pujer"
+    },
+    "35110200006": {
+      "district_code": "3511050",
+      "regency_code": "3511",
+      "name": "TLOGOSARI",
+      "address": "Jl. Raya Pakisan Ds. Pakisan, Kec. Tlogosari"
+    },
+    "35110200008": {
+      "district_code": "3511061",
+      "regency_code": "3511",
+      "name": "SUMBER WRINGIN",
+      "address": "Jl. Raya Raung Sumber Wringin, Kec. Sumber Wringin"
+    },
+    "35110200009": {
+      "district_code": "3511070",
+      "regency_code": "3511",
+      "name": "TAPEN",
+      "address": "Jl. Olah Raga No.1 Ds. Tapen, Kec. Tapen"
+    },
+    "35110200017": {
+      "district_code": "3511120",
+      "regency_code": "3511",
+      "name": "PAKEM",
+      "address": "Jl. Raya Patemon Ds. Patemon, Kec. Pakem"
+    },
+    "35110200019": {
+      "district_code": "3511140",
+      "regency_code": "3511",
+      "name": "TEGALAMPEL",
+      "address": "Jl. RBA Ki Ronggo RT 02 Sekarputih, Kec. Tegalampel"
+    },
+    "35110200021": {
+      "district_code": "3511141",
+      "regency_code": "3511",
+      "name": "TAMAN KROCOK",
+      "address": "Jl. Raya Taman Krocok No. 2 Ds. Taman. Kec. Taman Krocok"
+    },
+    "35110200023": {
+      "district_code": "3511152",
+      "regency_code": "3511",
+      "name": "BOTOLINGGO",
+      "address": "Jl. Raya Botolinggo, Kec. Botolinggo"
+    },
+    "35110200025": {
+      "district_code": "3511170",
+      "regency_code": "3511",
+      "name": "CERMEE",
+      "address": "Jl. Raya Cermee Ds. Suling Kulon, Kec. Cermee"
+    },
+    "35120200001": {
+      "district_code": "3512010",
+      "regency_code": "3512",
+      "name": "SUMBERMALANG",
+      "address": "Jl. Rengganis No. 03, Ds. Tlogosari, Kec. Sumbermalang"
+    },
+    "35120200005": {
+      "district_code": "3512050",
+      "regency_code": "3512",
+      "name": "SUBOH",
+      "address": "Jl. Raya Bondowoso No. 4 RT 03/ RW VI, Kec. Suboh"
+    },
+    "35120200007": {
+      "district_code": "3512070",
+      "regency_code": "3512",
+      "name": "BUNGATAN",
+      "address": "Jl. Raya Selowogo No.06, Ds. Bungatan, Kec. Bungatan"
+    },
+    "35120200014": {
+      "district_code": "3512140",
+      "regency_code": "3512",
+      "name": "ARJASA",
+      "address": "Jl. Raya Arjasa No.222, Kec. Arjasa"
+    },
+    "35120200017": {
+      "district_code": "3512170",
+      "regency_code": "3512",
+      "name": "BANYUPUTIH",
+      "address": "Jl. KH Syamsuri No.3, Sumberwaru, Kec. Banyuputih"
+    },
+    "35120200018": {
+      "district_code": "3512120",
+      "regency_code": "3512",
+      "name": "KLAMPOKAN",
+      "address": "Jl. Raya Battal No 06 RT006 RW 001 Dusun Krajan, Ds. Klampokan"
+    },
+    "35120200019": {
+      "district_code": "3512040",
+      "regency_code": "3512",
+      "name": "WIDOROPAYUNG",
+      "address": "Jl. Sumbermalang no. 84 RT 002 RW 001, Dusun Krajan, Ds. Widoropayung"
+    },
+    "35120200020": {
+      "district_code": "3512170",
+      "regency_code": "3512",
+      "name": "WONOREJO",
+      "address": "Jl. Raya Banyuputih, Ds. Wonorejo, Kec. Banyuputih"
+    },
+    "35130200002": {
+      "district_code": "3513020",
+      "regency_code": "3513",
+      "name": "SUMBER",
+      "address": "Jl. Raya Tempuran N0. 10 Kec. Sumber"
+    },
+    "35130200003": {
+      "district_code": "3513030",
+      "regency_code": "3513",
+      "name": "KURIPAN",
+      "address": "Jl. Raya Kuripan 76, Kec. Kuripan"
+    },
+    "35130200004": {
+      "district_code": "3513040",
+      "regency_code": "3513",
+      "name": "BANTARAN",
+      "address": "Jl. Raya Bantaran, Kec. Bantaran"
+    },
+    "35130200006": {
+      "district_code": "3513050",
+      "regency_code": "3513",
+      "name": "JORONGAN",
+      "address": "Jl. Raya Lumajang, Kec. Leces"
+    },
+    "35130200007": {
+      "district_code": "3513060",
+      "regency_code": "3513",
+      "name": "TEGALSIWALAN",
+      "address": "Jl. Raya Tegalsiwalan, Kec. Tegalsiwalan"
+    },
+    "35130200008": {
+      "district_code": "3513070",
+      "regency_code": "3513",
+      "name": "BANYUANYAR",
+      "address": "Jl. Raya Banyuanyar, Kec. Banyuanyar"
+    },
+    "35130200009": {
+      "district_code": "3513070",
+      "regency_code": "3513",
+      "name": "KLENANG KIDUL",
+      "address": "Jl. Raya Klenang Kidul, Kec. Banyuanyar"
+    },
+    "35130200010": {
+      "district_code": "3513080",
+      "regency_code": "3513",
+      "name": "RANUGEDANG",
+      "address": "Jl. Raya Ranugedang, Kec. Tiris"
+    },
+    "35130200012": {
+      "district_code": "3513090",
+      "regency_code": "3513",
+      "name": "KRUCIL",
+      "address": "Jl. Dewi Rengganis, Kec. Krucil"
+    },
+    "35130200013": {
+      "district_code": "3513100",
+      "regency_code": "3513",
+      "name": "WANGKAL",
+      "address": "Jl. Mayjen. Widoro Wangkal, Kec. Gading"
+    },
+    "35130200014": {
+      "district_code": "3513100",
+      "regency_code": "3513",
+      "name": "CONDONG",
+      "address": "Jl. Raya Condong, Kec. Gading"
+    },
+    "35130200015": {
+      "district_code": "3513110",
+      "regency_code": "3513",
+      "name": "GLAGAH",
+      "address": "Jl. Raya Glagah - Sindet, Kec. Pakuniran"
+    },
+    "35130200016": {
+      "district_code": "3513110",
+      "regency_code": "3513",
+      "name": "PAKUNIRAN",
+      "address": "Jl. Raya Sumberkembar No. 24 Kec. Pakuniran"
+    },
+    "35130200017": {
+      "district_code": "3513120",
+      "regency_code": "3513",
+      "name": "KOTAANYAR",
+      "address": "Jl. Raya Kota Anyar, Kec. Kotaanyar"
+    },
+    "35130200019": {
+      "district_code": "3513130",
+      "regency_code": "3513",
+      "name": "JABUNGSISIR",
+      "address": "Jl. Raya Besuk, Kec. Paiton"
+    },
+    "35130200020": {
+      "district_code": "3513140",
+      "regency_code": "3513",
+      "name": "BAGO",
+      "address": "Jl. Raya Bago 176, Kec. Besuk"
+    },
+    "35130200021": {
+      "district_code": "3513140",
+      "regency_code": "3513",
+      "name": "BESUK",
+      "address": "Jl. Raya Besuk No. 08 Desa Alaskandang Kec. Besuk"
+    },
+    "35130200023": {
+      "district_code": "3513160",
+      "regency_code": "3513",
+      "name": "KREJENGAN",
+      "address": "Jl. Raya krejengan 62, Kec. Krejengan"
+    },
+    "35130200025": {
+      "district_code": "3513180",
+      "regency_code": "3513",
+      "name": "MARON",
+      "address": "Jl. Asmali 604, Kec. Maron"
+    },
+    "35130200026": {
+      "district_code": "3513180",
+      "regency_code": "3513",
+      "name": "SUKO",
+      "address": "Jl. Raya Suko 182, Kec. Maron"
+    },
+    "35130200028": {
+      "district_code": "3513200",
+      "regency_code": "3513",
+      "name": "DRINGU",
+      "address": "Jl. Raya Dringu, Kec. Dringu"
+    },
+    "35130200029": {
+      "district_code": "3513210",
+      "regency_code": "3513",
+      "name": "WONOMERTO",
+      "address": "Jl. Raya Wonomerto, Kec. Wonomerto"
+    },
+    "35130200032": {
+      "district_code": "3513230",
+      "regency_code": "3513",
+      "name": "CURAHTULIS",
+      "address": "Jl. Raya Curah Tulis, Kec. Tongas"
+    },
+    "35130200033": {
+      "district_code": "3513240",
+      "regency_code": "3513",
+      "name": "SUMBERASIH",
+      "address": "Jl. Raya Sukapura I, Kec. Sumberasih"
+    },
+    "35140200003": {
+      "district_code": "3514020",
+      "regency_code": "3514",
+      "name": "SUMBERPITU",
+      "address": "Jl. Raya Sumberpitu No.25 Ds. Sumberpitu, Kec.Tutur"
+    },
+    "35140200004": {
+      "district_code": "3514030",
+      "regency_code": "3514",
+      "name": "PUSPO",
+      "address": "Jl. Raya Puspo 118, Kec. Puspo"
+    },
+    "35140200005": {
+      "district_code": "3514040",
+      "regency_code": "3514",
+      "name": "TOSARI",
+      "address": "Jl. Raya Tlogosari 43, Kec. Tosari"
+    },
+    "35140200006": {
+      "district_code": "3514050",
+      "regency_code": "3514",
+      "name": "LUMBANG",
+      "address": "Jl. Raya Cukurguling Desa Cukurguling, Kec. Lumbang"
+    },
+    "35140200008": {
+      "district_code": "3514070",
+      "regency_code": "3514",
+      "name": "KEJAYAN",
+      "address": "Jl. Lembu Suro 1, Kec. Kejayan"
+    },
+    "35140200009": {
+      "district_code": "3514070",
+      "regency_code": "3514",
+      "name": "AMBAL AMBIL",
+      "address": "Jl. Kabupaten No.38, Wrati, Kec. Kejayan"
+    },
+    "35140200010": {
+      "district_code": "3514080",
+      "regency_code": "3514",
+      "name": "WONOREJO",
+      "address": "Dsn. Sudan RT.001 RW.002 Ds. Wonosari, Kec. Wonorejo"
+    },
+    "35140200012": {
+      "district_code": "3514090",
+      "regency_code": "3514",
+      "name": "KARANGREJO",
+      "address": "Jl. Paku Kerto Ds.Karangrejo, Kec. Purwosari"
+    },
+    "35140200014": {
+      "district_code": "3514100",
+      "regency_code": "3514",
+      "name": "BULUKANDANG",
+      "address": "Jl. Raya Bulukandang No.39, Kec. Prigen"
+    },
+    "35140200017": {
+      "district_code": "3514120",
+      "regency_code": "3514",
+      "name": "SEBANI",
+      "address": "Jl. Ds. Sebani, Kec. Pandaan"
+    },
+    "35140200024": {
+      "district_code": "3514170",
+      "regency_code": "3514",
+      "name": "NGEMPIT",
+      "address": "Jl. Raya Ngempit 19 , Ds. Ngempit, Kec. Kraton"
+    },
+    "35140200025": {
+      "district_code": "3514170",
+      "regency_code": "3514",
+      "name": "KRATON",
+      "address": "Jl. Raya Tambakrejo, Kec. Kraton"
+    },
+    "35140200026": {
+      "district_code": "3514180",
+      "regency_code": "3514",
+      "name": "POHJENTREK",
+      "address": "Jl. Raya Warungdowo Barat, Kec. Pohjentrek"
+    },
+    "35140200028": {
+      "district_code": "3514200",
+      "regency_code": "3514",
+      "name": "REJOSO",
+      "address": "Jl. Raya Rejoso No.25A, Kec. Rejoso"
+    },
+    "35140200031": {
+      "district_code": "3514220",
+      "regency_code": "3514",
+      "name": "KEDAWUNGWETAN",
+      "address": "Jl. Raya kedawungwetan Ds. Kedawungwetan, Kec. Grati"
+    },
+    "35140200032": {
+      "district_code": "3514230",
+      "regency_code": "3514",
+      "name": "LEKOK",
+      "address": "Jl. Raya Lekok 1, Kec. Lekok"
+    },
+    "35140200033": {
+      "district_code": "3514240",
+      "regency_code": "3514",
+      "name": "NGULING",
+      "address": "Jl. Kabupaten 9, Kec. Nguling"
+    },
+    "35160200004": {
+      "district_code": "3516030",
+      "regency_code": "3516",
+      "name": "PANDAN",
+      "address": "Jl. Bungtomo 65, Ds. Pandan, Kec. Pacet"
+    },
+    "35160200009": {
+      "district_code": "3516060",
+      "regency_code": "3516",
+      "name": "WATUKENONGO",
+      "address": "Jl. Kalisadar No. 25, Ds. Watukenongo, Kec. Pungging"
+    },
+    "35160200010": {
+      "district_code": "3516070",
+      "regency_code": "3516",
+      "name": "PESANGGRAHAN",
+      "address": "Jl. Raya Mojosari, Ds. Pesanggrahan, Kec. Kutorejo"
+    },
+    "35160200012": {
+      "district_code": "3516080",
+      "regency_code": "3516",
+      "name": "MODOPURO",
+      "address": "Jl.WR. Supratman 9, Ds. Modopuro, Kec. Mojosari"
+    },
+    "35160200014": {
+      "district_code": "3516091",
+      "regency_code": "3516",
+      "name": "GAYAMAN",
+      "address": "Jl. Raya Gayaman No. 7, Ds. Gayaman, Kec. Mojoanyar"
+    },
+    "35160200015": {
+      "district_code": "3516100",
+      "regency_code": "3516",
+      "name": "KUTOREJO",
+      "address": "Jl. H. Sumadi No. 112, Kec. Dlanggu"
+    },
+    "35160200016": {
+      "district_code": "3516100",
+      "regency_code": "3516",
+      "name": "DLANGGU",
+      "address": "Jl. Yon Joko Tole 47,Ds. Dlanggu, Kec. Dlanggu"
+    },
+    "35160200024": {
+      "district_code": "3516150",
+      "regency_code": "3516",
+      "name": "KEDUNGSARI",
+      "address": "Jl. Raya Kedungsari, Ds. Kedungsari, Kec. Kemlagi"
+    },
+    "35160200025": {
+      "district_code": "3516160",
+      "regency_code": "3516",
+      "name": "KUPANG",
+      "address": "Jl. PB. Soedirman No.78, Ds. Kupang, Kec. Jetis"
+    },
+    "35160200027": {
+      "district_code": "3516170",
+      "regency_code": "3516",
+      "name": "DAWARBLANDONG",
+      "address": "Jl. Mayjen. Sungkono No. 17, RT 01/RW 03, Ds. Pulorejo, Kec. Dawarblandong"
+    },
+    "35170200001": {
+      "district_code": "3517010",
+      "regency_code": "3517",
+      "name": "BANDARKEDUNGMULYO",
+      "address": "Jl. Raja Bandar Kedungmulyo No. 14 Km 17, Kec. Bandar Kedung Mulyo"
+    },
+    "35170200004": {
+      "district_code": "3517030",
+      "regency_code": "3517",
+      "name": "PLUMBON GAMBANG",
+      "address": "Jl. Plumbon Gambang, Kec. Gudo"
+    },
+    "35170200005": {
+      "district_code": "3517040",
+      "regency_code": "3517",
+      "name": "CUKIR",
+      "address": "Jl. Raya Mojowarno 16 Cukir, Kec. Diwek"
+    },
+    "35170200007": {
+      "district_code": "3517050",
+      "regency_code": "3517",
+      "name": "PULOREJO",
+      "address": "Jl. Klotok 35, Pulorejo, Kec. Ngoro"
+    },
+    "35170200010": {
+      "district_code": "3517060",
+      "regency_code": "3517",
+      "name": "JAPANAN",
+      "address": "Jl. Raya Sumberboto 60 Ds. Japanan, Kec. Mojowarno"
+    },
+    "35170200012": {
+      "district_code": "3517080",
+      "regency_code": "3517",
+      "name": "WONOSALAM",
+      "address": "Jl. Anjasmoro 360 Ds. Wonosalam, Kec. Wonosalam"
+    },
+    "35170200016": {
+      "district_code": "3517100",
+      "regency_code": "3517",
+      "name": "JOGOLOYO",
+      "address": "Jl. Raya Jogoloyo, Kec. Sumobito"
+    },
+    "35170200018": {
+      "district_code": "3517110",
+      "regency_code": "3517",
+      "name": "JARAKKULON",
+      "address": "Jl. Raya Jarakkulon, Desa/Kel. Jarakkulon, Kec. Jogoroto"
+    },
+    "35170200020": {
+      "district_code": "3517120",
+      "regency_code": "3517",
+      "name": "DUKUH KLOPO",
+      "address": "Ds. Dukuh Klopo, Kec. Peterongan"
+    },
+    "35170200023": {
+      "district_code": "3517130",
+      "regency_code": "3517",
+      "name": "TAMBAKREJO",
+      "address": "Jl. Garuda 03 Tambak Rejo, Kec. Jombang"
+    },
+    "35170200027": {
+      "district_code": "3517150",
+      "regency_code": "3517",
+      "name": "JATIWATES",
+      "address": "Jl. Seruni 2 Jati Wates, Kec. Tembelang"
+    },
+    "35170200029": {
+      "district_code": "3517160",
+      "regency_code": "3517",
+      "name": "BLIMBING KESAMBEN",
+      "address": "Jl. Yodium 02 Blimbing, Kec. Kesamben"
+    },
+    "35170200030": {
+      "district_code": "3517170",
+      "regency_code": "3517",
+      "name": "TAPEN",
+      "address": "Ds. Tapen, Kec. Kudu"
+    },
+    "35170200031": {
+      "district_code": "3517171",
+      "regency_code": "3517",
+      "name": "KEBOAN",
+      "address": "Jl. Pendidikan 20 Keboan, Kec. Ngusikan"
+    },
+    "35170200032": {
+      "district_code": "3517180",
+      "regency_code": "3517",
+      "name": "BAWANGAN",
+      "address": "Jl. Raya Ploso Babat No. 236 Ds. Bawangan Kec.Ploso"
+    },
+    "35180200001": {
+      "district_code": "3518010",
+      "regency_code": "3518",
+      "name": "SAWAHAN",
+      "address": "Jl. Sedudo No.1, Ds. Sidorejo RT 001 RW 002, Kec. Sawahan"
+    },
+    "35180200005": {
+      "district_code": "3518050",
+      "regency_code": "3518",
+      "name": "PACE",
+      "address": "Jl.Nglirang - Berbek No.02 Ds. Babadan, Kec. Pace"
+    },
+    "35180200010": {
+      "district_code": "3518100",
+      "regency_code": "3518",
+      "name": "PATIANROWO",
+      "address": "Jl. Raya Ngepung, Ds.Ngepung, Kec.Patianrowo"
+    },
+    "35180200015": {
+      "district_code": "3518150",
+      "regency_code": "3518",
+      "name": "BAGOR",
+      "address": "Jl.Raya Madiun No.100 Ds.Petak, Kec.Bagor"
+    },
+    "35180200017": {
+      "district_code": "3518170",
+      "regency_code": "3518",
+      "name": "REJOSO",
+      "address": "Jl. PUD No.1 Desa Banjarejo RT 001 RW 001 , Kec. Rejoso"
+    },
+    "35180200020": {
+      "district_code": "3518200",
+      "regency_code": "3518",
+      "name": "JATIKALEN",
+      "address": "Jl. Raya Jatikalen No.21, Kec. Jatikalen"
+    },
+    "35190200001": {
+      "district_code": "3519010",
+      "regency_code": "3519",
+      "name": "GANTRUNG",
+      "address": "Jl. P Diponegoro No 311,Ds. Mojorejo, Kec Kebonsari"
+    },
+    "35190200002": {
+      "district_code": "3519010",
+      "regency_code": "3519",
+      "name": "KEBONSARI",
+      "address": "Jl. Husni Thamrin RT 008/RW 001, Ds. Balerejo Kec. Kebonsari"
+    },
+    "35190200004": {
+      "district_code": "3519020",
+      "regency_code": "3519",
+      "name": "KAIBON",
+      "address": "Jl. Pancotaruno No. 407, Ds. Kaibon, Kec. Geger"
+    },
+    "35190200005": {
+      "district_code": "3519030",
+      "regency_code": "3519",
+      "name": "MLILIR",
+      "address": "Jl. Raya Madiun Ponorogo Km 19 Kel. Mlilir Kec. Dolopo"
+    },
+    "35190200006": {
+      "district_code": "3519030",
+      "regency_code": "3519",
+      "name": "BANGUNSARI",
+      "address": "Jl. Panjang Punjung Kel. Bangunsari Kec. Dolopo"
+    },
+    "35190200008": {
+      "district_code": "3519040",
+      "regency_code": "3519",
+      "name": "JETIS",
+      "address": "Jl. Jetis, Ds. Jetis, Kec. Dagangan"
+    },
+    "35190200009": {
+      "district_code": "3519050",
+      "regency_code": "3519",
+      "name": "WUNGU",
+      "address": "Jl. Raya Kare No. 113, Ds. Wungu, Kec. Wungu"
+    },
+    "35190200010": {
+      "district_code": "3519050",
+      "regency_code": "3519",
+      "name": "MOJOPURNO",
+      "address": "Jl. Raya Dungus, Ds. Mojopurno, Kec. Wungu"
+    },
+    "35190200011": {
+      "district_code": "3519060",
+      "regency_code": "3519",
+      "name": "KARE",
+      "address": "Jl. Raya Randualas Kare, RT 02 RW 01 Ds.Kare, Kec.Kare"
+    },
+    "35190200012": {
+      "district_code": "3519070",
+      "regency_code": "3519",
+      "name": "GEMARANG",
+      "address": "Jl. Tentara Genie Pelajar No 17, Ds. Gemarang, Kec. Gemarang"
+    },
+    "35190200014": {
+      "district_code": "3519080",
+      "regency_code": "3519",
+      "name": "SUMBERSARI",
+      "address": "Jl. Raya Tulung No. 05, Ds. Sumbersari, Kec. Saradan"
+    },
+    "35190200015": {
+      "district_code": "3519090",
+      "regency_code": "3519",
+      "name": "PILANGKENCENG",
+      "address": "Jl. Raya Kenongorejo No. 774 Ds. Kenongorejo Kec. Pilangkenceng"
+    },
+    "35190200016": {
+      "district_code": "3519090",
+      "regency_code": "3519",
+      "name": "KREBET",
+      "address": "Jl. Gawang Utara No. 55 Ds. Krebet Kec. Pilangkenceng"
+    },
+    "35190200017": {
+      "district_code": "3519100",
+      "regency_code": "3519",
+      "name": "KLECOREJO",
+      "address": "Jl. Raya Wates, Ds. Klecorejo, Kec. Mejayan"
+    },
+    "35190200021": {
+      "district_code": "3519120",
+      "regency_code": "3519",
+      "name": "SIMO",
+      "address": "Jl. Raya Balerejo-Muneng No.96, Ds. Simo, Kec. Balerejo"
+    },
+    "35190200025": {
+      "district_code": "3519150",
+      "regency_code": "3519",
+      "name": "KLAGENSERUT",
+      "address": "Jl. Raya Klagenserut Rt 08 Rw 03 Kec. Jiwan"
+    },
+    "35200200001": {
+      "district_code": "3520010",
+      "regency_code": "3520",
+      "name": "PONCOL",
+      "address": "Jl. Raya Parang - Poncol Kel. Alastuwo, Kec. Poncol"
+    },
+    "35200200002": {
+      "district_code": "3520020",
+      "regency_code": "3520",
+      "name": "PARANG",
+      "address": "Jl. Blego Raya Kel.Parang, Kec. Parang"
+    },
+    "35200200003": {
+      "district_code": "3520030",
+      "regency_code": "3520",
+      "name": "LEMBEYAN",
+      "address": "Jl. Parang - Lambeyan Kel. Lambeyan, Kec. Lambeyan"
+    },
+    "35200200005": {
+      "district_code": "3520041",
+      "regency_code": "3520",
+      "name": "GORANG GARENG TAJI",
+      "address": "Jl. Ds. Goranggareng RT 5/RW 1, Kec. Nguntoronadi"
+    },
+    "35200200006": {
+      "district_code": "3520050",
+      "regency_code": "3520",
+      "name": "TLADAN",
+      "address": "Jl. Jend. Sudirman Ds. Tladan, Kec. Kawedanan"
+    },
+    "35200200007": {
+      "district_code": "3520050",
+      "regency_code": "3520",
+      "name": "KAWEDANAN",
+      "address": "Jl. A Yani No. 273 Kel.Kawedanan, Kec. Kawedanan"
+    },
+    "35200200009": {
+      "district_code": "3520061",
+      "regency_code": "3520",
+      "name": "NGARIBOYO",
+      "address": "Jl. Raya Magetan - Parang No. 49 Kel.Ngariboyo, Kec. Ngariboyo"
+    },
+    "35200200011": {
+      "district_code": "3520070",
+      "regency_code": "3520",
+      "name": "SUMBERAGUNG",
+      "address": "Jl. Raya Sumber Agung- Plaosan Ds. Sumber Agung, Kec. Plaosan"
+    },
+    "35200200012": {
+      "district_code": "3520071",
+      "regency_code": "3520",
+      "name": "SIDOREJO",
+      "address": "Jl. Raya Sarangan Desa Sidorejo Kec. Sidorejo"
+    },
+    "35200200013": {
+      "district_code": "3520080",
+      "regency_code": "3520",
+      "name": "PANEKAN",
+      "address": "Jl. Raya Panekan No. 08 Kel.Panekan, Kec. Panekan"
+    },
+    "35200200015": {
+      "district_code": "3520100",
+      "regency_code": "3520",
+      "name": "BENDO",
+      "address": "Jl. Raya Bendo No. 116 Kel.Bendo, Kec. Bendo"
+    },
+    "35200200017": {
+      "district_code": "3520110",
+      "regency_code": "3520",
+      "name": "NGUJUNG",
+      "address": "Jl. Raya Kanal Ngujung No.01 Kec. Maospati"
+    },
+    "35200200019": {
+      "district_code": "3520121",
+      "regency_code": "3520",
+      "name": "TAJI",
+      "address": "Jl. Raya Glodok - Kendal No. 9 Ds. Taji, Kec. Karas"
+    },
+    "35200200020": {
+      "district_code": "3520130",
+      "regency_code": "3520",
+      "name": "TEBON",
+      "address": "Jl. Slamet No. 5 Kel. Tebon, Kec. Barat"
+    },
+    "35200200021": {
+      "district_code": "3520130",
+      "regency_code": "3520",
+      "name": "REJOMULYO",
+      "address": "Ds. Rejomulyo, Kec. Barat"
+    },
+    "35200200022": {
+      "district_code": "3520131",
+      "regency_code": "3520",
+      "name": "KARTOHARJO",
+      "address": "Jl. Raya Kartoharjo No. 02 Desa Kartoharjo Kec. Kartoharjo"
+    },
+    "35210200006": {
+      "district_code": "3521101",
+      "regency_code": "3521",
+      "name": "KASREMAN",
+      "address": "Jl. Karangmalang - Gunungsari Km.01 Ds. Kasreman, Kec. Kasreman 63281"
+    },
+    "35210200007": {
+      "district_code": "3521051",
+      "regency_code": "3521",
+      "name": "WIDODAREN",
+      "address": "Jl. Raya Gerih-Kendal Ds.Widodaren Kec.Gerih 63272"
+    },
+    "35210200011": {
+      "district_code": "3521090",
+      "regency_code": "3521",
+      "name": "BRINGIN",
+      "address": "Jl. Raya Bringin Kec. Bringin"
+    },
+    "35210200017": {
+      "district_code": "3521130",
+      "regency_code": "3521",
+      "name": "GEMARANG",
+      "address": "Jl. Raya Ngawi-Solo Km.9 Ds.Gemarang Kec.Kedunggalar 63254"
+    },
+    "35220200003": {
+      "district_code": "3522030",
+      "regency_code": "3522",
+      "name": "TAMBAKREJO",
+      "address": "Jl. Diponegoro No. 497, Kec. Tambakrejo"
+    },
+    "35220200012": {
+      "district_code": "3522090",
+      "regency_code": "3522",
+      "name": "KEPOHBARU",
+      "address": "Jl. Raya Kepohbaru No. 85, Ds. Nglumber, Kec. Kepohbaru"
+    },
+    "35220200014": {
+      "district_code": "3522100",
+      "regency_code": "3522",
+      "name": "GUNUNGSARI",
+      "address": "Jl. Raya Babat - Bojonegoro ,Ds. Gunungsari, Kec. Baureno"
+    },
+    "35220200016": {
+      "district_code": "3522120",
+      "regency_code": "3522",
+      "name": "SUMBERREJO",
+      "address": "Jl. PUK No. 127 Ds. Sumuragung ,Kec. Sumberejo"
+    },
+    "35220200017": {
+      "district_code": "3522120",
+      "regency_code": "3522",
+      "name": "MEJUWET",
+      "address": "Jl. dr. Soetomo No. 206 Ds. Mejuwet, Kec. Sumberejo"
+    },
+    "35230200001": {
+      "district_code": "3523010",
+      "regency_code": "3523",
+      "name": "KENDURUAN",
+      "address": "Jl. Raya Blora No. 08 , Desa Sidomukti Kec. Kenduruan"
+    },
+    "35230200012": {
+      "district_code": "3523080",
+      "regency_code": "3523",
+      "name": "PRAMBONWETAN",
+      "address": "Jl. Veteran Desa Banjararum, Kec. Rengel"
+    },
+    "35230200031": {
+      "district_code": "3523180",
+      "regency_code": "3523",
+      "name": "KEBONHARJO",
+      "address": "Jl. Raya Lasem No.4 Kebonharjo, Kec. Jatirogo"
+    },
+    "35240200002": {
+      "district_code": "3524020",
+      "regency_code": "3524",
+      "name": "BLULUK",
+      "address": "Jl. Raya Bluluk - Sukorame No. 27 Desa Bluluk Kec. Blubuk 62274"
+    },
+    "35240200005": {
+      "district_code": "3524050",
+      "regency_code": "3524",
+      "name": "MANTUP",
+      "address": "Ds. Mantup, Kec. Mantup"
+    },
+    "35240200006": {
+      "district_code": "3524060",
+      "regency_code": "3524",
+      "name": "KEMBANGBAHU",
+      "address": "Ds. Kembangbahu, Kec. Kembangbahu"
+    },
+    "35240200008": {
+      "district_code": "3524080",
+      "regency_code": "3524",
+      "name": "KEDUNGPRING",
+      "address": "Ds. Tlanak, Kec. Kedungpring"
+    },
+    "35240200009": {
+      "district_code": "3524080",
+      "regency_code": "3524",
+      "name": "DRADAH",
+      "address": "Sumengko - Dradah Blumbang, Kec. Kedungpring"
+    },
+    "35240200010": {
+      "district_code": "3524090",
+      "regency_code": "3524",
+      "name": "MODO",
+      "address": "Ds. Mojorejo, Kec. Modo"
+    },
+    "35240200011": {
+      "district_code": "3524090",
+      "regency_code": "3524",
+      "name": "KARANGPILANG",
+      "address": "Ds. Karangpilang, Kec. Modo"
+    },
+    "35240200013": {
+      "district_code": "3524100",
+      "regency_code": "3524",
+      "name": "MOROPELANG",
+      "address": "Jl. Raya No. 1 Moropelang, Kec. Babat"
+    },
+    "35240200015": {
+      "district_code": "3524120",
+      "regency_code": "3524",
+      "name": "SUKODADI",
+      "address": "Jl. P. Sudirman 39 Sukodadi, Kec. Sukodadi"
+    },
+    "35240200016": {
+      "district_code": "3524120",
+      "regency_code": "3524",
+      "name": "SUMBERAJI",
+      "address": "Ds. Sumberaji, Kec. Sukodadi"
+    },
+    "35240200018": {
+      "district_code": "3524140",
+      "regency_code": "3524",
+      "name": "TIKUNG",
+      "address": "Ds. Bakalanpole, Kec. Tikung"
+    },
+    "35240200021": {
+      "district_code": "3524160",
+      "regency_code": "3524",
+      "name": "GLAGAH",
+      "address": "Jl. Raya Pud No. 61, Kec. Glagah"
+    },
+    "35240200024": {
+      "district_code": "3524190",
+      "regency_code": "3524",
+      "name": "KALITENGAH",
+      "address": "Jl. Raya Dibee, Kec. Kalitengah"
+    },
+    "35240200025": {
+      "district_code": "3524200",
+      "regency_code": "3524",
+      "name": "KARANGGENENG",
+      "address": "Jl. Raya Karanggeneng 110, Kec. Karanggeneng"
+    },
+    "35240200027": {
+      "district_code": "3524220",
+      "regency_code": "3524",
+      "name": "MADURAN",
+      "address": "Jl. Raya Maduran No. 3, Kec. Maduran"
+    },
+    "35240200031": {
+      "district_code": "3524250",
+      "regency_code": "3524",
+      "name": "TLOGOSADANG",
+      "address": "Jl. Raya Tlogosadang, Kec. Paciran"
+    },
+    "35250200001": {
+      "district_code": "3525010",
+      "regency_code": "3525",
+      "name": "WRINGIN ANOM",
+      "address": "Jl. Raya Wringin Anom No.111, Kec. Wringinanom"
+    },
+    "35250200002": {
+      "district_code": "3525010",
+      "regency_code": "3525",
+      "name": "KESAMBEN KULON",
+      "address": "Jl. Kesamben Kulon, Ds. kesamben Kulon, Kec. Wringinanom"
+    },
+    "35250200004": {
+      "district_code": "3525020",
+      "regency_code": "3525",
+      "name": "KARANGANDONG",
+      "address": "Jl. Raya Karangandong No 06, Ds. Karangandong, Kec. Driyorejo"
+    },
+    "35250200006": {
+      "district_code": "3525030",
+      "regency_code": "3525",
+      "name": "SLEMPIT",
+      "address": "Jl. Raya Slempit, Kec.Kedamean"
+    },
+    "35250200008": {
+      "district_code": "3525040",
+      "regency_code": "3525",
+      "name": "KEPATIHAN",
+      "address": "Jl. Raya Kepatihan 151, Kec. Menganti"
+    },
+    "35250200010": {
+      "district_code": "3525050",
+      "regency_code": "3525",
+      "name": "DADAP KUNING",
+      "address": "Jl. Raya Dadap Kuning 32, Kec. Cerme"
+    },
+    "35250200015": {
+      "district_code": "3525080",
+      "regency_code": "3525",
+      "name": "DUDUK SAMPEYAN",
+      "address": "Jl. Raya Duduk Sampeyan No.45, Kec. Duduksampeyan"
+    },
+    "35250200017": {
+      "district_code": "3525090",
+      "regency_code": "3525",
+      "name": "GENDING",
+      "address": "Jl. Veteran Gresik No.175A, Kec. Kebomas"
+    },
+    "35250200019": {
+      "district_code": "3525100",
+      "regency_code": "3525",
+      "name": "NELAYAN",
+      "address": "Jl. Gubernur Suryo 33, Kec. Gresik"
+    },
+    "35250200022": {
+      "district_code": "3525110",
+      "regency_code": "3525",
+      "name": "SEMBAYAT",
+      "address": "Jl. Pendopo No.1 Sembayat, Kec. Manyar"
+    },
+    "35250200023": {
+      "district_code": "3525110",
+      "regency_code": "3525",
+      "name": "SUKOMULYO",
+      "address": "Jl. Kalimantan No.104 GKB, Kec. Manyar"
+    },
+    "35250200026": {
+      "district_code": "3525140",
+      "regency_code": "3525",
+      "name": "MENTARAS",
+      "address": "Jl. Raya Mentaras, Kec. Dukun"
+    },
+    "35250200028": {
+      "district_code": "3525150",
+      "regency_code": "3525",
+      "name": "PANCENG",
+      "address": "Jl. Raya Panceng, Kec. Panceng"
+    },
+    "35250200029": {
+      "district_code": "3525160",
+      "regency_code": "3525",
+      "name": "UJUNG PANGKAH",
+      "address": "Jl. Sitarda No.14 Pangkah Wetan, Kec. Ujungpangkah"
+    },
+    "35250200030": {
+      "district_code": "3525160",
+      "regency_code": "3525",
+      "name": "SEKAPUK",
+      "address": "Jl. Raya Ds. Sekapuk, Kec. Ujungpangkah"
+    },
+    "35260200002": {
+      "district_code": "3526020",
+      "regency_code": "3526",
+      "name": "SUKOLILO",
+      "address": "Ds. Sukolilo Barat, Kec. Labang"
+    },
+    "35260200003": {
+      "district_code": "3526030",
+      "regency_code": "3526",
+      "name": "KWANYAR",
+      "address": "Ds. Dlemer, Kec. Kwanyar"
+    },
+    "35260200004": {
+      "district_code": "3526040",
+      "regency_code": "3526",
+      "name": "KEDUNGDUNG",
+      "address": "Ds. Pateremen, Kec. Modung"
+    },
+    "35260200008": {
+      "district_code": "3526070",
+      "regency_code": "3526",
+      "name": "GALIS",
+      "address": "Ds. Longkek, Kec. Galis"
+    },
+    "35260200009": {
+      "district_code": "3526070",
+      "regency_code": "3526",
+      "name": "BANJAR",
+      "address": "Ds. Banjar, Kec. Galis"
+    },
+    "35260200010": {
+      "district_code": "3526080",
+      "regency_code": "3526",
+      "name": "TANAH MERAH",
+      "address": "Ds. Petrah, Kec.Tanah Merah"
+    },
+    "35260200011": {
+      "district_code": "3526090",
+      "regency_code": "3526",
+      "name": "TRAGAH",
+      "address": "Ds. Karang Leman, Kec. Tragah"
+    },
+    "35260200012": {
+      "district_code": "3526100",
+      "regency_code": "3526",
+      "name": "SOCAH",
+      "address": "Ds. Socah, Kec. Socah"
+    },
+    "35260200013": {
+      "district_code": "3526100",
+      "regency_code": "3526",
+      "name": "JADDIH",
+      "address": "Ds. Jaddih, Kec. Socah"
+    },
+    "35260200017": {
+      "district_code": "3526130",
+      "regency_code": "3526",
+      "name": "TONGGUH",
+      "address": "Ds. Buduran, Kec. Arosbaya"
+    },
+    "35260200020": {
+      "district_code": "3526160",
+      "regency_code": "3526",
+      "name": "TANJUNG BUMI",
+      "address": "Ds. Tanjung Bumi, Kec. Tanjung Bumi"
+    },
+    "35260200021": {
+      "district_code": "3526170",
+      "regency_code": "3526",
+      "name": "SEPULU",
+      "address": "Ds. Sepulu, Kec. Sepulu"
+    },
+    "35270200007": {
+      "district_code": "3527040",
+      "regency_code": "3527",
+      "name": "TANJUNG",
+      "address": "Jl. Raya Dharma Tanjung, Kec. Camplong"
+    },
+    "35270200009": {
+      "district_code": "3527050",
+      "regency_code": "3527",
+      "name": "JRANGOAN",
+      "address": "Jl.Raya Jrangoan Ds.Jrangoan Kec.Omben"
+    },
+    "35270200010": {
+      "district_code": "3527060",
+      "regency_code": "3527",
+      "name": "KEDUNGDUNG",
+      "address": "Jl. Raya Kedungdung, Kec. Kedungdung"
+    },
+    "35270200011": {
+      "district_code": "3527060",
+      "regency_code": "3527",
+      "name": "BANJAR",
+      "address": "Ds. Banjar, Kec. Kedungdung"
+    },
+    "35270200013": {
+      "district_code": "3527080",
+      "regency_code": "3527",
+      "name": "TAMBELANGAN",
+      "address": "Ds. Tambelangan, Kec. Tambelangan"
+    },
+    "35270200014": {
+      "district_code": "3527090",
+      "regency_code": "3527",
+      "name": "BANYUATES",
+      "address": "Jl. Raya Banyuates, Kec. Banyuates"
+    },
+    "35270200015": {
+      "district_code": "3527090",
+      "regency_code": "3527",
+      "name": "BRINGKONING",
+      "address": "Jl. R.Praseno Ds. Tlagah, Kec. Banyuates"
+    },
+    "35270200017": {
+      "district_code": "3527101",
+      "regency_code": "3527",
+      "name": "KARANGPENANG",
+      "address": "Jl.Raya Karang Penang, Kec. Karang Penang"
+    },
+    "35270200019": {
+      "district_code": "3527110",
+      "regency_code": "3527",
+      "name": "BUNTEN BARAT",
+      "address": "Jl. Kesehatan Bunten Barat No,9, Kec. Ketapang"
+    },
+    "35270200020": {
+      "district_code": "3527120",
+      "regency_code": "3527",
+      "name": "BATULENGER",
+      "address": "Jl. Raya Batulenger, Kec. Sokobanah"
+    },
+    "35270200021": {
+      "district_code": "3527120",
+      "regency_code": "3527",
+      "name": "TAMBERU BARAT",
+      "address": "Ds. Tamberu Barat Kec. Sakobanah"
+    },
+    "35280200001": {
+      "district_code": "3528010",
+      "regency_code": "3528",
+      "name": "TLANAKAN",
+      "address": "Jl. Raya Tlanakan, Kec. Tlanakan"
+    },
+    "35280200002": {
+      "district_code": "3528010",
+      "regency_code": "3528",
+      "name": "BANDARAN",
+      "address": "Jl. Raya Bandaran Ds. Bandaran Kec. Tlanakan"
+    },
+    "35280200003": {
+      "district_code": "3528020",
+      "regency_code": "3528",
+      "name": "PADEMAWU",
+      "address": "Jl. Raya Murtajih Desa Murtajih Kec. Pademawu"
+    },
+    "35280200004": {
+      "district_code": "3528020",
+      "regency_code": "3528",
+      "name": "SOPAAH",
+      "address": "Jl. Raya Sopaah, Kec. Pademawu"
+    },
+    "35280200005": {
+      "district_code": "3528030",
+      "regency_code": "3528",
+      "name": "GALIS",
+      "address": "Jl. Raya Galis No. 17 Kec. Galis"
+    },
+    "35280200006": {
+      "district_code": "3528040",
+      "regency_code": "3528",
+      "name": "LARANGAN",
+      "address": "Jl. Raya Larangan Km 8 Kec. Larangan"
+    },
+    "35280200007": {
+      "district_code": "3528040",
+      "regency_code": "3528",
+      "name": "TALANG",
+      "address": "Jl. Raya Sumenep, Kec. Larangan"
+    },
+    "35280200010": {
+      "district_code": "3528060",
+      "regency_code": "3528",
+      "name": "PROPPO",
+      "address": "Jl. Raya Proppo Dusun Timur Desa Mapper Kec. Proppo"
+    },
+    "35280200011": {
+      "district_code": "3528060",
+      "regency_code": "3528",
+      "name": "PANAGUAN",
+      "address": "Jl. Raya Panaguan Kec. Proppo"
+    },
+    "35280200014": {
+      "district_code": "3528080",
+      "regency_code": "3528",
+      "name": "BULANGAN HAJI",
+      "address": "Jl. Sultan Muhammad Bulangan Haji Kec. Pegantenan"
+    },
+    "35280200015": {
+      "district_code": "3528090",
+      "regency_code": "3528",
+      "name": "KADUR",
+      "address": "Jl. Raya Kadur No. 17 Kec. Kadur"
+    },
+    "35280200017": {
+      "district_code": "3528110",
+      "regency_code": "3528",
+      "name": "WARU",
+      "address": "Jl. Raya Waru, Sotabar Desa Waru Kec. Waru"
+    },
+    "35280200018": {
+      "district_code": "3528110",
+      "regency_code": "3528",
+      "name": "TAMPOJUNG PREGI",
+      "address": "Jl. Raya Tampojung Pregi Kec. Waru"
+    },
+    "35280200019": {
+      "district_code": "3528120",
+      "regency_code": "3528",
+      "name": "BATUMARMAR",
+      "address": "Jl. Raya Tamberu, Kec. Batumarmar"
+    },
+    "35280200020": {
+      "district_code": "3528130",
+      "regency_code": "3528",
+      "name": "PASEAN",
+      "address": "Jl. Raya Pasean Waru Dusun Oro Timur Desa Tlontoraja, Kec. Pasean"
+    },
+    "35280200021": {
+      "district_code": "3528070",
+      "regency_code": "3528",
+      "name": "LARANGAN BADUNG",
+      "address": "Jl. Raya Larangan Badung, Kec. Palengaan"
+    },
+    "35290200002": {
+      "district_code": "3529020",
+      "regency_code": "3529",
+      "name": "BLUTO",
+      "address": "Jl. Raya Bluto No.13, Kec. Bluto"
+    },
+    "35290200003": {
+      "district_code": "3529030",
+      "regency_code": "3529",
+      "name": "SARONGGI",
+      "address": "Jl. Raya Saronggi, Kec. Saronggi"
+    },
+    "35290200005": {
+      "district_code": "3529050",
+      "regency_code": "3529",
+      "name": "TALANGO",
+      "address": "Jl. WR. Supratman, Kec. Talango"
+    },
+    "35290200007": {
+      "district_code": "3529070",
+      "regency_code": "3529",
+      "name": "PANDIAN",
+      "address": "Jl. Teuku Umar 46, Kec. Kota Sumenep"
+    },
+    "35290200008": {
+      "district_code": "3529070",
+      "regency_code": "3529",
+      "name": "PAMOLOKAN",
+      "address": "Jl. Agus Salim 25, Kec. Kota Sumenep"
+    },
+    "35290200009": {
+      "district_code": "3529071",
+      "regency_code": "3529",
+      "name": "BATUAN",
+      "address": "Jl. Raya Lenteng Ds. Batuan, Kec. Batuan"
+    },
+    "35290200010": {
+      "district_code": "3529080",
+      "regency_code": "3529",
+      "name": "LENTENG",
+      "address": "Jl. Raya Lenteng, Kec. Lenteng"
+    },
+    "35290200011": {
+      "district_code": "3529080",
+      "regency_code": "3529",
+      "name": "MONCEK",
+      "address": "Jl. Raya Moncek, Kec. Lenteng"
+    },
+    "35290200014": {
+      "district_code": "3529110",
+      "regency_code": "3529",
+      "name": "PASONGSONGAN",
+      "address": "Jl. Abu Bakar Sidik, Kec. Pasongsongan"
+    },
+    "35290200016": {
+      "district_code": "3529130",
+      "regency_code": "3529",
+      "name": "RUBARU",
+      "address": "Jl. Raya Rubaru, Kec. Rubaru"
+    },
+    "35290200017": {
+      "district_code": "3529140",
+      "regency_code": "3529",
+      "name": "DASUK",
+      "address": "Jl. Raya Dasuk, Kec. Dasuk"
+    },
+    "35290200018": {
+      "district_code": "3529150",
+      "regency_code": "3529",
+      "name": "MANDING",
+      "address": "Jl. Raya manding 03, Kec. Manding"
+    },
+    "35290200019": {
+      "district_code": "3529160",
+      "regency_code": "3529",
+      "name": "BATU PUTIH",
+      "address": "Jl. Arya Wiraja, Kec. Batuputih"
+    },
+    "35290200020": {
+      "district_code": "3529170",
+      "regency_code": "3529",
+      "name": "GAPURA",
+      "address": "Jl. Raya Gapura-Dungkek No.111, Kec. Gapura"
+    },
+    "35290200021": {
+      "district_code": "3529180",
+      "regency_code": "3529",
+      "name": "BATANG BATANG",
+      "address": "Jl. Raya Cemara Udang, Kec. Batang-Batang"
+    },
+    "35290200022": {
+      "district_code": "3529180",
+      "regency_code": "3529",
+      "name": "LEGUNG",
+      "address": "Jl. Raya Pantai Lombang No. 15, Kec. Batang-Batang"
+    },
+    "35290200023": {
+      "district_code": "3529190",
+      "regency_code": "3529",
+      "name": "DUNGKEK",
+      "address": "Jl. Raya Dungkek, Kec. Dungkek"
+    },
+    "35290200025": {
+      "district_code": "3529210",
+      "regency_code": "3529",
+      "name": "GAYAM",
+      "address": "Jl. Raya Pancor No.2, Kec. Gayam"
+    },
+    "35290200026": {
+      "district_code": "3529220",
+      "regency_code": "3529",
+      "name": "RAAS",
+      "address": "Jl. Raya Raas, Kec. Raas"
+    },
+    "35290200028": {
+      "district_code": "3529240",
+      "regency_code": "3529",
+      "name": "ARJASA",
+      "address": "Jl. Raya Arjasa, Kec. Arjasa"
+    },
+    "35290200029": {
+      "district_code": "3529241",
+      "regency_code": "3529",
+      "name": "KANGAYAN",
+      "address": "Jl.Raya Pelabuhan, Kec. Kangayan"
+    },
+    "35290200030": {
+      "district_code": "3529250",
+      "regency_code": "3529",
+      "name": "MASALEMBU",
+      "address": "Jl. Kafilah No. 03 , Ds./Kel. Sukajeruk, Kec. Masalembu"
+    },
+    "35710200007": {
+      "district_code": "3571030",
+      "regency_code": "3571",
+      "name": "NGLETIH",
+      "address": "Jl. Raya Bawang no. 34 Ngletih, Kec. Pesantren"
+    },
+    "35720200003": {
+      "district_code": "3572030",
+      "regency_code": "3572",
+      "name": "SANANWETAN",
+      "address": "Jl. Jawa No. 7, Kec. Sananwetan"
+    },
+    "35740200001": {
+      "district_code": "3574010",
+      "regency_code": "3574",
+      "name": "KETAPANG",
+      "address": "Jl. Raya Bromo No.1b, Kel.Ketapang, Kec. Kademangan"
+    },
+    "35740200003": {
+      "district_code": "3574020",
+      "regency_code": "3574",
+      "name": "WONOASIH",
+      "address": "Jl. Anggur No.70, Kel. Wonoasih, Kec. Wonoasih"
+    },
+    "35740200004": {
+      "district_code": "3574030",
+      "regency_code": "3574",
+      "name": "SUKABUMI",
+      "address": "Jl. Wijaya Kusuma No.1, Kel. Sukabumi, Kec. Mayangan"
+    },
+    "35740200005": {
+      "district_code": "3574030",
+      "regency_code": "3574",
+      "name": "JATI",
+      "address": "Jl. Hayam Wuruk No.2, Kel. Jati, Kec. Mayangan"
+    },
+    "35760200002": {
+      "district_code": "3576010",
+      "regency_code": "3576",
+      "name": "MENTIKAN",
+      "address": "Jl. Prapanca 55, Kec. Prajurit Kulon"
+    },
+    "35770200002": {
+      "district_code": "3577010",
+      "regency_code": "3577",
+      "name": "NGEGONG",
+      "address": "Jl. Keningar, Ngegong, Kec. Manguharjo"
+    },
+    "35770200003": {
+      "district_code": "3577020",
+      "regency_code": "3577",
+      "name": "BANJAREJO",
+      "address": "Jl. Bhayangkara No.1, Kec. Taman"
+    },
+    "35770200004": {
+      "district_code": "3577020",
+      "regency_code": "3577",
+      "name": "DEMANGAN",
+      "address": "Jl. Sukarno Hatta, Kec. Taman"
+    },
+    "35770200005": {
+      "district_code": "3577030",
+      "regency_code": "3577",
+      "name": "TAWANGREJO",
+      "address": "Jl. Tawang Sari No. 39, Kec. Kartoharjo"
+    },
+    "35770200006": {
+      "district_code": "3577030",
+      "regency_code": "3577",
+      "name": "SUKOSARI",
+      "address": "Jl. Basuki Rahmat No.4, Sukosari, Kec. Kartoharjo"
+    },
+    "35780200045": {
+      "district_code": "3578210",
+      "regency_code": "3578",
+      "name": "TANAH KALIKEDINDING",
+      "address": "Jl. Muhammad Noer Nomor 226, Kec. Kenjeran"
+    }
+  }
+}
